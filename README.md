@@ -40,4 +40,4 @@ python3 -m http.server 8000 --directory dist
 
 ## Official textbook update · 2026-10-22
 
-Supplied textbook pages 31–46 are integrated into Session 1; pages 47–61 into Session 2. Both source pages contain page-by-page and figure-by-figure indexes (22 original figure references). Content is paraphrased, with new teaching illustrations; original textbook photographs and transcripts are not published. Page 30 is missing from the supplied batch. External chapter references and unclear classroom audio remain unverified. Existing per-session progress and notes are preserved.
+Supplied textbook pages 30–46 are integrated into Session 1; pages 47–61 into Session 2. Both source pages contain page-by-page and figure-by-figure indexes (22 original figure references). Content is paraphrased, with new teaching illustrations; original textbook photographs and transcripts are not published. Page 30 has been supplied and integrated into the Session 1 structure and roots units. External chapter references and unclear classroom audio remain unverified. Existing per-session progress and notes are preserved.
