@@ -36,3 +36,8 @@ python3 -m http.server 8000 --directory dist
 编辑 `dist/` 后刷新页面即可。补充新课程时应对照讲义和课堂记录逐项核查，保留来源标注，并将不确定内容标记为待核对。
 
 本站为个人学习资料整理，非 WSET 官方网站。课程资料与相关商标的权利归各自权利人所有。原始讲义、录音及其完整转写不包含在本源码包中。考试要求应以报考时的官方及授课机构通知为准。
+
+
+## Official textbook update · 2026-10-22
+
+Supplied textbook pages 31–46 are integrated into Session 1; pages 47–61 into Session 2. Both source pages contain page-by-page and figure-by-figure indexes (22 original figure references). Content is paraphrased, with new teaching illustrations; original textbook photographs and transcripts are not published. Page 30 is missing from the supplied batch. External chapter references and unclear classroom audio remain unverified. Existing per-session progress and notes are preserved.
