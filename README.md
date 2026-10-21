@@ -41,3 +41,6 @@ python3 -m http.server 8000 --directory dist
 ## Official textbook update · 2026-10-22
 
 Supplied textbook pages 30–46 are integrated into Session 1; pages 47–61 into Session 2. Both source pages contain page-by-page and figure-by-figure indexes (22 original figure references). Content is paraphrased, with new teaching illustrations; original textbook photographs and transcripts are not published. Page 30 has been supplied and integrated into the Session 1 structure and roots units. External chapter references and unclear classroom audio remain unverified. Existing per-session progress and notes are preserved.
+
+## Workbook
+Four supplied blank workbook photographs are transcribed into separate Session 1 and 2 routes (#workbook/1 and #workbook/2). Session 1: four questions (16 marks), 16 white and 10 red varieties, four fields each. Session 2: four questions (20 marks), including four harvest scenarios. Original bilingual questions and marks are preserved. No answer key supplied; optional study prompts are labelled as supplemental, not official marking guidance. Answers use separate local-browser note keys.
