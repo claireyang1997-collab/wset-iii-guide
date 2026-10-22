@@ -8,5 +8,24 @@ function courseHome(){const a=count(),b=s2Done().filter(id=>s2Units.some(u=>u.id
 function session1Overview(){return `<main id="main" class="wrap session-overview"><a href="#home" class="back">← 全部课程记录</a><section class="session-heading"><div><div class="issue-label"><b>SESSION 01</b><span>2026.10.17 · 线上课</span></div><div class="eyebrow">THE VINE & ITS ENVIRONMENT</div><h1><span>葡萄藤与</span><span>生长环境</span></h1><p>葡萄藤结构与繁殖，以及环境对成熟、风格、品质和成本的影响。</p><div class="hero-actions"><a class="primary" href="#lesson/${lessons.find(l=>!completed.includes(l.id))?.id||'roots'}">${count()?'继续阅读':'开始阅读'} ↗</a><a href="#workbook/1">练习册 ↗</a><a href="#quiz">本课自测 ↗</a></div></div><img src="assets/vineyard.webp" alt="沿山坡延伸的葡萄园与酒庄"></section><div class="session-strip"><strong>第一课 · 已读 ${count()} / 6</strong><span>6 个阅读单元</span></div><div class="s2-unit-grid">${lessons.map(l=>`<a class="s2-unit" href="#lesson/${l.id}"><span class="s2-num">${l.n}</span><div class="eyebrow">${l.en}</div><h2>${l.short}</h2><p>${l.desc}</p><small>约 ${l.duration} 分钟 ${completed.includes(l.id)?'✓ 已读':'↗'}</small></a>`).join('')}</div><div class="session-end-links"><a href="#guide">资料索引 ↗</a><a href="#session2">下一课 · 葡萄园管理 →</a></div></main>`}
 function practiceHub(){return `<main id="main" class="wrap practice-hub"><div class="page-intro"><div class="eyebrow">PAUSE & RECALL</div><h1 class="page-title">练习与复习</h1><p>选择课程，进入练习册或自测。</p></div><div class="practice-courses">${[1,2].map(n=>`<section class="quiz-card"><div class="eyebrow">SESSION 0${n}</div><h2>${n===1?'葡萄藤与生长环境':'葡萄园管理'}</h2><p>${n===1?'4 道简答题 · 26 个品种填写表':'4 道简答题 · 包含 4 种采收情境'}</p><a class="primary" href="#workbook/${n}">打开练习册 ↗</a><a class="practice-other" href="${n===1?'#quiz':'#session2quiz'}">8 道自测 · 即时反馈 →</a></section>`).join('')}</div><p class="fine">记录仅保存在当前浏览器。暂无机构参考答案，复习提示供自查。</p></main>`}
 function prepareCourseBodies(){
- for(const [session,units] of [[1,lessons],[2,s2Units]])for(const unit of units){let i=0;const links=[];unit.body=unit.body.replace(/<h2>([\s\S]*?)<\/h2>/g,(_,title)=>{const id=`topic-${session}-${unit.id}-${++i}`;links.push([id,title]);return `<h2 id="${id}">${title}</h2>`});unit.body=`<nav class="unit-outline" aria-label="本单元知识主题"><span>本单元</span>${links.map(([id,t])=>`<a href="#${id}" data-book-jump="${id}">${t}</a>`).join('')}</nav>`+unit.body;}
+ const labels={
+  '1/roots':['根系、接穗与砧木','根瘤蚜与抗性砧木','室内嫁接与田间换接','嫁接与杂交的区别'],
+  '1/propagation':['属、种、品种与品系','扦插与压条','突变与克隆选择','有性繁殖与杂交','红葡萄品种与别名','白葡萄品种与别名','四种红葡萄对照'],
+  '1/cycle':['葡萄藤四部分结构','叶、卷须、花与芽','一年生木与结果','葡萄藤年周期','生长阶段与风险'],
+  '1/needs':['生长条件与光合作用','光照强度与日照','冬季冻害与春霜','寒春、酷热与野火','水分限制与胁迫','降雨时点与冰雹'],
+  '1/climate':['气候、天气与年份','生长季温度分类','大陆度与昼夜温差','三类主要气候','海拔、洋流与雾','糖、酸与风味成熟'],
+  '1/soil':['园地与局地气候','颗粒、腐殖质与土层','土壤储热与升温','土壤排水与保水','养分供应与黄化','土壤、风土与风味'],
+  '2/training':['建园地点与材料','种植、投产与更新','密度、整枝、修剪与搭架','密度与资源竞争','头状、主蔓与大树型','高干与矮干'],
+  '2/pruning':['木龄、芽与结果新梢','年周期与季节作业','冬剪与夏剪','短枝修剪与更新','替换长枝修剪','整枝与修剪组合'],
+  '2/canopy':['冠层管理目标','不搭架的灌木形','搭架的三个目的','VSP 与调整型 VSP','建园与作业成本'],
+  '2/balance':['产量与成熟能力','产量单位与经营限制','冬剪与摘青','炎热干燥情境','温和多雨情境'],
+  '2/health':['各阶段天气风险','根、叶与果实受害','霜霉、白粉与灰腐','病毒与细菌性病害','四种栽培方式','成本与品质取舍'],
+  '2/harvest':['采收与目标成熟度','早采、正常采与晚采','贵腐条件与选果','机械采收取舍','人工采收与整串','全年管理与采收衔接']
+ };
+ for(const [session,units] of [[1,lessons],[2,s2Units]])for(const unit of units){
+  let i=0;const links=[],short=labels[`${session}/${unit.id}`]||[];
+  unit.body=unit.body.replace(/<h2>([\s\S]*?)<\/h2>/g,(_,title)=>{const index=i++,id=`topic-${session}-${unit.id}-${i}`;links.push([id,short[index]||title]);return `<h2 id="${id}">${title}</h2>`});
+  if(!links.length)continue;
+  unit.body=`<details class="unit-outline"><summary><svg class="outline-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M7 5h10M7 10h10M7 15h10M3 5h.5M3 10h.5M3 15h.5" stroke-linecap="round"/></svg><span>本节目录</span><span class="outline-count">${links.length} 个主题</span></summary><nav aria-label="本节段落跳转"><ol>${links.map(([id,t],index)=>`<li><a href="#${id}" data-book-jump="${id}"><span class="outline-number" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><span class="outline-text">${t}</span><span class="outline-arrow" aria-hidden="true">↓</span></a></li>`).join('')}</ol></nav></details>`+unit.body;
+ }
 }
