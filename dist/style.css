@@ -434,3 +434,8 @@ kbd{font-size:var(--text-eyebrow);line-height:1.4}
 @media(max-width:480px){.practice-mode-tabs{grid-template-columns:minmax(0,1fr);gap:10px}.practice-mode-tabs>a{min-height:80px;padding:13px 16px}}
 
 @media(max-width:720px){.quiz-layout .quiz-summary{width:100%;align-self:stretch}}
+
+/* Search results share the body scale and show their matching context. */
+.search-result strong{display:block;font-size:var(--text-body);font-weight:600}
+.search-result .search-snippet{display:block;font-size:var(--text-meta);line-height:1.7;color:var(--ink);margin-top:5px;overflow-wrap:anywhere}
+.search-count{font-size:var(--text-meta);color:var(--muted);margin:0 0 8px}

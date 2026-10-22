@@ -56,3 +56,6 @@ The knowledge map is data-driven: 12 topics across two sessions, 36 targeted exp
 
 ## Typography and concise copy
 Shared semantic type roles cover both courses, source guides, workbook and knowledge map: 16px reading text and answer inputs, 13px metadata, 14px controls, and consistent serif heading levels. Source indexes use native collapsible sections; course tasks remain visible. Repeated instructions and editorial filler are shortened while retaining topic details, numbers, conditions, examples, workbook prompts and storage keys.
+
+## Overall usability review · 2026-10-23
+Knowledge search indexes the canonical integrated reading sections, including Chinese and English terminology, and shows contextual excerpts. Matching results open the relevant heading, including within the current unit. Both course overview buttons change to review mode after all units are read. Quiz answers, resets, reading markers and course tasks report failed storage writes and keep their prior state for retry. Explanation exercises show save status. The skip link keeps the current route; route navigation focuses the reading content, and shared dialogs have accessible names. Study records still remain in the current browser; backup/restore and finer topic coverage are future improvements.
