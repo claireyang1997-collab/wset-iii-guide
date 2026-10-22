@@ -403,3 +403,32 @@ kbd{font-size:var(--text-eyebrow);line-height:1.4}
 }
 
 @media(max-width:520px){.wb-tabs,.wb-entry{grid-template-columns:minmax(0,1fr)}}
+
+/* Practice choices share one scale and stay aligned within each course. */
+.practice-hub .practice-courses{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin:32px 0 0}
+.practice-course{min-width:0;padding:26px 0 0;border-top:1px solid var(--line)}
+.practice-course>.eyebrow{margin:0 0 8px}
+.practice-course>h2{font:500 var(--heading-2)/var(--leading-heading) var(--serif);margin:0 0 22px}
+.practice-activities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch}
+.practice-activity{display:flex;flex-direction:column;min-width:0;padding:20px 18px 18px;border:1px solid var(--line);border-radius:8px;background:var(--white)}
+.practice-activity h3{font:500 var(--heading-3)/var(--leading-heading) var(--serif);margin:0 0 12px}
+.practice-hub .practice-activity .practice-purpose{font:400 var(--text-body)/var(--leading-body) var(--sans);color:var(--ink);margin:0 0 14px}
+.practice-hub .practice-activity .practice-quantity,.practice-hub .practice-activity .practice-feedback{font:400 var(--text-meta)/var(--leading-meta) var(--sans);color:var(--muted);margin:0 0 8px}
+.practice-hub .practice-activity .practice-feedback{margin-bottom:22px}
+.practice-activity .primary{width:100%;min-height:48px;justify-content:center;gap:8px;margin-top:auto;padding:11px 12px;text-align:center;font:500 var(--text-control)/1.65 var(--sans)}
+.practice-read{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;color:var(--wine);font:400 var(--text-control)/1.65 var(--sans)}
+.practice-read:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* The same two modes appear on both the quiz and workbook pages. */
+.practice-mode-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;margin:24px 0 0}
+.practice-mode-tabs>a{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;min-width:0;min-height:86px;padding:14px 18px;border:1px solid var(--line);border-radius:7px;background:var(--white);color:var(--ink)}
+.practice-mode-tabs>a:hover{border-color:#aa8b91;background:#f8f1ed}
+.practice-mode-tabs>a[aria-current=page]{border-color:var(--wine);background:#f0e5e3;color:var(--wine)}
+.practice-mode-tabs strong{font:600 var(--text-control)/1.65 var(--sans)}
+.practice-mode-tabs small{font:400 var(--text-meta)/var(--leading-meta) var(--sans);color:var(--muted)}
+.practice-mode-tabs>a[aria-current=page] small{color:#775c61}
+.s2-quiz{padding-top:0}
+
+@media(max-width:900px){.practice-hub .practice-courses{grid-template-columns:minmax(0,1fr);gap:28px}}
+@media(max-width:520px){.practice-activities{grid-template-columns:minmax(0,1fr)}.practice-activity{padding:20px}.practice-course>h2{margin-bottom:18px}}
+@media(max-width:480px){.practice-mode-tabs{grid-template-columns:minmax(0,1fr);gap:10px}.practice-mode-tabs>a{min-height:80px;padding:13px 16px}}
