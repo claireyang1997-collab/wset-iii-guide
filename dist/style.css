@@ -432,3 +432,5 @@ kbd{font-size:var(--text-eyebrow);line-height:1.4}
 @media(max-width:900px){.practice-hub .practice-courses{grid-template-columns:minmax(0,1fr);gap:28px}}
 @media(max-width:520px){.practice-activities{grid-template-columns:minmax(0,1fr)}.practice-activity{padding:20px}.practice-course>h2{margin-bottom:18px}}
 @media(max-width:480px){.practice-mode-tabs{grid-template-columns:minmax(0,1fr);gap:10px}.practice-mode-tabs>a{min-height:80px;padding:13px 16px}}
+
+@media(max-width:720px){.quiz-layout .quiz-summary{width:100%;align-self:stretch}}
