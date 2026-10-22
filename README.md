@@ -44,3 +44,6 @@ Supplied textbook pages 30–46 are integrated into Session 1; pages 47–61 int
 
 ## Workbook
 Four supplied blank workbook photographs are transcribed into separate Session 1 and 2 routes (#workbook/1 and #workbook/2). Session 1: four questions (16 marks), 16 white and 10 red varieties, four fields each. Session 2: four questions (20 marks), including four harvest scenarios. Original bilingual questions and marks are preserved. No answer key supplied; optional study prompts are labelled as supplemental, not official marking guidance. Answers use separate local-browser note keys.
+
+## Integrated course structure
+The homepage is a peer course index. #session1 and #session2 open equal course records; #practice opens a shared review hub. Each of the twelve reading units now combines textbook, handout and classroom knowledge by topic. Duplicate explanations are merged; distinctive examples, conditions, numerical details and terminology are retained. Source indexes and uncertain transcript fragments remain on separate audit pages. Legacy lesson/quiz/workbook routes and browser storage keys are preserved.
