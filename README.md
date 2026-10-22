@@ -47,3 +47,6 @@ Four supplied blank workbook photographs are transcribed into separate Session 1
 
 ## Integrated course structure
 The homepage is a peer course index. #session1 and #session2 open equal course records; #practice opens a shared review hub. Each of the twelve reading units now combines textbook, handout and classroom knowledge by topic. Duplicate explanations are merged; distinctive examples, conditions, numerical details and terminology are retained. Source indexes and uncertain transcript fragments remain on separate audit pages. Legacy lesson/quiz/workbook routes and browser storage keys are preserved.
+
+## Variety workbook editor
+The 26 varieties use collapsed, searchable rows with empty/draft/completed states. Expand one to edit the original four fields, then save and close or save and continue. Inputs save drafts immediately. A complete marker requires all four nonblank fields and an explicit save; subsequent edits return the card to draft. Existing answer keys are preserved, completion metadata is stored separately with a value fingerprint, and failed saves keep the editor open with a copy-backup message. Progress and filters update without replacing active inputs. Answers remain local to the current browser.
