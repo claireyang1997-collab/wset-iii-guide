@@ -8,7 +8,7 @@ Session 1：砧木与嫁接、繁殖与品种、葡萄藤年周期、生长条�
 
 Session 2：密度与整枝、冬剪与夏剪、搭架与冠层、产量与品质、风险与栽培方式、采收与贵腐。包含 14 页讲义覆盖索引、约 1 小时 40 分钟课堂转写的主题核对、差异与待核对记录，以及独立的阅读笔记与 8 道自编小测。
 
-包含六个阅读单元、插画与图例、知识地图、自测题、课程与作业清单，以及需要回听核对的记录。
+两课共十二个阅读单元，包含插画、知识地图、自测题、课程任务和待核对记录。
 
 ## 本地预览
 
@@ -53,3 +53,6 @@ The 26 varieties use collapsed, searchable rows with empty/draft/completed state
 
 ## Knowledge logic map
 The knowledge map is data-driven: 12 topics across two sessions, 36 targeted explain/compare/apply prompts and three four-stage cross-course reasoning cases. Reading, self-assessment and all 16 linked quiz answers remain distinct; none is presented as an official mastery score. Prerequisite gaps and wrong linked quiz answers guide the next review. Self-checks require written reasoning plus explicit confirmation; editing a response clears relevant confirmations. Drafts, checks and case reasoning use new local-storage keys, preserving existing lesson/workbook records. Failed writes retain a temporary in-page draft and show a retry/backup message. Future-course directions are marked as not added and excluded from current counts. Add topic/case records to map-data.js; session filters and totals derive from the registry.
+
+## Typography and concise copy
+Shared semantic type roles cover both courses, source guides, workbook and knowledge map: 16px reading text and answer inputs, 13px metadata, 14px controls, and consistent serif heading levels. Source indexes use native collapsible sections; course tasks remain visible. Repeated instructions and editorial filler are shortened while retaining topic details, numbers, conditions, examples, workbook prompts and storage keys.
