@@ -163,8 +163,8 @@ function studyDiagram(key){
   return studyPlate(key,'VSP 与调整型：改变的是绿色冠层',`<div class="study-pair">${studyCard('VSP · 垂直新梢定位',v(false),'新梢排开，促进受光和通风。')}${studyCard('调整型 VSP',v(true),'炎热强光处，让顶部下垂产生遮阴。')}</div>`,'课本 p.52–53 · 图 6.3','示意均采用主蔓短枝骨架；VSP 也可配合头状替换长枝。它不是一种单独的永久骨架。');
  }
  if(key==='density'){
-  const v=(dense)=>studySvg(dense?'相同地块种植较多葡萄藤，株距和行距较小':'相同地块种植较少葡萄藤，株距和行距较大',`<rect x="35" y="42" width="285" height="174" fill="#e5e8d8" stroke="#b4baa5"/>`+Array.from({length:dense?4:3},(_,r)=>Array.from({length:dense?6:3},(_,c)=>`<circle cx="${dense?60+c*47:77+c*101}" cy="${dense?63+r*44:71+r*58}" r="6" fill="${P.green}"/>`).join('')).join('')+studyText(180,26,'俯视：每个点代表一株','middle',14)+studyText(180,252,dense?'更多竞争；单株空间较小':'较少竞争；单株空间较大','middle',14));
-  return studyPlate(key,'同面积比较，密度才有意义',`<div class="study-pair">${studyCard('较低密度',v(false),'缺水时减少争水；资源丰富时也可配合大树型分配长势。')}${studyCard('较高密度',v(true),'水足而土壤较贫瘠时，可与适合留芽量配合限制单株旺长。')}</div>`,'课本 p.54–56 · 讲义幻灯片 89–90','地块和点数仅作比例比较，不对应具体株／公顷。行距还要允许所用机械通行。');
+  const v=(dense)=>{const x=dense?60:77,x2=dense?107:178,y=dense?63:71,y2=dense?107:129;return studySvg(dense?'同面积较多植株；横向标株距，纵向标行距':'同面积较少植株；横向标株距，纵向标行距',`<rect x="35" y="42" width="285" height="174" fill="#e5e8d8" stroke="#b4baa5"/>`+Array.from({length:dense?4:3},(_,r)=>Array.from({length:dense?6:3},(_,c)=>`<circle cx="${dense?60+c*47:77+c*101}" cy="${dense?63+r*44:71+r*58}" r="6" fill="${P.green}"/>`).join('')).join('')+studyText(180,26,'俯视：每个点代表一株','middle',14)+studyArrow(x,234,x2,234,P.water)+studyArrow(x2,234,x,234,P.water)+studyText((x+x2)/2,256,'株距','middle',14)+studyArrow(332,y,332,y2,P.water)+studyArrow(332,y2,332,y,P.water)+studyText(332,y2+24,'行距','middle',13)+studyText(180,291,dense?'更多竞争；单株空间较小':'较少竞争；单株空间较大','middle',14),310)};
+  return studyPlate(key,'同面积比较，密度才有意义',`<div class="study-pair">${studyCard('较低密度',v(false),'缺水时减少争水；资源丰富时也可配合大树型分配长势。')}${studyCard('较高密度',v(true),'水足而土壤较贫瘠时，可与适合留芽量配合限制单株旺长。')}</div>`,'课本 p.54–56 · 讲义幻灯片 89–90','两块地的面积相同。横向箭头是同一行内的株距，纵向箭头是两行之间的行距；此处两者均作改变，密度也可只通过改变其中之一调整。点数不对应具体株／公顷，行距还须允许所用机械通行。');
  }
  return '';
 }

@@ -472,3 +472,6 @@ main[tabindex="-1"]:focus{outline:none}
 @container(min-width:720px){.study-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.study-grid.three .study-card{display:block}.study-grid.three .study-card>p{margin:12px 4px 0}}
 @media(max-width:980px){.book-reading{grid-template-columns:180px minmax(0,1fr);gap:28px}.book-sidebar summary{font-size:14px}.book-sidebar li a{font-size:13px}}
 @media(max-width:760px){.book-reading{display:block;padding-top:25px}.book-sidebar{position:static;max-height:none;padding:0;margin-bottom:25px}.book-reading .lesson-content{max-width:none}.study-pair{grid-template-columns:1fr}}
+
+/* Beginner reading: retain the journal type scale; examples explain one concrete step. */
+.reading-bridge{color:var(--ink)}.reading-example{border-left:3px solid #a5ad8b;padding:4px 0 4px 20px;margin:26px 0}.reading-example>strong{font-size:16px;color:var(--ink)}.reading-example p{margin:12px 0;font-size:16px;line-height:1.9}.practice-chapter-links{display:flex;flex-wrap:wrap;gap:10px 25px}.km-pitfall ul{margin:8px 0 0;padding-left:21px}.km-pitfall li{margin:7px 0;line-height:1.85}@media(max-width:760px){.reading-example{padding-left:15px}.reading-example p{font-size:15px}}
