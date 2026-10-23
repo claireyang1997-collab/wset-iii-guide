@@ -59,3 +59,8 @@ Shared semantic type roles cover both courses, source guides, workbook and knowl
 
 ## Overall usability review · 2026-10-23
 Knowledge search indexes the canonical integrated reading sections, including Chinese and English terminology, and shows contextual excerpts. Matching results open the relevant heading, including within the current unit. Both course overview buttons change to review mode after all units are read. Quiz answers, resets, reading markers and course tasks report failed storage writes and keep their prior state for retry. Explanation exercises show save status. The skip link keeps the current route; route navigation focuses the reading content, and shared dialogs have accessible names. Study records still remain in the current browser; backup/restore and finer topic coverage are future improvements.
+
+## Reading navigation and teaching figures
+Each reading unit has a compact sticky topic navigator. The current topic follows scrolling; its dropdown highlights the active section, closes after a jump, supports Escape and outside dismissal, and transfers keyboard focus to the destination heading. Route changes release scroll, resize and document listeners. The same 68 heading anchors remain valid for search and old links.
+
+Composite illustrations are displayed as focused panels beside the matching explanation rather than repeated full sheets. Topic labels and captions identify structures, colors, arrows and the link to the paragraph. The annual cycle is shown as six individually named stages. Four numbered markers identify the shoot's leaf, tendril, inflorescence and bud. Original illustration assets are reused through CSS viewports; course knowledge, tables, source indexes and study storage keys are retained.
