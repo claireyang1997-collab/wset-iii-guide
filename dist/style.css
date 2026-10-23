@@ -443,3 +443,5 @@ kbd{font-size:var(--text-eyebrow);line-height:1.4}
 /* Species names need their natural width; descriptions use the remaining space. */
 .species-comparison{min-width:620px}
 .species-comparison tr>:first-child{width:1%;white-space:nowrap}
+
+main[tabindex="-1"]:focus{outline:none}
