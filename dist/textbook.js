@@ -22,7 +22,7 @@ function enrichTextbook(){
 function textbookIndex(session){
  const unitNames={roots:'砧木与嫁接',propagation:'繁殖与品种',cycle:'葡萄藤年周期',needs:'生长条件与风险',climate:'气候与天气',soil:'地形与土壤',training:'密度与整枝',pruning:'冬剪与年周期',canopy:'搭架与冠层',balance:'产量与品质',health:'病虫害与栽培',harvest:'成熟与采收'};const rows=[];for(let page=session===1?30:47;page<=(session===1?46:61);page++){
  const rs=textbookRecords.filter(r=>r.page===page&&r.session===session);
- rows.push([String(page),rs.map(r=>r.title).join('；'),[...new Set(rs.map(r=>r.unit))].map(unit=>`<a href="${session===1?'#lesson/':'#session2/'}${unit}">${unitNames[unit]} ↗</a>`).join('；')]);
+ rows.push([String(page),rs.map(r=>r.title).join('；'),bookPageLinks(page)]);
  }
- return `<details class="textbook-source audit-fold"><summary><strong>课本逐页核对</strong><span>${session===1?'第4—5章 · p.30—46':'第6章 · p.47—61'}</span></summary><div class="audit-body">${table(['课本页','主题','阅读单元'],rows)}<details class="audit-subfold"><summary>配图索引</summary>${table(['原图号／页','主题','图解内容'],textbookFigures.filter(f=>f[0]===session).map(f=>[f[1]+' / '+f[2],f[4],`<a href="${session===1?'#lesson/':'#session2/'}${f[3]}">${f[6]}</a>`]))}</details><p class="fine">两课共32页、22个图号已建索引；原始录音待核听。未提供章节不在核对范围。</p></div></details>`;
+ return `<details class="textbook-source audit-fold"><summary><strong>课本逐页核对</strong><span>${session===1?'第4—5章 · p.30—46':'第6章 · p.47—61'}</span></summary><div class="audit-body">${table(['课本页','主题','阅读单元'],rows)}<details class="audit-subfold"><summary>配图索引</summary>${table(['原图号／页','主题','对应知识与图示'],textbookFigures.filter(f=>f[0]===session).map(f=>[f[1]+' / '+f[2],f[4],bookFigureLink(f)]))}</details><p class="fine">两课共32页、22个图号已建索引；原始录音待核听。未提供章节不在核对范围。</p></div></details>`;
 }

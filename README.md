@@ -1,66 +1,43 @@
 # WSET Ⅲ 通关指南
 
-葡萄酒期刊风格的个人学习站点，用于整理 WSET 三级课程讲义、课堂笔记与复习练习。
+个人葡萄酒学习站点。知识正文按已提供课本第 4、5、6 章组织，讲义与课堂转写中的独有解释和例子合入对应主题。
 
-## 当前内容
+## 内容结构
 
-Session 1：砧木与嫁接、繁殖与品种、葡萄藤年周期、生长条件与风险、气候与天气、地形与土壤。
+- 第 4 章「葡萄藤」：结构、葡萄种与品种、繁殖、根瘤蚜与嫁接，另附讲义品种表。
+- 第 5 章「生长环境」：生长条件、热量、阳光、水分、气候、土壤与养分。
+- 第 6 章「葡萄园管理」：选址栽种、年周期、整枝修剪、冠层、密度、产量、病虫害、栽培方式和采收。
 
-Session 2：密度与整枝、冬剪与夏剪、搭架与冠层、产量与品质、风险与栽培方式、采收与贵腐。包含 14 页讲义覆盖索引、约 1 小时 40 分钟课堂转写的主题核对、差异与待核对记录，以及独立的阅读笔记与 8 道自编小测。
+共 21 个阅读单元。完整年周期和木龄各有固定位置；正文不再按 Session 1、2 重复编排。
 
-两课共十二个阅读单元，包含插画、知识地图、自测题、课程任务和待核对记录。
+`#chapter/4`、`#chapter/5`、`#chapter/6` 为章目录；`#read/章节/单元` 为正文。历史阅读链接会解析到相应新章节。搜索只索引新正文。
 
-## 本地预览
+`#practice` 保留原课程练习身份：两课各 8 道自编选择题；练习册含 8 道原题，第一课另有 16 个白葡萄、10 个红葡萄填写表。原机构答案尚未提供，自查提示不是官方评分细则。
 
-站点是原生 HTML、CSS 与 JavaScript，无需安装依赖或构建。
+## 图示
 
-```sh
-python3 -m http.server 8000 --directory dist
-```
+`dist/study-diagrams.js` 绘制有明确课本／讲义依据的 SVG 教学图。整枝与修剪分别比较课本图 6.3 的三种冬季／夏季结构，Sylvoz 按讲义单列。标明多年生木、一年生木和当年新梢。此前混合了采收等无关内容的拼图已从阅读正文与知识地图撤下。
 
-在浏览器打开 http://localhost:8000 。也可以直接打开 `dist/index.html`。
+图用于说明结构和机制；省略的芽梢、比例、示意曲线等均有图注。原始课本照片、讲义和完整课堂转写不公开上传。
 
-## 文件结构
+## 学习记录
 
-- `dist/index.html`：页面入口
-- `dist/style.css`：版式与响应式样式
-- `dist/app.js`：页面路由、阅读单元、自测与交互
-- `dist/supplement.js`：Session 1 补充内容与来源索引
-- `dist/session2.js`：Session 2 内容、目录、自测与来源索引
-- `dist/assets/`：插画与图标
+笔记、练习册答案、阅读进度及知识地图自查保存在当前浏览器，不跨设备同步。原 Session 阅读进度保留；新章节另存阅读进度，不把旧课程已读直接认定为新章节已读。旧笔记显示在对应新单元下方，原答案键不变。
 
-阅读进度、笔记与作业勾选保存在当前浏览器的 localStorage 中；不同浏览器与域名之间不自动同步。
+## 文件
 
-## 内容维护
+- `dist/index.html`：入口与脚本顺序
+- `dist/book-data.js`：按课本顺序的正文、旧链接映射和内容迁移记录
+- `dist/book.js`：章节目录、阅读、原笔记与阅读进度
+- `dist/study-diagrams.js`：依据参考材料的图示
+- `dist/style.css`：版式、响应式目录与图文布局
+- `dist/app.js`：路由、搜索、选择自测与通用保存
+- `dist/workbook.js`：原课程练习册及品种编辑器
+- `dist/map-data.js`、`dist/knowledge-map.js`：稳定知识主题、自查和选择题证据
+- `dist/supplement.js`、`dist/session2.js`、`dist/textbook.js`、`dist/integrated-session*.js`：历史资料索引、原题与迁移基底；旧正文不作为独立阅读入口展示
 
-编辑 `dist/` 后刷新页面即可。补充新课程时应对照讲义和课堂记录逐项核查，保留来源标注，并将不确定内容标记为待核对。
+## 预览与部署
 
-本站为个人学习资料整理，非 WSET 官方网站。课程资料与相关商标的权利归各自权利人所有。原始讲义、录音及其完整转写不包含在本源码包中。考试要求应以报考时的官方及授课机构通知为准。
+原生 HTML、CSS、JavaScript，无构建依赖。可用静态服务器预览 `dist/`。Cloudflare Workers Static Assets 从 `./dist` 部署，GitHub main 更新触发构建。
 
-
-## Official textbook update · 2026-10-22
-
-Supplied textbook pages 30–46 are integrated into Session 1; pages 47–61 into Session 2. Both source pages contain page-by-page and figure-by-figure indexes (22 original figure references). Content is paraphrased, with new teaching illustrations; original textbook photographs and transcripts are not published. Page 30 has been supplied and integrated into the Session 1 structure and roots units. External chapter references and unclear classroom audio remain unverified. Existing per-session progress and notes are preserved.
-
-## Workbook
-Four supplied blank workbook photographs are transcribed into separate Session 1 and 2 routes (#workbook/1 and #workbook/2). Session 1: four questions (16 marks), 16 white and 10 red varieties, four fields each. Session 2: four questions (20 marks), including four harvest scenarios. Original bilingual questions and marks are preserved. No answer key supplied; optional study prompts are labelled as supplemental, not official marking guidance. Answers use separate local-browser note keys.
-
-## Integrated course structure
-The homepage is a peer course index. #session1 and #session2 open equal course records; #practice opens a shared review hub. Each of the twelve reading units now combines textbook, handout and classroom knowledge by topic. Duplicate explanations are merged; distinctive examples, conditions, numerical details and terminology are retained. Source indexes and uncertain transcript fragments remain on separate audit pages. Legacy lesson/quiz/workbook routes and browser storage keys are preserved.
-
-## Variety workbook editor
-The 26 varieties use collapsed, searchable rows with empty/draft/completed states. Expand one to edit the original four fields, then save and close or save and continue. Inputs save drafts immediately. A complete marker requires all four nonblank fields and an explicit save; subsequent edits return the card to draft. Existing answer keys are preserved, completion metadata is stored separately with a value fingerprint, and failed saves keep the editor open with a copy-backup message. Progress and filters update without replacing active inputs. Answers remain local to the current browser.
-
-## Knowledge logic map
-The knowledge map is data-driven: 12 topics across two sessions, 36 targeted explain/compare/apply prompts and three four-stage cross-course reasoning cases. Reading, self-assessment and all 16 linked quiz answers remain distinct; none is presented as an official mastery score. Prerequisite gaps and wrong linked quiz answers guide the next review. Self-checks require written reasoning plus explicit confirmation; editing a response clears relevant confirmations. Drafts, checks and case reasoning use new local-storage keys, preserving existing lesson/workbook records. Failed writes retain a temporary in-page draft and show a retry/backup message. Future-course directions are marked as not added and excluded from current counts. Add topic/case records to map-data.js; session filters and totals derive from the registry.
-
-## Typography and concise copy
-Shared semantic type roles cover both courses, source guides, workbook and knowledge map: 16px reading text and answer inputs, 13px metadata, 14px controls, and consistent serif heading levels. Source indexes use native collapsible sections; course tasks remain visible. Repeated instructions and editorial filler are shortened while retaining topic details, numbers, conditions, examples, workbook prompts and storage keys.
-
-## Overall usability review · 2026-10-23
-Knowledge search indexes the canonical integrated reading sections, including Chinese and English terminology, and shows contextual excerpts. Matching results open the relevant heading, including within the current unit. Both course overview buttons change to review mode after all units are read. Quiz answers, resets, reading markers and course tasks report failed storage writes and keep their prior state for retry. Explanation exercises show save status. The skip link keeps the current route; route navigation focuses the reading content, and shared dialogs have accessible names. Study records still remain in the current browser; backup/restore and finer topic coverage are future improvements.
-
-## Reading navigation and teaching figures
-Each reading unit has a compact sticky topic navigator. The current topic follows scrolling; its dropdown highlights the active section, closes after a jump, supports Escape and outside dismissal, and transfers keyboard focus to the destination heading. Route changes release scroll, resize and document listeners. The same 68 heading anchors remain valid for search and old links.
-
-Composite illustrations are displayed as focused panels beside the matching explanation rather than repeated full sheets. Topic labels and captions identify structures, colors, arrows and the link to the paragraph. The annual cycle is shown as six individually named stages. Four numbered markers identify the shoot's leaf, tendril, inflorescence and bud. Original illustration assets are reused through CSS viewports; course knowledge, tables, source indexes and study storage keys are retained.
+本站为个人学习整理，非 WSET 官方网站。课本范围为用户已提供 p.30–61；原始录音尚未完整核听，转写中的不清片段保留于资料索引。
