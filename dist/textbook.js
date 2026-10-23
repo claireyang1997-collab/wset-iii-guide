@@ -5,7 +5,7 @@ const textbookFigures=[[1, "4.1", 31, "cycle", "葡萄藤结构", "botany", "1�
 function textbookPlate(key){
  const paths={botany:'assets/textbook-botany.webp',environment:'assets/textbook-environment.webp',management:'assets/textbook-management.webp',cases:'assets/textbook-cases.webp',needs:'assets/needs-editorial.webp',cycle:'assets/cycle-editorial.webp',latitude:'assets/textbook-latitude.svg'};
  const titles={botany:'植物结构、繁殖与成熟',environment:'环境调节与葡萄园防护',management:'从冬季结构到夏季作业',cases:'两种环境，两套管理选择',needs:'五个生长条件',cycle:'一年中的生长阶段',latitude:'同量太阳能，不同的分布面积'};
- return `<figure class="textbook-plate"><a href="${paths[key]}" target="_blank" rel="noopener" aria-label="放大${titles[key]}"><img loading="lazy" src="${paths[key]}" alt="${titles[key]}教学插画，详解见下方图号说明"></a><figcaption>${titles[key]} · 点击放大。教学重绘，非原书照片。</figcaption></figure>`;
+ return `<figure class="textbook-plate"><img loading="lazy" src="${paths[key]}" alt="${titles[key]}教学插画，详解见下方图号说明"><figcaption>${titles[key]} · 教学重绘，非原书照片。</figcaption></figure>`;
 }
 function textbookBlock(session,unit){
  const entries=textbookRecords.filter(r=>r.session===session&&r.unit===unit);
