@@ -90,7 +90,7 @@ function render(){
  cleanupUnitOutline();
  const raw=location.hash.slice(1)||'home',hash=bookCanonicalRoute(raw),parts=hash.split('/'),route=parts[0];
  if(hash!==raw&&typeof history!=='undefined')history.replaceState(null,'','#'+hash);
- const view=route==='chapter'?bookChapterView(parts[1]):route==='read'?bookReadView(parts[1],parts[2]):route==='practice'?practiceHub():route==='workbook'?workbookView(parts[1]):route==='session2quiz'?s2Quiz():route==='session2sources'?s2Sources():route==='map'?mapView():route==='quiz'?quizView():route==='guide'?guideView():bookHome();
+ const view=route==='review'?bookReviewView(parts[1]):route==='chapter'?bookChapterView(parts[1]):route==='read'?bookReadView(parts[1],parts[2]):route==='practice'?practiceHub():route==='workbook'?workbookView(parts[1]):route==='session2quiz'?s2Quiz():route==='session2sources'?s2Sources():route==='map'?mapView():route==='quiz'?quizView():route==='guide'?guideView():bookHome();
  $('#app').innerHTML=view;
  document.querySelectorAll('[data-nav]').forEach(a=>{const yes=a.dataset.nav===(['practice','quiz','session2quiz','workbook'].includes(route)?'practice':route==='map'?'map':'home');a.classList.toggle('active',yes);if(yes)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  const unit=route==='read'?bookUnits.find(u=>u.chapter===Number(parts[1])&&u.id===parts[2]):null,ch=bookChapters.find(c=>c.id===Number(parts[1]));

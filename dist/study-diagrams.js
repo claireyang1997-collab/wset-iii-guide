@@ -32,16 +32,92 @@ function studyVine(kind,summer=false){
  return t;
 }
 function studyWoodLegend(){return `<div class="study-legend"><span><i style="background:${studyPalette.wood}"></i>多年生木：主干、干臂／主蔓</span><span><i style="background:${studyPalette.cane}"></i>一年生木：长枝／短枝</span><span><i style="background:${studyPalette.green}"></i>当年新梢：长叶、开花结果</span></div>`}
+function studyCut(x,y){return studyPath(`M${x-8} ${y-6}l16 12M${x-8} ${y+6}l16 -12`,'#a74e56',3)}
+function studyOperationsDiagram(key){
+ const P=studyPalette,card=(title,svg,text)=>studyCard(title,studySvg(title,svg),text),pair=cards=>`<div class="study-pair">${cards.join('')}</div>`,steps=cards=>`<div class="study-grid three study-steps">${cards.join('')}</div>`;
+ if(key==='wood-renewal')return studyPlate(key,'同一根枝条，跨年后名称怎样变？',studyWoodLegend()+steps([
+ card('① 生长季：当年新梢',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.cane,6)+studyShoot(126,173,115,true,0)+studyText(224,94,'绿色新梢')+studyArrow(219,99,137,112),'绿色枝是当年新梢，叶与果串长在它上面；下方赭色枝是它萌发时所在的一年生木。'),
+ card('② 木质化后：一年生木',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.wood,7)+studyPath('M126 173V58',P.cane,5)+[84,112,140].map(y=>studyBud(131,y)).join('')+studyText(221,94,'芽仍留在枝上')+studyArrow(217,101,139,112),'同一根新梢木质化，到次年春季称为一年生木。图中赭色直枝保留芽，落叶不代表芽消失。'),
+ card('③ 下一春：芽萌发新梢',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.wood,7)+studyPath('M126 173V106',P.cane,5)+studyShoot(126,117,68,true,52)+studyText(219,102,'下一年的新梢')+studyArrow(216,110,158,79),'下一年的绿色结果新梢从保留的一年生木上的芽萌发；光秃木枝本身不会直接长出一串葡萄。')
+ ]),'课本 p.30–31 · 讲义幻灯片 103、112','示意聚焦同一部位的跨年变化；进入下一年，较早的木质结构也随之增加木龄。');
+ if(key==='spur-renewal'){
+ const base=studyGround(232)+studyPath('M75 231V186H294',P.wood,12)+studyPath('M170 186V160',P.wood,7);
+ return studyPlate(key,'短枝修剪：截短的是新的一年生枝',studyWoodLegend()+steps([
+ card('① 冬剪前',base+studyPath('M170 164L142 61M170 164L235 55',P.cane,5)+[0,1,2,3].map(i=>studyBud(171-i*6,147-i*23)+studyBud(184+i*16,147-i*25)).join('')+studyText(30,30,'上一季长出的枝已木质化'),'主蔓上一个结果部位的局部图：上方赭色长枝由上一季新梢木质化而来；下方深棕色主蔓继续保留。'),
+ card('② 选择、截短',base+studyPath('M170 164L159 124',P.cane,5)+studyBud(171,149)+studyBud(165,130)+studyPath('M159 124L142 61M170 164L235 55','#c8b5a5',3,'5 5')+studyCut(158,120)+studyCut(180,151)+studyText(30,30,'红叉：剪除；虚线：将移除'),'选择适合的枝，剪短到通常2–3芽，并去掉多余枝。图示保留2芽；不能把整根多年生主蔓也剪掉。'),
+ card('③ 冬剪后',base+studyPath('M170 164L159 124',P.cane,5)+studyBud(171,149)+studyBud(165,130)+studyText(30,30,'留下新的一年生短枝')+studyText(180,265,'下个生长季由保留芽萌发','middle'),'留下的是今年新形成的一年生短枝，不是让同一根短枝永远不更新；来春芽再长出绿色新梢。')
+ ]),'课本 p.51–52 · 讲义幻灯片 102–106 · 课堂 15:57–25:08','这是单个结果部位的更新示意，省略相邻部位；枝条选择与实际剪口须结合具体系统。');
+ }
+ if(key==='cane-renewal'){
+ const trunk=studyGround(232)+studyPath('M86 231V169',P.wood,14),candidate=studyPath('M87 169L136 63',P.cane,5)+[0,1,2,3].map(i=>studyBud(103+i*10,145-i*23)).join('');
+ return studyPlate(key,'替换长枝：旧结果枝退出，新枝接替',studyWoodLegend()+steps([
+ card('① 冬剪前辨认两代枝',trunk+studyPath('M88 176H312',P.wood,7)+[180,238,296].map(x=>studyPath(`M${x} 176V82`,P.cane,4)+studyBud(x+5,110)).join('')+candidate+studyPath('M80 170L54 104',P.cane,5)+studyText(24,29,'右侧：上一轮用过的结果长枝'),'右侧横枝上一轮已承载绿色结果新梢，如今连同其上枝条准备剪除。主干附近选留新的、已木质化的一年生枝。'),
+ card('② 去旧、留新',trunk+studyPath('M99 176H312','#c8b5a5',4,'5 5')+studyCut(101,176)+candidate+studyPath('M80 170L69 143',P.cane,5)+studyBud(75,151)+studyBud(72,140)+studyText(24,29,'新长枝 ＋ 更新短枝'),'剪去上一轮用过的结果长枝；图示另留一条新结果长枝和一条更新短枝，后者为之后继续更新提供新梢。'),
+ card('③ 弯绑新结果长枝',trunk+studyPath('M86 170Q143 179 308 175',P.cane,5)+[111,139,167,195,223,251,279,303].map(x=>studyBud(x,170)).join('')+studyPath('M80 169L69 143',P.cane,5)+studyBud(75,151)+studyBud(72,140)+studyPath('M35 181H329','#a6ad9d',1)+studyText(24,29,'横绑的是新的一年生长枝'),'将选留的新结果长枝绑到铁丝上，使芽分布开；主干长期保留，水平结果长枝逐年替换。图示单居由。')
+ ]),'课本 p.52 · 讲义幻灯片 109–112 · 课堂视频 1:34:18–1:34:33','淡色虚线表示剪除部分；图示说明枝条代际关系，不代表整株统一留芽数。');
+ }
+ if(key==='guyot'){
+ const v=double=>{const b=studyGround(231)+studyPath('M180 230V165',P.wood,13)+studyPath('M30 176H330','#a6ad9d',1);return b+studyPath('M180 165Q222 174 312 171',P.cane,5)+(double?studyPath('M180 165Q138 174 48 171',P.cane,5):'')+[202,229,256,283,308,...(double?[52,79,106,133,158]:[])].map(x=>studyBud(x,167)).join('')+studyPath('M174 166L161 142',P.cane,5)+studyBud(164,147)+studyText(180,54,double?'两条结果长枝，向两侧绑':'一条结果长枝','middle')};
+ return studyPlate(key,'单居由与双居由：看结果长枝条数',studyWoodLegend()+pair([
+ card('单居由 Single Guyot',v(false),'头状替换长枝系统中，图示保留一条一年生结果长枝。短的更新枝不计作第二条结果长枝。'),
+ card('双居由 Double Guyot',v(true),'图示向两侧各绑一条一年生结果长枝；两条都须逐年更新，仍没有永久水平主蔓。')
+ ]),'课本 p.52 · 单居由／双居由','图中芽数仅帮助识别，不用于规定总负载；双居由也不意味着酒质必然更高或产量必然翻倍。');
+ }
+ if(key==='bud-fruitfulness')return studyPlate(key,'芽会不会萌发，与新梢能否结果，是两件事',studyWoodLegend()+pair([
+ card('基部芽也可能萌发',studyPath('M70 231V176',P.wood,12)+studyPath('M70 176H312',P.cane,6)+studyShoot(100,176,101,false,0)+studyBud(197,171)+studyBud(291,171)+studyText(180,31,'示意：基部芽萌发，但新梢无果','middle',14),'左端靠近枝条基部的芽已长出绿色新梢，图示没有果串。“结果力低”说的是较少产生结果新梢，不能直接改写为“芽不会发”。'),
+ card('较远芽的结果潜力',studyPath('M70 231V176',P.wood,12)+studyPath('M70 176H312',P.cane,6)+studyBud(100,171)+studyShoot(197,176,101,true,0)+studyBud(291,171)+studyText(180,31,'示意：较远芽长出带果新梢','middle',14),'对于基部芽结果力较低的品种，保留较长一年生枝可保留更远位置的芽；具体是否适合，还要看品种、芽结果力和目标负载。')
+ ]),'课堂 23:16–24:10、29:36–31:41 · 短枝与长枝的选择','此图只解释两个概念的区别，不能据此推断所有品种的每个芽都按同样模式结果；转写不清的品种名称未填入。');
+ if(key==='summer-actions'){
+ const shoot=studyPath('M180 231V202',P.wood,10)+studyShoot(180,202,149,true,0);
+ return studyPlate(key,'冠层操作：先看剪的是哪里',steps([
+ card('修剪树冠 Trimming',shoot+studyCut(180,88)+studyPath('M180 85V48','#a74e56',3,'4 4')+studyText(25,28,'处理超出目标冠层的新梢顶端'),'图中红叉位于新梢上段：控制过长枝叶和冠层体积。它不是移除葡萄果串的摘青，也不是冬季留芽。'),
+ card('果区摘叶 Leaf removal',shoot+`<ellipse cx="180" cy="163" rx="44" ry="34" fill="none" stroke="#a74e56" stroke-width="2" stroke-dasharray="4 4"/>`+studyText(25,28,'按需要去掉果区部分叶片'),'红圈标出果区附近叶片：改善果串受光、通风与喷药覆盖；炎热强光处要保留适当遮阴，避免过度暴露。'),
+ card('疏除多余新梢 Shoot thinning',studyPath('M180 231V181',P.wood,10)+studyPath('M120 181H244',P.cane,6)+studyShoot(145,181,100,true,-10)+studyShoot(216,181,100,true,10)+studyCut(215,170)+studyText(25,28,'从基部去掉不需要的新梢'),'红叉靠近其中一根新梢的基部：减少拥挤与相互遮蔽；处理对象是整根新梢，区别于只剪顶端或只摘叶。')
+ ]),'课本 p.51–53 · 讲义幻灯片 98–100、117','这些操作改变绿色冠层；永久骨架属于整枝，冬季保留一年生枝与芽属于冬剪。不能把所有操作都写成“剪掉一些东西”。');
+ }
+ if(key==='green-harvest')return studyPlate(key,'摘青：减的是果串，时机也重要',pair([
+ card('摘青前：评估果实负载',studyPath('M180 235V201',P.wood,10)+studyShoot(180,201,150,false,0)+studyBerries(145,155,'#8ea36d')+studyBerries(191,126,'#8ea36d')+studyBerries(152,99,'#8ea36d')+studyText(24,28,'绿色果串＝尚未完全成熟'),'结合叶幕供糖、资源和目标风格，判断果实负载是否超过成熟能力。果串多并不自动等于质量差。'),
+ card('摘青后：保留部分果串',studyPath('M180 235V201',P.wood,10)+studyShoot(180,201,150,false,0)+studyBerries(191,126,'#8ea36d')+studyPath('M143 151L165 175','#a74e56',2,'4 4')+studyCut(150,160)+studyText(24,28,'去掉部分果串，叶幕仍保留'),'摘青直接减少部分果串，而摘叶处理的是叶片。过早可能由剩余果粒膨大补偿；太晚又可能改善成熟有限，并增加人工成本。')
+ ]),'课本 p.54 · 讲义幻灯片 119–120 · 课堂 52:29–54:06','课堂以转色前后帮助理解时点；是否摘青和具体时机须按负载、品种及园地判断，不能理解为每年必须执行。');
+ if(key==='aspect'){
+ const v=north=>`<circle cx="${north?278:82}" cy="53" r="22" fill="#d6bb79"/>`+studyPath('M35 204L180 110L325 204','#a2ad8a',3)+studyArrow(north?263:97,83,north?234:126,149,P.cane)+studyText(58,241,'北侧')+studyText(267,241,'南侧')+studyText(180,29,north?'太阳偏南':'太阳偏北','middle')+studyText(north?268:89,182,north?'朝南坡':'朝北坡','middle');
+ return studyPlate(key,'坡向：先判断半球，再找朝赤道的坡',pair([
+ card('北半球',v(true),'右侧朝南坡面朝向赤道，通常获得较多太阳能；凉爽产区可借此增加热量。左侧是同一山坡的朝北面。'),
+ card('南半球',v(false),'左侧朝北坡面朝向赤道，通常获得较多太阳能。不能把北半球“朝南有利”的判断原样搬来。')
+ ]),'课本 p.39 · 讲义 p.17','横剖面示意，不是地形图；效果还取决于纬度、季节、坡度、云、风和遮挡，热区未必追求最大受热。');
+ }
+ if(key==='frost-tools')return studyPlate(key,'四类春霜对策：作用机制各不同',pair([
+ card('加热器 Heaters',studyGround(225)+`<rect x="153" y="142" width="52" height="80" rx="4" fill="#b49472"/>`+studyPath('M162 117Q147 97 162 73M182 117Q167 97 182 73M202 117Q187 97 202 73',P.cane,3)+studyText(180,41,'燃烧 → 向周围供热','middle'),'提高附近空气温度；设备、燃料与人工都有成本。示意的热源不能替代冬季埋土保护木质结构。'),
+ card('风机 Wind machines',`<rect x="24" y="45" width="312" height="44" fill="#e9dac0"/><rect x="24" y="178" width="312" height="46" fill="#c7d8dc"/>`+studyPath('M180 226V104',P.line,7)+studyPath('M150 99H210M180 69V129',P.line,5)+studyArrow(243,80,243,183,P.water)+studyText(37,72,'上层较暖')+studyText(38,205,'近地较冷'),'把上方较暖空气与近地冷空气混合。需要存在可利用的暖空气层，不能假设所有霜冻天气都有效。'),
+ card('防霜喷灌 Sprinklers',studyPath('M180 226V161',P.wood,9)+studyShoot(180,161,80,false,0)+studyPath('M65 221V102',P.water,4)+studyPath('M65 102Q133 48 252 133',P.water,2,'4 5')+studyText(180,39,'水持续结冰 → 释放潜热','middle'),'关键是持续结冰释放潜热来保护组织，不是冰本身发热；需要专门设计、正确持续运行及足够水源。'),
+ card('园地设计与整枝',`<path d="M28 138L133 115L257 211H330" fill="none" stroke="#9ca882" stroke-width="3"/>`+studyArrow(164,105,216,158,P.water)+studyPath('M111 128V59',P.wood,9)+studyBud(116,63)+studyText(180,35,'排冷通道 ＋ 较高结果部位','middle')+studyText(270,245,'避开积冷洼地','middle'),'选址和园地布局帮助冷空气排走；较高主干可使嫩芽远离最冷近地层。这是在规划与结构上降低暴露。')
+ ]),'课本 p.39–40 · 图 5.4、5.5','四图说明各自机制；工具是否合适取决于霜冻类型、地形、供水、能源及成本。');
+ if(key==='pest-pathways')return studyPlate(key,'病虫害：先找受害部位，再看后果',steps([
+ card('根系受害',studyGround(120)+studyPath('M180 120V69',P.wood,8)+studyPath('M180 120L125 208M180 120L228 208M180 156L181 229',P.wood,4)+`<circle cx="144" cy="177" r="20" fill="none" stroke="#a74e56" stroke-width="2"/>`+studyText(180,36,'地下吸收功能受损','middle'),'根瘤蚜或线虫伤根，可降低水分与养分吸收；部分线虫还能传播病毒。抗性砧木和健康材料针对地下风险。'),
+ card('叶片受害',`<g transform="translate(180 210) scale(4.5)">${studyLeaf(0,0)}</g>`+`<circle cx="171" cy="148" r="20" fill="none" stroke="#a74e56" stroke-width="2"/>`+studyText(180,36,'叶片功能受损','middle'),'昆虫、螨类或叶片病害影响叶面积与光合作用，间接妨碍果实成熟。图示只定位部位，不能据此诊断具体病。'),
+ card('果实受害',`<g transform="translate(90 76) scale(5)">${studyBerries(0,0)}</g>`+`<circle cx="171" cy="121" r="23" fill="none" stroke="#a74e56" stroke-width="2"/>`+studyText(180,36,'损失果实与健康度','middle'),'鸟啄、昆虫取食及真菌腐烂会直接损伤果实；伤口也可增加后续腐烂风险。防鸟网、监测与针对性防治各有用途。')
+ ]),'课本 p.57–58 · 讲义幻灯片 123–128','红圈是受害部位示意，不是病斑照片。冠层通风有助减少部分真菌压力，不能治愈病毒或细菌感染。');
+ return '';
+}
 function studyCard(title,svg,text){return `<div class="study-card">${title?`<h4>${title}</h4>`:''}${svg}${text?`<p>${text}</p>`:''}</div>`}
 function studyPlate(key,title,inside,reference,caption=''){return `<figure id="study-${key}" class="study-plate" data-study-figure="${key}"><div class="study-plate-head"><strong>${title}</strong><span>${reference}</span></div>${inside}${caption?`<figcaption>${caption}</figcaption>`:''}</figure>`}
 function studyTrainingComparison(){
  const examples=[['head-spur','头状 × 短枝','Bush / Gobelet','顶部短干臂是多年生木；其上保留带 2–3 芽的一年生短枝。夏季新梢自然展开，可形成遮阴。'],['head-cane','头状 × 替换长枝','Guyot · 居由式','横着绑的是一年生结果长枝（图示单居由），通常保留 1–2 条，每条约 8–20 芽，并逐年替换；永久主干保留。'],['cordon','主蔓 × 短枝','Midwire cordon','粗的水平木臂是长久保留的主蔓；上面分布一年生短枝，新梢可向上定位。']];
- const rows=examples.map(([kind,name,en,desc])=>`<article class="study-example"><h3>${name}<small>${en}</small></h3><div class="study-pair">${studyCard('① 冬季修剪后',studySvg(name+'冬季木质结构',studyVine(kind)), '')}${studyCard('② 转色后的冠层',studySvg(name+'夏季新梢与果串',studyVine(kind,true)), '')}</div><p>${desc}</p></article>`).join('');
- const sylvoz=`<article class="study-example"><h3>主蔓 × 长枝<small>Sylvoz · 讲义补充</small></h3><div class="study-pair">${studyCard('冬剪后的骨架',studySvg('Sylvoz：永久主蔓上保留向下弯绑的一年生长枝',studyVine('sylvoz')), '')}<div class="study-card study-reading-key"><h4>按木龄识别</h4><p><b>深棕色横臂</b>长期保留，是主蔓。</p><p><b>赭色弯枝</b>是其上保留的一年生长枝；讲义示意向下弯绑。</p><p>有长枝不等于头状整枝，关键仍是有没有永久水平主蔓。</p></div></div></article>`;
+ const winter={
+ 'head-spur':'头状短枝：深棕色主干与短干臂长期保留；赭色短枝是一年生木，每条通常留2–3芽。',
+ 'head-cane':'头状替换长枝：横绑的赭色长枝是一年生木；图示单居由。它会逐年替换，不能认作永久主蔓。',
+ 'cordon':'主蔓短枝：粗的深棕色水平臂是永久主蔓；赭色一年生短枝分布在它上面。'};
+ const summer={
+ 'head-spur':'头状短枝的夏季：绿色新梢从短枝上的芽长出，果串在新梢上；冠层自然展开，可形成遮阴。',
+ 'head-cane':'头状长枝的夏季：横绑长枝上的芽萌发绿色结果新梢；向上定位的是新梢，下面长枝仍是一年生结果母枝。',
+ 'cordon':'主蔓短枝的夏季：短枝上的芽长出绿色结果新梢；永久主蔓保留，新梢可沿铁丝向上定位。'};
+ const rows=examples.map(([kind,name,en])=>`<article class="study-example"><h3>${name}<small>${en}</small></h3><div class="study-pair">${studyCard('① 冬季修剪后',studySvg(name+'冬季木质结构',studyVine(kind)),winter[kind])}${studyCard('② 转色后的冠层',studySvg(name+'夏季新梢与果串',studyVine(kind,true)),summer[kind])}</div></article>`).join('');
+ const sylvoz=`<article class="study-example"><h3>主蔓 × 长枝<small>Sylvoz · 讲义补充</small></h3>${studyCard('冬剪后的骨架',studySvg('Sylvoz：永久主蔓上保留向下弯绑的一年生长枝',studyVine('sylvoz')),'主蔓长枝：深棕色水平臂是永久主蔓，赭色向下弯绑的枝是其上保留的一年生长枝。有长枝也可以是主蔓整枝，判断依据是永久骨架。')}</article>`;
  return studyPlate('training-comparison','逐项看：骨架、留枝与夏季冠层',studyWoodLegend()+rows+sylvoz,'课本图 6.3 · 讲义幻灯片 92–93、113','前三组按课本图 6.3 的冬剪／夏季对照关系重绘；Sylvoz 按讲义单列。芽和枝条为识别示意，不代表整株实际总留芽量。');
 }
 function studyDiagram(key){
  const P=studyPalette;
+ const extra=studyOperationsDiagram(key);if(extra)return extra;
  if(key==='training-comparison')return studyTrainingComparison();
  if(key==='new-vines')return studyPlate(key,'新园设施各做什么',studySvg('幼藤保护套管、支柱铁丝和滴灌管各有用途',studyGround(220)+studyPath('M68 35V220M295 35V220','#a5aa95',7)+studyPath('M68 70H295M68 123H295','#a5aa95',2)+studyPath('M178 220V102',P.wood,5)+`<rect x="162" y="127" width="32" height="92" rx="3" fill="#cad8c4" stroke="#93a48a" opacity=".8"/>`+studyPath('M68 197H295',P.water,3)+studyText(91,31,'支柱与铁丝：支撑')+studyText(23,159,'套管')+studyArrow(67,154,159,163)+studyText(223,254,'滴灌管：供水','middle')+studyArrow(250,237,258,200)),'课本图 6.1','保护套管减少幼苗被动物损伤；支撑与供水设施不能互相替代。');
  if(key==='stone-heat')return studyPlate(key,'地表吸热与放热',`<div class="study-pair">${studyCard('白天：吸收太阳能',studySvg('阳光使石块和土壤升温',`<circle cx="70" cy="57" r="23" fill="#d6bb79"/>`+studyGround(211)+[0,1,2].map(i=>`<ellipse cx="${90+i*90}" cy="194" rx="30" ry="16" fill="#ac9d83"/>`+studyArrow(90+i*40,91,90+i*90,167,P.cane)).join('')+studyText(180,256,'深色表土、石块吸热','middle')),'土壤湿度也影响升温所需能量。')}${studyCard('之后：再辐射热量',studySvg('升温后的石块向周围释放热量',studyGround(211)+[0,1,2].map(i=>`<ellipse cx="${90+i*90}" cy="194" rx="30" ry="16" fill="#ac9d83"/>`+studyArrow(90+i*90,169,90+i*90,104,P.cane)).join('')+studyText(180,256,'可帮助凉爽园地成熟','middle')),'并非石块越多，所有园地都越适合。')}</div>`,'课本 p.38–39 · 图 5.3','课本 Priorat 图同时展示石块与梯田；这里分别解释热量机制，坡地与作业条件仍见正文。');
