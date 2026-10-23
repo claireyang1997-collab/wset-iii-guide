@@ -27,7 +27,7 @@ soil:()=>editorialArt("soil")
 const flow=(...a)=>`<div class="flow">${a.map((s,i)=>`${i?'<b>→</b>':''}<span>${s}</span>`).join('')}</div>`;
 const section=(t,p)=>`<section class="article-section"><h2>${t}</h2>${p}</section>`;
 const callout=(label,p,green=false)=>`<aside class="callout ${green?'green':''}"><span class="label">${label}</span><p>${p}</p></aside>`;
-const table=(heads,rows)=>`<div class="comparison-wrap"><table class="comparison"><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const table=(heads,rows,tableClass='')=>`<div class="comparison-wrap"><table class="comparison${tableClass?' '+safe(tableClass):''}"><thead><tr>${heads.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 const lessons=[
 {id:'roots',n:'01',title:'砧木与嫁接',short:'砧木与嫁接',en:'ROOTSTOCKS & GRAFTING',tint:'#e6eadb',desc:'上面决定结什么葡萄，下面帮助它适应环境。',pages:'8—10',time:'00:00—15:35',duration:'6',deck:'接穗保留酿酒品种，砧木提供根系及环境适应性。',caption:'嫁接结构示意 · 接穗与砧木连接，但不是通过授粉产生新品种。',body:
 section('为什么需要砧木？','<p>课堂从根瘤蚜说起：它会损害葡萄藤根部，严重时导致植株死亡。常见的解决方式，是把所需的欧亚葡萄品种 <i>Vitis vinifera</i> 嫁接到具有抗性的砧木上。</p>'+flow('根瘤蚜损害根系','吸水与生长受影响','采用抗性砧木'))+
