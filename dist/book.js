@@ -32,6 +32,7 @@ function bookReplaceCardImage(html,title,name,alt,label){
  return html.slice(0,at)+bookOriginalImage(name,alt)+`<p class="textbook-image-label">${label}</p>`+html.slice(end);
 }
 function bookTextbookFigure(key){
+ const refined=bookRefinedStudyFigure(key);if(refined!==null)return refined;
  if(key==='frost')return bookFrostIllustration();
  if(key==='propagation')return bookPropagationIllustration();
  if(key==='graft')return bookGraftIllustration();
@@ -71,7 +72,7 @@ function bookTrainingImage(a,summer){
 function bookTrainingIllustrated(){
  let example=0;
  return studyDiagram('training-comparison').replace(/<article class="study-example">[\s\S]*?<\/article>/g,article=>{
-  const art=bookTrainingArt[example++];if(!art)return article;
+  const art=bookTrainingArt[example++];if(!art)return article.replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookRefinedArt('sylvoz',null,'Sylvoz：粗糙永久主蔓上保留三条下弯的一年生长枝')+bookRefinedLabels(['深棕水平臂：多年生主蔓','赭色下弯枝：一年生长枝','冬剪后的骨架']));
   let phase=0;
   return article.replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookTrainingImage(art,phase++===1));
  });
@@ -188,3 +189,49 @@ function bookFigureLink(f){const map={
  '5.1':['5/needs','needs','五个生长条件'], '5.2':['5/heat','latitude','纬度与能量分布'], '5.3':['5/heat','terraces','梯田台面与挡土结构；同节另有石块蓄热图'], '5.4':['5/heat','frost-tools','加热器、风机及防霜喷灌'], '5.5':['5/heat','coastal-altitude','海风、雾与海拔；同节另有排冷与坡向图'], '5.6':['5/water','irrigation','三种灌溉供水路径'], '5.7':['6/pests','nets','防雹网与防鸟网的区别'], '5.8':['5/soil','chlorosis','黄化与叶片功能'],
  '6.1':['6/establish','new-vines','幼藤套管、支撑与供水设施'], '6.2':['6/cycle','annual-cycle','阶段顺序、月份与作业表'], '6.3':['6/pruning','training-comparison','三种结构冬夏对照，Sylvoz 按讲义单列'], '6.4':['6/cases','case-dry','低密度独立灌木、冠层遮阴与争水'], '6.5':['6/cases','case-wet','高密度头状长枝与VSP园地组合'], '6.6':['6/pests','nets','果区防鸟网'], '6.7':['6/harvest','harvest-methods','机械采收果粒，果梗通常留藤'], '6.8':['6/harvest','harvest-methods','人工保留完整果串']
  };const v=map[f[1]];return v?`<a href="#read/${v[0]}/study-${v[1]}">${v[2]} ↗</a>`:bookPageLinks(f[2]);}
+
+/* Refined remaining teaching illustrations. Source text and storage IDs stay in place.
+   Captions live below their own panel; labels remain selectable and responsive. */
+function bookRefinedArt(asset,side,alt){
+ const src='assets/'+asset+'-refined.webp';
+ return side===null?`<div class="refined-art"><img src="${src}" alt="${alt}" loading="lazy" width="1536" height="1024"></div>`:`<div class="refined-art refined-art-half ${side===1?'refined-art-right':''}"><img src="${src}" alt="${alt}" loading="lazy" width="1774" height="887"></div>`;
+}
+function bookRefinedLabels(labels){return labels.length?`<div class="botanical-panel-labels refined-panel-labels">${labels.map(t=>`<span>${t}</span>`).join('')}</div>`:''}
+function bookRefinedSvgLabels(svg){return [...svg.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(Boolean)}
+function bookRefinedSwap(html,specs){let i=0;const out=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{const a=specs[i++];if(!a)throw Error('Unmapped refined panel');const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||a[0];return (a[3]?`<div class="refined-annotated">${bookRefinedArt(a[0],a[1],alt)}${a[3]}</div>`:bookRefinedArt(a[0],a[1],alt))+bookRefinedLabels(a[2]||bookRefinedSvgLabels(svg));});if(i!==specs.length)throw Error('Refined panel count mismatch '+i);return out;}
+function bookRefinedStudyFigure(key){
+ const pairs={'soil-water':'soil-structure','fruit-set':'fruit-set','height':'height','guyot':'guyot','bud-fruitfulness':'bud-fruitfulness','green-harvest':'green-harvest','botrytis':'botrytis','harvest-methods':'harvest-methods'};
+ if(pairs[key]){
+  let html=studyDiagram(key);
+  if(key==='fruit-set')html=html.replace('看果串是否稀疏：更多花没能形成幼果，果粒数量减少。虚线只是对照位置，并非会留在串上的器官。','看左图稀疏的果串和空出的分枝：更多花没能形成幼果，果粒数量减少。');
+  if(key==='harvest-methods')html=html.replace('此图解释采收对象，省略机器结构。','左图看剪下的完整果串；右图看跨行采收机，右下角展示振落与接果过程。');
+  const labels={
+   'soil-water':[['大孔隙让多余水流出'],['细孔隙与水膜：保留部分可用水']],
+   'fruit-set':[['落花：果粒数量减少，果串较稀疏'],['正常果粒与小而无籽果粒混合']],
+   'height':[['矮干：结果部位靠近地面','可更多利用地表热量'],['高干：结果部位较高','较远离最冷近地空气']],
+   'guyot':[['一条一年生结果长枝','短的更新枝另计'],['两条一年生结果长枝，向两侧绑','没有永久水平主蔓']],
+   'harvest-methods':[['剪断串梗','果串保留果梗'],['果梗通常留藤','接果 → 输送 → 容器']]
+  }[key];
+  return bookRefinedSwap(html,[[pairs[key],0,labels?.[0]],[pairs[key],1,labels?.[1]]]);
+ }
+ if(key==='frost-tools'){
+  let html=bookReplaceCardImage(studyDiagram(key),'加热器 Heaters','textbook-5-4-heaters','课本图5.4：纳帕县葡萄园中的两座加热装置','图 5.4 · 纳帕县的加热器：燃烧供热，加热空气并促进流动，用于降低春季霜冻风险。');
+  const arrows=bookBotanicalOverlay('refined-wind',[["M600 210Q810 320 645 595",true],["M430 650Q290 500 410 310",true]],[], '0 0 887 887');
+  return bookRefinedSwap(html,[['frost-equipment',0,['上层较暖','近地较冷','箭头：混合暖冷空气'],arrows],['frost-equipment',1,['水持续结冰 → 释放潜热']],['frost-site-design',null,['排冷通道 ＋ 较高结果部位','避开积冷洼地']]]).replace('class="study-card"><h4>风机','class="study-card wind-machine-card"><h4>风机');
+ }
+ if(key==='new-vines'){
+  const overlay=bookBotanicalOverlay('refined-new-vines',[["M440 160L200 240"],["M1110 200L1090 325"],["M600 580L744 580"],["M1160 690L1010 770"]],[[420,140,1],[1130,180,2],[570,580,3],[1180,670,4]]);
+  return bookRefinedSwap(studyDiagram(key),[['new-vines',null,['① 支柱：固定支撑','② 铁丝：支撑与定位枝条','③ 套管：保护幼藤','④ 滴灌管：根区供水'],overlay]]);
+ }
+ if(key==='case-dry'||key==='case-wet')return bookRefinedSwap(studyDiagram(key),[['vineyard-cases',key==='case-dry'?0:1]]);
+ if(key==='nets')return bookRefinedSwap(bookReplaceCardImage(studyDiagram(key),'防雹网：上方拦截冰雹','textbook-5-7-hail','课本图5.7：阿根廷葡萄园的架空防雹网，网面位于冠层上方','图 5.7 · 防雹网架在冠层上方，拦截冰雹。高风险园地可能接受较高架设成本；与包覆果区的防鸟网分开识别。'),[['bird-net',null,['网沿果区包覆，叶幕可露在上方']]]);
+ if(key==='density'){let i=0;return studyDiagram(key).replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookDensityIllustration(i++===1));}
+ if(key==='france-climates')return studyDiagram(key).replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookFranceIllustration());
+ return null;
+}
+function bookDensityIllustration(dense){
+ const rows=dense?4:3,cols=dense?6:3,x0=60,y0=50,dx=dense?65:162.5,dy=dense?66:99,w=dense?48:64;
+ let plants='';for(let r=0;r<rows;r++)for(let c=0;c<cols;c++)plants+=`<image href="assets/density-canopy-refined.webp" x="${x0+c*dx-w/2}" y="${y0+r*dy-w/2}" width="${w}" height="${w}"/>`;
+ const id=dense?'high':'low';return `<svg class="refined-density" viewBox="0 0 500 330" role="img" aria-label="同面积俯视，${rows*cols}株，横向株距、纵向行距"><defs><marker id="density-${id}" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1L7 4L1 7" fill="none" stroke="#688d99" stroke-width="1.2"/></marker><pattern id="soil-${id}" width="23" height="19" patternUnits="userSpaceOnUse"><circle cx="3" cy="7" r=".7" fill="#b9aa8b" opacity=".3"/></pattern></defs><rect x="20" y="12" width="405" height="270" rx="5" fill="#eee8d9" stroke="#c8c4b1"/><rect x="20" y="12" width="405" height="270" fill="url(#soil-${id})"/>${Array.from({length:rows},(_,r)=>`<path d="M30 ${y0+r*dy}H415" stroke="#c8b98e" stroke-dasharray="3 5"/>`).join('')}${plants}<g stroke="#688d99" fill="none" stroke-width="1.6" marker-start="url(#density-${id})" marker-end="url(#density-${id})"><path d="M${x0} 300H${x0+dx}"/><path d="M450 ${y0}V${y0+dy}"/></g><g font-family="sans-serif" font-size="15" fill="#46533e"><text x="${x0+dx/2}" y="324" text-anchor="middle">株距</text><text x="466" y="${y0+dy/2-6}" text-anchor="middle">行<tspan x="466" dy="19">距</tspan></text></g></svg>${bookRefinedLabels(['俯视：每个叶冠代表一株',dense?'更多竞争；单株空间较小':'较少竞争；单株空间较大'])}`;
+}
+function bookFranceIllustration(){return `<div class="france-refined-layout"><svg class="refined-france" viewBox="0 0 720 550" role="img" aria-label="法国本土地理位置：西南波尔多、东北香槟和夏布利、地中海沿岸"><defs><linearGradient id="france-land" x2=".8" y2="1"><stop stop-color="#e6e9d8"/><stop offset="1" stop-color="#c7cfae"/></linearGradient><pattern id="france-sea" width="20" height="12" patternUnits="userSpaceOnUse"><path d="M0 8q5 -3 10 0t10 0" stroke="#96b1b7" stroke-width=".5" fill="none" opacity=".35"/></pattern></defs><rect width="720" height="550" rx="5" fill="#edf1ed"/><rect width="720" height="550" fill="url(#france-sea)"/><path d="M505.6 127.7 L521.2 140.3 L568.8 149.1 L552.1 182.0 L547.9 216.2 L538.8 224.4 L523.8 220.0 L524.9 232.2 L500.7 259.2 L500.2 280.9 L516.0 273.4 L527.3 294.4 L526.0 308.0 L535.7 326.0 L524.2 340.6 L532.7 377.8 L550.6 383.9 L546.9 404.7 L517.0 431.8 L451.9 418.8 L403.8 434.4 L400.0 463.3 L361.8 469.5 L324.7 447.8 L312.7 458.2 L251.9 436.4 L238.8 417.7 L255.8 388.9 L262.1 293.3 L228.1 242.9 L203.7 218.6 L153.3 200.2 L150.0 165.2 L192.7 154.7 L248.2 167.1 L237.7 112.7 L268.8 133.3 L345.7 95.9 L355.6 56.6 L384.4 46.9 L389.2 63.8 L404.6 64.5 L419.9 83.8 L442.9 106.4 L459.9 102.7 L488.7 124.6 L496.1 128.8 L505.6 127.7Z M590.1 455.9 L611.4 437.5 L617.0 478.7 L606.1 515.8 L591.1 506.0 L583.5 473.7 L590.1 455.9Z" fill="url(#france-land)" stroke="#7d8b6d" stroke-width="1.8" stroke-linejoin="round"/><g fill="#405040" font-size="17" font-family="sans-serif"><text x="28" y="252" fill="#688d99">大西洋</text><text x="442" y="482" fill="#688d99">地中海</text><text x="50" y="58">北 ↑</text></g><g fill="none" stroke-width="1.5"><path d="M95 270Q145 255 218 297" stroke="#688d99" stroke-dasharray="5 5"/><path d="M282 349L239 359H90" stroke="#688d99"/><path d="M434 138L490 92H660" stroke="#9a7c48"/><path d="M427 208L500 205H650" stroke="#9a7c48"/><path d="M464 419L563 390H660" stroke="#7c4656"/></g><g stroke="#fbfaf5" stroke-width="3"><circle cx="282" cy="349" r="7" fill="#688d99"/><circle cx="434" cy="138" r="7" fill="#9a7c48"/><circle cx="427" cy="208" r="7" fill="#9a7c48"/><circle cx="464" cy="419" r="7" fill="#7c4656"/></g><g fill="#35432f" font-family="sans-serif" font-size="17"><text x="90" y="387">波尔多</text><text x="510" y="82">香槟</text><text x="510" y="195">夏布利</text><text x="563" y="378">南部沿岸</text></g><text x="184" y="278" fill="#748262" font-family="serif" font-size="32" letter-spacing="9">FRANCE</text></svg><div class="france-climate-notes"><section><b>西部 · 海洋性</b><span>波尔多：大西洋影响</span></section><section><b>内陆 · 凉爽大陆性</b><span>香槟、夏布利</span></section><section><b>南部 · 地中海性</b><span>地中海沿岸：冬雨夏干</span></section></div></div>`;}

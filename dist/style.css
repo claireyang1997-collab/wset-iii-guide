@@ -699,3 +699,26 @@ main[tabindex="-1"]:focus{outline:none}
 .figure-panel-notes dt{font-weight:600;color:var(--ink);white-space:nowrap}
 .figure-panel-notes dd{margin:0}
 @media(max-width:760px){.book-reading .study-card{padding:14px}.figure-panel-notes{gap:10px}}
+
+/* Detailed artwork: readable scale, matched panels, captions immediately below. */
+.refined-art{position:relative;width:100%;max-width:720px;margin:0 auto;overflow:hidden;border-radius:4px;background:#faf7ed}
+.refined-art>img{display:block;width:100%;height:auto;max-width:100%;border-radius:0}
+.refined-art-half{aspect-ratio:1;max-width:460px}
+.refined-art-half>img{position:absolute;inset:0 auto auto 0;width:200%;max-width:none;height:100%;object-fit:fill}
+.refined-art-right>img{left:-100%}
+.book-reading .refined-panel-labels{margin-top:10px;padding-top:10px;font-size:13px;line-height:1.8;color:#59624d}
+.study-card:has(>.botanical-callouts){position:relative}
+.book-reading .study-card>.botanical-callouts{position:absolute;top:56px;left:18px;width:calc(100% - 36px);height:auto;max-height:none;background:transparent;pointer-events:none}
+.book-reading .wind-machine-card>.botanical-callouts{aspect-ratio:1}
+.book-reading .study-plate:has(>.botanical-callouts){position:relative}
+.book-reading #study-new-vines>.botanical-callouts{position:absolute;top:95px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:720px;height:auto;max-height:none;background:transparent;pointer-events:none}
+.book-reading svg.refined-density{width:100%;height:auto;max-height:none;background:transparent}
+.france-refined-layout{max-width:720px;margin:auto}
+.book-reading svg.refined-france{width:100%;height:auto;max-height:none;background:transparent}
+.france-climate-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.france-climate-notes section{border-top:2px solid #9bafaf;padding-top:10px;font:13px/1.8 var(--sans);color:#59624d}
+.france-climate-notes section:nth-child(2){border-color:#b6a079}.france-climate-notes section:nth-child(3){border-color:#97727d}
+.france-climate-notes b,.france-climate-notes span{display:block}
+@media(max-width:760px){.france-climate-notes{grid-template-columns:1fr;gap:10px}.book-reading .study-card>.botanical-callouts{left:14px;top:52px;width:calc(100% - 28px)}}
+.refined-annotated{position:relative;width:100%;max-width:720px;margin:auto}
+.refined-annotated>.botanical-callouts{position:absolute;inset:0;display:block;width:100%;height:100%;max-height:none;background:transparent;pointer-events:none}
