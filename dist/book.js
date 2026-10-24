@@ -32,6 +32,7 @@ function bookReplaceCardImage(html,title,name,alt,label){
  return html.slice(0,at)+bookOriginalImage(name,alt)+`<p class="textbook-image-label">${label}</p>`+html.slice(end);
 }
 function bookTextbookFigure(key){
+ if(key==='training-comparison')return bookTrainingIllustrated();
  if(key==='graft-methods')return `<section class="study-plate textbook-original-plate" id="study-graft-methods" data-study-figure="graft-methods" aria-label="室内嫁接与田间换接的课本实物照片"><div class="study-plate-head"><strong>室内嫁接：用于培育新植株</strong><span>课本图 4.5</span></div><div class="textbook-photo-pair">${bookOriginalCard('textbook-4-5-bench-join','图 4.5① · 刚接合的枝条','室内嫁接近照，接穗与砧木的接合位置以及接穗上的芽清晰可见','先找接穗上的芽，再找两段枝条的接合处。上段是所需欧亚葡萄品种，下段提供砧木根系；接口须固定并保护。')}${bookOriginalCard('textbook-4-5-bench-planted','图 4.5② · 栽种后的嫁接苗','室内嫁接苗栽入土中，新梢长出，红蜡覆盖并保护接合部位','红蜡用于保护接口，芽萌发后长出绿色新梢。建新园通常需经过育苗、栽种与幼藤建立期，至少第三年才有商业收成。')}</div><div class="study-plate-head textbook-subhead"><strong>田间换接：利用现有主干与根系换种</strong><span>课本图 4.6</span></div><div class="textbook-photo-pair">${bookOriginalCard('textbook-4-6-head-new','图 4.6① · 春季刚换接的主干','原有主干上换接两段接穗，以条带绑紧并涂保护材料','看粗大的原有主干与其上新接的细枝。条带固定接穗，剪口涂保护材料；地下既有根系继续保留。')}${bookOriginalCard('textbook-4-6-head-established','图 4.6② · 田间换接的常见形态','保留原有主干、换接后长出枝叶和果串的葡萄藤','沿原有主干向上看新的分枝。成功后可在下一年结出新品种果实，通常比拔园重植更快、成本更低；这两幅为课本中的不同植株示例。')}</div><p class="textbook-photo-takeaway">嫁接组合接穗与砧木，不会把二者变成杂交新品种。这里辨认结构与用途，不作为切口操作教程。</p></section>`;
  let html=studyDiagram(key);
  if(key==='needs')return html.replace(/<svg\b[\s\S]*?<\/svg>/,bookOriginalImage('textbook-5-1-needs','课本图5.1：热量、阳光、二氧化碳、水分和养分的五支红色输入箭头，以及释放氧气的蓝色箭头')+`<p class="textbook-image-label"><strong>图 5.1 · 葡萄藤生长所需的条件。</strong>五支红箭头是必需输入；蓝箭头表示光合作用释放氧气。水分与养分由根系吸收，糖由叶片制造。</p>`);
@@ -46,6 +47,26 @@ function bookTextbookFigure(key){
  if(key==='nets')return bookReplaceCardImage(html,'防雹网：上方拦截冰雹','textbook-5-7-hail','课本图5.7：阿根廷葡萄园的架空防雹网，网面位于冠层上方','图 5.7 · 防雹网架在冠层上方，拦截冰雹。高风险园地可能接受较高架设成本；与包覆果区的防鸟网分开识别。');
  if(key==='chlorosis')return bookReplaceCardImage(html,'黄化叶片','textbook-5-8-chlorosis','课本图5.8：法国马孔内一株黄化病葡萄藤，叶片明显变黄','图 5.8 · 马孔内的黄化病植株：与左侧绿色叶片对照，黄色叶片的光合作用能力受影响。');
  return html;
+}
+
+/* Keep each seasonal illustration beside its own explanation, including on phones. */
+const bookTrainingArt=[
+ {src:'assets/training-head-spur.webp',name:'头状短枝',split:44},
+ {src:'assets/training-head-cane.webp',name:'头状替换长枝（单居由）',split:50},
+ {src:'assets/training-cordon-spur.webp',name:'主蔓短枝',split:50}
+];
+function bookTrainingImage(a,summer){
+ const portion=summer?100-a.split:a.split,ratio=2*portion/100,fit=Math.min(100,100*ratio),offset=summer?-a.split/portion*100:0;
+ const alt=summer?`${a.name}：转色后的冠层，绿色当年新梢从保留枝条的芽长出，果串长在新梢上`:`${a.name}：冬季修剪后，粗糙多年生木与细的一年生结果母枝对照`;
+ return `<a class="training-art-link" href="${a.src}" target="_blank" rel="noopener" aria-label="查看${a.name}完整冬夏对照插画"><span class="training-art-stage"><span class="training-art-slice" style="width:${fit}%;aspect-ratio:${ratio};--art-width:${10000/portion}%;--art-left:${offset}%"><img src="${a.src}" alt="${alt}" width="1774" height="887" loading="lazy"></span></span></a>`;
+}
+function bookTrainingIllustrated(){
+ let example=0;
+ return studyDiagram('training-comparison').replace(/<article class="study-example">[\s\S]*?<\/article>/g,article=>{
+  const art=bookTrainingArt[example++];if(!art)return article;
+  let phase=0;
+  return article.replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookTrainingImage(art,phase++===1));
+ });
 }
 
 function bookContent(u){return u.body.replace(/<div data-study-plate="([^"]+)"><\/div>/g,(_,key)=>u.chapter===4&&u.id==='structure'?bookStructureFigure(key):bookTextbookFigure(key))}
