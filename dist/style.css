@@ -797,3 +797,12 @@ main[tabindex="-1"]:focus{outline:none}
 .book-reading .refined-panel-labels{font:14px/1.85 var(--sans)}
 .book-reading .article-section:has(> #book-6-harvest-4) .comparison tr>:first-child{width:1%;min-width:0;white-space:nowrap}
 @container(max-width:680px){.book-reading .annual-cycle-compact .cycle-stage-grid{grid-template-columns:1fr}.book-reading .annual-cycle-compact .study-card{grid-template-columns:88px minmax(0,1fr)}.book-reading .annual-cycle-compact .study-card>.cycle-stage-art{width:88px;max-height:88px}}
+
+/* Keep the two qualifications attached to the stages they explain. */
+.km-flow-notes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:16px}
+.km-flow .km-flow-notes>p{max-width:none;margin:0;padding:12px 14px;border-top:2px solid var(--line);font:13px/1.8 var(--sans);color:var(--muted)}
+.km-flow-notes .km-management-note{grid-column:span 3}
+.km-flow-notes strong{display:block;color:var(--ink);font-weight:600;margin-bottom:3px}
+.km-flow-notes span{display:block}
+@media(max-width:900px){.km-flow-notes{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.km-flow-notes .km-management-note{grid-column:auto}}
+@media(max-width:540px){.km-flow-notes{grid-template-columns:1fr;gap:8px}}
