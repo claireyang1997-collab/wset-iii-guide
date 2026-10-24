@@ -508,3 +508,11 @@ main[tabindex="-1"]:focus{outline:none}
 .textbook-original-link{display:block;position:relative;color:var(--ink);border-radius:3px;overflow:hidden}
 .textbook-original-link::after{content:"↗";position:absolute;right:9px;bottom:9px;display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:#fcfaf4e8;color:#763e4b;font-size:18px;line-height:1;pointer-events:none}
 .textbook-original-link:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+
+/* Photo substitutions retain the surrounding, individually explained teaching cards. */
+.study-plate .textbook-original-link img{display:block;width:100%;height:auto;object-fit:contain;border-radius:3px}
+.study-card>.textbook-original-link>img{max-height:420px;background:#f8f5eb}
+.study-plate>.textbook-original-link{max-width:900px;margin:0 auto}
+.study-plate .textbook-image-label{font-size:var(--text-body);line-height:var(--leading-body);color:#56604e;margin:13px 0 0}
+.study-card .textbook-image-label{margin:12px 4px 0}
+.textbook-subhead{margin-top:30px}
