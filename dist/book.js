@@ -204,6 +204,11 @@ function bookRefinedLabels(labels){return labels.length?`<div class="botanical-p
 function bookRefinedSvgLabels(svg){return [...svg.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(Boolean)}
 function bookRefinedSwap(html,specs){let i=0;const out=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{const a=specs[i++];if(!a)throw Error('Unmapped refined panel');const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||a[0];return (a[3]?`<div class="refined-annotated">${bookRefinedArt(a[0],a[1],alt)}${a[3]}</div>`:bookRefinedArt(a[0],a[1],alt))+bookRefinedLabels(a[2]||bookRefinedSvgLabels(svg));});if(i!==specs.length)throw Error('Refined panel count mismatch '+i);return out;}
 function bookRefinedStudyFigure(key){
+ if(key==='annual-cycle'){
+  let n=0;
+  const alt=['冬季休眠：无叶葡萄藤、保留芽与木质骨架','萌芽：褐色芽鳞展开，嫩绿幼叶露出','生枝长叶：绿色新梢、叶片、节与卷须','开花：分枝花序上的细小花朵与雄蕊','坐果：分枝果梗上形成绿色幼果','转色与成熟：左侧红葡萄绿紫相间，右侧白葡萄趋黄透明','达到目标后采收：剪刀剪取完整果串','采后落叶：叶片逐渐转黄、脱落，木质结构保留'];
+  return studyDiagram(key).replace(/<svg\b[\s\S]*?<\/svg>/g,()=>{const i=n++;return `<img class="cycle-stage-art" src="assets/annual-stage-${i+1}.webp" alt="${alt[i]}" width="600" height="600" loading="lazy">`;}).replace('class="study-plate"','class="study-plate annual-cycle-compact"').replace('class="study-grid three"','class="cycle-stage-grid"');
+ }
  const three=bookThreeColumnFigure(key);if(three!==null)return three;
  if(key==='light-reflection'){
   const overlay=bookBotanicalOverlay('light-paths-v2',[['M340 190L1000 350'],['M315 220L620 785L1000 490']],[[640,245,1],[690,685,2]]);

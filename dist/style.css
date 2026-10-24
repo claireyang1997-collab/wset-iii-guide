@@ -742,3 +742,12 @@ main[tabindex="-1"]:focus{outline:none}
 #book-6-establish-2 + .s2-steps>li>strong{display:block;line-height:1.6}
 #book-6-establish-2 + .s2-steps>li>p{margin:6px 0 0;line-height:1.85}
 @media(max-width:760px){#book-6-establish-2 + .s2-steps{grid-template-columns:1fr;gap:0}#book-6-establish-2 + .s2-steps>li{padding-top:14px;padding-bottom:14px}#book-6-establish-2 + .s2-steps>li::before{top:14px}}
+/* Eight seasonal stages: a compact, ordered botanical atlas. */
+.cycle-stage-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.annual-cycle-compact .study-card{padding:12px;min-width:0;display:flex;flex-direction:column}
+.book-reading .annual-cycle-compact .study-card>h4{font-size:14px;line-height:1.6;margin:0 0 8px;min-height:44px}
+.cycle-stage-art{display:block;width:100%;aspect-ratio:1;object-fit:contain;border-radius:3px}
+.book-reading .annual-cycle-compact .study-card>p{font-size:13px;line-height:1.8;margin:10px 0 0}
+@container(min-width:680px){.cycle-stage-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.cycle-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.cycle-stage-grid{grid-template-columns:1fr}.annual-cycle-compact .study-card{display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px 12px;align-items:start}.book-reading .annual-cycle-compact .study-card>h4{grid-column:1/-1;min-height:0;margin:0}.book-reading .annual-cycle-compact .study-card>p{margin:0;font-size:13px}.cycle-stage-art{grid-column:1}}
