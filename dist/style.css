@@ -607,3 +607,7 @@ main[tabindex="-1"]:focus{outline:none}
 .propagation-map .propagation-outcomes{gap:9px}
 .propagation-map .concept-connector{font-size:21px;line-height:1.4}
 @media(max-width:760px){.concept-map .concept-root{margin-bottom:17px}.concept-map .concept-branch{padding:12px}.taxonomy-map .taxon-varieties .concept-node>span{font-size:11px}.taxonomy-map .taxon-varieties .concept-node>strong{font-size:13px}}
+
+/* Full-width textbook figures remain complete, with a bounded reading height. */
+.study-plate>.textbook-original-link{max-width:760px}
+.study-plate>.textbook-original-link>img{max-height:440px;object-fit:contain;background:#f8f5eb}

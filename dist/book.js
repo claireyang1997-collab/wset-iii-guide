@@ -75,6 +75,7 @@ function bookStructureTeachingFigure(key){
  let html=bookStructureFigure(key);if(key!=='wood-ages')return html;
  const drawing=`<div class="wood-age-illustration"><div class="wood-age-art">${bookTrainingImage(bookTrainingArt[1],true)}<span class="wood-age-marker wood-marker-trunk" aria-hidden="true">1</span><span class="wood-age-marker wood-marker-cane" aria-hidden="true">2</span><span class="wood-age-marker wood-marker-shoot" aria-hidden="true">3</span></div><dl class="wood-age-labels"><div><dt><b>1</b> 多年生木：主干</dt><dd>粗糙、较粗，长期保留，构成骨架。</dd></div><div><dt><b>2</b> 一年生木：横绑长枝</dt><dd>细、黄褐色，带芽；上一季的新梢木质化而成。</dd></div><div><dt><b>3</b> 当年新梢：绿色结果枝</dt><dd>从长枝的芽萌发，上面有叶片、卷须和果串。</dd></div></dl></div><p class="wood-age-bridge">这三种木龄同时存在于一株藤上。图示为头状替换长枝：横着的细长枝会逐年替换，<strong>不是永久主蔓</strong>。<a href="#read/6/pruning/study-training-comparison">冬剪前后怎样对应 →</a></p>`;
  html=html.replace('先看实物：细枝与永久骨架','先认木龄：主干、长枝与新梢');
+ html=html.replace('<span>课本图 4.2、4.3</span>','<span>讲义木龄示意 · 实物图 4.2、4.3</span>');
  html=html.replace('<div class="textbook-photo-pair">',drawing+'<details class="wood-age-originals"><summary>实物对照：课本图 4.2、4.3</summary><div class="textbook-photo-pair">');
  return html.replace('</div><p class="textbook-photo-takeaway">','</div></details><p class="textbook-photo-takeaway">');
 }
