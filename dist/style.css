@@ -695,7 +695,7 @@ main[tabindex="-1"]:focus{outline:none}
 .figure-panel-notes h5>b{display:grid;place-items:center;flex:none;width:22px;height:22px;border:1px solid #b69a9e;border-radius:50%;font:14px/1 Georgia,serif;color:var(--wine)}
 .book-reading .figure-panel-notes p,.book-reading .figure-panel-notes dl{font:14px/1.85 var(--sans);color:#56604e;margin:0}
 .figure-panel-notes dl{border-top:1px solid #e5e0d2;padding-top:11px}
-.figure-panel-notes dl>div{display:grid;grid-template-columns:2em minmax(0,1fr);gap:10px;margin:4px 0}
-.figure-panel-notes dt{font-weight:600;color:var(--ink)}
+.figure-panel-notes dl>div{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px;margin:4px 0;font:inherit}
+.figure-panel-notes dt{font-weight:600;color:var(--ink);white-space:nowrap}
 .figure-panel-notes dd{margin:0}
 @media(max-width:760px){.book-reading .study-card{padding:14px}.figure-panel-notes{gap:10px}}
