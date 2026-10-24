@@ -200,6 +200,12 @@ function bookRefinedLabels(labels){return labels.length?`<div class="botanical-p
 function bookRefinedSvgLabels(svg){return [...svg.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(Boolean)}
 function bookRefinedSwap(html,specs){let i=0;const out=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{const a=specs[i++];if(!a)throw Error('Unmapped refined panel');const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||a[0];return (a[3]?`<div class="refined-annotated">${bookRefinedArt(a[0],a[1],alt)}${a[3]}</div>`:bookRefinedArt(a[0],a[1],alt))+bookRefinedLabels(a[2]||bookRefinedSvgLabels(svg));});if(i!==specs.length)throw Error('Refined panel count mismatch '+i);return out;}
 function bookRefinedStudyFigure(key){
+ if(key==='light-reflection'){
+  const overlay=bookBotanicalOverlay('light-paths-v2',[['M340 190L1000 350'],['M315 220L620 785L1000 490']],[[640,245,1],[690,685,2]]);
+  return bookRefinedSwap(studyDiagram(key),[['light-reflection-v2',null,['① 直接日照：太阳 → 叶片','② 反射光：太阳 → 浅色地表／水面 → 叶片'],overlay]]);
+ }
+ const clarityPairs={'heat-hazards':'heat-hazards-v2','vsp':'vsp-comparison-v2','resource-yield':'resource-yield-v2'};
+ if(clarityPairs[key])return bookRefinedSwap(studyDiagram(key),[[clarityPairs[key],0],[clarityPairs[key],1]]);
  const pairs={'soil-water':'soil-structure','fruit-set':'fruit-set','height':'height','guyot':'guyot','bud-fruitfulness':'bud-fruitfulness','green-harvest':'green-harvest','botrytis':'botrytis','harvest-methods':'harvest-methods'};
  if(pairs[key]){
   let html=studyDiagram(key);
