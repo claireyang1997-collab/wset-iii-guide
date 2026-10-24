@@ -54,7 +54,11 @@ function bookTextbookFigure(key){
  if(key==='frost-tools')return bookReplaceCardImage(html,'加热器 Heaters','textbook-5-4-heaters','课本图5.4：纳帕县葡萄园中的两座加热装置','图 5.4 · 纳帕县的加热器：燃烧供热，加热空气并促进流动，用于降低春季霜冻风险。');
  if(key==='irrigation')return bookReplaceCardImage(html,'滴灌','textbook-5-6-drip','课本图5.6：新西兰葡萄园，黑色滴灌管沿葡萄行延伸并在根区附近供水','图 5.6 · 沿黑色管线找滴头：在每株根区附近局部供水，较精准、可控。滴灌管与支撑枝条的铁丝不是同一设施。');
  if(key==='nets')return bookReplaceCardImage(html,'防雹网：上方拦截冰雹','textbook-5-7-hail','课本图5.7：阿根廷葡萄园的架空防雹网，网面位于冠层上方','图 5.7 · 防雹网架在冠层上方，拦截冰雹。高风险园地可能接受较高架设成本；与包覆果区的防鸟网分开识别。');
- if(key==='chlorosis')return bookReplaceCardImage(html,'黄化叶片','textbook-5-8-chlorosis','课本图5.8：法国马孔内一株黄化病葡萄藤，叶片明显变黄','图 5.8 · 马孔内的黄化病植株：与左侧绿色叶片对照，黄色叶片的光合作用能力受影响。');
+ if(key==='chlorosis'){
+  html=html.replace('保持健康叶片，支持光合作用。','正常绿色叶片：光合作用正常，为生长和成熟制造糖。').replace('查明养分可利用性等原因，不能见黄叶就无限施肥。','黄化叶片：叶绿素减少，光合作用受限，影响生长和成熟。').replace('这里只对比叶色和功能，不用于凭外观判断所有病因。','两图用同一叶形、同一尺度比较叶色与功能。黄叶的原因不止一种，应查明养分可利用性等原因，不能见黄叶就无限施肥。');
+  const example=`<details class="wood-age-originals chlorosis-original"><summary>实物实例 · 法国马孔内的黄化植株</summary>${bookOriginalCard('textbook-5-8-chlorosis','图 5.8 · 课本实物照片','课本图5.8：法国马孔内一株黄化病葡萄藤，叶片明显变黄','沿枝条看明显变黄的叶片：这是整株葡萄藤上的黄化表现，与上方单叶对照属于不同观察尺度。')}</details>`;
+  return html.replace('</figure>',example+'</figure>');
+ }
  return html;
 }
 
