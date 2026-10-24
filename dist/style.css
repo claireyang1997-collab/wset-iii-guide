@@ -788,3 +788,12 @@ main[tabindex="-1"]:focus{outline:none}
 @media(max-width:760px){.book-reading #study-irrigation .study-card{grid-template-rows:auto auto auto auto;gap:10px}.book-reading #study-irrigation .study-card>h4{margin-bottom:2px}.frost-aligned .refined-panel-labels{min-height:0}.chlorosis-original[open]>.textbook-photo-card{grid-template-columns:1fr;max-width:380px;gap:12px}}
 
 .france-refined-layout{max-width:620px}.book-reading .france-climate-notes{gap:12px;margin-top:10px}.book-reading .france-climate-notes section{font-size:12px;padding-top:7px}
+/* Seasonal atlas: thumbnail beside its explanation, never intrinsic 600px image height. */
+.book-reading .annual-cycle-compact .cycle-stage-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.book-reading .annual-cycle-compact .study-card{display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:auto 1fr;gap:6px 12px;align-content:start;align-items:start;padding:14px}
+.book-reading .annual-cycle-compact .study-card>h4{grid-column:2;grid-row:1;min-height:0;margin:0;font:600 14px/1.7 var(--sans)}
+.book-reading .annual-cycle-compact .study-card>.cycle-stage-art{grid-column:1;grid-row:1/3;width:104px;height:auto;aspect-ratio:1;max-height:104px;object-fit:contain;align-self:center;margin:0}
+.book-reading .annual-cycle-compact .study-card>p{grid-column:2;grid-row:2;font:13px/1.8 var(--sans);border:0;padding:0;margin:0}
+.book-reading .refined-panel-labels{font:14px/1.85 var(--sans)}
+.book-reading .article-section:has(> #book-6-harvest-4) .comparison tr>:first-child{width:1%;min-width:0;white-space:nowrap}
+@container(max-width:680px){.book-reading .annual-cycle-compact .cycle-stage-grid{grid-template-columns:1fr}.book-reading .annual-cycle-compact .study-card{grid-template-columns:88px minmax(0,1fr)}.book-reading .annual-cycle-compact .study-card>.cycle-stage-art{width:88px;max-height:88px}}
