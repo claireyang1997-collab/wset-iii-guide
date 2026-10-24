@@ -722,3 +722,16 @@ main[tabindex="-1"]:focus{outline:none}
 @media(max-width:760px){.france-climate-notes{grid-template-columns:1fr;gap:10px}.book-reading .study-card>.botanical-callouts{left:14px;top:52px;width:calc(100% - 28px)}}
 .refined-annotated{position:relative;width:100%;max-width:720px;margin:auto}
 .refined-annotated>.botanical-callouts{position:absolute;inset:0;display:block;width:100%;height:100%;max-height:none;background:transparent;pointer-events:none}
+.study-three-clear{display:grid;grid-template-columns:1fr;gap:16px;align-items:stretch}
+.three-column-plate .study-card{padding:14px;display:flex;flex-direction:column;min-width:0}
+.book-reading .three-column-plate .study-card>h4{font-size:15px;line-height:1.6;margin:0 0 12px;min-height:48px}
+.tri-art{width:100%;aspect-ratio:1;overflow:hidden;border-radius:4px;background:#fbf7eb}
+.tri-art>img{display:block;width:100%;height:100%;object-fit:contain}
+.three-column-plate .refined-panel-labels{display:flex;flex-direction:column;gap:3px;min-height:64px}
+.book-reading .three-column-plate .study-card>p{font-size:14px;line-height:1.85;margin:12px 0 0}
+.climate-chart-label{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font:13px/1.7 var(--sans);color:#6b735f}
+.climate-chart-label b{font-weight:600;color:var(--ink)}
+.climate-clear svg{width:100%;max-height:none;background:transparent;margin:5px 0 10px}
+.climate-region-note{font:12px/1.7 var(--sans);color:#6b735f;margin:3px 0 0}
+@container(min-width:680px){.study-three-clear{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}}
+@media(max-width:760px){.study-three-clear{grid-template-columns:1fr}.book-reading .three-column-plate .study-card>h4{min-height:0}.three-column-plate .refined-panel-labels{min-height:0}.tri-art{max-width:440px;margin:auto}}

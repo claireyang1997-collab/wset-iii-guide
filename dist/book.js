@@ -200,6 +200,7 @@ function bookRefinedLabels(labels){return labels.length?`<div class="botanical-p
 function bookRefinedSvgLabels(svg){return [...svg.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(Boolean)}
 function bookRefinedSwap(html,specs){let i=0;const out=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{const a=specs[i++];if(!a)throw Error('Unmapped refined panel');const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||a[0];return (a[3]?`<div class="refined-annotated">${bookRefinedArt(a[0],a[1],alt)}${a[3]}</div>`:bookRefinedArt(a[0],a[1],alt))+bookRefinedLabels(a[2]||bookRefinedSvgLabels(svg));});if(i!==specs.length)throw Error('Refined panel count mismatch '+i);return out;}
 function bookRefinedStudyFigure(key){
+ const three=bookThreeColumnFigure(key);if(three!==null)return three;
  if(key==='light-reflection'){
   const overlay=bookBotanicalOverlay('light-paths-v2',[['M340 190L1000 350'],['M315 220L620 785L1000 490']],[[640,245,1],[690,685,2]]);
   return bookRefinedSwap(studyDiagram(key),[['light-reflection-v2',null,['① 直接日照：太阳 → 叶片','② 反射光：太阳 → 浅色地表／水面 → 叶片'],overlay]]);
@@ -234,6 +235,46 @@ function bookRefinedStudyFigure(key){
  if(key==='density'){let i=0;return studyDiagram(key).replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookDensityIllustration(i++===1));}
  if(key==='france-climates')return studyDiagram(key).replace(/<svg\b[\s\S]*?<\/svg>/g,()=>bookFranceIllustration());
  return null;
+}
+function bookThreeColumnFigure(key){
+ const arts={'irrigation':'irrigation-trio','training-types':'training-trio','spur-renewal':'spur-renewal-trio','cane-renewal':'cane-renewal-trio','summer-actions':'summer-actions-trio','pest-pathways':'pest-pathways-trio','pest-identities':'pest-identities-trio','disease-signs':'disease-signs-trio'};
+ if(!arts[key]&&key!=='climate-patterns')return null;
+ let i=0,html=studyDiagram(key);
+ const marks=(paths=[],circles=[])=>`<svg class="botanical-callouts" viewBox="0 0 800 800" aria-hidden="true"><g fill="none" stroke="#a54e60" stroke-width="4" stroke-linecap="round">${paths.map(([x,y])=>`<path d="M${x-14} ${y-14}l28 28m-28 0l28 -28"/>`).join('')}${circles.map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" stroke-dasharray="7 5"/>`).join('')}</g></svg>`;
+ const overlays={
+  'spur-renewal':['',marks([[270,375],[435,552]]),''],
+  'cane-renewal':['',marks([[277,392]]),''],
+  'summer-actions':[marks([[447,154]]),marks([],[[575,440,115]]),marks([[595,646]])],
+  'pest-pathways':[marks([],[[235,630,95]]),marks([],[[445,500,100]]),marks([],[[600,445,110]])]
+ };
+ const labels={
+  'irrigation':[['黑色管线 → 滴头 → 根区','局部供水，较精准、可控'],['喷头 → 地表 → 下渗','湿润范围较广，环境更湿'],['地表铺水 → 大范围下渗','平坦地形与充足水源']],
+  'spur-renewal':[['上一季新梢已木质化'],['红叉：剪除位置','淡色：将移除的枝段','保留两芽短枝'],['留下新的一年生短枝','下个生长季由保留芽萌发']],
+  'cane-renewal':[['右侧：上一轮用过的结果长枝'],['红叉：移除旧结果长枝','淡色：旧枝及其上枝条','新长枝 ＋ 更新短枝'],['横绑新的一年生结果长枝']],
+  'summer-actions':[['红叉：新梢顶端'],['红圈：果区部分叶片'],['红叉：整根多余新梢的基部','淡色：待移除新梢']],
+  'pest-pathways':[['红圈：地下根系受害部位'],['红圈：叶片受害部位'],['红圈：果实受害部位']],
+  'pest-identities':[['根部放大示意','小型昆虫，六足'],['土壤中的微小蠕虫','无足，不是昆虫'],['叶片上的螨类放大示意','成螨八足，红色仅为例子']],
+  'disease-signs':[['叶面黄斑','圆圈：叶背灰白绒状层'],['绿色组织表面的灰白粉层'],['果实灰色霉层与腐烂']]
+ };
+ html=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{
+  const n=i++;if(key==='climate-patterns')return bookClimatePanel(n);
+  const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||key;
+  const pic=`<div class="tri-art"><img src="assets/${arts[key]}-${n}.webp" alt="${alt}" width="800" height="800" loading="lazy"></div>`;
+  return `<div class="refined-annotated">${pic}${overlays[key]?.[n]||''}</div>`+bookRefinedLabels(labels[key]?.[n]||bookRefinedSvgLabels(svg));
+ });
+ if(i!==3)throw Error('Expected 3 panels: '+key);
+ html=html.replace('class="study-plate"','class="study-plate three-column-plate"').replace(/class="study-grid three(?: study-steps)?"/,'class="study-three-clear"');
+ if(key==='spur-renewal')html=html.replace('红叉：剪除；虚线：将移除','红叉：剪除；淡色：将移除');
+ if(key==='cane-renewal')html=html.replace('淡色虚线表示剪除部分','淡色枝条表示剪除部分');
+ if(key==='irrigation')html=html.replace('每株附近局部供水，可配合电脑控制。','沿黑色管线找滴头：在每株根区附近局部供水，较精准、可控，可配合电脑控制；滴灌管与支撑铁丝不是同一设施。');
+ return html;
+}
+function bookClimatePanel(index){
+ const id='climate-compare-'+index;
+ const curves=['M35 133C70 133 92 119 118 75S166 21 187 61S232 129 272 133','M35 113C80 113 100 98 122 83S163 60 186 80S230 112 272 113','M35 115C79 114 99 94 122 75S166 48 187 70S234 112 272 115'];
+ const rains=[[28,34,25,32],[44,43,39,45],[60,35,9,40]][index];
+ const seasons=['冬','春','夏','秋'];
+ return `<div class="climate-clear"><div class="climate-chart-label"><b>温度</b><span>${index===0?'冬夏温差较大':'冬夏温差较小'}</span></div><svg viewBox="0 0 300 175" role="img" aria-label="${index===0?'大陆性：冬夏温度差较大':'水体调节下冬夏温度差较小'}，相对趋势示意"><defs><linearGradient id="${id}" x2="0" y2="1"><stop stop-color="#c79959" stop-opacity=".18"/><stop offset="1" stop-color="#c79959" stop-opacity="0"/></linearGradient></defs><path d="M34 25H279M34 80H279M34 140H279" stroke="#dedfce" stroke-dasharray="3 4" fill="none"/><path d="M34 20V140H279" stroke="#a7ad96" fill="none"/><path d="${curves[index]}L272 140H35Z" fill="url(#${id})"/><path d="${curves[index]}" fill="none" stroke="#ad793d" stroke-width="3"/><g font-family="sans-serif" font-size="13" fill="#68715b"><text x="8" y="32">高</text><text x="8" y="140">低</text>${['冬','春','夏','秋','冬'].map((s,i)=>`<text x="${35+i*59.25}" y="164" text-anchor="middle">${s}</text>`).join('')}</g></svg><div class="climate-chart-label"><b>降雨</b><span>${index===0?'雨型随地区而异':index===1?'全年较均匀':'冬雨夏干'}</span></div><svg viewBox="0 0 300 122" role="img" aria-label="${index===0?'大陆性地区降雨模式有差异，柱形仅为一例':index===1?'全年各季降雨较均匀':'冬季多雨，夏季少雨'}；相对雨量示意"><path d="M34 12V92H279" stroke="#a7ad96" fill="none"/>${rains.map((v,i)=>`<rect x="${49+i*58}" y="${92-v}" width="30" height="${v}" rx="3" fill="#759ba4"/>`).join('')}<g font-family="sans-serif" font-size="13" fill="#68715b"><text x="8" y="22">多</text><text x="8" y="92">少</text>${seasons.map((s,i)=>`<text x="${64+i*58}" y="114" text-anchor="middle">${s}</text>`).join('')}</g></svg>${index===0?'<div class="climate-region-note">夏季常干；具体雨型仍有地区差别。</div>':''}</div>`;
 }
 function bookDensityIllustration(dense){
  const rows=dense?4:3,cols=dense?6:3,x0=60,y0=50,dx=dense?65:162.5,dy=dense?66:99,w=dense?48:64;
