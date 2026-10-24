@@ -524,3 +524,50 @@ main[tabindex="-1"]:focus{outline:none}
 .training-art-slice{display:block;position:relative;overflow:hidden;flex:none}
 .study-plate .training-art-slice>img{display:block;position:absolute;top:0;left:var(--art-left);width:var(--art-width);max-width:none;height:100%;object-fit:fill;border-radius:0}
 .training-art-link:hover{box-shadow:0 0 0 1px #b2aa91}
+
+/* Reference-led concept maps: live text and connectors stay legible at every width. */
+.concept-map{font-size:var(--text-body);line-height:var(--leading-body)}
+.concept-root{position:relative;max-width:420px;margin:0 auto 38px;padding:17px 23px;text-align:center;border:1px solid #b5bea1;border-radius:8px;background:#e8ecdd}
+.concept-root::after{content:"";position:absolute;bottom:-24px;left:50%;height:23px;border-left:1px solid #aeb798}
+.concept-root>strong,.concept-root>small{display:block}
+.concept-map small{font-size:13px;color:#727c62;line-height:1.5}
+.concept-branches{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;position:relative}
+.concept-branches::before{content:"";position:absolute;top:-15px;left:24%;right:24%;border-top:1px solid #aeb798}
+.concept-branch{position:relative;min-width:0;padding:20px;border:1px solid #dedfce;border-radius:6px;background:#fffdf7}
+.concept-branch::before{content:"";position:absolute;top:-15px;left:50%;height:14px;border-left:1px solid #aeb798}
+.concept-map .concept-branch>h3{font-family:inherit;font-weight:600;font-size:19px;line-height:1.5;margin:0 0 16px;color:var(--wine)}
+.concept-branch>h3>small{display:block;font-size:12px;margin-bottom:5px;letter-spacing:1px}
+.concept-node{min-width:0;padding:13px 11px;text-align:center;border:1px solid #d8ddc8;border-radius:5px;background:#f4f5eb}
+.concept-node>small,.concept-node>strong,.concept-node>span{display:block}
+.concept-node>strong{font-size:var(--text-body);color:var(--ink);overflow-wrap:anywhere}
+.concept-node>span{font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.concept-connector{text-align:center;color:#89926f;font-size:24px;line-height:1.5}
+.taxon-varieties{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:start}
+.taxon-clone{border-top:1px solid #cdd4bb;margin-top:13px;padding-top:12px}
+.taxon-clone>small,.taxon-clone>strong{display:block}
+.taxon-american{display:grid;gap:11px}
+.concept-map .concept-caption{font-size:var(--text-body);line-height:var(--leading-body);color:#56604e;margin:17px 0 0}
+.concept-use{margin-top:20px;border-top:1px solid #dedfce;padding-top:17px}
+.concept-use>strong{font-size:var(--text-body)}
+.concept-use>p,.concept-map .concept-brief{font-size:var(--text-body);line-height:var(--leading-body);margin:8px 0 15px}
+.propagation-map .concept-branches{grid-template-columns:1fr 1fr}
+.propagation-step{padding:15px;border:1px solid #d8ddc8;background:#f4f5eb;border-radius:5px}
+.propagation-step>b,.propagation-step>span,.propagation-step>small{display:block}
+.propagation-step>b{color:var(--ink);font-weight:600}
+.propagation-step>span{font-size:14px;line-height:1.7;margin-top:6px;color:#56604e}
+.propagation-outcomes{display:grid;gap:13px}
+.concept-map>figcaption{font-size:var(--text-body);line-height:var(--leading-body)}
+.wood-age-illustration{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:center}
+.wood-age-art{position:relative;min-width:0}
+.wood-age-marker{position:absolute;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--wine);color:#fff;border:2px solid #fffdf5;font:600 14px/1 sans-serif;pointer-events:none;transform:translate(-50%,-50%)}
+.wood-marker-trunk{left:25%;top:76%}.wood-marker-cane{left:62%;top:60%}.wood-marker-shoot{left:61%;top:34%}
+.wood-age-labels{margin:0;display:grid;gap:19px;font-size:var(--text-body);line-height:var(--leading-body)}
+.wood-age-labels dt{font-weight:600;color:var(--ink)}
+.wood-age-labels dt>b{display:inline-grid;place-items:center;margin-right:4px;width:23px;height:23px;border-radius:50%;background:var(--wine);color:white;font-size:12px}
+.wood-age-labels dd{margin:5px 0 0;color:#56604e}
+.textbook-original-plate .wood-age-bridge{font-size:var(--text-body);line-height:var(--leading-body);margin:17px 0}
+.wood-age-originals{border-top:1px solid #ded9c9;margin-top:19px;padding-top:13px}
+.wood-age-originals>summary{cursor:pointer;font-size:var(--text-body);font-weight:600;color:var(--wine);padding:4px 0 15px}
+@container(max-width:850px){.taxon-varieties{grid-template-columns:1fr}.concept-branches{gap:18px}.concept-branch{padding:16px}}
+@container(max-width:640px){.concept-branches,.propagation-map .concept-branches,.wood-age-illustration{grid-template-columns:1fr}.concept-root::after,.concept-branches::before,.concept-branch::before{display:none}.concept-root{margin-bottom:20px}.taxon-varieties{grid-template-columns:repeat(3,minmax(0,1fr))}.wood-age-art{max-width:460px;width:100%;margin:0 auto}}
+@media(max-width:760px){.concept-branches,.propagation-map .concept-branches,.wood-age-illustration{grid-template-columns:1fr}.concept-root::after,.concept-branches::before,.concept-branch::before{display:none}.concept-root{margin-bottom:20px}.concept-branch{padding:16px}.taxon-varieties{grid-template-columns:1fr}.wood-age-art{max-width:460px;width:100%;margin:0 auto}}
