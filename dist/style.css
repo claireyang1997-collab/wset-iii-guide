@@ -760,3 +760,31 @@ main[tabindex="-1"]:focus{outline:none}
 @container(min-width:680px){.management-control-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:760px){.management-control-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){.management-control-grid{grid-template-columns:1fr;gap:14px}.management-control-item{display:grid;grid-template-columns:68px minmax(0,1fr);column-gap:8px}.book-reading .management-control-item>h4{grid-row:1/4}.management-control-item>strong,.management-control-item>p,.management-control-item>small{grid-column:2}}
+
+/* Matched comparison panels: media, labels and explanations occupy the same rows. */
+.book-reading .frost-aligned>.study-card{display:grid;grid-template-rows:auto auto auto 1fr;align-content:start;min-width:0}
+.frost-aligned .compare-media{width:100%;aspect-ratio:1.35;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#faf7ed;border-radius:4px}
+.frost-aligned .compare-media>.textbook-original-link{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
+.book-reading .frost-aligned .compare-media img{object-fit:contain;max-height:100%;border-radius:0}
+.frost-aligned .compare-media>.refined-art,.frost-aligned .compare-media>.refined-annotated{width:auto;height:100%;max-width:100%;margin:0}
+.frost-aligned .compare-media .refined-art-half{width:auto;height:100%;aspect-ratio:1}
+.frost-aligned .compare-media>.refined-art:not(.refined-art-half){width:100%;height:100%;display:flex;align-items:center}
+.frost-aligned .compare-media .refined-art-half>img{max-height:none;object-fit:fill}
+.frost-aligned .refined-panel-labels{min-height:62px;display:flex;flex-direction:column;justify-content:start;gap:2px;box-sizing:border-box}
+.book-reading .frost-aligned>.study-card>h4{min-height:27px}
+.book-reading .three-column-plate .study-card>.refined-annotated,.three-column-plate .tri-art,.three-column-plate .refined-panel-labels{flex:none}
+.book-reading #study-irrigation .study-card{display:grid;grid-template-rows:40px auto 82px 1fr;align-content:start}
+.book-reading #study-irrigation .study-card>h4{min-height:0;margin:0}
+#study-irrigation .refined-annotated{align-self:start}
+#study-irrigation .refined-panel-labels{min-height:0;margin-top:12px}
+.precise-chart{width:100%;max-width:500px;margin:auto}
+.book-reading .precise-chart>svg{width:100%;height:auto;max-height:none;background:#faf9f3;border-radius:4px}
+.chart-key{display:flex;flex-wrap:wrap;gap:5px 16px;min-height:46px;align-content:start;font:12px/1.7 var(--sans);padding:8px 0 0;color:#59624e}
+.chart-key span:before{content:'';display:inline-block;width:16px;height:3px;vertical-align:middle;background:currentColor;margin-right:6px}
+.chart-sugar{color:#a87537}.chart-acid{color:#648e99}.chart-maturity{color:#60804b}
+.chlorosis-original[open]>.textbook-photo-card{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px;max-width:660px;margin:8px auto 20px;align-items:center}
+.book-reading .chlorosis-original .textbook-original-link>img{max-height:280px;width:100%;object-fit:contain}
+.book-reading .chlorosis-original .textbook-photo-card>figcaption{margin:0;padding:0;border:0}
+@media(max-width:760px){.book-reading #study-irrigation .study-card{grid-template-rows:auto auto auto auto;gap:10px}.book-reading #study-irrigation .study-card>h4{margin-bottom:2px}.frost-aligned .refined-panel-labels{min-height:0}.chlorosis-original[open]>.textbook-photo-card{grid-template-columns:1fr;max-width:380px;gap:12px}}
+
+.france-refined-layout{max-width:620px}.book-reading .france-climate-notes{gap:12px;margin-top:10px}.book-reading .france-climate-notes section{font-size:12px;padding-top:7px}
