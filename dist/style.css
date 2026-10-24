@@ -662,3 +662,13 @@ main[tabindex="-1"]:focus{outline:none}
 .book-reading .botanical-arrow-key{display:flex;flex-wrap:wrap;gap:10px 24px;font-size:13px;color:var(--wine);margin:18px 0 0}
 .botanical-arrow-key>span:last-child{color:#4a7d94}
 @media(max-width:760px){.botanical-key-grid{grid-template-columns:1fr;gap:12px}.needs-detail-keys{grid-template-columns:repeat(2,minmax(0,1fr))}.botanical-panel-labels{font-size:13px}}
+
+.book-reading .flow>span{flex:1 1 auto}
+@media(max-width:760px){.book-reading .flow{flex-direction:column;align-items:stretch}.book-reading .flow>span{flex:initial}.book-reading .flow>b{transform:rotate(90deg)}}
+.latitude-botanical-art{position:relative;max-width:680px;margin:auto}
+.latitude-botanical-art img{display:block;width:100%;height:auto}
+.latitude-botanical-art>span{position:absolute;left:2%;color:var(--ink);background:#fbfaf5e8;padding:3px 6px;border-radius:3px;font:600 clamp(13px,1.4vw,17px)/1.5 var(--sans)}
+.latitude-botanical-art>.latitude-north{top:7%}.latitude-botanical-art>.latitude-equator{top:47%}.latitude-botanical-art>.latitude-south{bottom:7%}
+.site-climate-keys{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stone-heat-art-label{font:600 14px/1.7 var(--sans);color:#536147;text-align:center;margin:10px 0 0}
+@media(max-width:760px){.site-climate-keys{grid-template-columns:1fr}}

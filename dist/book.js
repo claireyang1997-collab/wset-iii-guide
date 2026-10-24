@@ -35,18 +35,21 @@ function bookTextbookFigure(key){
  if(key==='propagation')return bookPropagationIllustration();
  if(key==='graft')return bookGraftIllustration();
  if(key==='needs')return bookNeedsIllustration();
+ if(key==='latitude')return bookLatitudeIllustration();
+ if(key==='site')return bookColdAirIllustration();
+ if(key==='coastal-altitude')return bookSiteClimateIllustration();
+ if(key==='stone-heat')return bookStoneHeatIllustration();
  if(key==='classification')return bookClassificationMap();
  if(key==='crossing')return bookPropagationMap();
  if(key==='training-comparison')return bookTrainingIllustrated();
  if(key==='graft-methods')return `<section class="study-plate textbook-original-plate" id="study-graft-methods" data-study-figure="graft-methods" aria-label="室内嫁接与田间换接的课本实物照片"><div class="study-plate-head"><strong>室内嫁接：用于培育新植株</strong><span>课本图 4.5</span></div><div class="textbook-photo-pair">${bookOriginalCard('textbook-4-5-bench-join','图 4.5① · 刚接合的枝条','室内嫁接近照，接穗与砧木的接合位置以及接穗上的芽清晰可见','先找接穗上的芽，再找两段枝条的接合处。上段是所需欧亚葡萄品种，下段提供砧木根系；接口须固定并保护。')}${bookOriginalCard('textbook-4-5-bench-planted','图 4.5② · 栽种后的嫁接苗','室内嫁接苗栽入土中，新梢长出，红蜡覆盖并保护接合部位','红蜡用于保护接口，芽萌发后长出绿色新梢。建新园通常需经过育苗、栽种与幼藤建立期，至少第三年才有商业收成。')}</div><div class="study-plate-head textbook-subhead"><strong>田间换接：利用现有主干与根系换种</strong><span>课本图 4.6</span></div><div class="textbook-photo-pair">${bookOriginalCard('textbook-4-6-head-new','图 4.6① · 春季刚换接的主干','原有主干上换接两段接穗，以条带绑紧并涂保护材料','看粗大的原有主干与其上新接的细枝。条带固定接穗，剪口涂保护材料；地下既有根系继续保留。')}${bookOriginalCard('textbook-4-6-head-established','图 4.6② · 田间换接的常见形态','保留原有主干、换接后长出枝叶和果串的葡萄藤','沿原有主干向上看新的分枝。成功后可在下一年结出新品种果实，通常比拔园重植更快、成本更低；这两幅为课本中的不同植株示例。')}</div></section>`;
  let html=studyDiagram(key);
- if(key==='latitude')return html.replace(/<img\b[^>]*>/,bookOriginalImage('textbook-5-2-latitude','课本图5.2：相同宽度的黄色太阳能量带，在赤道附近集中、在高纬度地区分散')+`<p class="textbook-image-label"><strong>图 5.2 · 纬度。</strong>黄色带代表相同的太阳能量：赤道附近集中在较小面积，高纬度斜射时分散到更大面积，因此单位面积获得的能量较少。</p>`);
+ if(key==='ripening-curves')return html.replace('<figcaption>横轴从转色开始向右推进；糖、酸曲线与绿色成熟箭头分别读。曲线为讲义趋势示意，没有浓度刻度，不代表所有品种的固定生长曲线。</figcaption>','');
  if(key==='terraces'){
   html=html.replace('侧面看：台面种植，边缘挡土','Priorat：前景石块，背景梯田');
   return bookReplaceCardImage(html,'Priorat：前景石块，背景梯田','textbook-5-3-priorat','课本图5.3：西班牙Priorat葡萄园，前景是片状石块，背景是陡坡梯田','图 5.3 · 前景石块能吸热并再辐射热量；背景阶梯状台面提供陡坡上的种植空间。石块与梯田分别对应热量和地形，不能混成一个概念。');
  }
  if(key==='frost-tools')return bookReplaceCardImage(html,'加热器 Heaters','textbook-5-4-heaters','课本图5.4：纳帕县葡萄园中的两座加热装置','图 5.4 · 纳帕县的加热器：燃烧供热，加热空气并促进流动，用于降低春季霜冻风险。');
- if(key==='coastal-altitude')return `<figure class="study-plate textbook-original-plate" id="study-coastal-altitude" data-study-figure="coastal-altitude"><div class="study-plate-head"><strong>把海拔、坡向、积冷与海洋放在同一块地里看</strong><span>课本图 5.5 · 北半球示意</span></div>${bookOriginalImage('textbook-5-5-site','课本图5.5北半球示意：海拔、坡向、编号1低洼积冷、编号2坡面排冷与编号3海洋降温气流')}<figcaption><strong>图 5.5 · 影响葡萄园气候的因素</strong><dl class="textbook-reading-keys"><div><dt>① 低洼地：冷空气聚集</dt><dd>冷空气下沉，周围高地围成的低洼地容易积冷，增加春霜风险。</dd></div><div><dt>② 坡面：冷空气继续向下流</dt><dd>保持排冷通道，冷空气较不易停留在葡萄园，可减少春霜风险。</dd></div><div><dt>③ 海洋：气流影响沿岸</dt><dd>图中冷海流及海风可降温；温暖洋流可能带来相反作用。影响程度还看风向、山地与位置。</dd></div><div><dt>海拔与坡向：分开判断</dt><dd>高处通常更凉；北半球朝南、南半球朝北的坡面通常获得更多热量和阳光。</dd></div></dl><p>海拔、坡向和洼地积冷不是同一个因素；海雾还可能遮挡日照。同一园地往往同时受多种因素影响。</p></figcaption></figure>`;
  if(key==='irrigation')return bookReplaceCardImage(html,'滴灌','textbook-5-6-drip','课本图5.6：新西兰葡萄园，黑色滴灌管沿葡萄行延伸并在根区附近供水','图 5.6 · 沿黑色管线找滴头：在每株根区附近局部供水，较精准、可控。滴灌管与支撑枝条的铁丝不是同一设施。');
  if(key==='nets')return bookReplaceCardImage(html,'防雹网：上方拦截冰雹','textbook-5-7-hail','课本图5.7：阿根廷葡萄园的架空防雹网，网面位于冠层上方','图 5.7 · 防雹网架在冠层上方，拦截冰雹。高风险园地可能接受较高架设成本；与包覆果区的防鸟网分开识别。');
  if(key==='chlorosis')return bookReplaceCardImage(html,'黄化叶片','textbook-5-8-chlorosis','课本图5.8：法国马孔内一株黄化病葡萄藤，叶片明显变黄','图 5.8 · 马孔内的黄化病植株：与左侧绿色叶片对照，黄色叶片的光合作用能力受影响。');
@@ -89,6 +92,29 @@ function bookNeedsIllustration(){
  return studyDiagram('needs').replace(/<svg\b[\s\S]*?<\/svg>/,art);
 }
 
+function bookLatitudeIllustration(){
+ const art=`<div class="latitude-botanical-art"><img src="assets/latitude-sunlight-botanical.webp" width="1536" height="1024" loading="lazy" alt="五束等宽平行阳光照向地球；赤道附近直射更集中，高纬度斜射时同量太阳能分散到更大表面积"><span class="latitude-north">北极</span><span class="latitude-equator">赤道</span><span class="latitude-south">南极</span></div><p class="textbook-image-label"><strong>图 5.2 · 纬度。</strong>黄色带代表相同的太阳能量：赤道附近集中在较小面积，高纬度斜射时分散到更大面积，因此单位面积获得的能量较少。</p>`;
+ return studyDiagram('latitude').replace(/<img\b[^>]*>/,art);
+}
+function bookColdAirIllustration(){
+ const art=`<div class="botanical-art-frame"><img src="assets/cold-air-slope-botanical.webp" width="1536" height="1024" loading="lazy" alt="侧面看葡萄园山坡：坡中部保持排冷通道；冷空气向坡下移动，在右侧封闭低洼地积聚；蓝色薄雾代表冷空气，不是水体">${bookBotanicalOverlay('cold-air-detail',[['M480 400L650 520',true],['M680 530L850 630',true],['M880 640L1050 710',true]],[[650,570,1,true],[1170,740,2,true]])}</div><div class="botanical-key-grid"><section><h4><b>1</b>坡中部：保持排冷通道</h4><p>冷空气顺坡下沉，通道畅通时能继续流走。</p></section><section><h4><b>2</b>洼地易积冷</h4><p>封闭低洼处聚集冷空气，增加嫩芽遭遇春霜的风险。</p></section><section><h4>土层、风与朝向仍需另判</h4><p>排冷只是园地条件之一，不能单凭海拔或坡位判断全部生长条件。</p></section></div>`;
+ return studyDiagram('site').replace(/<svg\b[\s\S]*?<\/svg>/,art);
+}
+function bookSiteClimateIllustration(){
+ const descriptions=[
+  ['海拔','气温随着海拔的升高而下降。高海拔对靠近赤道的地区有利，否则这些地区的气温可能会过高。'],
+  ['朝向','面向太阳的斜坡接收到热量和阳光最多。在北半球，如图所示，这些山坡朝南。在南半球，这些山坡朝北。可以从这张图上看到，太阳的能量主要集中在斜坡的中部（与顶部和底部相比），这意味着这个位置能接收到最多的热量和阳光。'],
+  ['霜冻 · ①封闭洼地与②开放坡面','可以利用葡萄园的地理位置来减少霜冻的风险。冷空气下降，而暖空气上升。在①号位置上，冷空气被周围的丘陵困住，增加了霜冻的风险。在②号位置上，冷空气能够流动，不会停留在葡萄园，这就减少了霜冻的风险。'],
+  ['海洋的降温效应 · ③沿海谷地','寒冷的洋流可以给沿海的葡萄酒产区降温。在如图所示的③号位置上，如果冷空气和雾气能够吹上岸，便可加强这种效应。请注意，虽然这里没有图解说明，但温暖的洋流可以产生相反的效应。']
+ ];
+ let overlay=bookBotanicalOverlay('site-climate-detail',[['M850 150L820 260',true],['M1000 230L880 290',true],['M520 320Q350 420 180 420',true],['M1080 900Q1130 700 960 520',true]],[[820,310,1],[450,400,2],[1050,610,3]]);
+ overlay=overlay.replace('</svg>','<g stroke="#c9a449" stroke-width="8"><path d="M1510 240L1280 490M1510 300L1330 550"/></g><g transform="translate(270 840) rotate(-35)" fill="#343d31" stroke="#343d31" stroke-width="2"><path d="M0 -40V40M-40 0H40M-7 -23L0 -40L7 -23" fill="none"/><g stroke="none" font-size="25" text-anchor="middle" font-family="Georgia,serif"><text y="-49">N</text><text x="57" y="9">E</text><text y="66">S</text><text x="-57" y="9">W</text></g></g></svg>');
+ return studyPlate('coastal-altitude','影响葡萄园气候的因素',`<div class="botanical-art-frame"><img src="assets/vineyard-site-climate-botanical.webp" width="1536" height="1024" loading="lazy" alt="北半球沿海地形示意：①丘陵围成的封闭洼地，②可排冷的开放坡面，③海风与雾可吹入的沿海谷地；高山在内陆，海洋在前景，金色线条表示阳光">${overlay}</div><div class="botanical-key-grid site-climate-keys">${descriptions.map(([title,text])=>`<section><h4>${title}</h4><p>${text}</p></section>`).join('')}</div>`,'参照课本图 5.5 · 北半球示意','坡中部受光的比较针对图示坡面；实际受热还需结合纬度、季节、坡度、遮挡和风。海拔、坡向与积冷应分别判断。');
+}
+function bookStoneHeatIllustration(){
+ let i=0;return studyDiagram('stone-heat').replace(/<svg\b[\s\S]*?<\/svg>/g,()=>{const after=i++===1,paths=after?[['M240 620V300'],['M560 650V300'],['M840 670V300']]:[['M180 180L240 640'],['M220 180L560 690'],['M260 180L840 700']];return `<div class="propagation-art-slice botanical-art-frame stone-heat-art ${after?'layering-art':''}"><img src="assets/soil-stones-heat-botanical.webp" width="2048" height="1024" loading="lazy" alt="${after?'同一组石块与表土在吸热后向周围再辐射热量，箭头从石块向空气':'白天太阳照向深色表土与三块自然石头，箭头指向受热表面'}">${bookBotanicalOverlay('stone-'+(after?'after':'day'),paths,[],'0 0 1000 1000')}</div><p class="stone-heat-art-label">${after?'可帮助凉爽园地成熟':'深色表土、石块吸热'}</p>`;});
+}
+
 function bookShootIllustration(){
  const notes=[
   ['卷须','葡萄藤无法支撑自身，所以用卷须来抓住支撑结构以保持向上直立。一旦卷须感觉触碰到像葡萄架铁丝这样的物体，就会紧紧地缠绕其上来保持新枝直立。'],
@@ -109,7 +135,7 @@ function bookStructureTeachingFigure(key){
 }
 function bookContent(u){
  let body=u.body;
- body=body.replace(/<table class="comparison">(?=<thead><tr><th scope="col">(?:观察情境|亲本关系|品种例子)<\/th>)/g,'<table class="comparison name-column-comparison">');
+ body=body.replace(/<table class="comparison">(?=<thead><tr><th scope="col">(?:观察情境|亲本关系|品种例子|因素)<\/th>)/g,'<table class="comparison name-column-comparison">');
  // An overview precedes the detailed methods; do not repeat the same map below.
  if(u.chapter===4&&u.id==='propagation')body='<div data-study-plate="crossing"></div>'+body.replace('<div data-study-plate="crossing"></div>','');
  return body.replace(/<div data-study-plate="([^"]+)"><\/div>/g,(_,key)=>u.chapter===4&&u.id==='structure'?bookStructureTeachingFigure(key):bookTextbookFigure(key));
