@@ -571,3 +571,39 @@ main[tabindex="-1"]:focus{outline:none}
 @container(max-width:850px){.taxon-varieties{grid-template-columns:1fr}.concept-branches{gap:18px}.concept-branch{padding:16px}}
 @container(max-width:640px){.concept-branches,.propagation-map .concept-branches,.wood-age-illustration{grid-template-columns:1fr}.concept-root::after,.concept-branches::before,.concept-branch::before{display:none}.concept-root{margin-bottom:20px}.taxon-varieties{grid-template-columns:repeat(3,minmax(0,1fr))}.wood-age-art{max-width:460px;width:100%;margin:0 auto}}
 @media(max-width:760px){.concept-branches,.propagation-map .concept-branches,.wood-age-illustration{grid-template-columns:1fr}.concept-root::after,.concept-branches::before,.concept-branch::before{display:none}.concept-root{margin-bottom:20px}.concept-branch{padding:16px}.taxon-varieties{grid-template-columns:1fr}.wood-age-art{max-width:460px;width:100%;margin:0 auto}}
+
+/* Compact maps: shared level labels and short rows replace large repeated cards. */
+.concept-map .study-plate-head{padding-bottom:11px;margin-bottom:16px}
+.concept-map .concept-root{max-width:280px;padding:9px 16px;margin-bottom:30px}
+.concept-map .concept-root>strong{font-size:16px}
+.concept-map .concept-branch{padding:14px}
+.concept-map .concept-branch>h3{font-size:16px;margin-bottom:10px}
+.concept-map .concept-node{padding:9px}
+.concept-map .concept-node>strong{font-size:15px}
+.concept-map .concept-node>span{font-size:13px;line-height:1.5}
+.concept-map .concept-caption,.concept-map .concept-use>p,.concept-map .concept-use>strong,.concept-map>figcaption{font-size:14px;line-height:1.7}
+.concept-map .concept-caption{margin-top:12px}
+.concept-map .concept-use{margin-top:13px;padding-top:12px}
+.concept-map .concept-use>p{margin:5px 0 0}
+.concept-map>figcaption{padding-top:12px;margin-top:16px}
+.taxonomy-map .taxon-varieties{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.taxon-level-label{grid-column:1/-1;text-align:center;font-size:12px;color:#727c62}
+.taxonomy-map .taxon-varieties>.concept-node>small{display:none}
+.taxonomy-map .taxon-varieties .concept-node{padding:9px 6px}
+.taxonomy-map .taxon-varieties .concept-node>strong{font-size:14px}
+.taxonomy-map .taxon-varieties .concept-node>span{font-size:12px}
+.taxonomy-map .taxon-clone{margin-top:9px;padding-top:8px}
+.taxonomy-map .taxon-clone>small{font-size:11px}
+.taxonomy-map .taxon-clone>strong{font-size:14px}
+.taxonomy-map .taxon-american{gap:8px}
+.taxonomy-map .taxon-american .concept-node{display:grid;grid-template-columns:76px minmax(0,1fr);gap:7px;text-align:left;align-items:center;padding:11px}
+.taxonomy-map .taxon-american .concept-node>small{display:none}
+.taxonomy-map .taxon-american .concept-node>strong{font-size:14px}
+.taxonomy-map .taxon-american .concept-node>span{font-size:13px}
+.propagation-map .concept-brief{font-size:14px;line-height:1.7;margin:6px 0 10px}
+.propagation-map .propagation-step{padding:10px 12px}
+.propagation-map .propagation-step>b{font-size:15px}
+.propagation-map .propagation-step>span{font-size:13px;margin-top:4px}
+.propagation-map .propagation-outcomes{gap:9px}
+.propagation-map .concept-connector{font-size:21px;line-height:1.4}
+@media(max-width:760px){.concept-map .concept-root{margin-bottom:17px}.concept-map .concept-branch{padding:12px}.taxonomy-map .taxon-varieties .concept-node>span{font-size:11px}.taxonomy-map .taxon-varieties .concept-node>strong{font-size:13px}}
