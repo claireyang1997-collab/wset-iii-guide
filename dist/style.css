@@ -672,3 +672,30 @@ main[tabindex="-1"]:focus{outline:none}
 .site-climate-keys{grid-template-columns:repeat(2,minmax(0,1fr))}
 .stone-heat-art-label{font:600 14px/1.7 var(--sans);color:#536147;text-align:center;margin:10px 0 0}
 @media(max-width:760px){.site-climate-keys{grid-template-columns:1fr}}
+
+/* One reading order throughout teaching plates: title, artwork, its explanation.
+   Captions are styled only when present; decorative art needs no added copy. */
+.book-reading .study-card{padding:18px;background:#faf8f0}
+.book-reading .study-card>h4{font:600 16px/1.65 var(--sans);color:var(--ink);margin:0 0 12px}
+.book-reading .study-card>p,.book-reading .study-plate>figcaption,.book-reading .textbook-photo-card>figcaption,.book-reading .textbook-image-label{font:14px/1.85 var(--sans);color:#56604e;text-align:left}
+.book-reading .study-card>p{margin:14px 0 0}
+.book-reading .study-card>p:first-of-type:not(.figure-stage){border-top:1px solid #dedfce;padding-top:12px}
+.book-reading .study-plate>figcaption{margin:20px 0 0;padding:14px 0 0}
+.book-reading .textbook-photo-card>figcaption{margin-top:14px;padding-top:12px}
+.book-reading .botanical-panel-labels{font:14px/1.85 var(--sans);gap:7px 16px;border-top:1px solid #dedfce;margin-top:14px;padding-top:12px}
+.book-reading .botanical-panel-labels>span{border:0;padding:0}
+.frost-stage-card{display:flex;flex-direction:column;gap:0}
+.book-reading .frost-stage-card>h4{margin-bottom:4px}
+.book-reading .frost-stage-card>.figure-stage{font:13px/1.7 var(--sans);color:var(--muted);margin:0 0 14px;padding:0;border:0}
+.frost-stage-art{position:relative}
+.frost-stage-art>.botanical-callouts{position:absolute;inset:0;width:100%;height:100%;max-height:none;background:transparent;border-radius:0}
+.figure-panel-notes{border-top:1px solid #dedfce;margin-top:16px;padding-top:14px;display:grid;gap:12px}
+.figure-panel-notes section{min-width:0}
+.book-reading .figure-panel-notes h5{display:flex;align-items:center;gap:8px;font:600 14px/1.7 var(--sans);margin:0 0 5px;color:var(--ink)}
+.figure-panel-notes h5>b{display:grid;place-items:center;flex:none;width:22px;height:22px;border:1px solid #b69a9e;border-radius:50%;font:14px/1 Georgia,serif;color:var(--wine)}
+.book-reading .figure-panel-notes p,.book-reading .figure-panel-notes dl{font:14px/1.85 var(--sans);color:#56604e;margin:0}
+.figure-panel-notes dl{border-top:1px solid #e5e0d2;padding-top:11px}
+.figure-panel-notes dl>div{display:grid;grid-template-columns:2em minmax(0,1fr);gap:10px;margin:4px 0}
+.figure-panel-notes dt{font-weight:600;color:var(--ink)}
+.figure-panel-notes dd{margin:0}
+@media(max-width:760px){.book-reading .study-card{padding:14px}.figure-panel-notes{gap:10px}}

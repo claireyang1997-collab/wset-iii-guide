@@ -32,6 +32,7 @@ function bookReplaceCardImage(html,title,name,alt,label){
  return html.slice(0,at)+bookOriginalImage(name,alt)+`<p class="textbook-image-label">${label}</p>`+html.slice(end);
 }
 function bookTextbookFigure(key){
+ if(key==='frost')return bookFrostIllustration();
  if(key==='propagation')return bookPropagationIllustration();
  if(key==='graft')return bookGraftIllustration();
  if(key==='needs')return bookNeedsIllustration();
@@ -76,6 +77,14 @@ function bookTrainingIllustrated(){
  });
 }
 
+function bookFrostIllustration(){
+ const panels=[
+  {title:'冬季冻害',phase:'休眠期 · 没有绿色冠层',alt:'休眠期葡萄藤：保留芽、一年生短枝和粗糙多年生木，没有绿色新梢',paths:[['M790 120L590 255'],['M210 530L470 520']],pins:[[825,95,1],[170,530,2]],notes:[['1','芽与枝条','看枝上的芽和木质部分；极端低温可伤芽、永久木，严重时伤及整株。'],['2','主干与多年生木','粗糙的深棕色部分是永久骨架，冬季保护也需要考虑这些部位。']],result:'严重受冻可能需要重植，并等待产量恢复。',response:'必要时培土／埋土保护。'},
+  {title:'萌芽后春霜',phase:'萌芽后 · 嫩芽和新梢已出现',alt:'萌芽后葡萄藤：保留木上长出绿色嫩梢，部分嫩梢顶端受霜后褐变、萎蔫，与健康绿色组织对照',paths:[['M480 70L390 120'],['M840 250L760 260']],pins:[[510,45,1],[880,245,2]],notes:[['1','褐变、萎蔫的嫩梢','看顶部下垂的褐色组织：萌芽后的嫩芽和绿色新梢容易受到春霜伤害。'],['2','绿色幼嫩组织','绿色部分用于辨认生长阶段；图中保留绿色组织作对照。']],result:'当年的结果新梢受损，潜在产量可能下降。',response:'加热、风机、喷灌各有适用条件，具体机制见上表。'}
+ ];
+ const cards=panels.map((p,i)=>`<section class="study-card frost-stage-card"><h4>${p.title}</h4><p class="figure-stage">${p.phase}</p><div class="frost-stage-art"><div class="propagation-art-slice ${i?'layering-art':''}"><img src="assets/frost-stages-botanical.webp" width="1774" height="887" loading="lazy" alt="${p.alt}"></div>${bookBotanicalOverlay('frost-stage-'+i,p.paths,p.pins,'0 0 1000 1000')}</div><div class="figure-panel-notes">${p.notes.map(([n,t,d])=>`<section><h5><b>${n}</b>${t}</h5><p>${d}</p></section>`).join('')}<dl><div><dt>后果</dt><dd>${p.result}</dd></div><div><dt>应对</dt><dd>${p.response}</dd></div></dl></div></section>`).join('');
+ return studyPlate('frost','低温发生在不同阶段，受害部位也不同',`<div class="study-pair">${cards}</div>`,'课本 p.39–40','插画用于比较生长阶段与受害部位；风机依赖暖空气层，防霜喷灌靠持续结冰释放潜热，需要正确运行和连续供水。');
+}
 function bookBotanicalOverlay(key,paths,pins,viewBox='0 0 1536 1024'){
  return `<svg class="botanical-callouts" viewBox="${viewBox}" aria-hidden="true"><defs><marker id="${key}-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#763e4b" stroke-width="1.2"/></marker><marker id="${key}-oxygen" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="#4a7d94" stroke-width="1.2"/></marker></defs><g fill="none" stroke-width="4" stroke-linecap="round">${paths.map(([d,out])=>`<path d="${d}" stroke="${out?'#4a7d94':'#763e4b'}" marker-end="url(#${key}-${out?'oxygen':'arrow'})"/>`).join('')}</g>${pins.map(([x,y,n,out])=>`<g><circle cx="${x}" cy="${y}" r="28" fill="#fbfaf5" stroke="${out?'#4a7d94':'#763e4b'}" stroke-width="2"/><text x="${x}" y="${y+10}" text-anchor="middle" fill="${out?'#4a7d94':'#763e4b'}" font-size="31" font-family="Georgia,serif">${n}</text></g>`).join('')}</svg>`;
 }
