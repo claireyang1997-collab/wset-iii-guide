@@ -735,3 +735,10 @@ main[tabindex="-1"]:focus{outline:none}
 .climate-region-note{font:12px/1.7 var(--sans);color:#6b735f;margin:3px 0 0}
 @container(min-width:680px){.study-three-clear{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}}
 @media(max-width:760px){.study-three-clear{grid-template-columns:1fr}.book-reading .three-column-plate .study-card>h4{min-height:0}.three-column-plate .refined-panel-labels{min-height:0}.tri-art{max-width:440px;margin:auto}}
+/* Establishment sequence: compact reading order, two steps per desktop row. */
+#book-6-establish-2 + .s2-steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin:20px 0 28px}
+#book-6-establish-2 + .s2-steps>li{padding:16px 0 16px 40px;min-width:0}
+#book-6-establish-2 + .s2-steps>li::before{top:16px;font-size:21px;line-height:1.6}
+#book-6-establish-2 + .s2-steps>li>strong{display:block;line-height:1.6}
+#book-6-establish-2 + .s2-steps>li>p{margin:6px 0 0;line-height:1.85}
+@media(max-width:760px){#book-6-establish-2 + .s2-steps{grid-template-columns:1fr;gap:0}#book-6-establish-2 + .s2-steps>li{padding-top:14px;padding-bottom:14px}#book-6-establish-2 + .s2-steps>li::before{top:14px}}
