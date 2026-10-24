@@ -14,6 +14,7 @@ const bookReview={
    "id": 4,
    "scope": "课本 p.30–35；第一课讲义 p.6–13；第一课转写 00:00–22:20 及课末砧木问答。",
    "findings": [
+    "补回讲义分类层级图，另用母株选择与枝条繁殖对照衔接克隆概念。",
     "结构与木龄集中在本章；全年管理周期移至第6章，保留相互跳转。",
     "繁殖、品系与杂交、根瘤蚜、嫁接过程和时间成本均有正文位置。讲义品种表作为本章附表。",
     "修剪细节归第6章；课本图4.2–4.4的木龄和永久骨架辨认，在结构正文与修剪对照图中衔接。"
@@ -24,6 +25,8 @@ const bookReview={
     "4/structure|wood-renewal|跨年木龄与结果位置",
     "4/propagation|propagation|扦插与压条",
     "4/propagation|crossing|授粉、种子与筛选",
+    "4/types|classification|属、种、品种与品系",
+    "4/propagation|clone-selection|选择母株与无性繁殖的关系",
     "4/grafting|graft|接穗、接口与砧木",
     "4/grafting|graft-methods|室内嫁接与田间换接"
    ],
@@ -79,6 +82,7 @@ const bookReview={
    "id": 5,
    "scope": "课本 p.36–46；第一课讲义 p.15–23；第一课转写 27:30–1:14:18 的环境、土壤与视频部分。",
    "findings": [
+    "补回成熟曲线、梯田、海风与海拔、反射光路、三类气候与法国例子示意。",
     "光热水和养分、温差、气候类型、天气风险、土壤与风土按主题合并，园地调温因素不再两课重复。",
     "热量四档边界、约10°C萌芽提示、极端温度示例均保留适用条件。",
     "补充半球坡向与四类春霜对策图；灌溉、土壤水分和黄化已有逐图说明。"
@@ -94,7 +98,14 @@ const bookReview={
     "5/heat|frost-tools|加热、风机、喷灌及设计",
     "5/water|irrigation|三类灌溉",
     "5/water|soil-water|排水和保水",
-    "5/soil|chlorosis|黄化与叶片功能"
+    "5/soil|chlorosis|黄化与叶片功能",
+    "5/heat|heat-hazards|酷热、火烧与烟熏污染",
+    "5/needs|ripening-curves|适宜与过热的成熟曲线",
+    "5/heat|terraces|梯田种植与作业空间",
+    "5/heat|coastal-altitude|海风、雾与海拔",
+    "5/light|light-reflection|直射与反射光路",
+    "5/climate|climate-patterns|三类气候的温差与雨型",
+    "5/climate|france-climates|法国气候例子定位"
    ],
    "handouts": [
     [
@@ -161,6 +172,7 @@ const bookReview={
    "id": 6,
    "scope": "课本 p.47–61；第一课讲义 p.14；第二课讲义 p.24–37；两课年周期及第二课管理转写。",
    "findings": [
+    "年周期改为八阶段植株图；补入两种坐果问题、两组园地组合、病虫类别和病害外观，贵腐增加失水皱缩与破坏性灰腐对照。",
     "目录依次为建园、年周期、整枝、修剪、冠层、密度、产量、管理实例、病虫害、栽培方式、采收。",
     "本次补回课堂3–4条长枝系统的说明、课末视频分区采样压汁测糖酸的步骤。",
     "短枝与替换长枝各补更新步骤；单／双居由、冠层三类操作、摘青及病虫害受害路径均单独配图。",
@@ -183,7 +195,14 @@ const bookReview={
     "6/pests|pest-pathways|根、叶、果实受害路径",
     "6/pests|nets|防雹网与防鸟网",
     "6/harvest|botrytis|贵腐天气、浓缩及选果",
-    "6/harvest|harvest-methods|人工整串与机械果粒"
+    "6/harvest|harvest-methods|人工整串与机械果粒",
+    "6/training|management-controls|四类管理手段的分工",
+    "6/yield|resource-yield|资源供给与果实负载",
+    "6/cycle|fruit-set|落花与小粒果",
+    "6/cases|case-dry|低密度灌木园组合",
+    "6/cases|case-wet|高密度头状长枝与VSP组合",
+    "6/pests|disease-signs|霜霉、白粉与灰腐外观",
+    "6/pests|pest-identities|根瘤蚜、线虫与叶螨类别"
    ],
    "handouts": [
     [
