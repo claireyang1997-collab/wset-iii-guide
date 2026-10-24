@@ -204,6 +204,10 @@ function bookRefinedLabels(labels){return labels.length?`<div class="botanical-p
 function bookRefinedSvgLabels(svg){return [...svg.matchAll(/<text\b[^>]*>([\s\S]*?)<\/text>/g)].map(m=>m[1].replace(/<[^>]+>/g,'').trim()).filter(Boolean)}
 function bookRefinedSwap(html,specs){let i=0;const out=html.replace(/<svg\b[\s\S]*?<\/svg>/g,svg=>{const a=specs[i++];if(!a)throw Error('Unmapped refined panel');const alt=svg.match(/<title>([\s\S]*?)<\/title>/)?.[1]||a[0];return (a[3]?`<div class="refined-annotated">${bookRefinedArt(a[0],a[1],alt)}${a[3]}</div>`:bookRefinedArt(a[0],a[1],alt))+bookRefinedLabels(a[2]||bookRefinedSvgLabels(svg));});if(i!==specs.length)throw Error('Refined panel count mismatch '+i);return out;}
 function bookRefinedStudyFigure(key){
+ if(key==='management-controls'){
+  const items=[['整枝','多年生木 · 永久骨架','确定主干、干臂／主蔓的形状，安排结果部位。','看保留多年的木质结构。'],['修剪','枝、叶、芽 · 每年调整','冬剪决定留芽数量与位置；夏剪调整绿色部分。','整枝相同，也可采用不同修剪方式。'],['搭架','支柱、铁丝 · 支撑定位','安排枝条和新梢，影响受光、通风及机械作业。','铁丝是设施，不是葡萄藤的木臂。'],['种植密度','株距、行距 · 单位面积株数','改变植株间的资源竞争、单株空间和机械通道。','与水分、肥力和树型配合选择。']];
+  return studyPlate(key,'四种手段，各管什么？',`<div class="management-control-grid">${items.map(([title,object,mechanism,keyPoint])=>`<section class="management-control-item"><h4>${title}</h4><strong>${object}</strong><p>${mechanism}</p><small>${keyPoint}</small></section>`).join('')}</div>`,'讲义 p.24 · 幻灯片 87–88','共同目标：协调永久骨架、留芽量、绿色冠层与行列空间，平衡生长和果实成熟；四者不能相互替代。');
+ }
  if(key==='annual-cycle'){
   let n=0;
   const alt=['冬季休眠：无叶葡萄藤、保留芽与木质骨架','萌芽：褐色芽鳞展开，嫩绿幼叶露出','生枝长叶：绿色新梢、叶片、节与卷须','开花：分枝花序上的细小花朵与雄蕊','坐果：分枝果梗上形成绿色幼果','转色与成熟：左侧红葡萄绿紫相间，右侧白葡萄趋黄透明','达到目标后采收：剪刀剪取完整果串','采后落叶：叶片逐渐转黄、脱落，木质结构保留'];
