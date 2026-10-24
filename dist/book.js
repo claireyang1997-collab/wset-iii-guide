@@ -220,7 +220,7 @@ function bookRefinedStudyFigure(key){
   return bookRefinedSwap(html,[['frost-equipment',0,['上层较暖','近地较冷','箭头：混合暖冷空气'],arrows],['frost-equipment',1,['水持续结冰 → 释放潜热']],['frost-site-design',null,['排冷通道 ＋ 较高结果部位','避开积冷洼地']]]).replace('class="study-card"><h4>风机','class="study-card wind-machine-card"><h4>风机');
  }
  if(key==='new-vines'){
-  const overlay=bookBotanicalOverlay('refined-new-vines',[["M440 160L200 240"],["M1110 200L1090 325"],["M600 580L744 580"],["M1160 690L1010 770"]],[[420,140,1],[1130,180,2],[570,580,3],[1180,670,4]]);
+  const overlay=bookBotanicalOverlay('refined-new-vines',[["M440 160L200 240"],["M1110 200L1090 305"],["M600 580L744 580"],["M1160 690L1010 770"]],[[420,140,1],[1130,180,2],[570,580,3],[1180,670,4]]);
   return bookRefinedSwap(studyDiagram(key),[['new-vines',null,['① 支柱：固定支撑','② 铁丝：支撑与定位枝条','③ 套管：保护幼藤','④ 滴灌管：根区供水'],overlay]]);
  }
  if(key==='case-dry'||key==='case-wet')return bookRefinedSwap(studyDiagram(key),[['vineyard-cases',key==='case-dry'?0:1]]);
