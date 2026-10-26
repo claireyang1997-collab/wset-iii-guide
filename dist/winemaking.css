@@ -140,3 +140,10 @@
 .book-reading .wm-composition-plate .wm-comp-notice{font:500 14px/1.85 var(--sans);padding:14px 16px;margin:24px 0 0;background:#eeeee1;border-radius:5px;color:var(--ink)}
 @media(max-width:1100px){.wm-comp-layout{grid-template-columns:minmax(0,1fr) 145px minmax(0,1fr);gap:22px 14px}}
 @media(max-width:760px){.wm-comp-layout{display:flex;flex-direction:column;gap:22px}.wm-comp-art{align-self:center;width:230px;max-width:100%;height:auto}.wm-comp-art img{height:auto;max-height:none}.wm-comp-note{width:100%}.book-reading .wm-comp-note p{margin-bottom:10px}.wm-comp-heading{font-size:16px}.wm-comp-heading>div{gap:12px}}
+
+/* Chapter review: keep the learning conclusion and its disposition together. */
+.logic-review-table {min-width:650px}
+.logic-review-table th:first-child {width:24%}
+.logic-review-table th small {display:block;font-weight:400;color:var(--muted);margin-top:.4em}
+.logic-review-table td:last-child {width:30%}
+.logic-review-table td p {margin:.4em 0 0}

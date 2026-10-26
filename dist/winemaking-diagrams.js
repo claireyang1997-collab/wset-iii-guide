@@ -64,7 +64,7 @@ function wmDiagram(d){
   {label:'塑料瓶',svg:bottle(108,'#cbd6b9'),notes:['较轻、较易运输','逐渐透氧，适合较快饮用']},
   {label:'袋装盒',svg:`${rect(55,30,170,165,'#e2d8bd','#a79878')}${rect(75,52,125,118,'#c7c7b3','#9a9f8c',15)}${line(197,160,242,160,blue,7)}${line(242,160,242,182,blue,7)}`,notes:['倒酒时内袋逐渐收缩','袋材仍透氧，不用于长期陈年']}];caption='包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。';
  }else if(n==='closures'){
-  title='图 7.8 · 封口结构对照';panels=[
+  title=d.title||'封口材料与保存表现示意';panels=[
    {label:'天然软木塞',svg:`${rect(98,35,88,150,'#c6a56f','#a17b4b',10)}${Array.from({length:22},(_,i)=>line(107+i%5*15,49+Math.floor(i/5)*28,113+i%5*15,52+Math.floor(i/5)*28,'#89693e',2)).join('')}`,notes:['整块软木；个体透氧有差异','需控制TCA污染']},
    {label:'技术软木塞',svg:`${rect(98,35,88,150,'#ccb186','#a17b4b',10)}${Array.from({length:40},(_,i)=>ellipse(107+i%6*13,49+Math.floor(i/6)*20,4,3,i%2?'#a17b4b':'#e2c596','#b6925e')).join('')}`,notes:['处理后的软木颗粒等构成','性能取决于等级及工艺']},
    {label:'合成塞',svg:`${rect(98,35,88,150,'#e0c9a1','#ae956e',10)}${line(108,46,108,174,'#eedfc6',4)}`,notes:['石化或植物来源材料','按隔氧表现与饮用期选择']},

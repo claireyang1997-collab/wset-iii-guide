@@ -77,7 +77,7 @@ function studyOperationsDiagram(key){
  const P=studyPalette,card=(title,svg,text)=>studyCard(title,studySvg(title,svg),text),pair=cards=>`<div class="study-pair">${cards.join('')}</div>`,steps=cards=>`<div class="study-grid three study-steps">${cards.join('')}</div>`;
  if(key==='wood-renewal')return studyPlate(key,'同一根枝条，跨年后名称怎样变？',studyWoodLegend()+steps([
  card('① 生长季：当年新梢',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.cane,6)+studyShoot(126,173,115,true,0)+studyText(224,94,'绿色新梢')+studyArrow(219,99,137,112),'绿色枝是当年新梢，叶与果串长在它上面；下方赭色枝是它萌发时所在的一年生木。'),
- card('② 木质化后：一年生木',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.wood,7)+studyPath('M126 173V58',P.cane,5)+[84,112,140].map(y=>studyBud(131,y)).join('')+studyText(221,94,'芽仍留在枝上')+studyArrow(217,101,139,112),'同一根新梢木质化，到次年春季称为一年生木。图中赭色直枝保留芽，落叶不代表芽消失。'),
+ card('② 木质化后：一年生木',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.wood,7)+studyPath('M126 173V58',P.cane,5)+[84,112,140].map(y=>studyBud(131,y)).join('')+studyText(221,94,'芽仍留在枝上')+studyArrow(217,101,139,112),'同一根新梢在生长季后段逐渐木质化，落叶后已成熟木质化，来春为一年生木。冬剪选择性留下枝与芽；落叶不代表芽消失。'),
  card('③ 下一春：芽萌发新梢',studyPath('M180 228V173',P.wood,12)+studyPath('M180 173H110',P.wood,7)+studyPath('M126 173V106',P.cane,5)+studyShoot(126,117,68,true,52)+studyText(219,102,'下一年的新梢')+studyArrow(216,110,158,79),'下一年的绿色结果新梢从保留的一年生木上的芽萌发；光秃木枝本身不会直接长出一串葡萄。')
  ]),'课本 p.30–31 · 讲义幻灯片 103、112','示意聚焦同一部位的跨年变化；进入下一年，较早的木质结构也随之增加木龄。');
  if(key==='spur-renewal'){

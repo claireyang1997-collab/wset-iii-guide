@@ -43,7 +43,19 @@
 
 ## 预览与部署
 
-原生 HTML、CSS、JavaScript，无构建依赖。可用静态服务器预览 `dist/`。Cloudflare Workers Static Assets 从 `./dist` 部署，GitHub main 更新触发构建。
+原生 HTML、CSS、JavaScript。可用静态服务器预览 `dist/`。Cloudflare Workers Static Assets 从 `./dist` 部署，GitHub main 更新触发构建。
+
+维护内容后运行：
+
+```sh
+python3 scripts/build-viticulture.py
+python3 scripts/build-winemaking.py
+python3 scripts/build-logic-review.py
+```
+
+第4–6章的现行内容源为 `content/viticulture.json`，包含既有正文、旧链接和迁移映射；`dist/book-data.js` 是生成物。早期 restructure、beginner_revision 和 editorial 迁移脚本只作历史记录，不再覆盖现行内容。第7–10章仍维护 `content/winemaking.json`。图注等渲染逻辑在对应的 `dist/book.js`、`dist/study-diagrams.js`、`dist/winemaking-diagrams.js` 中维护。
+
+`content/logic-review.json` 记录2026-10-27本轮46单元的学习结论与20单元修订去向，`scripts/logic-review.js` 是核对页模板。它们生成 `dist/logic-review.js`，在各章核对页显示；结论清单不替代正文前提，也不构成无遗漏保证。原题、保存键和既有图视频保留。
 
 本站为个人学习整理，非 WSET 官方网站。课本范围为用户已提供 p.30–102；课堂按已提供转写核对，未核听原音频，转写中的不清片段保留于资料索引。
 
