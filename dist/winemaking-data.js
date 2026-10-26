@@ -1343,7 +1343,8 @@ const winemakingData={
        }
       ],
       "caption": "常规白葡萄酒在没有果皮的葡萄汁中发酵。浸皮是可选分支，不是每款白酒的必经步骤。",
-      "id": "8-1"
+      "id": "8-1",
+      "processGraph": "dry-white"
      }
     },
     {
@@ -2070,7 +2071,18 @@ const winemakingData={
        }
       ],
       "caption": "与常规白酒相反，红酒通常在酒精发酵后压榨；整串与整粒工艺是另一组可选路径。",
-      "id": "9-3"
+      "id": "9-3",
+      "processGraph": "red-rose"
+     },
+     "video": {
+      "id": "red-winemaking",
+      "title": "红葡萄酒的酿造 · 视频",
+      "src": "assets/red-winemaking-revised-accelerated.mp4",
+      "type": "video/mp4",
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 106.467,
+      "caption": "细节修订加速版 · 1分46秒。可配合上方红葡萄酒流程图观看。"
      }
     },
     {
@@ -2367,6 +2379,10 @@ const winemakingData={
     {
      "route": "9/rose",
      "label": "桃红葡萄酒"
+    },
+    {
+     "route": "9/extraction/wmfig-9-3",
+     "label": "干红、整串与桃红完整流程图"
     }
    ],
    "status": "integrated",
@@ -2626,6 +2642,10 @@ const winemakingData={
     {
      "route": "9/extraction",
      "label": "红葡萄酒浸皮提取"
+    },
+    {
+     "route": "9/extraction/wmfig-9-3",
+     "label": "干红、整串与桃红完整流程图"
     }
    ],
    "status": "integrated",
@@ -3014,7 +3034,7 @@ const winemakingData={
   },
   {
    "number": "8.1",
-   "title": "图 8.1 · 干白葡萄酒流程：必经步骤与可选支路分开",
+   "title": "图 8.1 · 干型白葡萄酒的酿造：全部步骤、分流与两次混合",
    "routes": [
     "8/white-process"
    ]
@@ -3049,7 +3069,7 @@ const winemakingData={
   },
   {
    "number": "9.3",
-   "title": "图 9.3 · 干红与桃红的酿造流程：提取、压榨与发酵的顺序",
+   "title": "图 9.3 · 干型红葡萄酒和桃红葡萄酒的酿造：破碎、整串与桃红分支",
    "routes": [
     "9/extraction",
     "9/rose"
@@ -3427,6 +3447,1870 @@ const winemakingData={
    "id": "handout-198",
    "title": "色素、果皮单宁与籽单宁的萃取阶段",
    "route": "9/extraction"
+  }
+ ],
+ "processGraphs": [
+  {
+   "id": "dry-white",
+   "figureId": "8-1",
+   "title": "图 8.1 · 干型白葡萄酒的酿造",
+   "image": "assets/dry-white-winemaking-flow.svg",
+   "width": 840,
+   "height": 1760,
+   "minWidth": 720,
+   "nodes": [
+    {
+     "id": "grapes",
+     "label": "葡萄",
+     "x": 290,
+     "y": 80,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "sort",
+     "label": "筛选葡萄",
+     "x": 290,
+     "y": 165,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "destem",
+     "label": "去梗",
+     "x": 290,
+     "y": 250,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "crush",
+     "label": "破碎",
+     "x": 290,
+     "y": 335,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "skin",
+     "label": "浸皮",
+     "x": 290,
+     "y": 420,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "press",
+     "label": "压榨",
+     "x": 290,
+     "y": 505,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "press-juice",
+     "label": "压榨汁",
+     "x": 290,
+     "y": 590,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "clarify",
+     "label": "澄清",
+     "x": 290,
+     "y": 675,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "ferment",
+     "label": "酒精发酵",
+     "x": 290,
+     "y": 760,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "rack",
+     "label": "倒罐／换桶去除粗酒泥",
+     "x": 290,
+     "y": 845,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "mlf",
+     "label": "苹果酸—乳酸转化",
+     "x": 290,
+     "y": 930,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "new",
+     "label": "新酒液",
+     "x": 290,
+     "y": 1015,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "blend-1",
+     "label": "混合",
+     "x": 290,
+     "y": 1100,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "mature",
+     "label": "陈年",
+     "x": 290,
+     "y": 1185,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "blend-2",
+     "label": "混合",
+     "x": 290,
+     "y": 1270,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "finish",
+     "label": "澄清和稳定处理",
+     "x": 290,
+     "y": 1355,
+     "w": 280,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "pack",
+     "label": "包装",
+     "x": 290,
+     "y": 1440,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "ready",
+     "label": "待售的葡萄酒",
+     "x": 290,
+     "y": 1525,
+     "w": 280,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "skins",
+     "label": "葡萄皮",
+     "x": 20,
+     "y": 590,
+     "w": 240,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "free",
+     "label": "自流汁",
+     "x": 600,
+     "y": 590,
+     "w": 220,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "extra-1",
+     "label": "新酒液",
+     "x": 20,
+     "y": 1015,
+     "w": 240,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "extra-2",
+     "label": "新酒液",
+     "x": 20,
+     "y": 1185,
+     "w": 240,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    }
+   ],
+   "edges": [
+    {
+     "from": "grapes",
+     "to": "sort",
+     "points": [
+      [
+       430,
+       108
+      ],
+      [
+       430,
+       137
+      ]
+     ]
+    },
+    {
+     "from": "sort",
+     "to": "destem",
+     "points": [
+      [
+       430,
+       193
+      ],
+      [
+       430,
+       222
+      ]
+     ]
+    },
+    {
+     "from": "destem",
+     "to": "crush",
+     "points": [
+      [
+       430,
+       278
+      ],
+      [
+       430,
+       307
+      ]
+     ]
+    },
+    {
+     "from": "crush",
+     "to": "skin",
+     "points": [
+      [
+       430,
+       363
+      ],
+      [
+       430,
+       392
+      ]
+     ]
+    },
+    {
+     "from": "skin",
+     "to": "press",
+     "points": [
+      [
+       430,
+       448
+      ],
+      [
+       430,
+       477
+      ]
+     ]
+    },
+    {
+     "from": "press",
+     "to": "press-juice",
+     "points": [
+      [
+       430,
+       533
+      ],
+      [
+       430,
+       562
+      ]
+     ]
+    },
+    {
+     "from": "press-juice",
+     "to": "clarify",
+     "points": [
+      [
+       430,
+       618
+      ],
+      [
+       430,
+       647
+      ]
+     ]
+    },
+    {
+     "from": "clarify",
+     "to": "ferment",
+     "points": [
+      [
+       430,
+       703
+      ],
+      [
+       430,
+       732
+      ]
+     ]
+    },
+    {
+     "from": "ferment",
+     "to": "rack",
+     "points": [
+      [
+       430,
+       788
+      ],
+      [
+       430,
+       817
+      ]
+     ]
+    },
+    {
+     "from": "rack",
+     "to": "mlf",
+     "points": [
+      [
+       430,
+       873
+      ],
+      [
+       430,
+       902
+      ]
+     ]
+    },
+    {
+     "from": "mlf",
+     "to": "new",
+     "points": [
+      [
+       430,
+       958
+      ],
+      [
+       430,
+       987
+      ]
+     ]
+    },
+    {
+     "from": "new",
+     "to": "blend-1",
+     "points": [
+      [
+       430,
+       1043
+      ],
+      [
+       430,
+       1072
+      ]
+     ]
+    },
+    {
+     "from": "blend-1",
+     "to": "mature",
+     "points": [
+      [
+       430,
+       1128
+      ],
+      [
+       430,
+       1157
+      ]
+     ]
+    },
+    {
+     "from": "mature",
+     "to": "blend-2",
+     "points": [
+      [
+       430,
+       1213
+      ],
+      [
+       430,
+       1242
+      ]
+     ]
+    },
+    {
+     "from": "blend-2",
+     "to": "finish",
+     "points": [
+      [
+       430,
+       1298
+      ],
+      [
+       430,
+       1327
+      ]
+     ]
+    },
+    {
+     "from": "finish",
+     "to": "pack",
+     "points": [
+      [
+       430,
+       1383
+      ],
+      [
+       430,
+       1412
+      ]
+     ]
+    },
+    {
+     "from": "pack",
+     "to": "ready",
+     "points": [
+      [
+       430,
+       1468
+      ],
+      [
+       430,
+       1497
+      ]
+     ]
+    },
+    {
+     "from": "press",
+     "to": "skins",
+     "points": [
+      [
+       290,
+       505
+      ],
+      [
+       140,
+       505
+      ],
+      [
+       140,
+       562
+      ]
+     ]
+    },
+    {
+     "from": "skin",
+     "to": "free",
+     "points": [
+      [
+       570,
+       420
+      ],
+      [
+       710,
+       420
+      ],
+      [
+       710,
+       562
+      ]
+     ]
+    },
+    {
+     "from": "free",
+     "to": "clarify",
+     "points": [
+      [
+       710,
+       618
+      ],
+      [
+       710,
+       675
+      ],
+      [
+       570,
+       675
+      ]
+     ]
+    },
+    {
+     "from": "extra-1",
+     "to": "blend-1",
+     "points": [
+      [
+       140,
+       1043
+      ],
+      [
+       140,
+       1100
+      ],
+      [
+       290,
+       1100
+      ]
+     ]
+    },
+    {
+     "from": "extra-2",
+     "to": "blend-2",
+     "points": [
+      [
+       140,
+       1213
+      ],
+      [
+       140,
+       1270
+      ],
+      [
+       290,
+       1270
+      ]
+     ]
+    }
+   ],
+   "notes": [],
+   "legend": [
+    {
+     "color": "required",
+     "text": "必经步骤"
+    },
+    {
+     "color": "choice",
+     "text": "酿酒师的选择"
+    }
+   ],
+   "caption": "按课本图8.1复原。矩形表示过程，圆角框表示加入／产出；颜色区分必经步骤与酿酒师的选择。保留自流汁、压榨汁和葡萄皮的分流，以及陈年前、陈年后的两次混合和侧向加入的新酒液。常规白葡萄酒先分离果皮，再进行酒精发酵。",
+   "legendY": 1620,
+   "focusX": 430
+  },
+  {
+   "id": "red-rose",
+   "figureId": "9-3",
+   "title": "图 9.3 · 干型红葡萄酒和桃红葡萄酒的酿造",
+   "image": "assets/red-rose-winemaking-flow.svg",
+   "width": 1160,
+   "height": 1980,
+   "minWidth": 1040,
+   "nodes": [
+    {
+     "id": "grapes",
+     "label": "葡萄",
+     "x": 280,
+     "y": 80,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "sort",
+     "label": "筛选葡萄",
+     "x": 280,
+     "y": 165,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "destem",
+     "label": "去梗",
+     "x": 280,
+     "y": 250,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "crush",
+     "label": "破碎",
+     "x": 280,
+     "y": 335,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "crushed",
+     "label": "经过破碎的葡萄",
+     "x": 280,
+     "y": 420,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "pre",
+     "label": "发酵之前浸渍",
+     "x": 280,
+     "y": 505,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "ferment",
+     "label": "酒精发酵",
+     "x": 280,
+     "y": 590,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "post",
+     "label": "发酵之后浸渍",
+     "x": 280,
+     "y": 675,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "drain",
+     "label": "排汁",
+     "x": 280,
+     "y": 760,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "free",
+     "label": "自流汁",
+     "x": 30,
+     "y": 845,
+     "w": 250,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "skins-lees",
+     "label": "葡萄皮和粗酒泥",
+     "x": 520,
+     "y": 845,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "press",
+     "label": "压榨",
+     "x": 520,
+     "y": 930,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "skins",
+     "label": "葡萄皮",
+     "x": 310,
+     "y": 930,
+     "w": 180,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "press-juice",
+     "label": "压榨汁",
+     "x": 520,
+     "y": 1015,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "mlf-free",
+     "label": "苹果酸—乳酸转化",
+     "x": 30,
+     "y": 1100,
+     "w": 250,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "mlf-press",
+     "label": "苹果酸—乳酸转化",
+     "x": 520,
+     "y": 1100,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "new-free",
+     "label": "新酒液",
+     "x": 30,
+     "y": 1185,
+     "w": 250,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "other-new",
+     "label": "其他新酒液",
+     "x": 295,
+     "y": 1185,
+     "w": 210,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "press-blend",
+     "label": "压榨汁",
+     "x": 520,
+     "y": 1185,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "blend-1",
+     "label": "混合",
+     "x": 280,
+     "y": 1310,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "mature",
+     "label": "陈年",
+     "x": 280,
+     "y": 1395,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "other-left",
+     "label": "其他酒液",
+     "x": 30,
+     "y": 1395,
+     "w": 240,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "other-right",
+     "label": "其他酒液",
+     "x": 560,
+     "y": 1395,
+     "w": 240,
+     "h": 56,
+     "color": "choice",
+     "kind": "material"
+    },
+    {
+     "id": "blend-2",
+     "label": "混合",
+     "x": 280,
+     "y": 1480,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "finish",
+     "label": "澄清和稳定处理",
+     "x": 280,
+     "y": 1565,
+     "w": 260,
+     "h": 56,
+     "color": "choice",
+     "kind": "process"
+    },
+    {
+     "id": "pack",
+     "label": "包装",
+     "x": 280,
+     "y": 1650,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "process"
+    },
+    {
+     "id": "ready",
+     "label": "待售的葡萄酒",
+     "x": 280,
+     "y": 1735,
+     "w": 260,
+     "h": 56,
+     "color": "required",
+     "kind": "material"
+    },
+    {
+     "id": "whole",
+     "label": "整串葡萄",
+     "x": 895,
+     "y": 80,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "material"
+    },
+    {
+     "id": "co2",
+     "label": "注满二氧化碳",
+     "x": 895,
+     "y": 165,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "process"
+    },
+    {
+     "id": "carbonic",
+     "label": "二氧化碳浸渍",
+     "x": 895,
+     "y": 250,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "process"
+    },
+    {
+     "id": "semi",
+     "label": "半二氧化碳浸渍",
+     "x": 665,
+     "y": 335,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "process"
+    },
+    {
+     "id": "whole-press",
+     "label": "排汁和压碎",
+     "x": 895,
+     "y": 420,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "process"
+    },
+    {
+     "id": "whole-skins",
+     "label": "葡萄皮",
+     "x": 685,
+     "y": 420,
+     "w": 180,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "material"
+    },
+    {
+     "id": "must",
+     "label": "葡萄醪",
+     "x": 895,
+     "y": 505,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "material"
+    },
+    {
+     "id": "whole-ferment",
+     "label": "酒精发酵",
+     "x": 895,
+     "y": 590,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "process"
+    },
+    {
+     "id": "whole-mlf",
+     "label": "苹果酸—乳酸转化",
+     "x": 895,
+     "y": 675,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "process"
+    },
+    {
+     "id": "whole-new",
+     "label": "新酒液",
+     "x": 895,
+     "y": 760,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "material"
+    },
+    {
+     "id": "whole-other",
+     "label": "新酒液",
+     "x": 620,
+     "y": 760,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "material"
+    },
+    {
+     "id": "whole-blend",
+     "label": "混合",
+     "x": 895,
+     "y": 845,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "process"
+    },
+    {
+     "id": "whole-finish",
+     "label": "澄清和稳定处理",
+     "x": 895,
+     "y": 930,
+     "w": 240,
+     "h": 56,
+     "color": "whole-choice",
+     "kind": "process"
+    },
+    {
+     "id": "whole-pack",
+     "label": "包装",
+     "x": 895,
+     "y": 1015,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "process"
+    },
+    {
+     "id": "whole-ready",
+     "label": "待售的葡萄酒",
+     "x": 895,
+     "y": 1100,
+     "w": 240,
+     "h": 56,
+     "color": "whole-required",
+     "kind": "material"
+    },
+    {
+     "id": "rose-direct",
+     "label": "直接压榨",
+     "x": 20,
+     "y": 165,
+     "w": 230,
+     "h": 56,
+     "color": "rose",
+     "kind": "process"
+    },
+    {
+     "id": "rose-short",
+     "label": "短时间的浸皮",
+     "x": 20,
+     "y": 590,
+     "w": 230,
+     "h": 56,
+     "color": "rose",
+     "kind": "process"
+    },
+    {
+     "id": "rose-blend",
+     "label": "与白葡萄酒混合",
+     "x": 30,
+     "y": 1310,
+     "w": 240,
+     "h": 56,
+     "color": "rose",
+     "kind": "process"
+    }
+   ],
+   "edges": [
+    {
+     "from": "grapes",
+     "to": "sort",
+     "points": [
+      [
+       410,
+       108
+      ],
+      [
+       410,
+       137
+      ]
+     ]
+    },
+    {
+     "from": "sort",
+     "to": "destem",
+     "points": [
+      [
+       410,
+       193
+      ],
+      [
+       410,
+       222
+      ]
+     ]
+    },
+    {
+     "from": "destem",
+     "to": "crush",
+     "points": [
+      [
+       410,
+       278
+      ],
+      [
+       410,
+       307
+      ]
+     ]
+    },
+    {
+     "from": "crush",
+     "to": "crushed",
+     "points": [
+      [
+       410,
+       363
+      ],
+      [
+       410,
+       392
+      ]
+     ]
+    },
+    {
+     "from": "crushed",
+     "to": "pre",
+     "points": [
+      [
+       410,
+       448
+      ],
+      [
+       410,
+       477
+      ]
+     ]
+    },
+    {
+     "from": "pre",
+     "to": "ferment",
+     "points": [
+      [
+       410,
+       533
+      ],
+      [
+       410,
+       562
+      ]
+     ]
+    },
+    {
+     "from": "ferment",
+     "to": "post",
+     "points": [
+      [
+       410,
+       618
+      ],
+      [
+       410,
+       647
+      ]
+     ]
+    },
+    {
+     "from": "post",
+     "to": "drain",
+     "points": [
+      [
+       410,
+       703
+      ],
+      [
+       410,
+       732
+      ]
+     ]
+    },
+    {
+     "from": "drain",
+     "to": "free",
+     "points": [
+      [
+       410,
+       788
+      ],
+      [
+       410,
+       805
+      ],
+      [
+       155,
+       805
+      ],
+      [
+       155,
+       817
+      ]
+     ]
+    },
+    {
+     "from": "drain",
+     "to": "skins-lees",
+     "points": [
+      [
+       410,
+       788
+      ],
+      [
+       410,
+       805
+      ],
+      [
+       650,
+       805
+      ],
+      [
+       650,
+       817
+      ]
+     ]
+    },
+    {
+     "from": "skins-lees",
+     "to": "press",
+     "points": [
+      [
+       650,
+       873
+      ],
+      [
+       650,
+       902
+      ]
+     ]
+    },
+    {
+     "from": "press",
+     "to": "skins",
+     "points": [
+      [
+       520,
+       930
+      ],
+      [
+       490,
+       930
+      ]
+     ]
+    },
+    {
+     "from": "press",
+     "to": "press-juice",
+     "points": [
+      [
+       650,
+       958
+      ],
+      [
+       650,
+       987
+      ]
+     ]
+    },
+    {
+     "from": "press-juice",
+     "to": "mlf-press",
+     "points": [
+      [
+       650,
+       1043
+      ],
+      [
+       650,
+       1072
+      ]
+     ]
+    },
+    {
+     "from": "mlf-press",
+     "to": "press-blend",
+     "points": [
+      [
+       650,
+       1128
+      ],
+      [
+       650,
+       1157
+      ]
+     ]
+    },
+    {
+     "from": "free",
+     "to": "mlf-free",
+     "points": [
+      [
+       155,
+       873
+      ],
+      [
+       155,
+       1072
+      ]
+     ]
+    },
+    {
+     "from": "mlf-free",
+     "to": "new-free",
+     "points": [
+      [
+       155,
+       1128
+      ],
+      [
+       155,
+       1157
+      ]
+     ]
+    },
+    {
+     "from": "new-free",
+     "to": "blend-1",
+     "points": [
+      [
+       280,
+       1185
+      ],
+      [
+       285,
+       1185
+      ],
+      [
+       285,
+       1250
+      ],
+      [
+       350,
+       1250
+      ],
+      [
+       350,
+       1282
+      ]
+     ]
+    },
+    {
+     "from": "other-new",
+     "to": "blend-1",
+     "points": [
+      [
+       400,
+       1213
+      ],
+      [
+       400,
+       1282
+      ]
+     ]
+    },
+    {
+     "from": "press-blend",
+     "to": "blend-1",
+     "points": [
+      [
+       650,
+       1213
+      ],
+      [
+       650,
+       1250
+      ],
+      [
+       470,
+       1250
+      ],
+      [
+       470,
+       1282
+      ]
+     ]
+    },
+    {
+     "from": "blend-1",
+     "to": "mature",
+     "points": [
+      [
+       410,
+       1338
+      ],
+      [
+       410,
+       1367
+      ]
+     ]
+    },
+    {
+     "from": "mature",
+     "to": "blend-2",
+     "points": [
+      [
+       410,
+       1423
+      ],
+      [
+       410,
+       1452
+      ]
+     ]
+    },
+    {
+     "from": "other-left",
+     "to": "blend-2",
+     "points": [
+      [
+       150,
+       1423
+      ],
+      [
+       150,
+       1440
+      ],
+      [
+       350,
+       1440
+      ],
+      [
+       350,
+       1452
+      ]
+     ]
+    },
+    {
+     "from": "other-right",
+     "to": "blend-2",
+     "points": [
+      [
+       680,
+       1423
+      ],
+      [
+       680,
+       1440
+      ],
+      [
+       470,
+       1440
+      ],
+      [
+       470,
+       1452
+      ]
+     ]
+    },
+    {
+     "from": "blend-2",
+     "to": "finish",
+     "points": [
+      [
+       410,
+       1508
+      ],
+      [
+       410,
+       1537
+      ]
+     ]
+    },
+    {
+     "from": "finish",
+     "to": "pack",
+     "points": [
+      [
+       410,
+       1593
+      ],
+      [
+       410,
+       1622
+      ]
+     ]
+    },
+    {
+     "from": "pack",
+     "to": "ready",
+     "points": [
+      [
+       410,
+       1678
+      ],
+      [
+       410,
+       1707
+      ]
+     ]
+    },
+    {
+     "from": "sort",
+     "to": "rose-direct",
+     "points": [
+      [
+       280,
+       165
+      ],
+      [
+       250,
+       165
+      ]
+     ]
+    },
+    {
+     "from": "ferment",
+     "to": "rose-short",
+     "points": [
+      [
+       280,
+       590
+      ],
+      [
+       250,
+       590
+      ]
+     ]
+    },
+    {
+     "from": "new-free",
+     "to": "rose-blend",
+     "points": [
+      [
+       155,
+       1213
+      ],
+      [
+       155,
+       1282
+      ]
+     ]
+    },
+    {
+     "from": "sort",
+     "to": "whole",
+     "points": [
+      [
+       540,
+       165
+      ],
+      [
+       580,
+       165
+      ],
+      [
+       580,
+       80
+      ],
+      [
+       895,
+       80
+      ]
+     ]
+    },
+    {
+     "from": "whole",
+     "to": "co2",
+     "points": [
+      [
+       1015,
+       108
+      ],
+      [
+       1015,
+       137
+      ]
+     ]
+    },
+    {
+     "from": "co2",
+     "to": "carbonic",
+     "points": [
+      [
+       1015,
+       193
+      ],
+      [
+       1015,
+       222
+      ]
+     ]
+    },
+    {
+     "from": "carbonic",
+     "to": "whole-press",
+     "points": [
+      [
+       1015,
+       278
+      ],
+      [
+       1015,
+       392
+      ]
+     ]
+    },
+    {
+     "from": "whole",
+     "to": "semi",
+     "points": [
+      [
+       902,
+       96
+      ],
+      [
+       860,
+       96
+      ],
+      [
+       860,
+       280
+      ],
+      [
+       785,
+       280
+      ],
+      [
+       785,
+       307
+      ]
+     ]
+    },
+    {
+     "from": "semi",
+     "to": "whole-press",
+     "points": [
+      [
+       785,
+       363
+      ],
+      [
+       785,
+       382
+      ],
+      [
+       985,
+       382
+      ],
+      [
+       985,
+       392
+      ]
+     ]
+    },
+    {
+     "from": "whole",
+     "to": "ferment",
+     "points": [
+      [
+       925,
+       108
+      ],
+      [
+       925,
+       118
+      ],
+      [
+       610,
+       118
+      ],
+      [
+       610,
+       575
+      ],
+      [
+       540,
+       575
+      ]
+     ]
+    },
+    {
+     "from": "semi",
+     "to": "ferment",
+     "points": [
+      [
+       665,
+       335
+      ],
+      [
+       650,
+       335
+      ],
+      [
+       650,
+       605
+      ],
+      [
+       540,
+       605
+      ]
+     ]
+    },
+    {
+     "from": "whole-press",
+     "to": "whole-skins",
+     "points": [
+      [
+       895,
+       420
+      ],
+      [
+       865,
+       420
+      ]
+     ]
+    },
+    {
+     "from": "whole-press",
+     "to": "must",
+     "points": [
+      [
+       1015,
+       448
+      ],
+      [
+       1015,
+       477
+      ]
+     ]
+    },
+    {
+     "from": "must",
+     "to": "whole-ferment",
+     "points": [
+      [
+       1015,
+       533
+      ],
+      [
+       1015,
+       562
+      ]
+     ]
+    },
+    {
+     "from": "whole-ferment",
+     "to": "whole-mlf",
+     "points": [
+      [
+       1015,
+       618
+      ],
+      [
+       1015,
+       647
+      ]
+     ]
+    },
+    {
+     "from": "whole-mlf",
+     "to": "whole-new",
+     "points": [
+      [
+       1015,
+       703
+      ],
+      [
+       1015,
+       732
+      ]
+     ]
+    },
+    {
+     "from": "whole-new",
+     "to": "whole-blend",
+     "points": [
+      [
+       1015,
+       788
+      ],
+      [
+       1015,
+       817
+      ]
+     ]
+    },
+    {
+     "from": "whole-other",
+     "to": "whole-blend",
+     "points": [
+      [
+       860,
+       760
+      ],
+      [
+       875,
+       760
+      ],
+      [
+       875,
+       845
+      ],
+      [
+       895,
+       845
+      ]
+     ]
+    },
+    {
+     "from": "whole-blend",
+     "to": "whole-finish",
+     "points": [
+      [
+       1015,
+       873
+      ],
+      [
+       1015,
+       902
+      ]
+     ]
+    },
+    {
+     "from": "whole-finish",
+     "to": "whole-pack",
+     "points": [
+      [
+       1015,
+       958
+      ],
+      [
+       1015,
+       987
+      ]
+     ]
+    },
+    {
+     "from": "whole-pack",
+     "to": "whole-ready",
+     "points": [
+      [
+       1015,
+       1043
+      ],
+      [
+       1015,
+       1072
+      ]
+     ]
+    }
+   ],
+   "notes": [
+    {
+     "x": 645,
+     "y": 195,
+     "lines": [
+      "有时将整串的葡萄添加到",
+      "经破碎的葡萄中"
+     ]
+    },
+    {
+     "x": 675,
+     "y": 485,
+     "lines": [
+      "有时半二氧化碳浸渍",
+      "也会在与果皮接触的",
+      "过程中继续进行"
+     ]
+    }
+   ],
+   "legend": [
+    {
+     "color": "required",
+     "text": "经破碎葡萄 · 必经步骤"
+    },
+    {
+     "color": "choice",
+     "text": "经破碎葡萄 · 酿酒师的选择"
+    },
+    {
+     "color": "whole-required",
+     "text": "整串葡萄 · 必经步骤"
+    },
+    {
+     "color": "whole-choice",
+     "text": "整串葡萄 · 酿酒师的选择"
+    },
+    {
+     "color": "rose",
+     "text": "桃红葡萄酒的酿造方法"
+    }
+   ],
+   "caption": "按课本图9.3复原，保留经破碎葡萄与整串葡萄的两条主线，以及二氧化碳浸渍、半二氧化碳浸渍、整串加入破碎葡萄中的交叉连接。粉色框为直接压榨、短时间的浸皮、与白葡萄酒混合三种桃红路径；它们表示在相应节点转向桃红工艺，并非必须先完成红酒带皮发酵。发酵后的“自流汁／压榨汁”沿用原图标签，指自流酒／压榨酒。",
+   "legendY": 1830,
+   "focusX": 410
   }
  ]
 };
