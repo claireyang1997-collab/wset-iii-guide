@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1110" viewBox="0 0 1400 1110" role="img" aria-labelledby="title desc">
+<title id="title">图 7.5 · 葡萄酒的组成成分</title><desc id="desc">六类组成成分的范围、完整注释、提示与原图图注。色带用于定位成分。</desc>
+<rect width="1400" height="1110" fill="#fcfaf3"/>
+<g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif">
+<text x="40" y="55" font-size="30" font-weight="600" fill="#35412f">图 7.5 · 葡萄酒的组成成分</text>
+<g transform="translate(545 120) scale(1.1)"><defs>
+<linearGradient id="glass" x2="1"><stop stop-color="#a0ad85" stop-opacity=".4"/><stop offset=".22" stop-color="#f9fbeb" stop-opacity=".62"/><stop offset=".68" stop-color="#d8e2c2" stop-opacity=".3"/><stop offset="1" stop-color="#80916c" stop-opacity=".45"/></linearGradient>
+<linearGradient id="wine" x2="1"><stop stop-color="#a7a331"/><stop offset=".22" stop-color="#e1d468"/><stop offset=".5" stop-color="#cabe47"/><stop offset=".83" stop-color="#b5a937"/><stop offset="1" stop-color="#8d902c"/></linearGradient>
+<linearGradient id="shoulder" x2="0" y2="1"><stop stop-color="#c0ae45"/><stop offset=".65" stop-color="#d5c85d"/><stop offset="1" stop-color="#c3b64d"/></linearGradient>
+<clipPath id="bottle"><path d="M134 38H166Q173 38 173 48V180C173 212 205 231 212 272V610Q212 638 196 642H104Q88 638 88 610V272C95 231 127 212 127 180V48Q127 38 134 38Z"/></clipPath></defs>
+<ellipse cx="150" cy="651" rx="63" ry="8" fill="#8b8b6e" opacity=".12"/>
+<path d="M134 38H166Q173 38 173 48V180C173 212 205 231 212 272V610Q212 638 196 642H104Q88 638 88 610V272C95 231 127 212 127 180V48Q127 38 134 38Z" fill="url(#glass)" stroke="#788568" stroke-width="2"/>
+<g clip-path="url(#bottle)">
+<rect x="87" y="188" width="126" height="457" fill="url(#wine)"/>
+<rect x="87" y="201" width="126" height="80" fill="url(#shoulder)"/>
+<path d="M125 188Q150 185 175 188V194H125Z" fill="#5d7c42"/>
+<path d="M125 195H175V201H125Z" fill="#985d52"/>
+<path d="M85 280Q150 275 215 280V284Q150 280 85 285Z" fill="#795a7a"/>
+<path d="M85 286Q150 282 215 286V290Q150 286 85 291Z" fill="#42726e"/>
+<path d="M139 61V181C139 223 106 241 104 280V595Q104 616 115 620" fill="none" stroke="#fffdec" stroke-width="13" opacity=".27" stroke-linecap="round"/>
+<path d="M164 60V180C164 214 197 243 198 278V604" fill="none" stroke="#737c42" stroke-width="4" opacity=".19"/>
+<ellipse cx="150" cy="625" rx="54" ry="12" fill="none" stroke="#7c7d3d" stroke-width="2" opacity=".45"/>
+<path d="M109 632Q150 606 191 632" fill="none" stroke="#dad27a" stroke-width="4" opacity=".6"/>
+</g>
+<path d="M130 38Q150 34 170 38L173 55Q150 59 127 55Z" fill="#e9eddd" fill-opacity=".7" stroke="#7b876d" stroke-width="1.4"/>
+<path d="M127 58Q150 62 173 58V69Q150 73 127 69Z" fill="url(#glass)" stroke="#9aa48b" stroke-width="1"/>
+<path d="M42 191H100L126 191" fill="none" stroke="#5d7c42" stroke-width="1.7"/><circle cx="126" cy="191" r="3" fill="#5d7c42"/><circle cx="24" cy="191" r="15" fill="#fcfaf3" stroke="#5d7c42" stroke-width="1.8"/><text x="24" y="197" text-anchor="middle" font-size="18" font-weight="600" fill="#5d7c42">3</text><path d="M258 196H218L174 198" fill="none" stroke="#985d52" stroke-width="1.7"/><circle cx="174" cy="198" r="3" fill="#985d52"/><circle cx="276" cy="196" r="15" fill="#fcfaf3" stroke="#985d52" stroke-width="1.8"/><text x="276" y="202" text-anchor="middle" font-size="18" font-weight="600" fill="#985d52">4</text><path d="M42 313H64L89 282" fill="none" stroke="#795a7a" stroke-width="1.7"/><circle cx="89" cy="282" r="3" fill="#795a7a"/><circle cx="24" cy="313" r="15" fill="#fcfaf3" stroke="#795a7a" stroke-width="1.8"/><text x="24" y="319" text-anchor="middle" font-size="18" font-weight="600" fill="#795a7a">5</text><path d="M258 257H231L187 230" fill="none" stroke="#9b682a" stroke-width="1.7"/><circle cx="187" cy="230" r="3" fill="#9b682a"/><circle cx="276" cy="257" r="15" fill="#fcfaf3" stroke="#9b682a" stroke-width="1.8"/><text x="276" y="263" text-anchor="middle" font-size="18" font-weight="600" fill="#9b682a">2</text><path d="M42 548H88" fill="none" stroke="#887625" stroke-width="1.7"/><circle cx="88" cy="548" r="3" fill="#887625"/><circle cx="24" cy="548" r="15" fill="#fcfaf3" stroke="#887625" stroke-width="1.8"/><text x="24" y="554" text-anchor="middle" font-size="18" font-weight="600" fill="#887625">1</text><path d="M258 382H243L211 288" fill="none" stroke="#42726e" stroke-width="1.7"/><circle cx="211" cy="288" r="3" fill="#42726e"/><circle cx="276" cy="382" r="15" fill="#fcfaf3" stroke="#42726e" stroke-width="1.8"/><text x="276" y="388" text-anchor="middle" font-size="18" font-weight="600" fill="#42726e">6</text></g>
+<g data-component="water"><circle cx="54" cy="783" r="14" fill="#887625"/><text x="54" y="789" text-anchor="middle" font-size="17" fill="#fff">1</text>
+<text x="80" y="790" font-size="24" font-weight="600" fill="#35412f">水分</text>
+<text x="80" y="823" font-size="22" fill="#887625">70%～90%</text>
+<text data-note="water-0" font-size="20" fill="#35412f"><tspan x="40" y="864">水分是葡萄酒中最多的成分。</tspan></text>
+</g>
+<g data-component="ethanol"><circle cx="939" cy="378" r="14" fill="#9b682a"/><text x="939" y="384" text-anchor="middle" font-size="17" fill="#fff">2</text>
+<text x="965" y="385" font-size="24" font-weight="600" fill="#35412f">乙醇</text>
+<text x="965" y="418" font-size="22" fill="#9b682a">8%～22%</text>
+<text data-note="ethanol-0" font-size="20" fill="#35412f"><tspan x="925" y="459">乙醇是葡萄酒中的主要醇类。发酵过程中也会产</tspan><tspan x="925" y="489">生少量其他醇类。（该百分比包括加强型葡萄酒。）</tspan></text>
+</g>
+<g data-component="sugar"><circle cx="54" cy="138" r="14" fill="#5d7c42"/><text x="54" y="144" text-anchor="middle" font-size="17" fill="#fff">3</text>
+<text x="80" y="145" font-size="24" font-weight="600" fill="#35412f">糖分</text>
+<text x="80" y="178" font-size="22" fill="#5d7c42">0.1%～20%</text>
+<text data-note="sugar-0" font-size="20" fill="#35412f"><tspan x="40" y="219">葡萄酒的糖分含量取决于葡萄酒风格。糖分显然是</tspan><tspan x="40" y="249">甜葡萄酒的主要成分之一，但即使是干型葡萄酒也</tspan><tspan x="40" y="279">会含有非常少量的未发酵糖分。</tspan></text>
+<text data-note="sugar-1" font-size="20" fill="#35412f"><tspan x="40" y="323">这里给出的范围包括大多数甜葡萄酒的糖分含量。</tspan><tspan x="40" y="353">有些极甜型葡萄酒，比如佩德罗-希梅内斯雪利酒</tspan><tspan x="40" y="383">（PX Sherry），可能会有含量更高的残余糖分。</tspan></text>
+</g>
+<g data-component="acids"><circle cx="939" cy="138" r="14" fill="#985d52"/><text x="939" y="144" text-anchor="middle" font-size="17" fill="#fff">4</text>
+<text x="965" y="145" font-size="24" font-weight="600" fill="#35412f">酸类</text>
+<text x="965" y="178" font-size="22" fill="#985d52">0.3%～1%</text>
+<text data-note="acids-0" font-size="20" fill="#35412f"><tspan x="925" y="219">葡萄酒中最主要的酸类是酒石酸、苹果酸和乳酸。</tspan></text>
+</g>
+<g data-component="tannins"><circle cx="54" cy="548" r="14" fill="#795a7a"/><text x="54" y="554" text-anchor="middle" font-size="17" fill="#fff">5</text>
+<text x="80" y="555" font-size="24" font-weight="600" fill="#35412f">单宁和颜色</text>
+<text x="80" y="588" font-size="22" fill="#795a7a">不超过 0.4%</text>
+<text data-note="tannins-0" font-size="20" fill="#35412f"><tspan x="40" y="629">单宁和颜色在红葡萄酒中尤为重要。</tspan></text>
+</g>
+<g data-component="aroma"><circle cx="939" cy="658" r="14" fill="#42726e"/><text x="939" y="664" text-anchor="middle" font-size="17" fill="#fff">6</text>
+<text x="965" y="665" font-size="24" font-weight="600" fill="#35412f">香气和风味物质</text>
+<text x="965" y="698" font-size="22" fill="#42726e">不超过 0.2%</text>
+<text data-note="aroma-0" font-size="20" fill="#35412f"><tspan x="925" y="739">能够赋予葡萄酒香气和风味的各种化合物多达数</tspan><tspan x="925" y="769">百种，其含量都非常之少。</tspan></text>
+</g>
+<path d="M40 920H1360" stroke="#d8d9cc"/>
+<text data-notice="true" font-size="19" fill="#35412f"><tspan x="40" y="958">请注意：给出这些百分比仅为提供参考，学员不需要为考试而掌握这些数字。</tspan></text>
+<text data-caption="true" font-size="18" fill="#35412f"><tspan x="40" y="1010">这是一款典型的干型静止葡萄酒的图示，用来说明葡萄酒各个组成成分的相对容量。以上给出的百分比适用于大多数葡萄酒，在葡萄酒酒瓶上以容</tspan><tspan x="40" y="1038">量百分比来表示。</tspan></text>
+</g></svg>

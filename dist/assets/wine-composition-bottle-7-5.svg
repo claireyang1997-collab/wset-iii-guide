@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="700" viewBox="0 0 300 700" role="img" aria-labelledby="title"><title id="title">葡萄酒瓶剖面示意：1水分、2乙醇、3糖分、4酸类、5单宁和颜色、6香气和风味物质。</title><g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif"><defs>
+<linearGradient id="glass" x2="1"><stop stop-color="#a0ad85" stop-opacity=".4"/><stop offset=".22" stop-color="#f9fbeb" stop-opacity=".62"/><stop offset=".68" stop-color="#d8e2c2" stop-opacity=".3"/><stop offset="1" stop-color="#80916c" stop-opacity=".45"/></linearGradient>
+<linearGradient id="wine" x2="1"><stop stop-color="#a7a331"/><stop offset=".22" stop-color="#e1d468"/><stop offset=".5" stop-color="#cabe47"/><stop offset=".83" stop-color="#b5a937"/><stop offset="1" stop-color="#8d902c"/></linearGradient>
+<linearGradient id="shoulder" x2="0" y2="1"><stop stop-color="#c0ae45"/><stop offset=".65" stop-color="#d5c85d"/><stop offset="1" stop-color="#c3b64d"/></linearGradient>
+<clipPath id="bottle"><path d="M134 38H166Q173 38 173 48V180C173 212 205 231 212 272V610Q212 638 196 642H104Q88 638 88 610V272C95 231 127 212 127 180V48Q127 38 134 38Z"/></clipPath></defs>
+<ellipse cx="150" cy="651" rx="63" ry="8" fill="#8b8b6e" opacity=".12"/>
+<path d="M134 38H166Q173 38 173 48V180C173 212 205 231 212 272V610Q212 638 196 642H104Q88 638 88 610V272C95 231 127 212 127 180V48Q127 38 134 38Z" fill="url(#glass)" stroke="#788568" stroke-width="2"/>
+<g clip-path="url(#bottle)">
+<rect x="87" y="188" width="126" height="457" fill="url(#wine)"/>
+<rect x="87" y="201" width="126" height="80" fill="url(#shoulder)"/>
+<path d="M125 188Q150 185 175 188V194H125Z" fill="#5d7c42"/>
+<path d="M125 195H175V201H125Z" fill="#985d52"/>
+<path d="M85 280Q150 275 215 280V284Q150 280 85 285Z" fill="#795a7a"/>
+<path d="M85 286Q150 282 215 286V290Q150 286 85 291Z" fill="#42726e"/>
+<path d="M139 61V181C139 223 106 241 104 280V595Q104 616 115 620" fill="none" stroke="#fffdec" stroke-width="13" opacity=".27" stroke-linecap="round"/>
+<path d="M164 60V180C164 214 197 243 198 278V604" fill="none" stroke="#737c42" stroke-width="4" opacity=".19"/>
+<ellipse cx="150" cy="625" rx="54" ry="12" fill="none" stroke="#7c7d3d" stroke-width="2" opacity=".45"/>
+<path d="M109 632Q150 606 191 632" fill="none" stroke="#dad27a" stroke-width="4" opacity=".6"/>
+</g>
+<path d="M130 38Q150 34 170 38L173 55Q150 59 127 55Z" fill="#e9eddd" fill-opacity=".7" stroke="#7b876d" stroke-width="1.4"/>
+<path d="M127 58Q150 62 173 58V69Q150 73 127 69Z" fill="url(#glass)" stroke="#9aa48b" stroke-width="1"/>
+<path d="M42 191H100L126 191" fill="none" stroke="#5d7c42" stroke-width="1.7"/><circle cx="126" cy="191" r="3" fill="#5d7c42"/><circle cx="24" cy="191" r="15" fill="#fcfaf3" stroke="#5d7c42" stroke-width="1.8"/><text x="24" y="197" text-anchor="middle" font-size="18" font-weight="600" fill="#5d7c42">3</text><path d="M258 196H218L174 198" fill="none" stroke="#985d52" stroke-width="1.7"/><circle cx="174" cy="198" r="3" fill="#985d52"/><circle cx="276" cy="196" r="15" fill="#fcfaf3" stroke="#985d52" stroke-width="1.8"/><text x="276" y="202" text-anchor="middle" font-size="18" font-weight="600" fill="#985d52">4</text><path d="M42 313H64L89 282" fill="none" stroke="#795a7a" stroke-width="1.7"/><circle cx="89" cy="282" r="3" fill="#795a7a"/><circle cx="24" cy="313" r="15" fill="#fcfaf3" stroke="#795a7a" stroke-width="1.8"/><text x="24" y="319" text-anchor="middle" font-size="18" font-weight="600" fill="#795a7a">5</text><path d="M258 257H231L187 230" fill="none" stroke="#9b682a" stroke-width="1.7"/><circle cx="187" cy="230" r="3" fill="#9b682a"/><circle cx="276" cy="257" r="15" fill="#fcfaf3" stroke="#9b682a" stroke-width="1.8"/><text x="276" y="263" text-anchor="middle" font-size="18" font-weight="600" fill="#9b682a">2</text><path d="M42 548H88" fill="none" stroke="#887625" stroke-width="1.7"/><circle cx="88" cy="548" r="3" fill="#887625"/><circle cx="24" cy="548" r="15" fill="#fcfaf3" stroke="#887625" stroke-width="1.8"/><text x="24" y="554" text-anchor="middle" font-size="18" font-weight="600" fill="#887625">1</text><path d="M258 382H243L211 288" fill="none" stroke="#42726e" stroke-width="1.7"/><circle cx="211" cy="288" r="3" fill="#42726e"/><circle cx="276" cy="382" r="15" fill="#fcfaf3" stroke="#42726e" stroke-width="1.8"/><text x="276" y="388" text-anchor="middle" font-size="18" font-weight="600" fill="#42726e">6</text></g></svg>

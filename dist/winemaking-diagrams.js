@@ -19,7 +19,11 @@ function wmPhotoFigure(d){
  <div class="wm-plate-grid wm-plate-${count}">${d.photos.map(p=>`<figure class="wm-plate-panel wm-photo-panel"><h3>${wmEscape(p.title)}</h3>${media(p)}<figcaption class="wm-photo-caption">${wmEscape(p.caption)}</figcaption></figure>`).join('')}</div>
  ${d.caption?`<figcaption>${wmEscape(d.caption)}</figcaption>`:''}</figure>`;
 }
+function wmCompositionFigure(d){
+ return `<figure id="wmfig-${wmEscape(d.id)}" class="wm-plate wm-composition-plate" data-wm-figure="composition"><div class="wm-comp-heading"><strong>${wmEscape(d.title)}</strong><div><a href="${wmEscape(d.fullImage)}" target="_blank" rel="noopener">查看完整标注图 ↗</a><a href="${wmEscape(d.fullImage)}" download>下载 SVG ↓</a></div></div><div class="wm-comp-layout"><div class="wm-comp-art"><img src="${wmEscape(d.image)}" width="300" height="700" alt="葡萄酒瓶剖面示意；编号1水分、2乙醇、3糖分、4酸类、5单宁和颜色、6香气和风味物质。" loading="lazy" decoding="async"></div>${d.parts.map(p=>`<section class="wm-comp-note wm-comp-${p.id}" aria-labelledby="wm-comp-${p.id}-title"><h3 id="wm-comp-${p.id}-title"><span style="--component:${p.color}">${p.number}</span>${wmEscape(p.label)}<small>${wmEscape(p.range)}</small></h3>${p.paragraphs.map(t=>`<p>${wmEscape(t)}</p>`).join('')}</section>`).join('')}</div><p class="wm-comp-notice">${wmEscape(d.notice)}</p><figcaption>${wmEscape(d.caption)}</figcaption></figure>`;
+}
 function wmDiagram(d){
+ if(d.type==='composition'&&d.parts?.length)return wmCompositionFigure(d);
  if(d.photos?.length)return wmPhotoFigure(d);
  if(d.type==='berry')return wmGrapeFigure(d);
  const ink='#35412f',wine='#7d4352',blue='#568b9d',gold='#bb8442',wood='#865b39';
