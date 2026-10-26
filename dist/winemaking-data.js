@@ -551,19 +551,25 @@ const winemakingData={
       "id": "7-3",
       "photos": [
        {
-        "image": "assets/grape-reception-sorting-7-3.jpg",
+        "image": "assets/photo-grape-before-v2.webp",
         "title": "去梗前筛选",
-        "caption": "在进入去梗机的传送带上，手工采摘的葡萄正在被筛选。"
+        "caption": "在进入去梗机的传送带上，手工采摘的葡萄正在被筛选。",
+        "width": 654,
+        "height": 631
        },
        {
-        "image": "assets/grape-destemmer-7-3.jpg",
+        "image": "assets/photo-destemmer-v2.webp",
         "title": "去梗机",
-        "caption": "旋转的桨将葡萄敲落，葡萄经过小孔落入下面的滚筒，与果梗分开。"
+        "caption": "去梗机。旋转的桨将葡萄敲落，葡萄经过小孔落入下面的滚筒。",
+        "width": 689,
+        "height": 640
        },
        {
-        "image": "assets/grape-post-destemming-sorting-7-3.jpg",
+        "image": "assets/photo-grape-after-v2.webp",
         "title": "去梗后筛选",
-        "caption": "正在筛选已去除果梗的葡萄。图片底部的红色物体是安装在破碎机顶端的滚轴。"
+        "caption": "正在筛选已去除果梗的葡萄。图片底部的红色物体是安装在破碎机顶端的滚轴。",
+        "width": 757,
+        "height": 708
        }
       ],
       "title": "图 7.3 · 葡萄运达酒庄：筛选与去梗",
@@ -656,14 +662,18 @@ const winemakingData={
       "id": "7-4",
       "photos": [
        {
-        "image": "assets/press-basket-7-4.jpg",
+        "image": "assets/photo-press-basket-v2.webp",
         "title": "垂直篮式压榨机",
-        "caption": "压板向葡萄施压，汁液从篮的缝隙流出。"
+        "caption": "垂直篮式压榨机。",
+        "width": 1233,
+        "height": 872
        },
        {
-        "image": "assets/press-pneumatic-7-4.jpg",
+        "image": "assets/photo-press-pneumatic-v2.webp",
         "title": "气动压榨机",
-        "caption": "三台气动压榨机。内部充满压缩空气的橡胶囊将葡萄挤向坚硬的内壳。"
+        "caption": "三台气动压榨机。在压榨机内部，充满压缩空气的橡胶囊将葡萄挤向坚硬的内壳。",
+        "width": 1161,
+        "height": 839
        }
       ],
       "title": "图 7.4 · 两类压榨机",
@@ -1075,7 +1085,37 @@ const winemakingData={
      },
      "diagram": {
       "type": "filtration",
-      "id": "7-6"
+      "id": "7-6-mechanism",
+      "title": "过滤机制示意 · 深层与表面过滤"
+     },
+     "photoFigure": {
+      "id": "7-6",
+      "type": "source-photos",
+      "title": "图 7.6 · 过滤器",
+      "photos": [
+       {
+        "image": "assets/photo-filter-surface-v2.webp",
+        "title": "表面过滤设备",
+        "caption": "用于表面过滤的设备。可更换的过滤膜置于金属壳体内。",
+        "width": 686,
+        "height": 723
+       },
+       {
+        "image": "assets/photo-filter-drum-v2.webp",
+        "title": "滚筒式过滤器",
+        "caption": "滚筒式过滤器。",
+        "width": 728,
+        "height": 754
+       },
+       {
+        "image": "assets/photo-filter-plate-v2.webp",
+        "title": "板框式过滤器",
+        "caption": "板框式过滤器。",
+        "width": 786,
+        "height": 847
+       }
+      ],
+      "caption": "设备照片用于辨认外形；下方示意图解释颗粒截留的位置，不能只凭机器外形判断过滤方法。"
      }
     },
     {
@@ -1175,7 +1215,23 @@ const winemakingData={
      },
      "diagram": {
       "type": "packaging",
-      "id": "7-7"
+      "id": "7-7-mechanism",
+      "title": "包装特点示意"
+     },
+     "photoFigure": {
+      "id": "7-7",
+      "type": "source-photos",
+      "title": "图 7.7 · 一系列可供选择的包装",
+      "photos": [
+       {
+        "image": "assets/photo-packaging-v2.webp",
+        "title": "可供选择的葡萄酒包装",
+        "caption": "一系列可供选择的包装。从左至右分别为两只不同大小的塑料酒瓶、一个盒中袋和两只不同大小的玻璃酒瓶。",
+        "width": 1315,
+        "height": 992
+       }
+      ],
+      "wide": true
      }
     },
     {
@@ -1730,7 +1786,36 @@ const winemakingData={
      "ref": "课本 p.85，图8.2；讲义212–213",
      "diagram": {
       "type": "lees",
-      "id": "8-2"
+      "id": "8-2-mechanism",
+      "title": "酒泥接触与搅桶机制示意"
+     },
+     "photoFigure": {
+      "id": "8-2",
+      "type": "source-photos",
+      "title": "图 8.2 · 搅桶",
+      "photos": [
+       {
+        "image": "assets/photo-lees-settle-v2.webp",
+        "title": "1 · 酒泥沉在桶底",
+        "caption": "在酒桶的底部逐渐聚积了一层酒泥。酿酒师用棍棒往下伸到桶底，搅动酒桶中的酒泥。",
+        "width": 646,
+        "height": 527
+       },
+       {
+        "image": "assets/photo-lees-stir-v2.webp",
+        "title": "2 · 翻起酒泥",
+        "caption": "棍棒在酒泥中搅动，将酒泥翻转起来。",
+        "width": 715,
+        "height": 583
+       },
+       {
+        "image": "assets/photo-lees-mix-v2.webp",
+        "title": "3 · 充分混合",
+        "caption": "连续不断地搅动，让酒泥与酒液充分混合。",
+        "width": 708,
+        "height": 574
+       }
+      ]
      }
     }
    ],
@@ -1869,7 +1954,8 @@ const winemakingData={
      },
      "diagram": {
       "type": "freeze",
-      "id": "8-3"
+      "id": "8-3-mechanism",
+      "title": "冰冻葡萄与浓缩汁 · 机制示意"
      }
     },
     {
@@ -1899,6 +1985,34 @@ const winemakingData={
         "等待寒冷冬季，冻态采收与压榨",
         "较纯净品种果味；德国Eiswein、加拿大Icewine是例子。人工冷冻不能直接采用这些自然冰酒名称。"
        ]
+      ]
+     },
+     "photoFigure": {
+      "id": "8-3",
+      "type": "source-photos",
+      "title": "图 8.3 · 浓缩葡萄糖分的方式",
+      "photos": [
+       {
+        "image": "assets/photo-concentrate-botrytis-v2.webp",
+        "title": "贵腐菌",
+        "caption": "贵腐菌：葡萄皮上的真菌清晰可见。",
+        "width": 550,
+        "height": 454
+       },
+       {
+        "image": "assets/photo-concentrate-dried-v2.webp",
+        "title": "自然风干",
+        "caption": "自然风干：葡萄已皱缩，但未受真菌感染。",
+        "width": 519,
+        "height": 427
+       },
+       {
+        "image": "assets/photo-concentrate-frozen-v2.webp",
+        "title": "冰冻葡萄",
+        "caption": "冰冻葡萄：让葡萄留在树上经受冬季的冰冻。",
+        "width": 703,
+        "height": 578
+       }
       ]
      }
     },
@@ -2564,7 +2678,23 @@ const winemakingData={
      },
      "diagram": {
       "type": "steep",
-      "id": "10-1"
+      "id": "10-1-mechanism",
+      "title": "陡坡如何转化为成本 · 因果示意"
+     },
+     "photoFigure": {
+      "id": "10-1",
+      "type": "source-photos",
+      "title": "图 10.1 · 陡坡葡萄园与成本",
+      "photos": [
+       {
+        "image": "assets/photo-vineyard-cost-v2.webp",
+        "title": "摩泽尔陡坡葡萄园",
+        "caption": "极为陡峭的葡萄园，正如图片中这座摩泽尔产区的葡萄园，栽培成本比平地葡萄园高得多，酒庄的成本也随之增加。",
+        "width": 1364,
+        "height": 808
+       }
+      ],
+      "wide": true
      }
     },
     {
@@ -2863,7 +2993,7 @@ const winemakingData={
   },
   {
    "number": "7.6",
-   "title": "图 7.6 · 深层／表面过滤：液体与被截留物的位置",
+   "title": "图 7.6 · 过滤设备照片与深层／表面过滤机制",
    "routes": [
     "7/finishing"
    ]
@@ -2898,7 +3028,7 @@ const winemakingData={
   },
   {
    "number": "8.3",
-   "title": "图 8.3 · 冰冻葡萄与冻态压榨：冰和浓缩汁的去向",
+   "title": "图 8.3 · 浓缩葡萄糖分：贵腐、自然风干与冰冻葡萄",
    "routes": [
     "8/concentration"
    ]

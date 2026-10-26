@@ -4,7 +4,7 @@ function wmTable(t){return `<div class="comparison-wrap wm-table-wrap"><table cl
 function wmFlow(f){return `<figure ${f.id?`id="wmfig-${wmEscape(f.id)}"`:""} class="wm-flow" data-wm-figure="flow"><div class="wm-flow-lanes">${f.lanes.map(l=>`<div class="wm-flow-lane"><strong>${wmEscape(l.label)}</strong><ol>${l.steps.map(step=>`<li>${wmEscape(step)}</li>`).join('')}</ol></div>`).join('')}</div>${f.caption?`<figcaption>${wmEscape(f.caption)}</figcaption>`:''}</figure>`;}
 function winemakingUnitBody(u){
  let html=`<p class="wm-orientation">${wmEscape(u.intro)}</p>`;
- html+=u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${(s.paragraphs||[]).map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow?wmFlow(s.flow):''}${s.diagram?wmDiagram(s.diagram):''}${s.points?.length?`<ul class="wm-topic-points">${s.points.map(p=>`<li>${wmEscape(p)}</li>`).join('')}</ul>`:''}</section>`).join('');
+ html+=u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${(s.paragraphs||[]).map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow?wmFlow(s.flow):''}${s.photoFigure?wmPhotoFigure(s.photoFigure):''}${s.diagram?wmDiagram(s.diagram):''}${s.points?.length?`<ul class="wm-topic-points">${s.points.map(p=>`<li>${wmEscape(p)}</li>`).join('')}</ul>`:''}</section>`).join('');
  if(u.links.length)html+=`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>`;
  return html;
 }
