@@ -13,9 +13,10 @@ function wmGrapeFigure(d){
 }
 function wmPhotoFigure(d){
  const count=d.photos.length;
+ const media=p=>p.crop?`<svg class="wm-photo-media wm-photo-crop" viewBox="${p.crop.viewBox.join(' ')}" role="img" aria-label="${wmEscape(p.title)}" preserveAspectRatio="xMidYMid meet"><g transform="translate(0 ${p.crop.sourceWidth}) rotate(-90)"><image href="${wmEscape(p.image)}" width="${p.crop.sourceWidth}" height="${p.crop.sourceHeight}"/></g></svg>`:`<img class="wm-photo-media" src="${wmEscape(p.image)}" alt="${wmEscape(p.title)}" loading="lazy" decoding="async">`;
  return `<figure id="wmfig-${wmEscape(d.id)}" class="wm-plate wm-photo-plate" data-wm-figure="${wmEscape(d.type)}">
  <div class="wm-plate-title">${wmEscape(d.title)}</div>
- <div class="wm-plate-grid wm-plate-${count}">${d.photos.map(p=>`<div class="wm-plate-panel wm-photo-panel"><h3>${wmEscape(p.title)}</h3><img src="${wmEscape(p.image)}" alt="${wmEscape(p.title)}" loading="lazy" decoding="async"><p class="wm-photo-caption">${wmEscape(p.caption)}</p></div>`).join('')}</div>
+ <div class="wm-plate-grid wm-plate-${count}">${d.photos.map(p=>`<div class="wm-plate-panel wm-photo-panel"><h3>${wmEscape(p.title)}</h3>${media(p)}<p class="wm-photo-caption">${wmEscape(p.caption)}</p></div>`).join('')}</div>
  ${d.caption?`<figcaption>${wmEscape(d.caption)}</figcaption>`:''}</figure>`;
 }
 function wmDiagram(d){

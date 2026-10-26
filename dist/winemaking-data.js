@@ -335,7 +335,7 @@ const winemakingData={
      "title": "惰性容器：不增加木香，仍需管理氧气",
      "paragraphs": [],
      "points": [],
-     "ref": "课本 p.64–66，图7.2；讲义149–150、218",
+     "ref": "课本 p.64–66，图7.2；用户补充图7.2五幅照片及图注；讲义149–150、218",
      "table": {
       "headers": [
        "容器",
@@ -367,7 +367,91 @@ const winemakingData={
      },
      "diagram": {
       "type": "vessels",
-      "id": "7-2"
+      "id": "7-2",
+      "title": "图 7.2 · 酿酒容器与橡木条",
+      "photos": [
+       {
+        "title": "1 · 小橡木桶与大橡木桶",
+        "image": "assets/container-oak-barrels.webp",
+        "caption": "橡木桶；左边是新的小橡木桶，右边是大橡木桶。",
+        "crop": {
+         "sourceWidth": 1280,
+         "sourceHeight": 1707,
+         "viewBox": [
+          256,
+          196,
+          910,
+          900
+         ],
+         "rotation": -90
+        }
+       },
+       {
+        "title": "2 · 橡木条",
+        "image": "assets/container-oak-staves.webp",
+        "caption": "橡木条特写。木条可用于增加橡木风味；其赋味作用与整桶熟化时的氧气接触须分别判断。",
+        "crop": {
+         "sourceWidth": 1280,
+         "sourceHeight": 1707,
+         "viewBox": [
+          280,
+          302,
+          804,
+          800
+         ],
+         "rotation": -90
+        }
+       },
+       {
+        "title": "3 · 水泥发酵池",
+        "image": "assets/container-concrete-vats.webp",
+        "caption": "水泥发酵池；在水泥池前面可以看到一排橡木条。",
+        "crop": {
+         "sourceWidth": 1280,
+         "sourceHeight": 1707,
+         "viewBox": [
+          470,
+          225,
+          735,
+          795
+         ],
+         "rotation": -90
+        }
+       },
+       {
+        "title": "4 · 蛋形水泥罐",
+        "image": "assets/container-concrete-eggs.webp",
+        "caption": "近年来，蛋形水泥罐非常流行。人们认为这种形状有助于葡萄汁／酒液的自然流动，从而减少对人工按压酒帽和淋皮的需求。",
+        "crop": {
+         "sourceWidth": 1280,
+         "sourceHeight": 1707,
+         "viewBox": [
+          338,
+          230,
+          716,
+          755
+         ],
+         "rotation": -90
+        }
+       },
+       {
+        "title": "5 · 不锈钢发酵罐",
+        "image": "assets/container-steel-tanks.webp",
+        "caption": "一座装备了不锈钢发酵罐的大型酒庄。",
+        "crop": {
+         "sourceWidth": 1280,
+         "sourceHeight": 1707,
+         "viewBox": [
+          370,
+          272,
+          807,
+          825
+         ],
+         "rotation": -90
+        }
+       }
+      ],
+      "caption": "依次辨认大小橡木桶、橡木条、水泥发酵池、蛋形水泥罐和不锈钢发酵罐。第4图的“自然流动”是课本记述的使用理念，不能据此认定所有酒款都不需要酒帽管理；容器选择仍需结合内壁处理、温控、清洁与目标风格。"
      }
     },
     {
