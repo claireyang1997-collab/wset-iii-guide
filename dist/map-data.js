@@ -165,7 +165,7 @@ const knowledgeCases = [
 ];
 
 const knowledgeFuture = [
-  {id: 'winemaking', title: '酿造、陈年与价格', summary: '第 7–10 章框架已加入：通用原理 → 白／甜 → 红／桃红 → 成本与价格。', added: false, href: '#chapter/7', status: '框架预览'},
+  {id: 'winemaking', title: '酿造、陈年与价格', summary: '第 7–10 章正文已整合：通用原理 → 白／甜 → 红／桃红 → 成本与价格。可进入章节阅读，地图自查题另待整理。', added: false, href: '#chapter/7', status: '正文已收录 · 自查待整理'},
   {id: 'regions', title: '产区与风格', summary: '把环境、品种与管理放入具体产区，比较相同品种为什么会有不同表现。', added: false},
   {id: 'tasting', title: '品鉴与品质判断', summary: '把杯中的酸度、酒体、单宁和风味，接回成熟、酿造与陈年的证据。', added: false}
 ];

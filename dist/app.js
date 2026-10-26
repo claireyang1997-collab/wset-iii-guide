@@ -112,7 +112,7 @@ function buildSearchIndex(){
  for(const unit of bookUnits){
   const base={chapter:unit.chapter,route:bookHref(unit),unit:unit.title};
   entries.push({...base,title:unit.title,anchor:'',text:unit.desc,terms:searchNormalize(unit.title+' '+unit.desc)});
-  for(const m of bookContent(unit).matchAll(/<section class="article-section">([\s\S]*?)<\/section>/g)){
+  for(const m of bookContent(unit).matchAll(/<section class="article-section(?: [^"]*)?">([\s\S]*?)<\/section>/g)){
    const heading=m[1].match(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/);if(!heading)continue;
    const title=searchPlain(heading[2]),text=searchPlain(m[1].slice(heading.index+heading[0].length));
    entries.push({...base,title,anchor:heading[1],text,terms:searchNormalize(title+' '+text)});
