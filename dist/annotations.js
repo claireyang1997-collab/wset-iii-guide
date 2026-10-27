@@ -180,9 +180,6 @@
   editor.close(); list.close(); toolbar.hidden = true; pending = null;
   root = document.getElementById('reading-body'); if (!root) return;
   route = location.hash.split('/').slice(1,3).join('/');
-  const bar = element('div', 'annotation-reading-tools');
-  bar.innerHTML = '<button id="annotation-open" type="button">本页高亮与点评</button><small>选中文字即可高亮或点评 · 仅保存在当前浏览器</small>';
-  root.before(bar); bar.querySelector('button').addEventListener('click', openList);
   const activate = e => {
    const mark = e.target.closest('mark[data-annotation]');
    if (!mark || !window.getSelection()?.isCollapsed || (e.type === 'keydown' && !['Enter',' '].includes(e.key))) return;
