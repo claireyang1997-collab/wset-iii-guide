@@ -95,7 +95,7 @@ function render(){
  document.querySelectorAll('[data-nav]').forEach(a=>{const yes=a.dataset.nav===(['practice','quiz','session2quiz','workbook'].includes(route)?'practice':route==='map'?'map':'home');a.classList.toggle('active',yes);if(yes)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
  const unit=route==='read'?bookUnits.find(u=>u.chapter===Number(parts[1])&&u.id===parts[2]):null,ch=bookChapters.find(c=>c.id===Number(parts[1]));
  const name=route==='start'?'第一次来，从这里开始':unit?unit.title:route==='review'&&ch?'第 '+ch.id+' 章 · 核对记录':route==='chapter'&&ch?'第 '+ch.id+' 章 · '+ch.title:route==='map'?'知识地图':route==='practice'?'练习与复习':route==='workbook'?'第'+(parts[1]==='2'?'二':'一')+'课练习册':route==='quiz'?'第一课 · 选择自测':route==='session2quiz'?'第二课 · 选择自测':['guide','session2sources'].includes(route)?'资料索引':'章节目录';
- document.title=name+' · WSET Ⅲ 通关指南';window.scrollTo(0,0);bindPage();const main=$('#main');main?.setAttribute('tabindex','-1');main?.focus({preventScroll:true});
+ document.title=name+' · WSET Ⅲ 通关指南';window.scrollTo(0,0);bindPage();const main=$('#main');main?.setAttribute('tabindex','-1');main?.focus({preventScroll:true});window.readingAnnotationsMount?.();
  if(pendingSearchAnchor){let anchor=pendingSearchAnchor;pendingSearchAnchor='';const old=anchor.match(/^topic-(1|2)-([a-z]+)-(\d+)$/);if(old){const record=bookSectionOrigins[old[1]+'/'+old[2]+'/'+old[3]];anchor=record?.heading||'';}if(anchor)focusReadingTarget(anchor);}else if(route==='read'&&parts[3])focusReadingTarget(parts[3]);else if(route==='map'&&parts[1]==='chapter')focusReadingTarget('knowledge-library');
 }
 function toast(t){$('#toast').textContent=t;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2300)}

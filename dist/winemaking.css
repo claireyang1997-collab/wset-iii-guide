@@ -147,3 +147,12 @@
 .logic-review-table th small {display:block;font-weight:400;color:var(--muted);margin-top:.4em}
 .logic-review-table td:last-child {width:30%}
 .logic-review-table td p {margin:.4em 0 0}
+
+/* Three images above, two centered half-width panels below. */
+@media(min-width:1101px){
+ #wmfig-7-2 .wm-plate-5{grid-template-columns:repeat(6,minmax(0,1fr))}
+ #wmfig-7-2 .wm-photo-panel{grid-column:span 2}
+ #wmfig-7-2 .wm-photo-panel:nth-child(n+4){grid-column:span 3}
+}
+#wmfig-7-2 .wm-photo-media{max-width:330px;margin-left:auto;margin-right:auto}
+#wmfig-7-2 .wm-photo-caption{max-width:none;text-wrap:pretty}
