@@ -17,7 +17,10 @@ def render_graph(g):
            '<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#657061" stroke-width="1.4"/></marker></defs>',
            f'<rect width="{w}" height="{h}" fill="#fcfaf3"/>',
            '<g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#35412f">',
-           f'<text x="24" y="30" font-size="23" font-weight="600">{escape(g["title"])}</text>']
+           f'<text x="24" y="30" font-size="23" font-weight="600">{escape(g.get("layoutTitle", g["title"]))}</text>']
+    for stage in g.get('stages', []):
+        out.append(f'<rect x="{stage["x"]}" y="55" width="360" height="535" rx="14" fill="#f5f3e9" stroke="#e1e1d4"/>')
+        out.append(f'<text x="{stage["x"]+18}" y="88" font-size="20" font-weight="600">{escape(stage["title"])}</text>')
     for e in g['edges']:
         pts = e['points']
         path = 'M' + 'L'.join(f'{x} {y}' for x, y in pts)
@@ -26,7 +29,7 @@ def render_graph(g):
         fill, stroke = PALETTE[n['color']]
         x, cy, nw, nh = n['x'], n['y'], n['w'], n['h']
         rx = nh / 2 if n['kind'] == 'material' else 3
-        font = 19 if len(n['label']) > 12 else 20
+        font = n.get('fontSize', 19 if len(n['label']) > 12 else 20)
         out += [f'<g data-node="{n["id"]}"><rect x="{x}" y="{cy-nh/2:g}" width="{nw}" height="{nh}" rx="{rx:g}" fill="{fill}" stroke="{stroke}" stroke-width="1.8"/>',
                 f'<text x="{x+nw/2:g}" y="{cy+7}" font-size="{font}" text-anchor="middle">{escape(n["label"])}</text></g>']
     for note in g['notes']:

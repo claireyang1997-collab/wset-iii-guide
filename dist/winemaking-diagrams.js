@@ -22,7 +22,21 @@ function wmPhotoFigure(d){
 function wmCompositionFigure(d){
  return `<figure id="wmfig-${wmEscape(d.id)}" class="wm-plate wm-composition-plate" data-wm-figure="composition"><div class="wm-comp-heading"><strong>${wmEscape(d.title)}</strong><div><a href="${wmEscape(d.fullImage)}" target="_blank" rel="noopener">查看完整标注图 ↗</a><a href="${wmEscape(d.fullImage)}" download>下载 SVG ↓</a></div></div><div class="wm-comp-layout"><div class="wm-comp-art"><img src="${wmEscape(d.image)}" width="300" height="700" alt="葡萄酒瓶剖面示意；编号1水分、2乙醇、3糖分、4酸类、5单宁和颜色、6香气和风味物质。" loading="lazy" decoding="async"></div>${d.parts.map(p=>`<section class="wm-comp-note wm-comp-${p.id}" aria-labelledby="wm-comp-${p.id}-title"><h3 id="wm-comp-${p.id}-title"><span style="--component:${p.color}">${p.number}</span>${wmEscape(p.label)}<small>${wmEscape(p.range)}</small></h3>${p.paragraphs.map(t=>`<p>${wmEscape(t)}</p>`).join('')}</section>`).join('')}</div><p class="wm-comp-notice">${wmEscape(d.notice)}</p><figcaption>${wmEscape(d.caption)}</figcaption></figure>`;
 }
+function wmRefinedFigure(d){
+ const filtration=d.type==='filtration';
+ const panels=filtration?[
+  {label:'深层过滤',image:'filtration-depth-refined.svg',notes:['较厚、多孔的介质','颗粒截留在介质内部']},
+  {label:'表面过滤',image:'filtration-surface-refined.svg',notes:['细膜孔径形成屏障','微小颗粒留在上游表面']}
+ ]:[
+  {label:'玻璃瓶',image:'packaging-glass-refined.svg',notes:['惰性，长期陈年表现成熟','重量与运输空间较大']},
+  {label:'塑料瓶',image:'packaging-plastic-refined.svg',notes:['较轻、较易运输','逐渐透氧，适合较快饮用']},
+  {label:'袋装盒',image:'packaging-bag-refined.svg',notes:['倒酒时内袋逐渐收缩','袋材仍透氧，不用于长期陈年']}
+ ];
+ const caption=filtration?'图中箭头为酒液方向。课本还展示滤芯及金属外壳、旋转滚筒和板框式过滤设备；过滤方法不能只凭机器外形判断。':'包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。';
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-refined-plate" data-wm-figure="${wmEscape(d.type)}"><div class="wm-plate-title">${wmEscape(d.title||(filtration?'过滤机制示意 · 深层与表面过滤':'包装特点示意'))}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map(p=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><img src="assets/${p.image}" width="420" height="300" alt="${wmEscape(p.label)}结构与作用示意" loading="lazy" decoding="async"><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
+}
 function wmDiagram(d){
+ if(['filtration','packaging'].includes(d.type))return wmRefinedFigure(d);
  if(d.type==='composition'&&d.parts?.length)return wmCompositionFigure(d);
  if(d.photos?.length)return wmPhotoFigure(d);
  if(d.type==='berry')return wmGrapeFigure(d);
@@ -54,15 +68,6 @@ function wmDiagram(d){
    {label:'气囊压榨',svg:`${rect(25,62,240,105,'#dce2dc','#7f8d7d',45)}${rect(60,85,172,50,'#d1b5a6','#926a5e',22)}${line(140,85,140,66,wine,3,true)}${line(140,135,140,155,wine,3,true)}${line(40,178,250,178,blue,3)}${line(250,178,273,178,blue,3,true)}${txt(145,112,'膨胀气囊',15)}${txt(145,210,'液体由有孔桶壁流出',14)}`,notes:['气囊膨胀，把果实压向桶壁','可调压力，采用较温和的压榨']}];caption='白酒通常在发酵前压榨；红酒通常先带皮发酵，再分开自流酒与压榨酒。';
  }else if(n==='composition'){
   title='图 7.5 · 成酒的主要组成';panels=[{label:'从葡萄汁到葡萄酒',svg:`${rect(52,20,180,175,'#f1e9cf','#b3b79c',12)}${rect(55,60,174,132,'#d6d9b8','#b3b79c',7)}${txt(142,118,'水是最大组成',18)}${txt(142,45,'水约70–90%',17)}${txt(142,154,'酒精约8–22%',16)}`,notes:['发酵把部分糖变成酒精','糖、酸、单宁、色素和香气仍影响风格','下表范围各自比较，不应当相加为一款酒的配方']}];caption='组成比例因酒款而变；各项范围用于理解量级与作用，不能推出所有酒具有同一配方。';
- }else if(n==='filtration'){
-  title=d.title||'图 7.6 · 过滤介质在哪里截留颗粒';panels=[
-  {label:'深层过滤',svg:`${rect(105,25,80,170,'#d3d9bd','#a2ad8e')}${Array.from({length:35},(_,i)=>line(108+i%7*11,30+Math.floor(i/7)*35,125+i%7*9,52+Math.floor(i/7)*31,'#a2ad8e',1)).join('')}${line(18,105,100,105,blue,4,true)}${line(188,105,267,105,blue,4,true)}${[60,85,125,150].map((x,i)=>ellipse(x,78+i%2*48,5,5,wine,wine)).join('')}`,notes:['较厚、多孔的介质','颗粒截留在介质内部']},
-  {label:'表面过滤',svg:`${rect(145,25,8,170,'#9caa8e','#7b8e6c',0)}${line(18,105,138,105,blue,4,true)}${line(158,105,267,105,blue,4,true)}${[0,1,2,3,4].map(i=>ellipse(136,50+i*30,5,5,wine,wine)).join('')}`,notes:['细膜孔径形成屏障','微小颗粒留在上游表面']}];caption='图中箭头为酒液方向。课本还展示滤芯及金属外壳、旋转滚筒和板框式过滤设备；过滤方法不能只凭机器外形判断。';
- }else if(n==='packaging'){
-  title=d.title||'图 7.7 · 包装形式';const bottle=(x,c)=>`${rect(x+24,20,22,44,c,'#758879',3)}<path d="M${x+24} 62Q${x+24} 75 ${x+8} 85V190H${x+62}V85Q${x+46} 75 ${x+46} 62Z" fill="${c}" stroke="#758879" stroke-width="2"/>${rect(x+10,114,50,40,'#eee9d7','#d2d0bc',1)}`;panels=[
-  {label:'玻璃瓶',svg:bottle(108,'#73866c'),notes:['惰性，长期陈年表现成熟','重量与运输空间较大']},
-  {label:'塑料瓶',svg:bottle(108,'#cbd6b9'),notes:['较轻、较易运输','逐渐透氧，适合较快饮用']},
-  {label:'袋装盒',svg:`${rect(55,30,170,165,'#e2d8bd','#a79878')}${rect(75,52,125,118,'#c7c7b3','#9a9f8c',15)}${line(197,160,242,160,blue,7)}${line(242,160,242,182,blue,7)}`,notes:['倒酒时内袋逐渐收缩','袋材仍透氧，不用于长期陈年']}];caption='包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。';
  }else if(n==='closures'){
   title=d.title||'封口材料与保存表现示意';panels=[
    {label:'天然软木塞',svg:`${rect(98,35,88,150,'#c6a56f','#a17b4b',10)}${Array.from({length:22},(_,i)=>line(107+i%5*15,49+Math.floor(i/5)*28,113+i%5*15,52+Math.floor(i/5)*28,'#89693e',2)).join('')}`,notes:['整块软木；个体透氧有差异','需控制TCA污染']},
