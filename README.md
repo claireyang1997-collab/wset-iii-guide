@@ -51,6 +51,7 @@
 python3 scripts/build-viticulture.py
 python3 scripts/build-winemaking.py
 python3 scripts/build-logic-review.py
+python3 scripts/build-learner-support.py
 ```
 
 第4–6章的现行内容源为 `content/viticulture.json`，包含既有正文、旧链接和迁移映射；`dist/book-data.js` 是生成物。早期 restructure、beginner_revision 和 editorial 迁移脚本只作历史记录，不再覆盖现行内容。第7–10章仍维护 `content/winemaking.json`。图注等渲染逻辑在对应的 `dist/book.js`、`dist/study-diagrams.js`、`dist/winemaking-diagrams.js` 中维护。
@@ -74,3 +75,12 @@ python3 scripts/build-logic-review.py
 - `#chapter/7` 至 `#chapter/10`：章节目录；`#review/7` 至 `#review/10`：资料去向、图示跳转与待确认项。
 
 项目根目录外的 `work/build-offline.py` 内嵌脚本、样式与图片，生成离线网页。开发验收 `work/audit/check-unit2-complete.cjs` 检查24单元、路由、搜索、段落跳转及旧数据；逐页覆盖记录与浏览器截图单独保存在本地审阅目录，原资料不公开上传。
+
+
+## 新学习者路径与自查
+
+`#start` 说明第4–10章的阅读顺序、六组基础术语、学习记录的含义及资料边界。首页提供入口。原练习册第5、6页、机构评分细则和待辨原音频仍待提供；产区、起泡／加强酒及系统品鉴专章不在本批资料范围内。
+
+`content/learner-support.json` 维护第7–10章12个自编自查主题（每题解释、比较、应用三项）和2个四步情境；`scripts/learner-support.js` 维护导读模板，运行 `scripts/build-learner-support.py` 生成 `dist/learner-support.js`。知识地图共有24个主题、5个情境。原12个主题、3个情境和保存键保留；已读、小测证据和自评状态分开。无关联小测的主题不会显示虚构的自测链接。
+
+阅读末尾与练习页可进入 `#map/chapter/4` 至 `#map/chapter/10`，直接筛选本章并定位主题区。自编自查不代替机构原练习册，不自动评分。氧气单元首次使用香气分类处补入定义，并在导读注明WSET词汇表依据。

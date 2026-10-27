@@ -1,0 +1,611 @@
+{
+ "date": "2026-10-27",
+ "topics": [
+  {
+   "id": "wm:processing",
+   "chapter": 7,
+   "chapters": [
+    7
+   ],
+   "stage": "wine",
+   "title": "原料、分选与压榨",
+   "summary": "先分清皮、籽、果肉各提供什么，再决定何时分离固体与液体。",
+   "bookUnits": [
+    "7/grape",
+    "7/processing"
+   ],
+   "href": "#read/7/grape",
+   "requires": [
+    "s2:harvest"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "果皮、果肉和籽分别提供什么？去梗、破碎与压榨各改变什么？",
+     "hint": "果皮带来颜色、单宁及多种风味物质；果肉主要提供水、糖、酸。去梗移除果梗，破碎弄破果皮，压榨分离液体与固体，并应避免打碎籽。",
+     "href": "#read/7/grape/book-7-grape-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "白葡萄酒、红葡萄酒和桃红葡萄酒，皮与汁分别接触到哪一步？",
+     "hint": "白葡萄酒通常先压榨后发酵；红葡萄酒通常带皮发酵后分离；桃红以直接压榨或短时间浸皮限制颜色提取。整串与浸皮等选择需要另看目标。",
+     "href": "#read/7/processing/book-7-processing-3"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "能用黑葡萄酿白葡萄酒吗？怎样处理才可能得到浅色酒？",
+     "hint": "许多黑葡萄的色素主要在皮中，及时分离皮汁、限制提取可以酿白葡萄酒；不能把果皮颜色直接当成成酒颜色。",
+     "href": "#read/7/grape/book-7-grape-1"
+    }
+   ]
+  },
+  {
+   "id": "wm:oxygen",
+   "chapter": 7,
+   "chapters": [
+    7
+   ],
+   "stage": "wine",
+   "title": "氧气、二氧化硫与橡木",
+   "summary": "把木材风味、氧气接触和陈年变化拆开判断。",
+   "bookUnits": [
+    "7/oxygen",
+    "7/containers"
+   ],
+   "href": "#read/7/oxygen",
+   "requires": [
+    "wm:processing"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "为什么有时隔氧，有时允许缓慢接氧？二氧化硫为何需要监测？",
+     "hint": "新鲜果味风格强调保护；受控接氧可支持熟化，过量则损失果味并增加缺陷风险。二氧化硫部分会结合，有效水平会变化，不能只记曾经加过。",
+     "href": "#read/7/oxygen/book-7-oxygen-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "用 TOAST 比较橡木桶：时间、来源、新旧、大小、烘烤各影响什么？",
+     "hint": "时间与单位酒液接触面积影响作用程度；来源和烘烤影响风味；旧桶可少木香但仍缓慢接氧。烘烤程度应与目标风格匹配。",
+     "href": "#read/7/containers/book-7-containers-2"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "旧桶与钢罐加木条都可能只有较弱或可控的木香，它们的氧气管理相同吗？",
+     "hint": "木条主要提供木材成分，不能自动复制木桶的缓慢供氧。钢罐仍须单独管理密封、液面上方空间和操作带入的氧气。",
+     "href": "#read/7/containers/book-7-containers-3"
+    }
+   ]
+  },
+  {
+   "id": "wm:fermentation",
+   "chapter": 7,
+   "chapters": [
+    7
+   ],
+   "stage": "wine",
+   "title": "调节、酒精发酵与 MLF",
+   "summary": "糖决定潜在酒精度；酵母和乳酸菌处理的是不同原料。",
+   "bookUnits": [
+    "7/adjustments",
+    "7/fermentation"
+   ],
+   "href": "#read/7/adjustments",
+   "requires": [
+    "wm:processing"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "酒精发酵消耗什么、产生什么？MLF 又改变什么？",
+     "hint": "酵母把糖转为酒精、二氧化碳和热等；乳酸菌把苹果酸转为乳酸，降低酸的尖锐感并可能改变香气。MLF 完成不代表糖已耗尽。",
+     "href": "#read/7/fermentation/book-7-fermentation-5"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "发酵前增糖、成酒增甜、增酸／降酸，分别为了什么？",
+     "hint": "增糖可提高潜在酒精度，成酒增甜增加残糖；增酸或降酸调整酸度。是否允许与如何使用须看当地规定，不能把几项处理混成一种加糖。",
+     "href": "#read/7/adjustments/book-7-adjustments-3"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "糖很高的葡萄汁为什么可能酿出甜而酒精度较低的酒？",
+     "hint": "高糖可使酵母生存困难、发酵自然停止，留下残糖；酒精度还取决于实际发酵了多少糖。潜在酒精度不等于最终酒精度。",
+     "href": "#read/8/concentration/book-8-concentration-5"
+    }
+   ]
+  },
+  {
+   "id": "wm:maturation",
+   "chapter": 7,
+   "chapters": [
+    7
+   ],
+   "stage": "wine",
+   "title": "酒泥、陈年与混合",
+   "summary": "先确定目标风格，再决定接触什么、多久，以及何时混合。",
+   "bookUnits": [
+    "7/maturation"
+   ],
+   "href": "#read/7/maturation",
+   "requires": [
+    "wm:fermentation",
+    "wm:oxygen"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "粗酒泥与细酒泥有何区别，为什么不把所有沉淀都长期保留？",
+     "hint": "粗酒泥可含果肉、皮等较大物质，可能带来不良风味；适当细酒泥接触可增加质感与复杂性，但仍需监测。",
+     "href": "#read/7/maturation/book-7-maturation-2"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "共同发酵与发酵后混合有什么区别？单一品种为何也可能混合？",
+     "hint": "共同发酵在发酵阶段把不同原料放在一起；混合可组合不同园地、批次、容器或压榨组分。单一品种并不等于单一批次。",
+     "href": "#read/7/maturation/book-7-maturation-4"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "想保留清新果味、尽早上市，是否应一律延长橡木陈年？",
+     "hint": "先看果味、结构和饮用时间。长期橡木陈年可能掩盖轻巧果味，也增加时间和资金成本；短期储存可能更符合目标。",
+     "href": "#read/7/maturation/book-7-maturation-1"
+    }
+   ]
+  },
+  {
+   "id": "wm:finishing",
+   "chapter": 7,
+   "chapters": [
+    7
+   ],
+   "stage": "wine",
+   "title": "澄清、稳定与包装",
+   "summary": "清亮、微生物稳定和可陈年是不同目标。",
+   "bookUnits": [
+    "7/finishing",
+    "7/packaging"
+   ],
+   "href": "#read/7/finishing",
+   "requires": [
+    "wm:fermentation",
+    "wm:maturation"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "下胶、过滤与稳定处理各解决什么问题？",
+     "hint": "下胶使目标成分聚集并被移除；过滤以介质截留颗粒或微生物；稳定还需分别考虑蛋白、酒石及微生物风险。外观清澈不保证微生物稳定。",
+     "href": "#read/7/finishing/book-7-finishing-3"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "盒中袋、塑料瓶、玻璃瓶以及不同封口，怎样匹配饮用时间？",
+     "hint": "比较隔氧能力、重量、运输和成本。即饮产品与有瓶陈潜力的酒需求不同；封口还要考虑软木污染、透氧与一致性，不能只按外观排序。",
+     "href": "#read/7/packaging/book-7-packaging-1"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "一款含残糖、准备装瓶的酒，即使已清亮，还须检查什么？",
+     "hint": "检查残糖与活酵母导致再发酵的风险，并按目标采取有效过滤、卫生装瓶等控制；也要考虑其他稳定性和包装储存条件。",
+     "href": "#read/7/finishing/book-7-finishing-4"
+    }
+   ]
+  },
+  {
+   "id": "wm:white",
+   "chapter": 8,
+   "chapters": [
+    8
+   ],
+   "stage": "wine",
+   "title": "白葡萄酒的工艺与风格",
+   "summary": "在共同流程上比较果香保护、澄清、温度、橡木与酒泥。",
+   "bookUnits": [
+    "8/white-process",
+    "8/bulk-white",
+    "8/aromatic",
+    "8/nonaromatic"
+   ],
+   "href": "#read/8/white-process",
+   "requires": [
+    "wm:processing",
+    "wm:fermentation",
+    "wm:maturation"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "从采收到装瓶写出白葡萄酒主线，并指出哪些节点是可选的。",
+     "hint": "运达、去梗／破碎等选择→压榨→澄清→酒精发酵→去粗酒泥→可选 MLF、混合、陈年→澄清稳定→包装。自流汁、压榨汁及不同批次可分开处理。",
+     "href": "#read/8/white-process/book-8-white-process-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "清新长相思与饱满霞多丽，为什么可能采用不同的氧气、温度、橡木和 MLF 选择？",
+     "hint": "前者通常保护品种果香与酸度；后者可用橡木、MLF、细酒泥与搅桶增加风味和质感，但霞多丽也可做成清新无橡木风格。",
+     "href": "#read/8/nonaromatic/book-8-nonaromatic-3"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "大批量低价位白葡萄酒为什么强调速度与一致性？“越清越好”是否正确？",
+     "hint": "机械化、罐发酵与快速周转可控制单位成本。发酵前需适度澄清；过度去除固体可能减少酵母可用养分，须按原料和风格取舍。",
+     "href": "#read/8/white-process/book-8-white-process-3"
+    }
+   ]
+  },
+  {
+   "id": "wm:sweet",
+   "chapter": 8,
+   "chapters": [
+    8
+   ],
+   "stage": "wine",
+   "title": "甜酒路线与糖分浓缩",
+   "summary": "把怎样获得高糖原料与怎样保留残糖分开。",
+   "bookUnits": [
+    "8/sweet-paths",
+    "8/concentration"
+   ],
+   "href": "#read/8/sweet-paths",
+   "requires": [
+    "wm:fermentation",
+    "s2:harvest"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "甜酒的三条路径是什么？浓缩葡萄糖分是否直接等于留下残糖？",
+     "hint": "可中断发酵、发酵后增甜，或以高糖原料令发酵难以耗尽糖。浓缩先改变原料；最终甜度仍看发酵与后续选择。",
+     "href": "#read/8/sweet-paths/book-8-sweet-paths-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "贵腐、自然风干和自然冰冻，分别怎样浓缩？各有什么条件与风险？",
+     "hint": "贵腐需适宜湿润与干燥交替，失水并带来独特风味；风干靠水分蒸发；自然冰冻后压榨让冰留在压榨机中。腐烂、雨水、动物和天气不确定性及低出汁率影响成本。",
+     "href": "#read/8/concentration/book-8-concentration-4"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "冷却停止发酵后能直接安心装瓶吗？加强又如何不同？",
+     "hint": "降温只是暂时抑制酵母，还需有效移除或控制酵母并卫生装瓶，避免再发酵。加强通过提高酒精度抑制酵母，成酒风格不同。",
+     "href": "#read/8/sweet-paths/book-8-sweet-paths-2"
+    }
+   ]
+  },
+  {
+   "id": "wm:extraction",
+   "chapter": 9,
+   "chapters": [
+    9
+   ],
+   "stage": "wine",
+   "title": "红葡萄酒提取与酒帽管理",
+   "summary": "提取颜色、风味和单宁的速度与目标并不完全相同。",
+   "bookUnits": [
+    "9/extraction",
+    "9/cap"
+   ],
+   "href": "#read/9/extraction",
+   "requires": [
+    "wm:processing",
+    "wm:fermentation"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "为什么红酒要让皮与汁接触？颜色、单宁的提取进程有什么差别？",
+     "hint": "皮提供颜色与多种酚类；色素较早提取，单宁提取还受温度、时间、酒精和操作影响。颜色深不自动等于单宁高或品质好。",
+     "href": "#read/9/extraction/book-9-extraction-3"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "压帽、淋皮、倒罐回浇与旋转发酵罐，分别怎样让皮汁接触？",
+     "hint": "压帽把酒帽压入汁中；淋皮抽汁浇回；倒罐回浇先排出酒液再回浇；旋转容器使皮汁混合。强度和频率须结合发酵进程及原料。",
+     "href": "#read/9/cap/book-9-cap-1"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "果味细致、皮中单宁已足，是否应该为颜色更深继续强提取？",
+     "hint": "同时品尝果味与单宁质地，考虑目标结构和成熟度。达到目标可减少接触或分离皮汁；颜色与单宁不是同一个停止标准。",
+     "href": "#read/9/extraction/book-9-extraction-5"
+    }
+   ]
+  },
+  {
+   "id": "wm:red",
+   "chapter": 9,
+   "chapters": [
+    9
+   ],
+   "stage": "wine",
+   "title": "整串、红酒陈年与品种风格",
+   "summary": "整串是原料状态；二氧化碳浸渍是特定环境与发酵路径。",
+   "bookUnits": [
+    "9/whole-bunch",
+    "9/red-maturation",
+    "9/red-styles"
+   ],
+   "href": "#read/9/whole-bunch",
+   "requires": [
+    "wm:extraction",
+    "wm:oxygen",
+    "wm:maturation"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "完整果粒在二氧化碳环境中的变化，与破碎后酵母发酵如何衔接？",
+     "hint": "完整果粒可先进行细胞内发酵，之后破碎、压榨，再由酵母完成发酵；半二氧化碳浸渍由底部破碎果粒的发酵供气。",
+     "href": "#read/9/whole-bunch/book-9-whole-bunch-2"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "整串发酵、全二氧化碳浸渍和半二氧化碳浸渍，为什么不能当作同义词？",
+     "hint": "整串描述保留果梗与完整果串；二氧化碳浸渍强调完整果粒所处的气体条件和细胞内过程。整串也可与破碎葡萄一起发酵。",
+     "href": "#read/9/whole-bunch/book-9-whole-bunch-3"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "轻盈黑皮诺与结构强的赤霞珠，能否统一用同一强度的新橡木陈年？",
+     "hint": "考虑果味强度、单宁、酸度与目标风格，新木风味应与酒体匹配；品种提供线索，但原料成熟度和具体酒款决定选择。",
+     "href": "#read/9/red-maturation/book-9-red-maturation-2"
+    }
+   ]
+  },
+  {
+   "id": "wm:rose",
+   "chapter": 9,
+   "chapters": [
+    9
+   ],
+   "stage": "wine",
+   "title": "桃红葡萄酒的路径",
+   "summary": "限制颜色提取，并在分离后选择适合目标的发酵工艺。",
+   "bookUnits": [
+    "9/rose"
+   ],
+   "href": "#read/9/rose",
+   "requires": [
+    "wm:processing",
+    "wm:white",
+    "wm:extraction"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "直接压榨与短时间浸皮各怎样取得桃红颜色？后段如何处理？",
+     "hint": "直接压榨仅在压榨中短暂皮汁接触；短浸皮到目标颜色后分离，后段通常按白葡萄酒方式发酵。部分短浸皮可持续到发酵刚开始。",
+     "href": "#read/9/rose/book-9-rose-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "专为桃红选择的葡萄，与放血法从红酒罐分出的汁，原料目标有何差异？",
+     "hint": "专用桃红可按清新、酸度与轻巧感选择采收；放血法同时浓缩原红酒罐的皮汁比例，分出的汁可能来自为红酒成熟度采收的葡萄。",
+     "href": "#read/9/rose/book-9-rose-2"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "把红白葡萄酒混合是否到处都能用于桃红？颜色浅又能否证明干型？",
+     "hint": "混合方法取决于产区与酒类法规，不能普遍套用。颜色主要取决于色素和提取，残糖取决于发酵及增甜，二者不能互推。",
+     "href": "#read/9/rose/book-9-rose-3"
+    }
+   ]
+  },
+  {
+   "id": "wm:cost",
+   "chapter": 10,
+   "chapters": [
+    10
+   ],
+   "stage": "wine",
+   "title": "从生产选择到单位成本",
+   "summary": "把增加的投入与减少的可销售产量一起算。",
+   "bookUnits": [
+    "10/production-costs"
+   ],
+   "href": "#read/10/production-costs",
+   "requires": [
+    "s2:balance",
+    "s2:harvest",
+    "wm:oxygen",
+    "wm:sweet"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "陡坡、人工、低出汁率与长期陈年，各通过什么路径增加成本？",
+     "hint": "陡坡限制机械作业，人工耗时；低出汁率让同量原料产出更少；陈年占容器、空间与资金且有损耗。都要落到每瓶可销售酒。",
+     "href": "#read/10/production-costs/book-10-production-costs-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "总成本下降，是否就代表每瓶成本下降？给出一个有分母的例子。",
+     "hint": "若成本从10万元降到9万元，而可售产量从1万瓶降到6千瓶，单位成本由10元升到15元。固定成本、变动成本与实际产量须一起看。",
+     "href": "#read/10/production-costs/book-10-production-costs-3"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "贵腐甜酒为何通常比普通即饮白葡萄酒生产成本高？",
+     "hint": "连起分批手采与筛选、天气及腐烂损失、低出汁率和可能更长的酿造时间；每一点说明投入增加或可售产量减少，别只写“品质高”。",
+     "href": "#read/10/production-costs/book-10-production-costs-3"
+    }
+   ]
+  },
+  {
+   "id": "wm:market",
+   "chapter": 10,
+   "chapters": [
+    10
+   ],
+   "stage": "wine",
+   "title": "售价、渠道与生产商",
+   "summary": "成本解释生产负担，市场与组织方式解释更多差异。",
+   "bookUnits": [
+    "10/distribution",
+    "10/producers"
+   ],
+   "href": "#read/10/distribution",
+   "requires": [
+    "wm:cost"
+   ],
+   "quiz": [],
+   "checks": [
+    {
+     "id": "explain",
+     "label": "解释机制",
+     "question": "从酒厂到消费者，哪些环节会影响最终售价？",
+     "hint": "运输、仓储、进口与当地税、分销和零售环节，以及供求、品牌与声誉都会影响售价。成本相同不保证售价相同。",
+     "href": "#read/10/distribution/book-10-distribution-1"
+    },
+    {
+     "id": "compare",
+     "label": "比较选择",
+     "question": "酒庄、合作社和酒商，如何分配葡萄、设备与销售资源？",
+     "hint": "酒庄可自种自酿，合作社汇集成员葡萄并共用设施，酒商可购买葡萄、葡萄汁或酒再加工销售；实际企业可兼有多种身份。",
+     "href": "#read/10/producers/book-10-producers-1"
+    },
+    {
+     "id": "apply",
+     "label": "应用到情境",
+     "question": "两款酒生产成本相近，但一款产量稀少、品牌需求强，怎样解释售价差异？",
+     "hint": "把稀缺与需求、品牌及渠道加成独立列出。高售价不能直接反推更高生产成本或更好品质，组织类型也不能单独决定品质。",
+     "href": "#read/10/distribution/book-10-distribution-3"
+    }
+   ]
+  }
+ ],
+ "cases": [
+  {
+   "id": "fresh-white-chain",
+   "title": "从采收到清新干白",
+   "context": "为一款清新、果香突出的干白制定方案，并解释为什么这样选。",
+   "topics": [
+    "s2:harvest",
+    "wm:processing",
+    "wm:fermentation",
+    "wm:white",
+    "wm:finishing"
+   ],
+   "stages": [
+    {
+     "id": "conditions",
+     "label": "条件与目标",
+     "prompt": "目标饮用时间、果味、酸度和售价是什么？",
+     "hint": "先明确即饮、清新与合理成本，再判断适合的原料成熟度和生产节奏。"
+    },
+    {
+     "id": "vine",
+     "label": "原料与机制",
+     "prompt": "葡萄到酒液的过程中，糖、酸与果香有哪些变化或风险？",
+     "hint": "糖在发酵中转为酒精；氧化可损失果香。保留酸度需区分采收、酸度调节与MLF的作用。"
+    },
+    {
+     "id": "choice",
+     "label": "工艺选择",
+     "prompt": "怎样选择采收处理、澄清、容器、温度与后续稳定？",
+     "hint": "及时低温处理、保护氧气、适度澄清、可控温的惰性容器；是否MLF、酒泥或橡木仍由目标决定。装瓶前另检查稳定性。"
+    },
+    {
+     "id": "outcome",
+     "label": "风格与成本",
+     "prompt": "怎样预测甜度、香气、质感和周转成本？",
+     "hint": "干型须看残糖；果香来自原料与发酵并需保护。快速周转可少占资金，但卫生、稳定与包装仍有成本。"
+    }
+   ],
+   "pitfalls": [
+    "芳香突出不等于含糖多",
+    "惰性容器不代表所有操作都无氧",
+    "冷却不能替代移除或控制酵母"
+   ]
+  },
+  {
+   "id": "red-cost-chain",
+   "title": "从红酒提取到售价",
+   "context": "比较一款尽早上市的柔和红酒与一款计划长期陈年的结构型红酒。",
+   "topics": [
+    "wm:extraction",
+    "wm:red",
+    "wm:oxygen",
+    "wm:cost",
+    "wm:market"
+   ],
+   "stages": [
+    {
+     "id": "conditions",
+     "label": "条件与目标",
+     "prompt": "两款酒的原料和目标饮用时间如何不同？",
+     "hint": "比较成熟度、果味强度、酸与单宁以及目标市场，不能只说一款贵一款便宜。"
+    },
+    {
+     "id": "vine",
+     "label": "原料与机制",
+     "prompt": "温度、时间、酒精和酒帽接触如何改变提取？",
+     "hint": "颜色与单宁提取并不同步，强操作也可能提取粗糙单宁；应以目标结构和原料能力决定。"
+    },
+    {
+     "id": "choice",
+     "label": "工艺选择",
+     "prompt": "如何安排提取停止、压榨组分、混合和陈年？",
+     "hint": "可分开自流酒与压榨酒后试混；橡木强度及陈年时间匹配果味和结构，而非一律越长越好。"
+    },
+    {
+     "id": "outcome",
+     "label": "风格与成本",
+     "prompt": "哪些差异是每瓶成本，哪些属于市场售价？",
+     "hint": "设备、橡木、空间、资金时间及损耗影响成本；品牌、稀缺、渠道和需求可进一步影响售价。"
+    }
+   ],
+   "pitfalls": [
+    "深颜色不能代替单宁判断",
+    "长期陈年不保证品质提高",
+    "售价不能作为生产成本的直接证据"
+   ]
+  }
+ ],
+ "aromaSource": "https://www.wsetglobal.com/media/11766/wset_l3wines_sat_en_may2022_issue2.pdf"
+}
