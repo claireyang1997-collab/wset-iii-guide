@@ -45,20 +45,71 @@ body += '<path d="M246 68H279L290 48" fill="none" stroke="#859774"/>'
 body += text(324,45,'薄膜与微孔') + text(85,65,'含颗粒的酒液') + text(327,102,'过滤后酒液') + text(210,276,'颗粒停留在膜的上游表面')
 write('filtration-surface-refined.svg','表面过滤：颗粒截留在薄膜上游，酒液穿过微孔',body)
 
-bottle = 'M188 41H232V98Q232 116 249 130Q266 144 266 166V254Q266 266 254 267H166Q154 266 154 254V166Q154 144 171 130Q188 116 188 98Z'
-body = f'<ellipse cx="210" cy="275" rx="76" ry="9" fill="#dddcd0" opacity=".5"/><path d="{bottle}" fill="url(#glass)" stroke="#435940" stroke-width="2"/><rect x="187" y="29" width="46" height="51" rx="6" fill="#445c4e"/><path d="M191 42H229M191 50H229M190 73H230" stroke="#859b7d" opacity=".7"/><path d="M176 145Q167 155 167 176V242" fill="none" stroke="#cfdbac" stroke-width="5" opacity=".55"/><path d="M169 257Q210 241 251 257" fill="none" stroke="#243e32" stroke-width="4"/><rect x="165" y="174" width="90" height="57" rx="2" fill="#f0e9d3" stroke="#d7cbae"/>'
-body += text(210,197,'WINE',12,'#7d7156') + '<path d="M186 207H234M192 215H228" stroke="#bfb297"/>'
-body += text(320,117,'玻璃瓶壁') + '<path d="M286 121L260 148" stroke="#8c9a80" fill="none"/>'
-write('packaging-glass-refined.svg','玻璃葡萄酒瓶：瓶颈、肩部、酒标与凹底的结构示意',body)
+# Larger packaging studies. The bag-in-box pair uses a true cutaway so that
+# the shrinking bag cannot be confused with the rigid outer box.
+PACKAGE_DEFS = '''<defs>
+<linearGradient id="green"><stop stop-color="#3d5a4b"/><stop offset=".26" stop-color="#73886a"/><stop offset=".5" stop-color="#91a47a"/><stop offset=".78" stop-color="#57715b"/><stop offset="1" stop-color="#304d40"/></linearGradient>
+<linearGradient id="clear"><stop stop-color="#d3ddd0"/><stop offset=".27" stop-color="#ffffff"/><stop offset=".7" stop-color="#edf0df"/><stop offset="1" stop-color="#becdb9"/></linearGradient>
+<linearGradient id="silver"><stop stop-color="#b4bfb5"/><stop offset=".34" stop-color="#f7f8ed"/><stop offset=".67" stop-color="#d5dcd0"/><stop offset="1" stop-color="#a8b7aa"/></linearGradient>
+<linearGradient id="wine" x2="0" y2="1"><stop stop-color="#b8a261"/><stop offset="1" stop-color="#9e8646"/></linearGradient>
+<marker id="tip" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#668b91" stroke-width="1.5"/></marker>
+</defs>'''
 
-body = f'<ellipse cx="210" cy="275" rx="76" ry="9" fill="#dddcd0" opacity=".5"/><path d="{bottle}" fill="url(#pet)" stroke="#839b7e" stroke-width="2"/><path d="M157 170H263V254Q263 263 253 264H167Q157 263 157 254Z" fill="#d3ce93" opacity=".45"/><rect x="186" y="29" width="48" height="40" rx="5" fill="#9ba98b" stroke="#7d9177"/>'
-for x in range(191,233,5): body += f'<path d="M{x} 33V63" stroke="#71866a" stroke-width="1"/>'
-body += '<path d="M187 79H233M187 86H233M165 154Q210 160 255 154M159 246Q210 252 261 246M162 257Q210 262 258 257" fill="none" stroke="#a5b697" stroke-width="2"/><path d="M176 145Q167 155 167 176V235" fill="none" stroke="white" stroke-width="6" opacity=".7"/><rect x="166" y="178" width="88" height="54" rx="2" fill="#f0ebda" stroke="#c5cbb6"/>'
-body += text(210,200,'WINE',12,'#7d7156') + '<path d="M187 211H233M194 218H226" stroke="#bfb297"/>'
-body += text(320,113,'轻质瓶身') + '<path d="M285 117L260 144" stroke="#8c9a80" fill="none"/>'
-write('packaging-plastic-refined.svg','塑料葡萄酒瓶：轻质透明瓶身、螺纹盖与加强纹示意',body)
+def package_write(name, title, description, body, w=500, h=540):
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title description"><title id="title">{escape(title)}</title><desc id="description">{escape(description)}</desc>{PACKAGE_DEFS}<rect width="{w}" height="{h}" rx="16" fill="#f5f2e8"/><g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#354b40" stroke-linejoin="round" stroke-linecap="round">{body}</g></svg>'''
+    (OUT / name).write_text(svg + '\n')
 
-body = '<ellipse cx="210" cy="272" rx="124" ry="10" fill="#dddcd0" opacity=".5"/><path d="M100 72L136 47H314L278 72Z" fill="#ede3c8" stroke="#a79878"/><path d="M278 72L314 47V228L278 255Z" fill="#c8b997" stroke="#a79878"/><rect x="100" y="72" width="178" height="183" rx="4" fill="url(#paper)" stroke="#a79878" stroke-width="1.5"/><path d="M129 103Q187 93 248 107L257 223Q192 238 122 226Z" fill="url(#bag)" stroke="#96a58e" stroke-width="1.6"/><path d="M132 114Q170 131 150 213M240 114Q220 155 246 218M135 225Q185 208 237 225" fill="none" stroke="#a6b39f" stroke-width="1.3"/><path d="M127 100L132 228M248 105L253 224" fill="none" stroke="#f9fbf1" stroke-width="3"/><circle cx="252" cy="211" r="13" fill="#bec6b7" stroke="#82917b"/><path d="M252 211H298V235" fill="none" stroke="#556b64" stroke-width="12" stroke-linejoin="round"/><rect x="281" y="202" width="24" height="7" rx="2" fill="#354d48"/><path d="M298 243Q287 259 298 261Q309 259 298 243" fill="#bba45c"/>'
-body += text(326,107,'外层纸盒') + '<path d="M309 113L289 138" stroke="#9b957e"/>' + text(190,153,'柔性内袋',15) + text(190,177,'随倒酒收缩',13)
-body += arrow('M80 160H117') + arrow('M272 160H251')
-write('packaging-bag-refined.svg','袋装盒剖面：外层纸盒、收缩的柔性内袋和出酒阀',body)
+def package_label(x, y, value, path):
+    return f'<path d="{path}" fill="none" stroke="#8d9985" stroke-width="1.8"/><text x="{x}" y="{y}" font-size="22" font-weight="500">{value}</text>'
+
+bottle = 'M175 55H225V141C225 167 278 183 278 220V458Q278 480 256 482H144Q122 480 122 458V220C122 183 175 167 175 141Z'
+body = f'<ellipse cx="200" cy="490" rx="110" ry="11" fill="#dedfce"/><path d="{bottle}" fill="url(#green)" stroke="#3c5746" stroke-width="3"/>'
+body += '<path d="M138 245H263V453Q263 466 249 469H151Q138 466 138 453Z" fill="#a5a56e" opacity=".22"/><path d="M142 220C139 249 139 284 139 329" fill="none" stroke="#e3e9c0" stroke-width="7" opacity=".65"/><path d="M151 195Q174 173 181 150" fill="none" stroke="#d9e4b9" stroke-width="4" opacity=".6"/><rect x="172" y="43" width="56" height="80" rx="7" fill="#7d4352" stroke="#633542" stroke-width="2"/><path d="M177 57H223M177 65H223M176 110H224" stroke="#b7838d" stroke-width="2"/><rect x="140" y="298" width="120" height="100" rx="5" fill="#f7f0db" stroke="#dfd2af" stroke-width="2"/>'
+body += '<path d="M166 316H234M166 379H234" stroke="#c9b991" stroke-width="1.5"/><text x="200" y="347" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#746144" letter-spacing="3">WINE</text><path d="M181 361H219" stroke="#b6a985"/><path d="M139 463Q200 436 262 463" fill="none" stroke="#294638" stroke-width="6"/><path d="M145 472Q200 450 256 472" fill="none" stroke="#7f956d" stroke-width="2"/>'
+body += package_label(321,105,'瓶口与封口','M229 84H288L307 99')
+body += package_label(321,260,'玻璃瓶身','M279 272H294L308 254')
+body += package_label(321,441,'瓶底','M266 466H290L308 435')
+package_write('packaging-glass-clear.svg','玻璃瓶结构示意','放大的绿色玻璃葡萄酒瓶，标出瓶口与封口、玻璃瓶身和瓶底。',body)
+
+plastic = 'M174 67H226V136C226 161 276 180 279 216L286 448Q287 476 261 480H139Q113 476 114 448L121 216C124 180 174 161 174 136Z'
+body = f'<ellipse cx="200" cy="490" rx="114" ry="11" fill="#dedfce"/><path d="{plastic}" fill="url(#clear)" stroke="#80977c" stroke-width="3"/>'
+body += '<path d="M126 241H274L278 446Q280 465 260 468H140Q120 465 122 446Z" fill="url(#wine)" opacity=".45"/><path d="M127 241Q200 253 274 241" fill="none" stroke="#c0ae70" stroke-width="2"/><rect x="170" y="43" width="60" height="55" rx="7" fill="#7d4352" stroke="#633542" stroke-width="2"/>'
+for x in range(177,227,6):
+    body += f'<path d="M{x} 51V88" stroke="#b7838d" stroke-width="2"/>'
+body += '<path d="M173 105H227M173 115H227M174 127H226" stroke="#8fa388" stroke-width="3"/><path d="M147 204Q171 178 181 149" fill="none" stroke="white" stroke-width="5"/><path d="M136 220L130 443" fill="none" stroke="white" stroke-width="7" opacity=".75"/>'
+for y in [264,277,413,426]:
+    body += f'<path d="M126 {y}Q200 {y+10} 278 {y}" fill="none" stroke="#94a48a" stroke-width="2"/>'
+body += '<rect x="139" y="300" width="122" height="98" rx="5" fill="#f7f0db" stroke="#d9d0b4" stroke-width="2"/><path d="M166 317H234M166 379H234" stroke="#c9b991" stroke-width="1.5"/><text x="200" y="348" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#746144" letter-spacing="3">WINE</text><path d="M181 362H219" stroke="#b6a985"/><path d="M132 456Q148 442 160 464Q181 447 200 468Q219 447 240 464Q252 442 268 456" fill="none" stroke="#889d7e" stroke-width="2.5"/>'
+body += package_label(321,83,'螺旋瓶盖','M231 66H293L307 77')
+body += package_label(321,251,'塑料瓶身','M282 272H294L308 245')
+body += package_label(321,436,'瓶底','M275 459H292L308 430')
+package_write('packaging-plastic-clear.svg','塑料瓶结构示意','放大的透明塑料葡萄酒瓶，画出螺旋瓶盖、瓶口螺纹、轻质瓶身、酒液和瓶底轮廓。',body)
+
+def bag_scene(offset, collapsed=False):
+    body = f'<g transform="translate({offset} 0)"><ellipse cx="206" cy="376" rx="164" ry="12" fill="#dedfce"/>'
+    body += '<path d="M70 122L114 87H323L279 122Z" fill="#f1e6c9" stroke="#a18b63" stroke-width="2.5"/><path d="M279 122L323 87V333L279 370Z" fill="#c9b68b" stroke="#a18b63" stroke-width="2.5"/><rect x="70" y="122" width="209" height="248" rx="5" fill="#e7d8b4" stroke="#a18b63" stroke-width="2.5"/>'
+    body += '<path d="M86 143H262V352H86Z" fill="#f8f6eb" stroke="#c7b88e" stroke-width="1.5" stroke-dasharray="6 5"/>'
+    if not collapsed:
+        body += '<path d="M112 155Q173 146 235 156L247 327Q178 345 99 331Z" fill="url(#silver)" stroke="#85988a" stroke-width="2.5"/><path d="M110 213Q174 225 239 213L247 327Q178 342 101 331Z" fill="#a05c70" opacity=".8"/><path d="M110 213Q174 226 239 213" fill="none" stroke="#743d50" stroke-width="2"/><path d="M119 162Q131 203 110 321M229 163Q219 215 239 320" fill="none" stroke="#f7f9ec" stroke-width="4"/><path d="M109 329Q179 313 239 328" fill="none" stroke="#8a9b8a" stroke-width="2"/>'
+    else:
+        body += '<path d="M158 157L185 165L171 188L203 216L185 244L218 277L227 329Q192 343 145 334L133 310L154 285L134 257L161 229L142 202Z" fill="url(#silver)" stroke="#85988a" stroke-width="2.5"/><path d="M143 302Q181 312 222 301L227 329Q190 342 146 333Z" fill="#a05c70" opacity=".8"/><path d="M169 177L164 202L182 222L165 244L185 268L173 287" fill="none" stroke="#f7f9ec" stroke-width="3"/>'
+        body += '<path d="M108 220H139M231 220H205" fill="none" stroke="#668b91" stroke-width="3" marker-end="url(#tip)"/>'
+    body += '<path d="M234 322H278" fill="none" stroke="#556d64" stroke-width="16"/><ellipse cx="238" cy="322" rx="14" ry="18" fill="#bdcabe" stroke="#7f9587" stroke-width="2"/><path d="M243 322H298V346" fill="none" stroke="#405c55" stroke-width="15"/><rect x="280" y="301" width="32" height="8" rx="4" fill="#405c55"/>'
+    if collapsed:
+        body += '<path d="M299 355C295 361 289 368 291 372C293 379 305 379 307 372C309 368 303 361 299 355Z" fill="#9c5267"/>'
+    body += '</g>'
+    return body
+
+body = '<text x="210" y="48" text-anchor="middle" font-size="25" font-weight="600">倒酒前</text><text x="710" y="48" text-anchor="middle" font-size="25" font-weight="600">倒出部分酒液后</text>'
+body += bag_scene(0) + bag_scene(500,True)
+body += '<path d="M409 233H479" fill="none" stroke="#668b91" stroke-width="3.5" marker-end="url(#tip)"/>'
+body += package_label(341,113,'纸盒','M321 132H334V119')
+body += package_label(341,203,'内袋','M240 176H326L334 197')
+body += package_label(341,327,'出酒阀','M299 322H332')
+body += '<text x="200" y="420" text-anchor="middle" font-size="23">纸盒支撑，柔性内袋装酒</text><text x="710" y="420" text-anchor="middle" font-size="23">外盒不变，内袋随倒酒收缩</text>'
+package_write('packaging-bag-clear.svg','袋装盒剖面：倒酒前后内袋的变化','两幅同尺寸纸盒剖面图。左图内袋充盈，标出纸盒、内袋和出酒阀；右图酒液减少、内袋收缩，外层纸盒保持原形。',body,1000,456)
+
+body = '<text x="210" y="48" text-anchor="middle" font-size="25" font-weight="600">倒酒前</text>' + bag_scene(0)
+body += package_label(341,113,'纸盒','M321 132H334V119') + package_label(341,203,'内袋','M240 176H326L334 197') + package_label(341,327,'出酒阀','M299 322H332')
+body += '<text x="210" y="420" text-anchor="middle" font-size="22">纸盒支撑，柔性内袋装酒</text><g transform="translate(0 446)"><text x="210" y="48" text-anchor="middle" font-size="25" font-weight="600">倒出部分酒液后</text>' + bag_scene(0,True) + '<text x="210" y="420" text-anchor="middle" font-size="22">外盒不变，内袋随倒酒收缩</text></g><path d="M437 398V484" fill="none" stroke="#668b91" stroke-width="3" marker-end="url(#tip)"/>'
+package_write('packaging-bag-clear-mobile.svg','袋装盒剖面：倒酒前后内袋的变化','上下两幅同尺寸纸盒剖面图，内袋随倒酒而收缩，外层纸盒保持形状。',body,500,900)

@@ -22,7 +22,16 @@ function wmPhotoFigure(d){
 function wmCompositionFigure(d){
  return `<figure id="wmfig-${wmEscape(d.id)}" class="wm-plate wm-composition-plate" data-wm-figure="composition"><div class="wm-comp-heading"><strong>${wmEscape(d.title)}</strong><div><a href="${wmEscape(d.fullImage)}" target="_blank" rel="noopener">查看完整标注图 ↗</a><a href="${wmEscape(d.fullImage)}" download>下载 SVG ↓</a></div></div><div class="wm-comp-layout"><div class="wm-comp-art"><img src="${wmEscape(d.image)}" width="300" height="700" alt="葡萄酒瓶剖面示意；编号1水分、2乙醇、3糖分、4酸类、5单宁和颜色、6香气和风味物质。" loading="lazy" decoding="async"></div>${d.parts.map(p=>`<section class="wm-comp-note wm-comp-${p.id}" aria-labelledby="wm-comp-${p.id}-title"><h3 id="wm-comp-${p.id}-title"><span style="--component:${p.color}">${p.number}</span>${wmEscape(p.label)}<small>${wmEscape(p.range)}</small></h3>${p.paragraphs.map(t=>`<p>${wmEscape(t)}</p>`).join('')}</section>`).join('')}</div><p class="wm-comp-notice">${wmEscape(d.notice)}</p><figcaption>${wmEscape(d.caption)}</figcaption></figure>`;
 }
+function wmPackagingFigure(d){
+ const panels=[
+  {label:'玻璃瓶',image:'packaging-glass-clear.svg',width:500,height:540,alt:'放大的绿色玻璃葡萄酒瓶，标出瓶口与封口、玻璃瓶身和瓶底。',notes:['惰性，长期陈年表现成熟','重量与运输空间较大']},
+  {label:'塑料瓶',image:'packaging-plastic-clear.svg',width:500,height:540,alt:'放大的透明塑料葡萄酒瓶，画出螺旋瓶盖、瓶口螺纹、瓶身与酒液。',notes:['较轻、较易运输','逐渐透氧，适合较快饮用']},
+  {label:'袋装盒',image:'packaging-bag-clear.svg',width:1000,height:456,alt:'袋装盒倒酒前后的剖面对比：纸盒保持形状，柔性内袋随酒液减少而收缩。标出纸盒、内袋及出酒阀。',notes:['倒酒时内袋逐渐收缩','袋材仍透氧，不用于长期陈年']}
+ ];
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-packaging-plate" data-wm-figure="packaging"><div class="wm-plate-title">${wmEscape(d.title||'包装特点示意')}</div><div class="wm-packaging-grid">${panels.map((p,i)=>`<section class="wm-package-panel${i===2?' wm-package-wide':''}"><h3>${wmEscape(p.label)}</h3><picture>${i===2?'<source media="(max-width:650px)" srcset="assets/packaging-bag-clear-mobile.svg" width="500" height="900">':''}<img src="assets/${p.image}" width="${p.width}" height="${p.height}" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"></picture><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><figcaption>${wmEscape(d.caption||'包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。')}</figcaption></figure>`;
+}
 function wmRefinedFigure(d){
+ if(d.type==='packaging')return wmPackagingFigure(d);
  const filtration=d.type==='filtration';
  const panels=filtration?[
   {label:'深层过滤',image:'filtration-depth-refined.svg',notes:['较厚、多孔的介质','颗粒截留在介质内部']},
