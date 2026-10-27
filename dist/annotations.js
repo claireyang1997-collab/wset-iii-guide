@@ -14,7 +14,7 @@
  document.body.append(toolbar);
  const editor = element('dialog', 'annotation-dialog');
  editor.setAttribute('aria-labelledby', 'annotation-editor-title');
- editor.innerHTML = '<form><div class="annotation-dialog-head"><h2 id="annotation-editor-title">高亮与点评</h2><button type="button" data-action="cancel" aria-label="关闭点评">×</button></div><blockquote></blockquote><label for="annotation-note">我的点评</label><textarea id="annotation-note" maxlength="5000" placeholder="写下理解、疑问或想补充的内容……"></textarea><p class="annotation-error" role="alert"></p><div class="annotation-actions"><button type="button" data-action="cancel">取消</button><button type="submit" class="primary">保存</button></div></form>';
+ editor.innerHTML = '<form><div class="annotation-dialog-head"><h2 id="annotation-editor-title">高亮与点评</h2><button type="button" data-action="cancel" aria-label="关闭点评">×</button></div><blockquote></blockquote><label for="annotation-note">我的点评</label><textarea id="annotation-note" maxlength="5000" placeholder="写下理解、疑问或想补充的内容……"></textarea><p class="annotation-error" role="alert"></p><div class="annotation-actions"><button type="button" data-action="delete-record" hidden>删除高亮与点评</button><button type="button" data-action="delete-comment" hidden>仅删除点评</button><button type="button" data-action="cancel">取消</button><button type="submit" class="primary">保存</button></div></form>';
  document.body.append(editor);
  const list = element('dialog', 'annotation-dialog');
  list.setAttribute('aria-labelledby', 'annotation-list-title');
@@ -120,6 +120,9 @@
   editor.querySelector('blockquote').textContent = record.quote;
   editor.querySelector('textarea').value = record.note;
   editor.querySelector('.annotation-error').textContent = '';
+  const saved = records.some(r => r.id === record.id);
+  editor.querySelector('[data-action="delete-record"]').hidden = !saved;
+  editor.querySelector('[data-action="delete-comment"]').hidden = !saved || !record.note;
   list.close(); editor.showModal(); editor.querySelector('textarea').focus();
  }
  function renderList() {
@@ -137,6 +140,15 @@
   else if (persist([...records, record])) {toolbar.hidden = true; pending = null; window.getSelection()?.removeAllRanges(); paint(); notice('高亮已保存到当前浏览器。');}
  });
  editor.querySelectorAll('[data-action="cancel"]').forEach(b => b.addEventListener('click', () => editor.close()));
+ editor.addEventListener('click', e => {
+  const action = e.target.closest('button')?.dataset.action;
+  if (!editing || !['delete-record','delete-comment'].includes(action)) return;
+  const id = editing.id;
+  const next = action === 'delete-record' ? records.filter(r => r.id !== id) : records.map(r => r.id === id ? {...r, note:''} : r);
+  if (!persist(next)) {editor.querySelector('.annotation-error').textContent = '删除未能保存，请重试；原记录仍保留。'; return;}
+  editor.close(); paint();
+  notice(action === 'delete-record' ? '已删除高亮与点评。' : '已删除点评，高亮已保留。');
+ });
  editor.addEventListener('close', () => {editing = null; pending = null; window.getSelection()?.removeAllRanges();});
  editor.querySelector('form').addEventListener('submit', e => {
   e.preventDefault(); if (!editing) return;
