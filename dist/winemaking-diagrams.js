@@ -92,9 +92,39 @@ function wmDiagram(d){
    {label:'合成塞',svg:`${rect(98,35,88,150,'#e0c9a1','#ae956e',10)}${line(108,46,108,174,'#eedfc6',4)}`,notes:['石化或植物来源材料','按隔氧表现与饮用期选择']},
    {label:'螺旋盖',svg:`${rect(80,50,122,100,'#bac6bd','#78877c',8)}${[75,85,95,105].map(y=>line(82,y,200,y,'#7e8f84',2)).join('')}${rect(80,145,122,18,'#8e9f8d','#78877c',2)}${txt(142,190,'内衬控制透氧',15)}`,notes:['金属盖＋内衬','可再封，也适合高品质酒']}];caption='外形只帮助辨认类型；保存表现要结合具体材料、内衬、装瓶与储存条件。';
  }else if(n==='freeze'){
+  const ice=(x,y,k=1)=>`<g transform="translate(${x} ${y}) scale(${k})"><path d="M-13 -9L3 -16L17 -4L10 14L-9 16L-18 2Z" fill="#d9eff5" stroke="#70a6ba" stroke-width="2"/><path d="M-13 -9L0 0L17 -4M0 0L10 14M0 0L3 -16" fill="none" stroke="#9ec9d7" stroke-width="1.5"/></g>`;
+  const sugar=(x,y)=>`<circle cx="${x}" cy="${y}" r="3.5" fill="#a56b29"/>`;
   title=d.title||'图 8.3 · 冰冻葡萄与浓缩汁';panels=[
-   {label:'冻态采收',svg:`${berries(115,75,1.8,'#a59f7c')}${[75,100,125,150,175,200].map((x,i)=>`${line(x,145,x+12,135,'#b6d5da',2)}${line(x+2,132,x+10,148,'#b6d5da',2)}`).join('')}`,notes:['水的一部分结成冰','葡萄须保持冰冻进入压榨']},
-   {label:'冻态压榨',svg:`${rect(55,45,172,112,'#cbd7ce','#82998a')}${rect(65,65,150,25,'#a9b7b0','#82998a')}${line(140,14,140,61,wine,3,true)}${txt(140,120,'冰留在压榨机中',15)}${line(230,145,265,145,blue,4,true)}${ellipse(266,177,8,15,'#ceae58','#b9984e')}`,notes:['含糖汁液流出','分离部分水，糖与酸浓缩']}];caption='冰酒仍需把浓缩汁发酵成酒。成酒的甜度取决于剩余糖分，不是“加冰”产生的甜味。';
+   {label:'冻态采收',w:500,h:500,svg:`
+    <path d="M46 76Q130 43 215 65" fill="none" stroke="#79634b" stroke-width="10" stroke-linecap="round"/>
+    <path d="M139 62L145 116M145 94L100 137M145 94L184 137" fill="none" stroke="#7c8759" stroke-width="5"/>
+    ${[[102,139],[151,133],[188,156],[122,183],[164,193],[141,232]].map(([x,y])=>`${ellipse(x,y,29,32,'#b6b47f','#7e8058')}<path d="M${x-19} ${y-10}Q${x} ${y-27} ${x+18} ${y-10}" fill="none" stroke="#eef6ef" stroke-width="5" stroke-linecap="round"/>`).join('')}
+    <path d="M187 191L248 187" fill="none" stroke="#9baba4" stroke-width="2" stroke-dasharray="5 5"/>
+    ${ellipse(337,202,87,97,'#e8c577','#8b8b60')}${ellipse(337,202,80,90,'#f4db96','#bbc68a')}
+    ${ice(305,160,1.1)}${ice(364,178,1.3)}${ice(312,226,1.2)}${ice(366,250,.9)}
+    ${[[335,151],[333,187],[289,196],[352,214],[335,251],[379,215],[315,268]].map(([x,y])=>sugar(x,y)).join('')}
+    ${txt(337,83,'果粒剖面 · 放大',22)}
+    <path d="M305 160L273 112H241M364 250L416 316H454" fill="none" stroke="#70a6ba" stroke-width="2"/>
+    ${txt(257,103,'冰晶',20,blue)}${txt(363,348,'未冻结的含糖汁液',22,'#956526')}
+    ${rect(44,390,412,65,'#edf4f3','#cbdcdb',12)}${txt(250,417,'保持冰冻状态',23,blue)}${txt(250,443,'采收后进入压榨，不先解冻',20)}${txt(250,484,'浅蓝色：冰晶 · 棕色圆点：糖分（示意）',18)}
+   `,notes:['水的一部分结成冰','葡萄须保持冰冻进入压榨']},
+   {label:'冻态压榨',w:500,h:500,svg:`
+    ${txt(225,39,'向下施压',22)}${line(225,53,225,100,wine,5,true)}
+    ${rect(83,103,285,22,'#99a9a7','#647e7d',4)}
+    <path d="M79 139V303H371V139" fill="#f3e4b8" stroke="#7a9391" stroke-width="5"/>
+    ${[[113,170],[170,158],[226,178],[288,161],[337,191],[140,225],[200,242],[271,222],[327,255],[104,273],[250,277]].map(([x,y],i)=>ice(x,y,i%2?.7:.9)).join('')}
+    ${Array.from({length:23},(_,i)=>sugar(99+(i*47)%252,152+(i*37)%136)).join('')}
+    ${Array.from({length:14},(_,i)=>rect(89+i*20,305,11,12,'#faf7ed','#7a9391',1)).join('')}
+    <path d="M77 326H375L352 345H100Z" fill="#d9e1dc" stroke="#7a9391" stroke-width="2"/>
+    <path d="M148 319V334M225 319V334M304 319V334M352 335H420V371" fill="none" stroke="#c69840" stroke-width="5"/>
+    ${line(384,335,416,335,'#b5832f',3,true)}
+    <path d="M385 384V460Q422 478 459 460V384" fill="#fffaf0" stroke="#8e9c8e" stroke-width="3"/>
+    <path d="M388 422Q422 414 456 422V458Q422 474 388 458Z" fill="#e5b44e"/>
+    <path d="M420 372Q407 390 420 394Q433 390 420 372Z" fill="#d5a23b"/>
+    ${txt(225,145,'冰晶与果皮留在机内',19,blue)}
+    ${txt(225,376,'筛孔让汁液流出',19)}${txt(206,436,'浓缩汁 →',24,'#956526')}
+    ${txt(225,491,'压榨剖面示意，非设备比例',17,'#6d7b70')}
+   `,notes:['含糖汁液流出','分离部分水，糖与酸浓缩']}];caption='浅蓝色为冰晶，金色为未冻结的汁液，棕色圆点表示糖分（非实际比例）。冰酒仍需把浓缩汁发酵成酒；甜度取决于剩余糖分。';
  }else if(n==='cap'){
   title='图 9.1、9.2 · 酒帽管理的四条路径';panels=[
    {label:'压帽 Punching down',svg:`${capTank()}${line(145,0,145,105,'#7d8b7d',7)}${rect(108,95,75,12,'#9aa89b','#7d8b7d',1)}${line(205,5,205,90,blue,3,true)}`,notes:['工具把上浮酒帽压回酒液','增加接触，强度可调']},
@@ -112,5 +142,5 @@ function wmDiagram(d){
  }
  if(!panels.length)return '';
  const defs=`<defs><linearGradient id="wm-steel" x2="1"><stop stop-color="#9caaa7"/><stop offset=".3" stop-color="#edf0e8"/><stop offset=".65" stop-color="#bcc8c2"/><stop offset="1" stop-color="#8c9d97"/></linearGradient><linearGradient id="wm-oak" x2="1"><stop stop-color="#a47c45"/><stop offset=".4" stop-color="#d5b578"/><stop offset="1" stop-color="#9b713c"/></linearGradient><marker id="wm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker></defs>`;
- return `<figure id="wmfig-${wmEscape(d.id||n)}" class="wm-plate" data-wm-figure="${wmEscape(n)}"><div class="wm-plate-title">${wmEscape(title)}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map((p,i)=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><svg viewBox="0 0 ${p.w||290} ${p.h||235}" role="img" aria-label="${wmEscape(p.label)}" preserveAspectRatio="xMidYMid meet">${(defs+p.svg).replace(/wm-(steel|oak|arrow)/g, 'wm-'+(d.id||n)+'-'+i+'-$1')}</svg><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
+ return `<figure id="wmfig-${wmEscape(d.id||n)}" class="wm-plate" data-wm-figure="${wmEscape(n)}"><div class="wm-plate-title">${wmEscape(title)}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map((p,i)=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><svg${n==='freeze'?' style="max-height:none"':''} viewBox="0 0 ${p.w||290} ${p.h||235}" role="img" aria-label="${wmEscape(p.label)}" preserveAspectRatio="xMidYMid meet">${(defs+p.svg).replace(/wm-(steel|oak|arrow)/g, 'wm-'+(d.id||n)+'-'+i+'-$1')}</svg><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
 }

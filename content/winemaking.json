@@ -2046,25 +2046,25 @@
       "title": "图 8.3 · 浓缩葡萄糖分的方式",
       "photos": [
        {
-        "image": "assets/photo-concentrate-botrytis-v2.webp",
+        "image": "assets/photo-concentrate-botrytis-v3.webp",
         "title": "贵腐菌",
         "caption": "贵腐菌：葡萄皮上的真菌清晰可见。",
-        "width": 550,
-        "height": 454
+        "width": 526,
+        "height": 428
        },
        {
-        "image": "assets/photo-concentrate-dried-v2.webp",
+        "image": "assets/photo-concentrate-dried-v3.webp",
         "title": "自然风干",
         "caption": "自然风干：葡萄已皱缩，但未受真菌感染。",
-        "width": 519,
-        "height": 427
+        "width": 520,
+        "height": 422
        },
        {
-        "image": "assets/photo-concentrate-frozen-v2.webp",
+        "image": "assets/photo-concentrate-frozen-v3.webp",
         "title": "冰冻葡萄",
         "caption": "冰冻葡萄：让葡萄留在树上经受冬季的冰冻。",
-        "width": 703,
-        "height": 578
+        "width": 508,
+        "height": 422
        }
       ]
      }
