@@ -116,8 +116,6 @@
 .wm-process-viewport{overflow:auto;max-width:100%;overscroll-behavior:contain;border:1px solid var(--line);border-radius:5px;background:#fcfaf3}
 .wm-process-viewport img{display:block;width:100%;min-width:var(--flow-min);height:auto;max-width:none}
 .wm-process-viewport:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
-.wm-process-text{margin-top:20px;font-size:14px;line-height:1.8}.wm-process-text summary{cursor:pointer;color:var(--wine)}
-.wm-process-text ol{padding-left:1.6em}.wm-process-text li{margin:12px 0}.wm-process-text strong,.wm-process-text small,.wm-process-text span{display:block}.wm-process-text small{color:var(--muted)}
 .wm-video{margin:28px 0;padding:22px;background:#fcfaf3;border:1px solid var(--line);border-radius:8px;min-width:0}
 .wm-video video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#252a24;border-radius:5px}
 .book-reading .wm-video figcaption{font:14px/1.85 var(--sans);color:var(--muted);margin-top:14px}.wm-video figcaption a{color:var(--wine)}
