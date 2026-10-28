@@ -167,3 +167,12 @@
 @media(max-width:650px){.wm-packaging-grid{grid-template-columns:minmax(0,1fr);gap:26px}.wm-package-panel>picture>img{max-width:440px;margin:auto}.wm-package-wide>picture>img{max-width:none}.book-reading .wm-package-wide ul{grid-template-columns:minmax(0,1fr);gap:4px}}
 
 .wm-package-panel>picture{display:block}
+/* Matched barrel cutaways: keep the sediment layer and stirring path legible. */
+.wm-lees-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.wm-lees-panel{min-width:0}
+.book-reading .wm-lees-panel h3{font:600 17px/1.65 var(--sans);margin:0 0 14px;color:var(--ink)}
+.wm-lees-panel>img{display:block;width:100%;height:auto;border-radius:12px}
+.book-reading .wm-lees-panel ul{padding:14px 0 0 1.2em;margin:16px 0 0;border-top:1px solid var(--line);font:400 15px/1.85 var(--sans);color:var(--muted)}
+.book-reading .wm-lees-panel li{margin:0 0 5px}
+.book-reading .wm-lees-key{font:400 14px/1.8 var(--sans);color:var(--muted);margin:20px 0 0}
+@media(max-width:720px){.wm-lees-grid{grid-template-columns:minmax(0,1fr);gap:26px}.wm-lees-panel>img{max-width:520px;margin:auto}}

@@ -44,7 +44,15 @@ function wmRefinedFigure(d){
  const caption=filtration?'图中箭头为酒液方向。课本还展示滤芯及金属外壳、旋转滚筒和板框式过滤设备；过滤方法不能只凭机器外形判断。':'包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。';
  return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-refined-plate" data-wm-figure="${wmEscape(d.type)}"><div class="wm-plate-title">${wmEscape(d.title||(filtration?'过滤机制示意 · 深层与表面过滤':'包装特点示意'))}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map(p=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><img src="assets/${p.image}" width="420" height="300" alt="${wmEscape(p.label)}结构与作用示意" loading="lazy" decoding="async"><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
 }
+function wmLeesFigure(d){
+ const panels=[
+  {label:'静置：酒泥沉在底部',image:'lees-settled-cutaway.svg',alt:'橡木桶剖面：细酒泥形成底部浅金色沉积层，上方为酒液。',notes:['移除粗酒泥','可按风格保留细酒泥接触']},
+  {label:'搅动：细酒泥重新悬浮',image:'lees-stirred-cutaway.svg',alt:'橡木桶剖面：搅桶棒接触桶底，蓝色箭头表示酒液流动，金色颗粒离开沉积层并悬浮。',notes:['搅桶使酒液与细酒泥接触','可增加质感、面包及饼干类特征']}
+ ];
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-lees-plate" data-wm-figure="lees"><div class="wm-plate-title">${wmEscape(d.title||'酒泥接触与搅桶机制示意')}</div><div class="wm-lees-grid">${panels.map(p=>`<section class="wm-lees-panel"><h3>${wmEscape(p.label)}</h3><img src="assets/${p.image}" width="600" height="600" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><p class="wm-lees-key">金色颗粒表示细酒泥，蓝色箭头表示酒液流动；颗粒大小与循环路径为示意。</p><figcaption>${wmEscape(d.caption||'细酒泥主要包括死亡酵母等沉淀。搅桶是可选操作，不等于所有沉淀都应长期留酒。')}</figcaption></figure>`;
+}
 function wmDiagram(d){
+ if(d.type==='lees')return wmLeesFigure(d);
  if(['filtration','packaging'].includes(d.type))return wmRefinedFigure(d);
  if(d.type==='composition'&&d.parts?.length)return wmCompositionFigure(d);
  if(d.photos?.length)return wmPhotoFigure(d);
@@ -83,10 +91,6 @@ function wmDiagram(d){
    {label:'技术软木塞',svg:`${rect(98,35,88,150,'#ccb186','#a17b4b',10)}${Array.from({length:40},(_,i)=>ellipse(107+i%6*13,49+Math.floor(i/6)*20,4,3,i%2?'#a17b4b':'#e2c596','#b6925e')).join('')}`,notes:['处理后的软木颗粒等构成','性能取决于等级及工艺']},
    {label:'合成塞',svg:`${rect(98,35,88,150,'#e0c9a1','#ae956e',10)}${line(108,46,108,174,'#eedfc6',4)}`,notes:['石化或植物来源材料','按隔氧表现与饮用期选择']},
    {label:'螺旋盖',svg:`${rect(80,50,122,100,'#bac6bd','#78877c',8)}${[75,85,95,105].map(y=>line(82,y,200,y,'#7e8f84',2)).join('')}${rect(80,145,122,18,'#8e9f8d','#78877c',2)}${txt(142,190,'内衬控制透氧',15)}`,notes:['金属盖＋内衬','可再封，也适合高品质酒']}];caption='外形只帮助辨认类型；保存表现要结合具体材料、内衬、装瓶与储存条件。';
- }else if(n==='lees'){
-  title=d.title||'图 8.2 · 酒泥接触与搅桶';panels=[
-   {label:'静置：酒泥沉在底部',svg:`${tank(85,25,115,165)}${rect(89,166,107,20,'#baa974','#978657',1)}${txt(140,135,'酒液',17)}${line(205,175,266,175,gold,2,true)}`,notes:['移除粗酒泥','可按风格保留细酒泥接触']},
-   {label:'搅动：细酒泥重新悬浮',svg:`${tank(85,25,115,165)}${line(145,0,130,175,wood,6)}<path d="M110 130Q170 85 179 140Q185 170 125 175" fill="none" stroke="${gold}" stroke-width="3" marker-end="url(#wm-arrow)"/>${Array.from({length:15},(_,i)=>ellipse(101+i%5*19,90+Math.floor(i/5)*32,3,3,'#b6a877','#b6a877')).join('')}`,notes:['搅桶使酒液与细酒泥接触','可增加质感、面包及饼干类特征']}];caption='细酒泥主要包括死亡酵母等沉淀。搅桶是可选操作，不等于所有沉淀都应长期留酒。';
  }else if(n==='freeze'){
   title=d.title||'图 8.3 · 冰冻葡萄与浓缩汁';panels=[
    {label:'冻态采收',svg:`${berries(115,75,1.8,'#a59f7c')}${[75,100,125,150,175,200].map((x,i)=>`${line(x,145,x+12,135,'#b6d5da',2)}${line(x+2,132,x+10,148,'#b6d5da',2)}`).join('')}`,notes:['水的一部分结成冰','葡萄须保持冰冻进入压榨']},
