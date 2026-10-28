@@ -51,7 +51,30 @@ function wmLeesFigure(d){
  ];
  return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-lees-plate" data-wm-figure="lees"><div class="wm-plate-title">${wmEscape(d.title||'酒泥接触与搅桶机制示意')}</div><div class="wm-lees-grid">${panels.map(p=>`<section class="wm-lees-panel"><h3>${wmEscape(p.label)}</h3><img src="assets/${p.image}" width="600" height="600" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><p class="wm-lees-key">金色颗粒表示细酒泥，蓝色箭头表示酒液流动；颗粒大小与循环路径为示意。</p><figcaption>${wmEscape(d.caption||'细酒泥主要包括死亡酵母等沉淀。搅桶是可选操作，不等于所有沉淀都应长期留酒。')}</figcaption></figure>`;
 }
+function wmFreezeFigure(d){
+ const stages=[
+  {number:'01',label:'冻态采收',image:'freeze-grape-cutaway-v2',alt:'带霜葡萄及果粒放大剖面：一部分水结成浅蓝色冰晶，其余金色汁液仍含溶解的糖和酸。',notes:['水的一部分结成冰','葡萄须保持冰冻进入压榨']},
+  {number:'02',label:'冻态压榨',image:'freeze-press-cutaway-v2',alt:'篮式压榨原理剖面：压板下压，冰晶与果皮留在篮内；汁液穿过筛底进入集汁槽，由出汁口流入收集容器。',notes:['含糖汁液流出','分离部分水，糖与酸浓缩']}
+ ];
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-freeze-plate" data-wm-figure="freeze"><div class="wm-plate-title">${wmEscape(d.title||'冰冻葡萄与浓缩汁 · 机制示意')}</div><div class="wm-freeze-grid">${stages.map(p=>`<section class="wm-freeze-stage"><h3><span>${p.number}</span>${wmEscape(p.label)}</h3><picture><source media="(max-width:540px)" srcset="assets/${p.image}-mobile.svg"><img src="assets/${p.image}.svg" width="620" height="620" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"></picture><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><div class="wm-freeze-result"><span class="wm-freeze-result-number">03</span><div><h3>获得少量浓缩汁</h3><p>部分水以冰的形式留在机内，流出的汁液量减少，糖与酸的浓度提高。</p></div></div><figcaption>${wmEscape(d.caption||'以篮式压榨剖面表现分离原理；颜色与形体比例为示意。浓缩汁仍需发酵成酒，成酒甜度取决于剩余糖分。')}</figcaption></figure>`;
+}
+function wmCapFigure(d){
+ const panels=[
+  {label:'压帽',english:'Punching down',image:'punch',alt:'发酵罐剖面：压帽棒的圆盘将局部酒帽压入酒液，周围的酒帽仍浮在表面。',notes:['工具把上浮酒帽压回酒液','增加接触，强度可调']},
+  {label:'淋皮',english:'Pumping over',image:'pump-over',alt:'发酵罐底部抽出的酒液经过泵和外部管路，到顶部喷淋酒帽并回到罐内。',notes:['从底部抽酒、泵到顶部','酒液淋过酒帽并回到罐内']},
+  {label:'倒罐返浇',english:'Rack and return',image:'rack-return',alt:'两个先后步骤：先将酒液排入接酒罐，酒帽落下；再将接酒罐中的酒液整体返浇到原罐顶部，冲散酒帽。',notes:['先排出酒液，再整体返浇','与持续小量淋皮区分']},
+  {label:'旋转式发酵',english:'Rotary fermentation',image:'rotary',alt:'带支架、轴承和驱动装置的水平旋转发酵罐剖面；滚动使皮渣被带起，再与酒液反复混合。',notes:['容器转动使皮渣与汁液混合','设备、效率与提取强度一起考虑']}
+ ];
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-cap-plate" data-wm-figure="cap"><div class="wm-plate-title">${wmEscape(d.title||'图 9.1、9.2 · 酒帽管理的四条路径')}</div><div class="wm-cap-key"><span><i class="wm-cap-skin"></i>酒帽／皮渣</span><span><i class="wm-cap-wine"></i>酒液</span><span><i class="wm-cap-arrow">→</i>操作或流动方向</span></div><div class="wm-cap-grid">${panels.map((p,i)=>`<section class="wm-cap-panel"><h3><span>${String(i+1).padStart(2,'0')}</span><div>${wmEscape(p.label)}<small>${wmEscape(p.english)}</small></div></h3><picture><source media="(max-width:540px)" srcset="assets/cap-${p.image}-cutaway-v2-mobile.svg"><img src="assets/cap-${p.image}-cutaway-v2.svg" width="620" height="640" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"></picture><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><figcaption>${wmEscape(d.caption||'设备剖面与流向为原理示意，非设备比例。提取效果还取决于温度、操作频率、接触时间及原料。')}</figcaption></figure>`;
+}
+function wmSteepFigure(d){
+ const steps=[{title:'机械进入与作业受限制',text:'坡度、狭窄梯田和搬运路径限制设备使用。'},{title:'需要更多人工与时间',text:'采收、园地操作和搬运更困难，作业可能较慢。'},{title:'单位葡萄生产成本增加',text:'同样数量的葡萄，需要投入更多人工或时间。'}];
+ return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-steep-plate" data-wm-figure="steep"><div class="wm-plate-title">${wmEscape(d.title||'陡坡如何转化为成本 · 因果示意')}</div><div class="wm-steep-layout"><section class="wm-steep-scene"><h3>陡坡与梯田</h3><img src="assets/steep-vineyard-work-v2.svg" width="860" height="640" alt="梯田葡萄园场景：石质挡土墙支撑层层葡萄行，工人手工采收并沿窄台阶搬运葡萄。" loading="lazy" decoding="async"><ul><li>机械进入和作业受限制</li><li>人工操作与搬运更困难</li></ul></section><section class="wm-steep-cost"><h3>成本如何增加</h3><ol>${steps.map((p,i)=>`<li><span>${i+1}</span><div><strong>${wmEscape(p.title)}</strong><p>${wmEscape(p.text)}</p></div></li>`).join('')}</ol><p class="wm-steep-factors">还取决于产量、工资及规模。</p><p class="wm-steep-price">售价也受需求、声誉和利润影响。</p></section></div><figcaption>${wmEscape(d.caption||'摩泽尔陡坡葡萄园是地形限制机械化的例子；高生产成本并不保证市场愿意支付更高售价。')}</figcaption></figure>`;
+}
 function wmDiagram(d){
+ if(d.type==='cap')return wmCapFigure(d);
+ if(d.type==='steep')return wmSteepFigure(d);
+ if(d.type==='freeze')return wmFreezeFigure(d);
  if(d.type==='lees')return wmLeesFigure(d);
  if(['filtration','packaging'].includes(d.type))return wmRefinedFigure(d);
  if(d.type==='composition'&&d.parts?.length)return wmCompositionFigure(d);
@@ -66,7 +89,7 @@ function wmDiagram(d){
  const berries=(x,y,scale=1,color='#74415d')=>`<g transform="translate(${x} ${y}) scale(${scale})">${[[0,0],[18,0],[36,0],[9,16],[27,16],[18,32]].map(([a,b])=>ellipse(a,b,10,11,color,'#f7f1e3')).join('')}${line(18,-30,18,-10,'#62764b',3)}${line(18,-10,0,0,'#62764b',2)}${line(18,-10,36,0,'#62764b',2)}</g>`;
  const tank=(x,y,w=100,h=135,fill='url(#wm-steel)')=>`${rect(x,y,w,h,fill,'#78868a',8)}${ellipse(x+w/2,y,w/2,10,'#d8e0df','#78868a')}${line(x+13,y+h,x+9,y+h+18,'#78868a',5)}${line(x+w-13,y+h,x+w-9,y+h+18,'#78868a',5)}${rect(x+w*.35,y+h*.5,w*.3,26,'#edf0e7','#78868a',12)}${line(x+w,y+h-15,x+w+20,y+h-15,blue,4)}`;
  const barrel=(x,y,w=110,h=130)=>`<path d="M${x+12} ${y}Q${x-10} ${y+h/2} ${x+12} ${y+h}H${x+w-12}Q${x+w+10} ${y+h/2} ${x+w-12} ${y}Z" fill="url(#wm-oak)" stroke="${wood}" stroke-width="2"/>${[.2,.8].map(n=>rect(x+2,y+h*n-5,w-4,10,'#77817b','#535f58',1)).join('')}${[.25,.42,.6,.77].map(n=>`<path d="M${x+w*n} ${y+2}Q${x+w*n-5} ${y+h/2} ${x+w*n} ${y+h-2}" stroke="#b68c53" fill="none"/>`).join('')}`;
- const capTank=(x=45,y=30,w=200,h=170)=>`${rect(x,y,w,h,'#f5f3e9','#7b8986',7)}${juice(x+2,y+70,w-4,h-72)}${rect(x+2,y+50,w-4,25,'#673c4c',wine,0)}${Array.from({length:12},(_,i)=>ellipse(x+10+i*16,y+60,7,5,'#8e5a6d',wine)).join('')}`;
+
  let panels=[],caption='',title=d.title||'',n=d.type;
  if(n==='vessels'){
   title='图 7.2 · 容器的外形与作用';panels=[
@@ -91,56 +114,13 @@ function wmDiagram(d){
    {label:'技术软木塞',svg:`${rect(98,35,88,150,'#ccb186','#a17b4b',10)}${Array.from({length:40},(_,i)=>ellipse(107+i%6*13,49+Math.floor(i/6)*20,4,3,i%2?'#a17b4b':'#e2c596','#b6925e')).join('')}`,notes:['处理后的软木颗粒等构成','性能取决于等级及工艺']},
    {label:'合成塞',svg:`${rect(98,35,88,150,'#e0c9a1','#ae956e',10)}${line(108,46,108,174,'#eedfc6',4)}`,notes:['石化或植物来源材料','按隔氧表现与饮用期选择']},
    {label:'螺旋盖',svg:`${rect(80,50,122,100,'#bac6bd','#78877c',8)}${[75,85,95,105].map(y=>line(82,y,200,y,'#7e8f84',2)).join('')}${rect(80,145,122,18,'#8e9f8d','#78877c',2)}${txt(142,190,'内衬控制透氧',15)}`,notes:['金属盖＋内衬','可再封，也适合高品质酒']}];caption='外形只帮助辨认类型；保存表现要结合具体材料、内衬、装瓶与储存条件。';
- }else if(n==='freeze'){
-  const ice=(x,y,k=1)=>`<g transform="translate(${x} ${y}) scale(${k})"><path d="M-13 -9L3 -16L17 -4L10 14L-9 16L-18 2Z" fill="#d9eff5" stroke="#70a6ba" stroke-width="2"/><path d="M-13 -9L0 0L17 -4M0 0L10 14M0 0L3 -16" fill="none" stroke="#9ec9d7" stroke-width="1.5"/></g>`;
-  const sugar=(x,y)=>`<circle cx="${x}" cy="${y}" r="3.5" fill="#a56b29"/>`;
-  title=d.title||'图 8.3 · 冰冻葡萄与浓缩汁';panels=[
-   {label:'冻态采收',w:500,h:500,svg:`
-    <path d="M46 76Q130 43 215 65" fill="none" stroke="#79634b" stroke-width="10" stroke-linecap="round"/>
-    <path d="M139 62L145 116M145 94L100 137M145 94L184 137" fill="none" stroke="#7c8759" stroke-width="5"/>
-    ${[[102,139],[151,133],[188,156],[122,183],[164,193],[141,232]].map(([x,y])=>`${ellipse(x,y,29,32,'#b6b47f','#7e8058')}<path d="M${x-19} ${y-10}Q${x} ${y-27} ${x+18} ${y-10}" fill="none" stroke="#eef6ef" stroke-width="5" stroke-linecap="round"/>`).join('')}
-    <path d="M187 191L248 187" fill="none" stroke="#9baba4" stroke-width="2" stroke-dasharray="5 5"/>
-    ${ellipse(337,202,87,97,'#e8c577','#8b8b60')}${ellipse(337,202,80,90,'#f4db96','#bbc68a')}
-    ${ice(305,160,1.1)}${ice(364,178,1.3)}${ice(312,226,1.2)}${ice(366,250,.9)}
-    ${[[335,151],[333,187],[289,196],[352,214],[335,251],[379,215],[315,268]].map(([x,y])=>sugar(x,y)).join('')}
-    ${txt(337,83,'果粒剖面 · 放大',22)}
-    <path d="M305 160L273 112H241M364 250L416 316H454" fill="none" stroke="#70a6ba" stroke-width="2"/>
-    ${txt(257,103,'冰晶',20,blue)}${txt(363,348,'未冻结的含糖汁液',22,'#956526')}
-    ${rect(44,390,412,65,'#edf4f3','#cbdcdb',12)}${txt(250,417,'保持冰冻状态',23,blue)}${txt(250,443,'采收后进入压榨，不先解冻',20)}${txt(250,484,'浅蓝色：冰晶 · 棕色圆点：糖分（示意）',18)}
-   `,notes:['水的一部分结成冰','葡萄须保持冰冻进入压榨']},
-   {label:'冻态压榨',w:500,h:500,svg:`
-    ${txt(225,39,'向下施压',22)}${line(225,53,225,100,wine,5,true)}
-    ${rect(83,103,285,22,'#99a9a7','#647e7d',4)}
-    <path d="M79 139V303H371V139" fill="#f3e4b8" stroke="#7a9391" stroke-width="5"/>
-    ${[[113,170],[170,158],[226,178],[288,161],[337,191],[140,225],[200,242],[271,222],[327,255],[104,273],[250,277]].map(([x,y],i)=>ice(x,y,i%2?.7:.9)).join('')}
-    ${Array.from({length:23},(_,i)=>sugar(99+(i*47)%252,152+(i*37)%136)).join('')}
-    ${Array.from({length:14},(_,i)=>rect(89+i*20,305,11,12,'#faf7ed','#7a9391',1)).join('')}
-    <path d="M77 326H375L352 345H100Z" fill="#d9e1dc" stroke="#7a9391" stroke-width="2"/>
-    <path d="M148 319V334M225 319V334M304 319V334M352 335H420V371" fill="none" stroke="#c69840" stroke-width="5"/>
-    ${line(384,335,416,335,'#b5832f',3,true)}
-    <path d="M385 384V460Q422 478 459 460V384" fill="#fffaf0" stroke="#8e9c8e" stroke-width="3"/>
-    <path d="M388 422Q422 414 456 422V458Q422 474 388 458Z" fill="#e5b44e"/>
-    <path d="M420 372Q407 390 420 394Q433 390 420 372Z" fill="#d5a23b"/>
-    ${txt(225,145,'冰晶与果皮留在机内',19,blue)}
-    ${txt(225,376,'筛孔让汁液流出',19)}${txt(206,436,'浓缩汁 →',24,'#956526')}
-    ${txt(225,491,'压榨剖面示意，非设备比例',17,'#6d7b70')}
-   `,notes:['含糖汁液流出','分离部分水，糖与酸浓缩']}];caption='浅蓝色为冰晶，金色为未冻结的汁液，棕色圆点表示糖分（非实际比例）。冰酒仍需把浓缩汁发酵成酒；甜度取决于剩余糖分。';
- }else if(n==='cap'){
-  title='图 9.1、9.2 · 酒帽管理的四条路径';panels=[
-   {label:'压帽 Punching down',svg:`${capTank()}${line(145,0,145,105,'#7d8b7d',7)}${rect(108,95,75,12,'#9aa89b','#7d8b7d',1)}${line(205,5,205,90,blue,3,true)}`,notes:['工具把上浮酒帽压回酒液','增加接触，强度可调']},
-   {label:'淋皮 Pumping over',svg:`${capTank()}<path d="M245 175H275V8H145V42" fill="none" stroke="${blue}" stroke-width="5" marker-end="url(#wm-arrow)"/>${ellipse(273,174,13,13,'#c1ceca',blue)}`,notes:['从底部抽酒、泵到顶部','酒液淋过酒帽并回到罐内']},
-   {label:'倒罐返浇 Rack and return',svg:`${capTank(25,30,145,170)}${rect(202,130,70,70,'#e6e7dc','#82998a')}${juice(204,160,66,38)}<path d="M170 180H202M238 125V5H95V40" fill="none" stroke="${blue}" stroke-width="4" marker-end="url(#wm-arrow)"/>`,notes:['先排出酒液，再整体返浇','与持续小量淋皮区分']},
-   {label:'旋转式发酵',svg:`<g transform="rotate(-15 145 115)">${rect(30,65,230,110,'#dee3db','#82998a',45)}${juice(65,120,160,40)}</g><path d="M85 30Q170 -10 233 42" fill="none" stroke="${blue}" stroke-width="3" marker-end="url(#wm-arrow)"/>${line(50,185,35,215,'#82998a',6)}${line(240,185,255,215,'#82998a',6)}`,notes:['容器转动使皮渣与汁液混合','设备、效率与提取强度一起考虑']}];caption='深色带为酒帽，红色为酒液，蓝色箭头为操作方向。提取效果还取决于温度、频率、时间及原料。';
  }else if(n==='temperature'){
   title='讲义示意 · 温度与发酵进程';panels=[{label:'适宜范围内，较温暖通常更快',svg:`${line(45,185,45,22,ink,1.5,true)}${line(45,185,275,185,ink,1.5,true)}<path d="M48 40C100 40 95 162 195 175" fill="none" stroke="${wine}" stroke-width="3"/><path d="M48 40C140 40 160 115 260 175" fill="none" stroke="${blue}" stroke-width="3"/>${txt(9,88,'残',13)}${txt(9,106,'糖',13)}${txt(160,220,'发酵时间 →',14)}${txt(92,144,'较温暖',13,wine)}${txt(209,100,'较凉爽',13,blue)}`,notes:['纵轴：剩余糖的相对水平；横轴：时间','酒红线较快消耗糖，蓝线较慢','过热会使酵母停工，不能把曲线无限外推']}];caption='参照讲义169的速度关系重画；曲线为趋势示意，未使用实测数据或固定天数。温度、菌株、糖分与营养都会影响实际速度。';
  }else if(n==='extraction'){
   title='讲义示意 · 色素与单宁的萃取阶段';panels=[{label:'三类物质的高峰不在同一阶段',svg:`${line(45,185,45,22,ink,1.5,true)}${line(45,185,275,185,ink,1.5,true)}<path d="M48 183C78 175 78 30 102 42S122 168 265 182" fill="none" stroke="${wine}" stroke-width="3"/><path d="M48 183C110 175 130 122 163 98S210 153 265 182" fill="none" stroke="${blue}" stroke-width="3"/><path d="M48 183C135 183 153 140 193 125S240 150 265 182" fill="none" stroke="${gold}" stroke-width="3"/>${txt(10,54,'相',12)}${txt(10,72,'对',12)}${txt(10,90,'萃',12)}${txt(10,108,'取',12)}${txt(10,126,'速',12)}${txt(10,144,'率',12)}${txt(160,220,'接触时间 →',14)}`,notes:['酒红线：色素较早出现明显萃取高峰','蓝线：果皮单宁；金线：籽单宁，明显萃取通常较后','曲线比较萃取速率的阶段，不代表成酒浓度或固定天数']}];caption='参照讲义198重画的定性示意，无实测坐标或单位。酒精、温度、品种和成熟度会改变曲线；萃取速率下降不等于酒中已提取的物质同时全部消失。';
- }else if(n==='steep'){
-  title=d.title||'图 10.1 · 陡坡如何转化为成本';panels=[
-   {label:'陡坡与梯田',svg:`<path d="M5 210L55 175H90V142H125V110H165V78H205V45H275V220H5Z" fill="#dadfc7" stroke="#97a27d" stroke-width="2"/>${[60,105,145,187,235].map((x,i)=>`${line(x,168-i*29,x,135-i*29,wood,5)}${line(x-13,140-i*29,x+13,140-i*29,'#74834e',4)}`).join('')}${ellipse(146,85,8,8,'#b29a77')}${line(146,94,137,115,wine,4)}${line(137,115,123,126,wine,4)}${line(137,115,151,124,wine,4)}`,notes:['机械进入和作业受限制','人工操作与搬运更困难']},
-   {label:'连到酒价，而非直接等同品质',svg:`${rect(25,35,230,45,'#e9e6d2','#c7c4ab')}${txt(140,64,'更多人工／较慢作业',17)}${line(140,85,140,115,gold,3,true)}${rect(25,125,230,50,'#e5d8d8','#c9b4b7')}${txt(140,156,'单位葡萄的生产成本增加',16)}`,notes:['还取决于产量、工资及规模','售价也受需求、声誉和利润影响']}];caption='摩泽尔陡坡葡萄园是地形限制机械化的例子；高生产成本并不保证市场愿意支付更高售价。';
+
  }
  if(!panels.length)return '';
  const defs=`<defs><linearGradient id="wm-steel" x2="1"><stop stop-color="#9caaa7"/><stop offset=".3" stop-color="#edf0e8"/><stop offset=".65" stop-color="#bcc8c2"/><stop offset="1" stop-color="#8c9d97"/></linearGradient><linearGradient id="wm-oak" x2="1"><stop stop-color="#a47c45"/><stop offset=".4" stop-color="#d5b578"/><stop offset="1" stop-color="#9b713c"/></linearGradient><marker id="wm-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker></defs>`;
- return `<figure id="wmfig-${wmEscape(d.id||n)}" class="wm-plate" data-wm-figure="${wmEscape(n)}"><div class="wm-plate-title">${wmEscape(title)}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map((p,i)=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><svg${n==='freeze'?' style="max-height:none"':''} viewBox="0 0 ${p.w||290} ${p.h||235}" role="img" aria-label="${wmEscape(p.label)}" preserveAspectRatio="xMidYMid meet">${(defs+p.svg).replace(/wm-(steel|oak|arrow)/g, 'wm-'+(d.id||n)+'-'+i+'-$1')}</svg><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
+ return `<figure id="wmfig-${wmEscape(d.id||n)}" class="wm-plate" data-wm-figure="${wmEscape(n)}"><div class="wm-plate-title">${wmEscape(title)}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map((p,i)=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><svg viewBox="0 0 ${p.w||290} ${p.h||235}" role="img" aria-label="${wmEscape(p.label)}" preserveAspectRatio="xMidYMid meet">${(defs+p.svg).replace(/wm-(steel|oak|arrow)/g, 'wm-'+(d.id||n)+'-'+i+'-$1')}</svg><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
 }

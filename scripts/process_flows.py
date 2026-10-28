@@ -16,8 +16,9 @@ def render_graph(g):
            f'<desc id="description">{escape(g["caption"])}</desc>',
            '<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#657061" stroke-width="1.4"/></marker></defs>',
            f'<rect width="{w}" height="{h}" fill="#fcfaf3"/>',
-           '<g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#35412f">',
-           f'<text x="24" y="30" font-size="23" font-weight="600">{escape(g.get("layoutTitle", g["title"]))}</text>']
+           '<g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#35412f">']
+    if g['id'] != 'red-rose':
+        out.append(f'<text x="24" y="30" font-size="23" font-weight="600">{escape(g.get("layoutTitle", g["title"]))}</text>')
     for stage in g.get('stages', []):
         out.append(f'<rect x="{stage["x"]}" y="55" width="360" height="535" rx="14" fill="#f5f3e9" stroke="#e1e1d4"/>')
         out.append(f'<text x="{stage["x"]+18}" y="88" font-size="20" font-weight="600">{escape(stage["title"])}</text>')

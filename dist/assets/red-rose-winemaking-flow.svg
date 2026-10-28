@@ -4,7 +4,6 @@
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#657061" stroke-width="1.4"/></marker></defs>
 <rect width="1160" height="1980" fill="#fcfaf3"/>
 <g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#35412f">
-<text x="24" y="30" font-size="23" font-weight="600">图 9.3 · 干型红葡萄酒和桃红葡萄酒的酿造</text>
 <path data-from="grapes" data-to="sort" d="M410 108L410 137" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <path data-from="sort" data-to="destem" d="M410 193L410 222" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <path data-from="destem" data-to="crush" d="M410 278L410 307" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
