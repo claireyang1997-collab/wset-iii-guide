@@ -1849,25 +1849,25 @@ const winemakingData={
       "title": "图 8.2 · 搅桶",
       "photos": [
        {
-        "image": "assets/photo-lees-settle-v2.webp",
+        "image": "assets/photo-lees-settle-supplied.png",
         "title": "1 · 酒泥沉在桶底",
         "caption": "在酒桶的底部逐渐聚积了一层酒泥。酿酒师用棍棒往下伸到桶底，搅动酒桶中的酒泥。",
-        "width": 646,
-        "height": 527
+        "width": 512,
+        "height": 404
        },
        {
-        "image": "assets/photo-lees-stir-v2.webp",
+        "image": "assets/photo-lees-stir-supplied.png",
         "title": "2 · 翻起酒泥",
         "caption": "棍棒在酒泥中搅动，将酒泥翻转起来。",
-        "width": 715,
-        "height": 583
+        "width": 520,
+        "height": 414
        },
        {
-        "image": "assets/photo-lees-mix-v2.webp",
+        "image": "assets/photo-lees-mix-supplied.png",
         "title": "3 · 充分混合",
         "caption": "连续不断地搅动，让酒泥与酒液充分混合。",
-        "width": 708,
-        "height": 574
+        "width": 508,
+        "height": 416
        }
       ]
      }
