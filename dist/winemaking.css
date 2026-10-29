@@ -210,19 +210,24 @@
 .wm-cap-panel picture{display:block}.wm-cap-panel img{display:block;width:100%;height:auto;max-width:620px;margin:0 auto 12px}
 .book-reading .wm-cap-panel ul{margin:0;padding:14px 0 0 1.15em;border-top:1px solid var(--line);font:400 15px/1.85 var(--sans);color:var(--muted)}
 .book-reading .wm-cap-panel li{margin:0 0 4px;padding:0}
-/* Terraced vineyard: scene plus a selectable-text cause-and-effect explanation. */
-.wm-steep-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;min-width:0}
-.wm-steep-scene,.wm-steep-cost{min-width:0}
-.book-reading .wm-steep-layout h3{margin:0 0 12px;font:600 17px/1.6 var(--sans);color:var(--ink)}
-.wm-steep-scene img{display:block;width:100%;height:auto;margin:8px auto 16px}
-.book-reading .wm-steep-scene ul{margin:0;padding:12px 0 0 1.15em;border-top:1px solid var(--line);font:400 15px/1.85 var(--sans);color:var(--muted)}
-.book-reading .wm-steep-scene li{margin:0 0 4px;padding:0}
-.book-reading .wm-steep-cost ol{list-style:none;margin:0;padding:0}
-.book-reading .wm-steep-cost ol>li{position:relative;display:flex;gap:13px;margin:0;padding:0 0 25px}
-.wm-steep-cost ol>li:not(:last-child)::after{content:'';position:absolute;top:35px;bottom:6px;left:15px;width:1px;background:#c7d1b5}
-.wm-steep-cost ol>li>span{display:grid;place-items:center;flex:none;width:31px;height:31px;border:1px solid #c6d1b4;border-radius:50%;font:500 13px/1 var(--sans);background:#f1f3e6;color:#728463}
-.wm-steep-cost li strong{font:600 15px/1.7 var(--sans);color:var(--ink)}
-.book-reading .wm-steep-cost li p{margin:4px 0 0;font:400 14px/1.8 var(--sans);color:var(--muted)}
-.book-reading .wm-steep-factors{margin:0 0 13px;font:400 14px/1.85 var(--sans);color:var(--muted)}
-.book-reading .wm-steep-price{margin:0;padding:12px 14px;background:#f2ecda;border-radius:5px;font:400 14px/1.85 var(--sans);color:#826b3c}
-@media(max-width:1100px){.wm-cap-grid,.wm-steep-layout{grid-template-columns:minmax(0,1fr)}.wm-steep-scene img{max-width:700px}}
+/* Steep vineyard: full-width editorial illustration with readable causal annotations. */
+.wm-steep-art{margin:0 0 25px}
+.wm-steep-art>a{display:block;border-radius:6px;overflow:hidden;background:#f6f2e7}
+.wm-steep-art img{display:block;width:100%;height:auto}
+.book-reading .wm-steep-art>p{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 0;font:400 12px/1.7 var(--sans);color:var(--muted)}
+.wm-steep-art>p a{color:var(--wine);white-space:nowrap}
+.wm-steep-observations{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:24px}
+.wm-steep-observations>section{min-width:0;padding-top:15px;border-top:1px solid #ccd5be}
+.wm-steep-observation-title{display:flex;gap:10px;align-items:center;margin:0 0 13px}
+.wm-steep-observation-title>span{display:grid;place-items:center;width:30px;height:30px;flex:none;border:1px solid #c6d2b5;border-radius:50%;font:500 11px/1 var(--sans);color:#738565}
+.book-reading .wm-steep-observation-title h3{margin:0;font:600 15px/1.6 var(--sans);color:var(--ink)}
+.wm-steep-observations section>strong{display:block;font:600 16px/1.7 var(--sans);color:#536b43}
+.book-reading .wm-steep-observations section>p{margin:6px 0 0;font:400 14px/1.85 var(--sans);color:var(--muted)}
+.wm-steep-outcome{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:20px;padding:20px 24px;background:#eeeedd;border:1px solid #d9dec7;border-radius:7px}
+.wm-steep-outcome>div>span{display:block;margin-bottom:5px;font:400 12px/1.6 var(--sans);color:#7d876c}
+.wm-steep-outcome strong{font:600 17px/1.7 var(--sans);color:#485c3a}
+.wm-steep-outcome-arrow{font:400 27px/1 var(--sans);color:#8d9d70}
+.wm-steep-context{display:flex;flex-wrap:wrap;justify-content:space-between;gap:7px 20px;margin-top:15px}
+.book-reading .wm-steep-context>p{margin:0;font:400 13px/1.8 var(--sans);color:var(--muted)}
+@media(max-width:1100px){.wm-cap-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:760px){.wm-steep-observations{grid-template-columns:minmax(0,1fr);gap:20px}.wm-steep-observation-title{margin-bottom:8px}.wm-steep-outcome{grid-template-columns:minmax(0,1fr);gap:10px;padding:18px}.wm-steep-outcome-arrow{transform:rotate(90deg);width:28px;text-align:center}.wm-steep-context{display:block}.book-reading .wm-steep-context>p+p{margin-top:6px}}
