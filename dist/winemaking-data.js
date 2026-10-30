@@ -3509,7 +3509,7 @@ const winemakingData={
    "id": "dry-white",
    "figureId": "8-1",
    "title": "图 8.1 · 干型白葡萄酒的酿造",
-   "image": "assets/dry-white-winemaking-flow.svg",
+   "image": "assets/dry-white-winemaking-flow-v2.svg",
    "width": 1180,
    "height": 720,
    "minWidth": 760,
@@ -3745,11 +3745,11 @@ const winemakingData={
      "to": "sort",
      "points": [
       [
-       128.0,
+       128,
        182
       ],
       [
-       128.0,
+       128,
        188
       ]
      ]
@@ -3759,11 +3759,11 @@ const winemakingData={
      "to": "destem",
      "points": [
       [
-       128.0,
+       128,
        232
       ],
       [
-       128.0,
+       128,
        238
       ]
      ]
@@ -3773,11 +3773,11 @@ const winemakingData={
      "to": "crush",
      "points": [
       [
-       128.0,
+       128,
        282
       ],
       [
-       128.0,
+       128,
        288
       ]
      ]
@@ -3787,11 +3787,11 @@ const winemakingData={
      "to": "skin",
      "points": [
       [
-       128.0,
+       128,
        332
       ],
       [
-       128.0,
+       128,
        338
       ]
      ]
@@ -3801,11 +3801,11 @@ const winemakingData={
      "to": "press",
      "points": [
       [
-       128.0,
+       128,
        382
       ],
       [
-       128.0,
+       128,
        388
       ]
      ]
@@ -3815,11 +3815,11 @@ const winemakingData={
      "to": "press-juice",
      "points": [
       [
-       128.0,
+       128,
        432
       ],
       [
-       128.0,
+       128,
        438
       ]
      ]
@@ -3855,11 +3855,11 @@ const winemakingData={
      "to": "ferment",
      "points": [
       [
-       590.0,
+       590,
        182
       ],
       [
-       590.0,
+       590,
        208
       ]
      ]
@@ -3869,11 +3869,11 @@ const winemakingData={
      "to": "rack",
      "points": [
       [
-       590.0,
+       590,
        252
       ],
       [
-       590.0,
+       590,
        278
       ]
      ]
@@ -3883,11 +3883,11 @@ const winemakingData={
      "to": "mlf",
      "points": [
       [
-       590.0,
+       590,
        322
       ],
       [
-       590.0,
+       590,
        348
       ]
      ]
@@ -3897,11 +3897,11 @@ const winemakingData={
      "to": "new",
      "points": [
       [
-       590.0,
+       590,
        392
       ],
       [
-       590.0,
+       590,
        418
       ]
      ]
@@ -3937,11 +3937,11 @@ const winemakingData={
      "to": "mature",
      "points": [
       [
-       919.0,
+       919,
        182
       ],
       [
-       919.0,
+       919,
        208
       ]
      ]
@@ -3951,11 +3951,11 @@ const winemakingData={
      "to": "blend-2",
      "points": [
       [
-       919.0,
+       919,
        252
       ],
       [
-       919.0,
+       919,
        278
       ]
      ]
@@ -3965,11 +3965,11 @@ const winemakingData={
      "to": "finish",
      "points": [
       [
-       919.0,
+       919,
        322
       ],
       [
-       919.0,
+       919,
        348
       ]
      ]
@@ -3979,11 +3979,11 @@ const winemakingData={
      "to": "pack",
      "points": [
       [
-       919.0,
+       919,
        392
       ],
       [
-       919.0,
+       919,
        418
       ]
      ]
@@ -3993,11 +3993,11 @@ const winemakingData={
      "to": "ready",
      "points": [
       [
-       919.0,
+       919,
        462
       ],
       [
-       919.0,
+       919,
        488
       ]
      ]
@@ -4108,7 +4108,7 @@ const winemakingData={
    "legendY": 625,
    "focusX": 0,
    "compact": true,
-   "layoutTitle": "从取汁到包装 · 按 ① → ② → ③ 阅读",
+   "layoutTitle": "",
    "stages": [
     {
      "x": 20,

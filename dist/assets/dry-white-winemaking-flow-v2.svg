@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="720" viewBox="0 0 1180 720" role="img" aria-labelledby="title description">
+<title id="title">图 8.1 · 干型白葡萄酒的酿造</title>
+<desc id="description">按课本图8.1复原。矩形表示过程，圆角框表示加入／产出；颜色区分必经步骤与酿酒师的选择。保留自流汁、压榨汁和葡萄皮的分流，以及陈年前、陈年后的两次混合和侧向加入的新酒液。常规白葡萄酒先分离果皮，再进行酒精发酵。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M1 1L8 5L1 9" fill="none" stroke="#657061" stroke-width="1.4"/></marker></defs>
+<rect width="1180" height="720" fill="#fcfaf3"/>
+<g font-family="PingFang SC,Noto Sans CJK SC,Microsoft YaHei,sans-serif" fill="#35412f">
+<rect x="20" y="55" width="360" height="535" rx="14" fill="#f5f3e9" stroke="#e1e1d4"/>
+<text x="38" y="88" font-size="20" font-weight="600">① 原料处理与取汁</text>
+<rect x="410" y="55" width="360" height="535" rx="14" fill="#f5f3e9" stroke="#e1e1d4"/>
+<text x="428" y="88" font-size="20" font-weight="600">② 澄清、发酵与新酒</text>
+<rect x="800" y="55" width="360" height="535" rx="14" fill="#f5f3e9" stroke="#e1e1d4"/>
+<text x="818" y="88" font-size="20" font-weight="600">③ 调配、陈年与包装</text>
+<path data-from="grapes" data-to="sort" d="M128.0 182L128.0 188" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="sort" data-to="destem" d="M128.0 232L128.0 238" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="destem" data-to="crush" d="M128.0 282L128.0 288" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="crush" data-to="skin" d="M128.0 332L128.0 338" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="skin" data-to="press" d="M128.0 382L128.0 388" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="press" data-to="press-juice" d="M128.0 432L128.0 438" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="press-juice" data-to="clarify" d="M128 482L128 540L394 540L394 160L430 160" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="clarify" data-to="ferment" d="M590.0 182L590.0 208" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="ferment" data-to="rack" d="M590.0 252L590.0 278" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="rack" data-to="mlf" d="M590.0 322L590.0 348" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="mlf" data-to="new" d="M590.0 392L590.0 418" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="new" data-to="blend-1" d="M590 462L590 560L784 560L784 160L818 160" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="blend-1" data-to="mature" d="M919.0 182L919.0 208" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="mature" data-to="blend-2" d="M919.0 252L919.0 278" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="blend-2" data-to="finish" d="M919.0 322L919.0 348" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="finish" data-to="pack" d="M919.0 392L919.0 418" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="pack" data-to="ready" d="M919.0 462L919.0 488" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="press" data-to="skins" d="M218 410L300 410L300 438" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="skin" data-to="free" d="M218 360L240 360" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="free" data-to="clarify" d="M360 360L376 360L376 540L394 540L394 160L430 160" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="extra-1" data-to="blend-1" d="M1040 160L1020 160" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path data-from="extra-2" data-to="blend-2" d="M1040 300L1020 300" fill="none" stroke="#657061" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-node="grapes"><rect x="38" y="138" width="180" height="44" rx="22" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="128" y="167" font-size="20" text-anchor="middle">葡萄</text></g>
+<g data-node="sort"><rect x="38" y="188" width="180" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="128" y="217" font-size="20" text-anchor="middle">筛选葡萄</text></g>
+<g data-node="destem"><rect x="38" y="238" width="180" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="128" y="267" font-size="20" text-anchor="middle">去梗</text></g>
+<g data-node="crush"><rect x="38" y="288" width="180" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="128" y="317" font-size="20" text-anchor="middle">破碎</text></g>
+<g data-node="skin"><rect x="38" y="338" width="180" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="128" y="367" font-size="20" text-anchor="middle">浸皮</text></g>
+<g data-node="press"><rect x="38" y="388" width="180" height="44" rx="3" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="128" y="417" font-size="20" text-anchor="middle">压榨</text></g>
+<g data-node="press-juice"><rect x="38" y="438" width="180" height="44" rx="22" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="128" y="467" font-size="20" text-anchor="middle">压榨汁</text></g>
+<g data-node="clarify"><rect x="430" y="138" width="320" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="590" y="167" font-size="20" text-anchor="middle">澄清</text></g>
+<g data-node="ferment"><rect x="430" y="208" width="320" height="44" rx="3" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="590" y="237" font-size="20" text-anchor="middle">酒精发酵</text></g>
+<g data-node="rack"><rect x="430" y="278" width="320" height="44" rx="3" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="590" y="307" font-size="20" text-anchor="middle">倒罐／换桶去除粗酒泥</text></g>
+<g data-node="mlf"><rect x="430" y="348" width="320" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="590" y="377" font-size="20" text-anchor="middle">苹果酸—乳酸转化</text></g>
+<g data-node="new"><rect x="430" y="418" width="320" height="44" rx="22" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="590" y="447" font-size="20" text-anchor="middle">新酒液</text></g>
+<g data-node="blend-1"><rect x="818" y="138" width="202" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="919" y="167" font-size="20" text-anchor="middle">混合</text></g>
+<g data-node="mature"><rect x="818" y="208" width="202" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="919" y="237" font-size="20" text-anchor="middle">陈年</text></g>
+<g data-node="blend-2"><rect x="818" y="278" width="202" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="919" y="307" font-size="20" text-anchor="middle">混合</text></g>
+<g data-node="finish"><rect x="818" y="348" width="202" height="44" rx="3" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="919" y="377" font-size="20" text-anchor="middle">澄清和稳定处理</text></g>
+<g data-node="pack"><rect x="818" y="418" width="202" height="44" rx="3" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="919" y="447" font-size="20" text-anchor="middle">包装</text></g>
+<g data-node="ready"><rect x="818" y="488" width="202" height="44" rx="22" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="919" y="517" font-size="20" text-anchor="middle">待售的葡萄酒</text></g>
+<g data-node="skins"><rect x="240" y="438" width="120" height="44" rx="22" fill="#e7eddf" stroke="#75866a" stroke-width="1.8"/>
+<text x="300" y="467" font-size="18" text-anchor="middle">葡萄皮</text></g>
+<g data-node="free"><rect x="240" y="338" width="120" height="44" rx="22" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="300" y="367" font-size="18" text-anchor="middle">自流汁</text></g>
+<g data-node="extra-1"><rect x="1040" y="138" width="110" height="44" rx="22" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="1095" y="167" font-size="18" text-anchor="middle">新酒液</text></g>
+<g data-node="extra-2"><rect x="1040" y="278" width="110" height="44" rx="22" fill="#f4ead0" stroke="#ba9d57" stroke-width="1.8"/>
+<text x="1095" y="307" font-size="18" text-anchor="middle">新酒液</text></g>
+<path d="M24 600H1156" stroke="#d8d9cc"/>
+<rect x="24" y="617" width="30" height="20" rx="2" fill="none" stroke="#657061"/><text x="65" y="633" font-size="17">过程</text>
+<rect x="175" y="617" width="40" height="20" rx="10" fill="none" stroke="#657061"/><text x="228" y="633" font-size="17">加入／产出</text>
+<rect x="24" y="658" width="20" height="20" rx="3" fill="#e7eddf" stroke="#75866a"/><text x="56" y="674" font-size="17">必经步骤</text>
+<rect x="614" y="658" width="20" height="20" rx="3" fill="#f4ead0" stroke="#ba9d57"/><text x="646" y="674" font-size="17">酿酒师的选择</text>
+</g></svg>
