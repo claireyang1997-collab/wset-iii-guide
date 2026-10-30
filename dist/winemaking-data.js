@@ -623,18 +623,18 @@ const winemakingData={
       "id": "7-4",
       "photos": [
        {
-        "image": "assets/photo-press-basket-v2.webp",
+        "image": "assets/photo-press-basket-v3.webp",
         "title": "垂直篮式压榨机",
         "caption": "垂直篮式压榨机。",
-        "width": 1233,
-        "height": 872
+        "width": 654,
+        "height": 412
        },
        {
-        "image": "assets/photo-press-pneumatic-v2.webp",
+        "image": "assets/photo-press-pneumatic-v3.webp",
         "title": "气动压榨机",
         "caption": "三台气动压榨机。在压榨机内部，充满压缩空气的橡胶囊将葡萄挤向坚硬的内壳。",
-        "width": 1161,
-        "height": 839
+        "width": 628,
+        "height": 464
        }
       ],
       "title": "图 7.4 · 两类压榨机",
@@ -3745,11 +3745,11 @@ const winemakingData={
      "to": "sort",
      "points": [
       [
-       128,
+       128.0,
        182
       ],
       [
-       128,
+       128.0,
        188
       ]
      ]
@@ -3759,11 +3759,11 @@ const winemakingData={
      "to": "destem",
      "points": [
       [
-       128,
+       128.0,
        232
       ],
       [
-       128,
+       128.0,
        238
       ]
      ]
@@ -3773,11 +3773,11 @@ const winemakingData={
      "to": "crush",
      "points": [
       [
-       128,
+       128.0,
        282
       ],
       [
-       128,
+       128.0,
        288
       ]
      ]
@@ -3787,11 +3787,11 @@ const winemakingData={
      "to": "skin",
      "points": [
       [
-       128,
+       128.0,
        332
       ],
       [
-       128,
+       128.0,
        338
       ]
      ]
@@ -3801,11 +3801,11 @@ const winemakingData={
      "to": "press",
      "points": [
       [
-       128,
+       128.0,
        382
       ],
       [
-       128,
+       128.0,
        388
       ]
      ]
@@ -3815,11 +3815,11 @@ const winemakingData={
      "to": "press-juice",
      "points": [
       [
-       128,
+       128.0,
        432
       ],
       [
-       128,
+       128.0,
        438
       ]
      ]
@@ -3855,11 +3855,11 @@ const winemakingData={
      "to": "ferment",
      "points": [
       [
-       590,
+       590.0,
        182
       ],
       [
-       590,
+       590.0,
        208
       ]
      ]
@@ -3869,11 +3869,11 @@ const winemakingData={
      "to": "rack",
      "points": [
       [
-       590,
+       590.0,
        252
       ],
       [
-       590,
+       590.0,
        278
       ]
      ]
@@ -3883,11 +3883,11 @@ const winemakingData={
      "to": "mlf",
      "points": [
       [
-       590,
+       590.0,
        322
       ],
       [
-       590,
+       590.0,
        348
       ]
      ]
@@ -3897,11 +3897,11 @@ const winemakingData={
      "to": "new",
      "points": [
       [
-       590,
+       590.0,
        392
       ],
       [
-       590,
+       590.0,
        418
       ]
      ]
@@ -3937,11 +3937,11 @@ const winemakingData={
      "to": "mature",
      "points": [
       [
-       919,
+       919.0,
        182
       ],
       [
-       919,
+       919.0,
        208
       ]
      ]
@@ -3951,11 +3951,11 @@ const winemakingData={
      "to": "blend-2",
      "points": [
       [
-       919,
+       919.0,
        252
       ],
       [
-       919,
+       919.0,
        278
       ]
      ]
@@ -3965,11 +3965,11 @@ const winemakingData={
      "to": "finish",
      "points": [
       [
-       919,
+       919.0,
        322
       ],
       [
-       919,
+       919.0,
        348
       ]
      ]
@@ -3979,11 +3979,11 @@ const winemakingData={
      "to": "pack",
      "points": [
       [
-       919,
+       919.0,
        392
       ],
       [
-       919,
+       919.0,
        418
       ]
      ]
@@ -3993,11 +3993,11 @@ const winemakingData={
      "to": "ready",
      "points": [
       [
-       919,
+       919.0,
        462
       ],
       [
-       919,
+       919.0,
        488
       ]
      ]
