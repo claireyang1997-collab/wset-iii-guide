@@ -1,6 +1,6 @@
 # WSET Ⅲ 通关指南
 
-个人葡萄酒学习站点。第 4–10 章按课本顺序编排，共46个阅读单元。第7–10章已依据本批课本、讲义与课堂转写整合正文和图示；原音频及练习册第5、6页原题仍待提供。
+个人葡萄酒学习站点。第 4–10 章按课本顺序编排，共46个阅读单元。第7–10章已依据本批课本、讲义与课堂转写整合正文和图示；练习册第5、6页已于2026-10-31收录，原音频及机构参考答案仍待提供。
 
 ## 内容结构
 
@@ -12,7 +12,7 @@
 
 `#chapter/4`、`#chapter/5`、`#chapter/6` 为章目录；`#read/章节/单元` 为正文。`#review/4`、`#review/5`、`#review/6` 列出逐章课本与讲义去向、配图检查及未确认的转写片段。历史阅读链接会解析到相应新章节。搜索只索引新正文。自测的回看链接直接到对应段落，练习册保留原题与原保存键，并提供填写范围提示。
 
-`#practice` 保留原课程练习身份：两课各 8 道自编选择题；练习册含 8 道原题，第一课另有 16 个白葡萄、10 个红葡萄填写表。原机构答案尚未提供，自查提示不是官方评分细则。
+`#practice` 保留原课程练习身份：两课各 8 道自编选择题；练习册含 16 道原题，第一课另有 16 个白葡萄、10 个红葡萄填写表。原机构答案尚未提供，自查提示不是官方评分细则。
 
 ## 图示
 
@@ -52,6 +52,7 @@ python3 scripts/build-viticulture.py
 python3 scripts/build-winemaking.py
 python3 scripts/build-logic-review.py
 python3 scripts/build-learner-support.py
+python3 scripts/build-workbook-winemaking.py
 ```
 
 第4–6章的现行内容源为 `content/viticulture.json`，包含既有正文、旧链接和迁移映射；`dist/book-data.js` 是生成物。早期 restructure、beginner_revision 和 editorial 迁移脚本只作历史记录，不再覆盖现行内容。第7–10章仍维护 `content/winemaking.json`。图注等渲染逻辑在对应的 `dist/book.js`、`dist/study-diagrams.js`、`dist/winemaking-diagrams.js` 中维护。
@@ -67,7 +68,7 @@ python3 scripts/build-learner-support.py
 
 正文包括工艺机制、适用条件、数值范围、实例与例外，配有15组课本编号图解及讲义趋势图。新章支持正文搜索、具体段落跳转、笔记保存和阅读标记。首页封面及章节插画保持统一期刊风格；阅读标记不等于掌握自查。
 
-本批43张课本照片对应p.62–102共41个不同课本页，第63、97页已补齐；p.68重复，编号179未拍到课本。27张讲义照片为p.39–65、幻灯片145–240，按主题融入正文。三份Word课堂转写的教学内容已核对，含混或与课本冲突之处列于核对页。未收到原始音频、练习册p.5、6原题，不宣称课堂全部完成或已核听。
+本批43张课本照片对应p.62–102共41个不同课本页，第63、97页已补齐；p.68重复，编号179未拍到课本。27张讲义照片为p.39–65、幻灯片145–240，按主题融入正文。三份Word课堂转写的教学内容已核对，含混或与课本冲突之处列于核对页。练习册p.5、6原题已收录，未收到原始音频与机构参考答案，不宣称课堂全部完成或已核听。
 
 - `content/winemaking.json`：新章、单元、课程记录、资料状态和配图规划的权威内容层。
 - `scripts/build-winemaking.py`：从 JSON 生成 `dist/winemaking-data.js`；运行 `python3 scripts/build-winemaking.py`，再发布 `dist/`。旧章节迁移生成器不会覆盖这个新内容层。
@@ -79,8 +80,15 @@ python3 scripts/build-learner-support.py
 
 ## 新学习者路径与自查
 
-`#start` 说明第4–10章的阅读顺序、六组基础术语、学习记录的含义及资料边界。首页提供入口。原练习册第5、6页、机构评分细则和待辨原音频仍待提供；产区、起泡／加强酒及系统品鉴专章不在本批资料范围内。
+`#start` 说明第4–10章的阅读顺序、六组基础术语、学习记录的含义及资料边界。首页提供入口。原练习册第5、6页已收录；机构评分细则和待辨原音频仍待提供；产区、起泡／加强酒及系统品鉴专章不在本批资料范围内。
 
 `content/learner-support.json` 维护第7–10章12个自编自查主题（每题解释、比较、应用三项）和2个四步情境；`scripts/learner-support.js` 维护导读模板，运行 `scripts/build-learner-support.py` 生成 `dist/learner-support.js`。知识地图共有24个主题、5个情境。原12个主题、3个情境和保存键保留；已读、小测证据和自评状态分开。无关联小测的主题不会显示虚构的自测链接。
 
 阅读末尾与练习页可进入 `#map/chapter/4` 至 `#map/chapter/10`，直接筛选本章并定位主题区。自编自查不代替机构原练习册，不自动评分。氧气单元首次使用香气分类处补入定义，并在导读注明WSET词汇表依据。
+
+
+## 第三、四课练习册（2026-10-31）
+
+`content/workbook-winemaking.json` 按新收到的p.5、6两张照片转录8道中英文原题，共33分：第三课14分、第四课19分。糖分／酸度与两类甜酒的分项分值、A→B→C三栏、运抵／发酵／熟化三阶段和“红葡萄品种”提示保留。原表未分配的每栏分值不自行拆分。
+
+`scripts/build-workbook-winemaking.py` 与 `scripts/workbook-winemaking.js` 生成 `dist/workbook-winemaking.js`；版式在 `dist/workbook-winemaking.css`。`#workbook/3`、`#workbook/4` 支持22个新填写栏、自动保存、每题手动保存、恢复、收起和保存失败重试；使用独立的 `wset3-notes-workbook-s3-*`／`s4-*` 键，原第一、二课125个填写栏及批注、笔记、进度键不变。新增题目可按 `#workbook/3/wbq-s3-must` 直接定位。复习提示为自编，机构答案尚未提供，不自动评分。

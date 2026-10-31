@@ -3153,7 +3153,7 @@ const winemakingData={
    "10月25日 11:19 A1录音-文稿-转写结果.docx"
   ],
   "handoutsReceived": true,
-  "workbookReceived": false,
+  "workbookReceived": true,
   "rawAudioReceived": false,
   "fullTextIntegrated": true,
   "supplementalPages": [
@@ -3164,7 +3164,12 @@ const winemakingData={
   "handoutPhotos": 27,
   "handoutPageRange": "39–65",
   "handoutSlideRange": "145–240",
-  "handoutsComplete": true
+  "handoutsComplete": true,
+  "workbookPages": [
+   5,
+   6
+  ],
+  "workbookReceivedDate": "2026-10-31"
  },
  "courses": [
   {
@@ -3491,7 +3496,7 @@ const winemakingData={
    "status": "integrated"
   }
  ],
- "auditNote": "课本p.62–102、讲义145–240及3份课堂转写已按章节整合；原始音频和练习册第5、6页原题未提供。课堂与课本不一致或无法核实的说法不直接写成事实。",
+ "auditNote": "课本p.62–102、讲义145–240及3份课堂转写已按章节整合；练习册第5、6页原题已于2026-10-31收录；原始音频未提供。课堂与课本不一致或无法核实的说法不直接写成事实。",
  "lectureFigures": [
   {
    "id": "handout-169",
