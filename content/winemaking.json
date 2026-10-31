@@ -3194,6 +3194,46 @@
     10
    ],
    "workbookPage": 6
+  },
+  {
+   "id": 5,
+   "date": "2026.10.31",
+   "weekday": "周六",
+   "time": "10:00–12:00",
+   "teacher": "刘畅",
+   "title": "勃艮第和博若莱",
+   "chapters": [
+    11,
+    15,
+    16
+   ],
+   "chapterTitles": [
+    "葡萄酒法律法规",
+    "勃艮第",
+    "博若莱"
+   ],
+   "textbookPart": "第二部分",
+   "workbookPage": "7–9",
+   "materialsReceived": false
+  },
+  {
+   "id": 6,
+   "date": "2026.11.01",
+   "weekday": "周日",
+   "time": "10:00–12:00",
+   "teacher": "孙莺",
+   "title": "波尔多与法国西南部",
+   "chapters": [
+    13,
+    14
+   ],
+   "chapterTitles": [
+    "波尔多",
+    "多尔多涅和法国西南部"
+   ],
+   "textbookPart": "第二部分",
+   "workbookPage": "10–11",
+   "materialsReceived": false
   }
  ],
  "handoutMap": [

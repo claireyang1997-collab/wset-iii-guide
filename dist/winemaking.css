@@ -22,6 +22,14 @@
 .wm-course-grid small{font-size:12px;color:var(--muted)}
 .wm-assignment span{margin-left:8px;font-size:12px;color:var(--wine)}
 .wm-course-grid article>div{display:flex;gap:12px 24px;flex-wrap:wrap;color:var(--wine);font-size:14px;margin-top:17px}
+.wm-course-grid article>.wm-course-label{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 14px;font-size:12px;font-weight:600;letter-spacing:.05em}
+.wm-course-status{font-size:11px;font-weight:400;letter-spacing:0;color:#747d64;border:1px solid #cfd5c1;border-radius:3px;padding:2px 7px}
+.wm-course-grid .wm-course-prep-title{margin-top:18px;color:var(--ink)}
+.wm-course-prep{list-style:none;margin:9px 0 17px;padding:0}
+.wm-course-prep li{display:grid;grid-template-columns:64px 1fr;gap:8px;margin:7px 0;font:400 14px/1.7 var(--sans);color:var(--muted)}
+.wm-course-prep strong{font-weight:500;color:var(--ink)}
+.wm-course-grid .wm-course-materials{font-size:12px;line-height:1.8;border-top:1px solid #dce0d0;padding-top:12px;margin-top:12px}
+.wm-course-pending .wm-assignment>span{font-size:12px;color:#7f856f;margin-left:7px;white-space:nowrap}
 .wm-review-status{background:#eeeee4;border-left:3px solid #929b77;padding:18px 22px;margin:0 0 32px;font-size:16px;line-height:1.9}
 .wm-review-status p{margin:7px 0 0}
 .wm-source-list{font-size:15px;line-height:1.85;margin:18px 0 32px}
