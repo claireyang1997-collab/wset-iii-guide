@@ -156,6 +156,16 @@
 #wmfig-7-2 .wm-photo-caption{max-width:none;text-wrap:pretty}
 .wm-refined-plate .wm-plate-panel>img{display:block;width:100%;height:auto;aspect-ratio:7/5;margin:12px auto 16px;border-radius:8px}
 .wm-material-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;align-items:start}.wm-material-panel{min-width:0}.book-reading .wm-material-panel h3{font:600 17px/1.6 var(--sans);margin:0 0 12px}.wm-material-image{display:block;border-radius:10px;overflow:hidden;background:#f5f2e8}.wm-material-image img{display:block;width:100%;height:auto;max-height:none}.book-reading .wm-material-panel ul{margin:14px 0 0;padding:13px 0 0 1.15em;border-top:1px solid var(--line);font-size:14px;line-height:1.85;color:var(--muted)}.wm-material-panel li{margin:0 0 5px}.book-reading .wm-material-key{font-size:13px;line-height:1.85;color:var(--muted);margin:22px 0 0;padding:14px 16px;border-radius:5px;background:#eef0e4}@media(max-width:760px){.wm-material-grid{grid-template-columns:1fr;gap:28px}.book-reading .wm-material-panel h3{font-size:17px}.wm-material-panel{max-width:560px;width:100%;margin:auto}.book-reading .wm-material-key{padding:12px;font-size:13px}}
+/* Filtration: quiet, abstract sections with separate teaching notes. */
+.wm-filter-elegant .wm-filter-grid{gap:28px}
+.book-reading .wm-filter-panel h3{display:flex;align-items:center;gap:12px;font-size:18px;line-height:1.4;margin-bottom:8px}
+.wm-filter-number{display:grid;place-items:center;flex:none;width:36px;height:36px;border:1px solid #d8decd;border-radius:50%;background:#f0f2e9;color:#849176;font:500 12px/1 var(--sans)}
+.wm-filter-panel h3 small{display:block;font:400 10px/1.5 var(--sans);letter-spacing:.13em;color:#87917e;margin-top:3px}
+.wm-filter-elegant .wm-material-image{background:#fcfbf7;border-radius:0}
+.book-reading .wm-filter-panel ul{margin-top:4px;padding-top:15px;font-size:14px;color:#65705e}
+.book-reading .wm-filter-elegant .wm-material-key{background:#f4f3eb;border-radius:0;font-size:12px;padding:14px 16px}
+.wm-filter-flow-key{color:#467f87}.wm-filter-particle-key{color:#87516a}
+@media(max-width:760px){.wm-filter-elegant .wm-filter-grid{gap:26px}.book-reading .wm-filter-panel h3{font-size:18px}.book-reading .wm-filter-elegant .wm-material-key{font-size:12px;line-height:1.9}}
 /* Packaging: large bottle studies above a full-width bag-in-box cutaway. */
 .wm-packaging-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}
 .wm-package-panel{min-width:0}
