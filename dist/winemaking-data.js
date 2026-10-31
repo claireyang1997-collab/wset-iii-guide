@@ -1125,25 +1125,25 @@ const winemakingData={
       "title": "图 7.6 · 过滤器",
       "photos": [
        {
-        "image": "assets/photo-filter-surface-v2.webp",
+        "image": "assets/photo-filter-surface-supplied-v3.png",
         "title": "表面过滤设备",
         "caption": "用于表面过滤的设备。可更换的过滤膜置于金属壳体内。",
-        "width": 686,
-        "height": 723
+        "width": 440,
+        "height": 464
        },
        {
-        "image": "assets/photo-filter-drum-v2.webp",
+        "image": "assets/photo-filter-drum-supplied-v3.png",
         "title": "滚筒式过滤器",
         "caption": "滚筒式过滤器。",
-        "width": 728,
-        "height": 754
+        "width": 440,
+        "height": 438
        },
        {
-        "image": "assets/photo-filter-plate-v2.webp",
+        "image": "assets/photo-filter-plate-supplied-v3.png",
         "title": "板框式过滤器",
         "caption": "板框式过滤器。",
-        "width": 786,
-        "height": 847
+        "width": 434,
+        "height": 436
        }
       ],
       "caption": "设备照片用于辨认外形；下方示意图解释颗粒截留的位置，不能只凭机器外形判断过滤方法。"

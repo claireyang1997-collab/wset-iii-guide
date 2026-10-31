@@ -155,6 +155,7 @@
 #wmfig-7-2 .wm-photo-media{max-width:330px;margin-left:auto;margin-right:auto}
 #wmfig-7-2 .wm-photo-caption{max-width:none;text-wrap:pretty}
 .wm-refined-plate .wm-plate-panel>img{display:block;width:100%;height:auto;aspect-ratio:7/5;margin:12px auto 16px;border-radius:8px}
+.wm-material-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;align-items:start}.wm-material-panel{min-width:0}.book-reading .wm-material-panel h3{font:600 17px/1.6 var(--sans);margin:0 0 12px}.wm-material-image{display:block;border-radius:10px;overflow:hidden;background:#f5f2e8}.wm-material-image img{display:block;width:100%;height:auto;max-height:none}.book-reading .wm-material-panel ul{margin:14px 0 0;padding:13px 0 0 1.15em;border-top:1px solid var(--line);font-size:14px;line-height:1.85;color:var(--muted)}.wm-material-panel li{margin:0 0 5px}.book-reading .wm-material-key{font-size:13px;line-height:1.85;color:var(--muted);margin:22px 0 0;padding:14px 16px;border-radius:5px;background:#eef0e4}@media(max-width:760px){.wm-material-grid{grid-template-columns:1fr;gap:28px}.book-reading .wm-material-panel h3{font-size:17px}.wm-material-panel{max-width:560px;width:100%;margin:auto}.book-reading .wm-material-key{padding:12px;font-size:13px}}
 /* Packaging: large bottle studies above a full-width bag-in-box cutaway. */
 .wm-packaging-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}
 .wm-package-panel{min-width:0}

@@ -30,20 +30,7 @@ function wmPackagingFigure(d){
  ];
  return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-packaging-plate" data-wm-figure="packaging"><div class="wm-plate-title">${wmEscape(d.title||'包装特点示意')}</div><div class="wm-packaging-grid">${panels.map((p,i)=>`<section class="wm-package-panel${i===2?' wm-package-wide':''}"><h3>${wmEscape(p.label)}</h3><picture>${i===2?'<source media="(max-width:650px)" srcset="assets/packaging-bag-clear-mobile.svg" width="500" height="900">':''}<img src="assets/${p.image}" width="${p.width}" height="${p.height}" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"></picture><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></section>`).join('')}</div><figcaption>${wmEscape(d.caption||'包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。')}</figcaption></figure>`;
 }
-function wmRefinedFigure(d){
- if(d.type==='packaging')return wmPackagingFigure(d);
- const filtration=d.type==='filtration';
- const panels=filtration?[
-  {label:'深层过滤',image:'filtration-depth-refined.svg',notes:['较厚、多孔的介质','颗粒截留在介质内部']},
-  {label:'表面过滤',image:'filtration-surface-refined.svg',notes:['细膜孔径形成屏障','微小颗粒留在上游表面']}
- ]:[
-  {label:'玻璃瓶',image:'packaging-glass-refined.svg',notes:['惰性，长期陈年表现成熟','重量与运输空间较大']},
-  {label:'塑料瓶',image:'packaging-plastic-refined.svg',notes:['较轻、较易运输','逐渐透氧，适合较快饮用']},
-  {label:'袋装盒',image:'packaging-bag-refined.svg',notes:['倒酒时内袋逐渐收缩','袋材仍透氧，不用于长期陈年']}
- ];
- const caption=filtration?'图中箭头为酒液方向。课本还展示滤芯及金属外壳、旋转滚筒和板框式过滤设备；过滤方法不能只凭机器外形判断。':'包装和封口共同影响保护能力；还须结合目标饮用时间与运输成本。';
- return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-refined-plate" data-wm-figure="${wmEscape(d.type)}"><div class="wm-plate-title">${wmEscape(d.title||(filtration?'过滤机制示意 · 深层与表面过滤':'包装特点示意'))}</div><div class="wm-plate-grid wm-plate-${panels.length}">${panels.map(p=>`<div class="wm-plate-panel"><h3>${wmEscape(p.label)}</h3><img src="assets/${p.image}" width="420" height="300" alt="${wmEscape(p.label)}结构与作用示意" loading="lazy" decoding="async"><ul>${p.notes.map(t=>`<li>${wmEscape(t)}</li>`).join('')}</ul></div>`).join('')}</div><figcaption>${wmEscape(d.caption||caption)}</figcaption></figure>`;
-}
+function wmRefinedFigure(d){return d.type==='packaging'?wmPackagingFigure(d):wmMaterialFigure(d);}
 function wmLeesFigure(d){
  const panels=[
   {label:'静置：酒泥沉在底部',image:'lees-settled-cutaway.svg',alt:'橡木桶剖面：细酒泥形成底部浅金色沉积层，上方为酒液。',notes:['移除粗酒泥','可按风格保留细酒泥接触']},
@@ -76,6 +63,7 @@ function wmSteepFigure(d){
  return `<figure id="wmfig-${wmEscape(d.id||d.type)}" class="wm-plate wm-steep-plate wm-steep-editorial" data-wm-figure="steep"><div class="wm-plate-title">${wmEscape(d.title||'陡坡如何转化为成本 · 因果示意')}</div><div class="wm-steep-art"><a href="assets/steep-vineyard-work-v3.webp" target="_blank" rel="noopener" aria-label="查看陡坡作业场景插画大图"><img src="assets/steep-vineyard-work-v3.webp" width="1536" height="1024" alt="教材风场景插画：陡峭葡萄园中，工人在密集葡萄行间手工采收，另一人沿狭窄坡道搬运葡萄箱；下方的村落与道路显示坡地的高差。" loading="lazy" decoding="async"></a><p><span>场景插画：陡坡上的采收与搬运</span><a href="assets/steep-vineyard-work-v3.webp" target="_blank" rel="noopener">查看插画大图 ↗</a></p></div><div class="wm-steep-observations">${observations.map(p=>`<section><div class="wm-steep-observation-title"><span>${p.number}</span><h3>${wmEscape(p.title)}</h3></div><strong>${wmEscape(p.text)}</strong><p>${wmEscape(p.detail)}</p></section>`).join('')}</div><div class="wm-steep-outcome"><div><span>投入增加</span><strong>更多人工与更长作业时间</strong></div><span class="wm-steep-outcome-arrow" aria-hidden="true">→</span><div><span>成本结果</span><strong>单位葡萄生产成本增加</strong></div></div><div class="wm-steep-context"><p>还取决于产量、工资及规模。</p><p>售价也受需求、声誉和利润影响。</p></div><figcaption>${wmEscape(d.caption||'摩泽尔陡坡葡萄园是地形限制机械化的例子；高生产成本并不保证市场愿意支付更高售价。')}</figcaption></figure>`;
 }
 function wmDiagram(d){
+ if(d.type==='closures')return wmMaterialFigure(d);
  if(d.type==='cap')return wmCapFigure(d);
  if(d.type==='steep')return wmSteepFigure(d);
  if(d.type==='freeze')return wmFreezeFigure(d);
@@ -112,12 +100,6 @@ function wmDiagram(d){
    {label:'气囊压榨',svg:`${rect(25,62,240,105,'#dce2dc','#7f8d7d',45)}${rect(60,85,172,50,'#d1b5a6','#926a5e',22)}${line(140,85,140,66,wine,3,true)}${line(140,135,140,155,wine,3,true)}${line(40,178,250,178,blue,3)}${line(250,178,273,178,blue,3,true)}${txt(145,112,'膨胀气囊',15)}${txt(145,210,'液体由有孔桶壁流出',14)}`,notes:['气囊膨胀，把果实压向桶壁','可调压力，采用较温和的压榨']}];caption='白酒通常在发酵前压榨；红酒通常先带皮发酵，再分开自流酒与压榨酒。';
  }else if(n==='composition'){
   title='图 7.5 · 成酒的主要组成';panels=[{label:'从葡萄汁到葡萄酒',svg:`${rect(52,20,180,175,'#f1e9cf','#b3b79c',12)}${rect(55,60,174,132,'#d6d9b8','#b3b79c',7)}${txt(142,118,'水是最大组成',18)}${txt(142,45,'水约70–90%',17)}${txt(142,154,'酒精约8–22%',16)}`,notes:['发酵把部分糖变成酒精','糖、酸、单宁、色素和香气仍影响风格','下表范围各自比较，不应当相加为一款酒的配方']}];caption='组成比例因酒款而变；各项范围用于理解量级与作用，不能推出所有酒具有同一配方。';
- }else if(n==='closures'){
-  title=d.title||'封口材料与保存表现示意';panels=[
-   {label:'天然软木塞',svg:`${rect(98,35,88,150,'#c6a56f','#a17b4b',10)}${Array.from({length:22},(_,i)=>line(107+i%5*15,49+Math.floor(i/5)*28,113+i%5*15,52+Math.floor(i/5)*28,'#89693e',2)).join('')}`,notes:['整块软木；个体透氧有差异','需控制TCA污染']},
-   {label:'技术软木塞',svg:`${rect(98,35,88,150,'#ccb186','#a17b4b',10)}${Array.from({length:40},(_,i)=>ellipse(107+i%6*13,49+Math.floor(i/6)*20,4,3,i%2?'#a17b4b':'#e2c596','#b6925e')).join('')}`,notes:['处理后的软木颗粒等构成','性能取决于等级及工艺']},
-   {label:'合成塞',svg:`${rect(98,35,88,150,'#e0c9a1','#ae956e',10)}${line(108,46,108,174,'#eedfc6',4)}`,notes:['石化或植物来源材料','按隔氧表现与饮用期选择']},
-   {label:'螺旋盖',svg:`${rect(80,50,122,100,'#bac6bd','#78877c',8)}${[75,85,95,105].map(y=>line(82,y,200,y,'#7e8f84',2)).join('')}${rect(80,145,122,18,'#8e9f8d','#78877c',2)}${txt(142,190,'内衬控制透氧',15)}`,notes:['金属盖＋内衬','可再封，也适合高品质酒']}];caption='外形只帮助辨认类型；保存表现要结合具体材料、内衬、装瓶与储存条件。';
  }else if(n==='temperature'){
   title='讲义示意 · 温度与发酵进程';panels=[{label:'适宜范围内，较温暖通常更快',svg:`${line(45,185,45,22,ink,1.5,true)}${line(45,185,275,185,ink,1.5,true)}<path d="M48 40C100 40 95 162 195 175" fill="none" stroke="${wine}" stroke-width="3"/><path d="M48 40C140 40 160 115 260 175" fill="none" stroke="${blue}" stroke-width="3"/>${txt(9,88,'残',13)}${txt(9,106,'糖',13)}${txt(160,220,'发酵时间 →',14)}${txt(92,144,'较温暖',13,wine)}${txt(209,100,'较凉爽',13,blue)}`,notes:['纵轴：剩余糖的相对水平；横轴：时间','酒红线较快消耗糖，蓝线较慢','过热会使酵母停工，不能把曲线无限外推']}];caption='参照讲义169的速度关系重画；曲线为趋势示意，未使用实测数据或固定天数。温度、菌株、糖分与营养都会影响实际速度。';
  }else if(n==='extraction'){
