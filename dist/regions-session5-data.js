@@ -1524,11 +1524,12 @@ const regionsSession5={
     0.876
    ],
    "title": "三种整串组织方式",
-   "caption": "讲义p.87。左：外加CO₂；中：底层汁液发酵产生CO₂；右：整串与破碎果实相混。三者不是同义词。",
+   "caption": "据讲义p.87重绘。左：外加CO₂；中：底层汁液发酵产生CO₂；右：整串与破碎葡萄醪相混，完整果粒周围主要是酒液。三者不是同义词；图中的产区举例并非互斥规则。",
    "kind": "diagram",
-   "src": "assets/s5-wholebunch-three.webp",
-   "width": 1617,
-   "height": 638
+   "src": "assets/s5-wholebunch-three-redrawn.webp",
+   "width": 1642,
+   "height": 958,
+   "originalSrc": "assets/s5-wholebunch-three.webp"
   },
   {
    "id": "wholebunch-liquid",
@@ -1540,11 +1541,12 @@ const regionsSession5={
     0.43
    ],
    "title": "整串在正在发酵的酒液中",
-   "caption": "讲义p.88。图中整串周围是液体，区别于前两种以气体环境解释完整果粒细胞内转化的示意。",
+   "caption": "据讲义p.88及整串工艺说明重绘。完整果串被正在发酵的葡萄醪包围；酒液中的酵母进行酒精发酵，完整果粒内部在缺氧条件下可发生细胞内发酵。压帽使果粒逐渐破裂，后续继续发酵和浸渍。",
    "kind": "diagram",
-   "src": "assets/s5-wholebunch-liquid.webp",
-   "width": 516,
-   "height": 611
+   "src": "assets/s5-wholebunch-liquid-redrawn.webp",
+   "width": 1619,
+   "height": 971,
+   "originalSrc": "assets/s5-wholebunch-liquid.webp"
   },
   {
    "id": "carbonic-process",

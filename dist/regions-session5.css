@@ -18,6 +18,7 @@
 #s5fig-gamay-bush{--s5-compact-width:280px}
 #s5fig-chauvet-photo{--s5-compact-width:280px}
 #s5fig-nouveau-label{--s5-compact-width:300px}
+#s5fig-wholebunch-liquid{width:100%;max-width:760px;justify-self:start}
 .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;max-width:664px}
 @media(min-width:601px){
  .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){align-items:stretch}
