@@ -408,6 +408,23 @@ const regionsSession5={
       "优质霞多丽和黑皮诺可以随着瓶陈发展复杂度；教材以部分上佳白酒可陈年十年以上为例，不能推广为所有勃艮第都需久存。",
       "教材提到优质白勃艮第曾出现过早氧化问题，其成因复杂，也不限于勃艮第。不要把酒龄大、颜色深或“有陈味”自动当成优质成熟。"
      ]
+    },
+    {
+     "title": "金丘红酒：同一流程，比较两种目标",
+     "paragraphs": [
+      "练习册p.8以Grand Cru和Bourgogne作对照，保留全部12步骤。较简单早饮目标通常减少过强提取、长时间新桶及资金占用；成熟浓郁、希望陈年的原料可以支持更细致筛选与较长熟化。具体去梗、整串、浸渍与桶比例仍由年份和生产者决定。"
+     ],
+     "flow": "burgundy-red",
+     "conclusion": "每一步都写选择和原因，最后说明果味、结构、陈年与成本；等级本身不是统一酿造配方。"
+    },
+    {
+     "title": "干白：三种价位与两次混合",
+     "paragraphs": [
+      "练习册p.9比较超高价Grand Cru、Premier Cru或高价村庄酒、中低价大区酒。下图保留11节点及三种情境，两次混合均保留；倒罐去粗酒泥后，仍可留下细酒泥用于熟化。",
+      "对清新早饮酒，可倾向较短惰性容器熟化并保护酸果；成熟、浓郁且有陈年目标的原料，可以采用适量桶发酵／桶熟化、细酒泥与MLC增加质感，但新桶、MLC、搅桶没有必须同时全做的规定。完整填写入口在“第五课原练习册”。"
+     ],
+     "flow": "burgundy-white",
+     "conclusion": "解释价位差异时同时考虑原料成本、筛选、容器、时间和产量；也要说明酸度与香气有没有被保留。"
     }
    ],
    "links": [
@@ -2541,8 +2558,9 @@ const regionsSession5={
   ],
   "audioEmbedded": false,
   "workbookPages": "7–9",
-  "workbookReceived": false,
-  "gap": "第一份转写以约11:12休息结束；第二份11:40从马孔内讲解中途开始。中间金丘红酒、夜丘和夏隆内丘内容依用户同意，以课本与讲义补齐，未补造教师原话。"
+  "workbookReceived": true,
+  "gap": "第一份转写以约11:12休息结束；第二份11:40从马孔内讲解中途开始。中间金丘红酒、夜丘和夏隆内丘内容依用户同意，以课本与讲义补齐，未补造教师原话。",
+  "workbookSupplement": "2026-11-01收到p.7–9：四题17分，两张未标分值工艺比较表；题干、表格及全部节点已核对。"
  },
  "sources": [
   {
@@ -2650,6 +2668,26 @@ const regionsSession5={
     "Cru不等于勃艮第Grand Cru",
     "新酒价格含运输推广，不是品质自动评分"
    ]
+  }
+ ],
+ "workbookSupplementPages": [
+  {
+   "page": 7,
+   "sourceId": "331",
+   "topic": "Grand Cru园址、Bourgogne Rouge工艺、春霜、新酒四题，共17分",
+   "href": "#workbook/5"
+  },
+  {
+   "page": 8,
+   "sourceId": "333",
+   "topic": "金丘红酒12步骤，Bourgogne与Grand Cru对比，未标分值",
+   "href": "#workbook/5/wbq-s5-red-options"
+  },
+  {
+   "page": 9,
+   "sourceId": "332",
+   "topic": "勃艮第干白11步骤、三种情境及两次混合，未标分值",
+   "href": "#workbook/5/wbq-s5-white-options"
   }
  ]
 };

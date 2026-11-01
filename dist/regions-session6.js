@@ -1,0 +1,32 @@
+/* Bordeaux/Southwest chapters and the newly supplied original assignments. */
+function regionOptionsFlow(id){
+ const f=regionsSession6.flows.find(f=>f.id===id);if(!f)return '';
+ return `<figure class="region-flow" id="flow-${wmEscape(id)}"><div class="region-flow-heading"><span class="eyebrow">${wmEscape(f.source)}</span><h3>${wmEscape(f.title)}</h3><p>${wmEscape(f.intro)}</p></div><ol class="region-flow-steps">${f.steps.map((s,i)=>`<li class="${s.omitted?'flow-omitted':''}"><span class="flow-step-no">${String(i+1).padStart(2,'0')}</span><div><strong>${s.omitted?'<s>':''}${wmEscape(s.zh)}${s.omitted?'</s>':''}</strong><small lang="en">${wmEscape(s.en)}</small>${s.optional?'<em>按目标选择</em>':''}${s.omitted?'<em>原讲义划除</em>':''}</div><span class="flow-step-arrow" aria-hidden="true">${i===f.steps.length-1?'✓':'→'}</span></li>`).join('')}</ol>${f.scenarios?`<div class="region-flow-scenarios">${f.scenarios.map((s,i)=>`<div><span>${String(i+1).padStart(2,'0')}</span><strong>${wmEscape(s.zh)}</strong><small lang="en">${wmEscape(s.en)}</small></div>`).join('')}</div>`:''}<figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
+}
+function s6Figure(id){
+ const f=regionsSession6.figures.find(f=>f.id===id);if(!f)return '';
+ return `<figure id="s6fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s6-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong><a href="${f.src}" target="_blank" rel="noopener" aria-label="打开大图：${wmEscape(f.title)}">打开大图 ↗</a></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener"><img src="${f.src}" width="${f.width}" height="${f.height}" alt="${wmEscape(f.title+'。'+f.caption)}" loading="lazy" decoding="async"></a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
+}
+function s6UnitBody(u){
+ const sources=regionsSession6.sources.filter(s=>s.routes.includes(`${u.chapter}/${u.id}`));
+ return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${s.paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow?regionOptionsFlow(s.flow):''}${s.figures?.length?`<div class="s5-figures${s.figures.every(id=>regionsSession6.figures.find(f=>f.id===id).kind==='labels')?' s5-figures-labels':''}">${s.figures.map(s6Figure).join('')}</div>`:''}${s.conclusion?`<p class="s5-conclusion"><strong>学到这里，应该能说：</strong>${wmEscape(s.conclusion)}</p>`:''}</section>`).join('')+`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>${sources.length?`<p class="s5-references">核对依据：${sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a>`).join('；')}</p>`:''}`;
+}
+for(const ch of regionsSession6.chapters)bookChapters.push({...ch,framework:false});
+for(const u of regionsSession6.units)bookUnits.push({...u,framework:false,origins:[],body:s6UnitBody(u)});
+bookChapters.sort((a,b)=>a.id-b.id);
+// Stable sort keeps every existing within-chapter unit and its note key in order.
+bookUnits.sort((a,b)=>a.chapter-b.chapter);
+const burgundyWinemaking=bookUnits.find(u=>u.chapter===15&&u.id==='winemaking');
+burgundyWinemaking.body=s5UnitBody(regionsSession5.units.find(u=>u.chapter===15&&u.id==='winemaking'));
+knowledgeTopics.push(...regionsSession6.topics);
+knowledgeCases.push(...regionsSession6.cases);
+Object.assign(knowledgeFuture.find(f=>f.id==='regions'),{added:true,status:'四个法国产区专章已收录',summary:'第13–16章：波尔多、多尔多涅与法国西南部、勃艮第、博若莱。按环境、品种、工艺解释风格、品质和成本。',href:'#chapter/13'});
+const s6PreviousReview=bookReviewView;
+bookReviewView=function(id){
+ const ch=regionsSession6.chapters.find(c=>c.id===Number(id));if(!ch)return s6PreviousReview(id);
+ const us=regionsSession6.units.filter(u=>u.chapter===ch.id),pages=regionsSession6.pages.filter(p=>p.routes.some(r=>r.startsWith(ch.id+'/'))),figs=regionsSession6.figures.filter(f=>us.some(u=>u.sections.some(s=>s.figures?.includes(f.id))));
+ const link=r=>{const u=bookUnits.find(u=>`${u.chapter}/${u.id}`===r);return u?`<a href="#read/${r}">${wmEscape(u.title)} →</a>`:''};
+ return `<main id="main" class="wrap book-review wm-review"><a class="back" href="#chapter/${ch.id}">← 第${ch.id}章</a><header class="page-intro"><div class="eyebrow">CHAPTER ${ch.id} · SOURCE RECORD</div><h1 class="page-title">资料与配图核对记录</h1><p>${wmEscape(ch.title)} · 课本p.${ch.pages} · ${us.length}个阅读单元</p></header><section><h2>这次收到与仍缺的资料</h2><p>共37张照片逐页核对：课本p.110–118共9页；讲义24张，覆盖p.91–111、幻灯片301–364及放大重复地图；练习册p.6–9四张。</p><p>第六课课本与讲义已整合；本批没有课堂转写／录音，未宣称核听。第六课练习册p.10–11与机构答案仍待提供。已收到的第五课p.7–9可在<a href="#workbook/5">原练习册</a>填写；p.6重复页沿用第四课题目和记录。</p></section><section><h2>每页知识与图示去向</h2><div class="comparison-wrap"><table class="comparison wm-review-table"><thead><tr><th>来源</th><th>知识与图</th><th>正文</th></tr></thead><tbody>${pages.map(p=>`<tr><th scope="row">${p.type==='textbook'?'课本':'讲义'}p.${p.page}<small> · 照片${p.sourceId}</small></th><td>${wmEscape(p.topic)}<p class="fine">${wmEscape(p.visual)}</p></td><td>${p.routes.map(link).join('<br>')}</td></tr>`).join('')}</tbody></table></div></section><section><h2>本章配图 · ${figs.length}幅</h2><ul class="wm-figure-list">${figs.map(f=>{const u=us.find(u=>u.sections.some(s=>s.figures?.includes(f.id)));return `<li><a href="#read/${u.chapter}/${u.id}/s6fig-${f.id}">${wmEscape(f.title)} →</a><span>裁出主体，图下独立解释，可打开大图。</span></li>`}).join('')}</ul></section><details class="review-fold"><summary>版本与简化表述怎样处理</summary><ul>${regionsSession6.corrections.map(x=>`<li>${wmEscape(x)}</li>`).join('')}</ul></details><details class="review-fold"><summary>讲义的课程收束通知</summary><p>${wmEscape(regionsSession6.intake.nextClassNotice)}</p></details><section><h2>法规与数字核对依据</h2>${regionsSession6.sources.map(s=>`<p><a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a></p>`).join('')}</section></main>`;
+};
+const s6PreviousPractice=learnerPracticeSection;
+learnerPracticeSection=function(){return s6PreviousPractice()+`<section class="learner-practice"><div class="eyebrow">EXPLAIN A REGIONAL STYLE</div><h2>波尔多与西南部 · 自编自查</h2><p>${regionsSession6.topics.length}个主题与2个跨区情境；先写因果，再看提示。第六课原练习册p.10–11仍待提供，这些自查不冒充原题。</p><div class="learner-chapters">${regionsSession6.chapters.map(c=>`<article><h3>第${c.id}章 · ${wmEscape(c.title)}</h3>${learnerChapterPractice(c.id)}</article>`).join('')}</div></section>`;};

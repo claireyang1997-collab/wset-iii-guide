@@ -2,7 +2,7 @@
 const winemakingWorkbook={
  "version": 1,
  "received": "2026-10-31",
- "sourceNote": "按用户提供练习册第5、6页照片逐题转录；未收到机构参考答案。分项分值按原表保留，总分由分项相加。",
+ "sourceNote": "按用户提供的练习册p.5–9逐题转录；p.6重复页合并并保留原作答键。第五课p.7四题共17分，p.8、9工艺比较表未标分值。未收到机构参考答案。",
  "sessions": [
   {
    "id": 3,
@@ -25,6 +25,19 @@ const winemakingWorkbook={
     10
    ],
    "marks": 19
+  },
+  {
+   "id": 5,
+   "page": "7–9",
+   "label": "第五课",
+   "title": "勃艮第和博若莱",
+   "chapters": [
+    11,
+    15,
+    16
+   ],
+   "marks": 17,
+   "worksheets": 2
   }
  ],
  "questions": [
@@ -358,6 +371,675 @@ const winemakingWorkbook={
      "label": "细酒泥与搅桶"
     }
    ]
+  },
+  {
+   "session": 5,
+   "id": "grand-cru-site",
+   "marks": 3,
+   "page": 7,
+   "zh": "勃艮第特级葡萄园（Grand Cru）能够产出非常高质量的葡萄酒与其独特的地形有关。请解释特级葡萄园所在的位置为什么对葡萄的生长和成熟有利？",
+   "en": "Grand Cru vineyards can provide the grapes for high-quality wines due to their location. Explain why these Grand Cru sites are beneficial for grape growing and ripening in Burgundy.",
+   "layout": "chain",
+   "hint": "先给园址条件，再写受光、温度、排水与冷空气下沉的作用，最后明确“有助健康成熟与优质原料”。不能把Grand Cru标签本身当因。",
+   "refs": [
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-1",
+     "label": "金丘坡位"
+    },
+    {
+     "href": "#read/15/growing/book-15-growing-1",
+     "label": "气候与栽培"
+    }
+   ],
+   "fields": [
+    {
+     "id": "a",
+     "zh": "因为有A：园址条件",
+     "en": "Because of A"
+    },
+    {
+     "id": "b",
+     "zh": "所以有B的影响：作用机制",
+     "en": "Thus there is B"
+    },
+    {
+     "id": "c",
+     "zh": "于是C的效果：有利生长与成熟",
+     "en": "So it results in C",
+     "note": "特级园的地理位置对葡萄的生长和成熟有利。These Grand Cru sites are beneficial for grape growing and ripening."
+    }
+   ]
+  },
+  {
+   "session": 5,
+   "id": "bourgogne-rouge",
+   "marks": 6,
+   "page": 7,
+   "zh": "描述并解释上面的这款葡萄酒可能使用的发酵（以及萃取）、熟化和混合方式。",
+   "en": "Describe and explain how this wine is fermented, matured and blended.",
+   "layout": "rows",
+   "hint": "酒标明确为Bourgogne Rouge。围绕大区红酒可能的果味、早饮与成本目标，把每种工艺和原因配对；混合可来自不同地块／批次，不能只答不同品种，也不要凭酒标猜生产者未给出的确切做法。",
+   "refs": [
+    {
+     "href": "#read/15/winemaking/book-15-winemaking-2",
+     "label": "红勃艮第酿造"
+    },
+    {
+     "href": "#read/15/hierarchy/book-15-hierarchy-1",
+     "label": "大区等级"
+    }
+   ],
+   "context": "原题配Bourgogne Rouge酒标；下图保留原标签主体。",
+   "image": "assets/s6-bourgogne-workbook-label.webp",
+   "imageCaption": "原练习册p.7酒标：Bourgogne Rouge。原题问“可能”的方式，未提供该瓶具体技术表。",
+   "rows": [
+    {
+     "title": "发酵以及萃取方式 · Fermentation including extraction",
+     "fields": [
+      {
+       "id": "ferment-description",
+       "zh": "描述",
+       "en": "Description"
+      },
+      {
+       "id": "ferment-reason",
+       "zh": "原因",
+       "en": "Reasons for the choice"
+      }
+     ]
+    },
+    {
+     "title": "熟化方式 · Maturation",
+     "fields": [
+      {
+       "id": "maturation-description",
+       "zh": "描述",
+       "en": "Description"
+      },
+      {
+       "id": "maturation-reason",
+       "zh": "原因",
+       "en": "Reasons for the choice"
+      }
+     ]
+    },
+    {
+     "title": "混合方式 · Blending",
+     "fields": [
+      {
+       "id": "blending-description",
+       "zh": "描述",
+       "en": "Description"
+      },
+      {
+       "id": "blending-reason",
+       "zh": "原因",
+       "en": "Reasons for the choice"
+      }
+     ]
+    }
+   ],
+   "imageWidth": 613,
+   "imageHeight": 441
+  },
+  {
+   "session": 5,
+   "id": "spring-frost",
+   "marks": 4,
+   "page": 7,
+   "zh": "勃艮第具有凉爽到温和的大陆性气候，在生长季经常会遇到春季霜冻的威胁。请解释春季的霜冻会对葡萄生长产生什么影响？请列举2个可以减少上述天气灾害对葡萄生长的影响的措施。",
+   "en": "Burgundy has a cool to moderate continental climate which may experience spring frost. Please explain the adverse impacts that spring frosts can have on grape growing. Please list 2 methods that can be taken to minimize the adverse effects of spring frost.",
+   "layout": "text",
+   "hint": "先解释萌芽后幼嫩组织受冻与产量损失，再列两种合适方法并说明适用前提。加热、风机、喷水等机制不同；风机需要辐射霜冻逆温条件，喷水需持续正确操作。",
+   "refs": [
+    {
+     "href": "#read/15/growing/book-15-growing-2",
+     "label": "勃艮第霜冻"
+    },
+    {
+     "href": "#read/5/heat/book-5-heat-5",
+     "label": "霜冻机制与管理"
+    }
+   ],
+   "fields": [
+    {
+     "id": "answer",
+     "zh": "影响及两种减轻措施",
+     "en": "Impacts and two mitigation methods"
+    }
+   ]
+  },
+  {
+   "session": 5,
+   "id": "nouveau-method",
+   "marks": 4,
+   "page": 7,
+   "zh": "酿造博若莱新酒需要使用一种特殊的酿造工艺，描述这种酿造工艺并解释该工艺如何影响葡萄酒最终的风格？",
+   "en": "Beaujolais Nouveau is made through a particular winemaking technique. Describe how this winemaking technique works and explain how it influences the style of the final wine.",
+   "layout": "text",
+   "hint": "说明整串完整果、缺氧条件、果粒内变化，再说明破裂或压榨后酵母完成发酵；二氧化碳与半二氧化碳的气体来源分开。结论应连到低单宁、浓郁鲜果／糖果联想及适合早饮，不能漏后续酒精发酵。",
+   "refs": [
+    {
+     "href": "#read/16/whole-bunch/book-16-whole-bunch-1",
+     "label": "完整果与工艺原理"
+    },
+    {
+     "href": "#read/16/nouveau/book-16-nouveau-1",
+     "label": "新酒风格与饮用"
+    }
+   ],
+   "fields": [
+    {
+     "id": "answer",
+     "zh": "工艺与最终风格",
+     "en": "Technique and resulting style"
+    }
+   ]
+  },
+  {
+   "session": 5,
+   "id": "red-options",
+   "marks": null,
+   "page": 8,
+   "zh": "科多尔红葡萄酒：不同等级的酿造选择",
+   "en": "Côte d’Or Red Wine — Winemaking: how do these levels differ?",
+   "layout": "worksheet",
+   "hint": "这是原练习册未标分值的工艺比较表。先写原料成熟与浓度，再逐步解释筛选、接触／提取、温度容器、MLC、酒泥、橡木、混合、完善。高等级不等于所有增强工艺全做；同等级生产者也可以选择不同。",
+   "refs": [
+    {
+     "href": "#read/15/winemaking/book-15-winemaking-4",
+     "label": "对应工艺比较"
+    },
+    {
+     "href": "#read/15/hierarchy/book-15-hierarchy-1",
+     "label": "等级与地块"
+    }
+   ],
+   "rows": [
+    {
+     "title": "01 · 采收选择 · Harvest choices",
+     "fields": [
+      {
+       "id": "step1-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step1-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "02 · 筛选 · Sorting",
+     "fields": [
+      {
+       "id": "step2-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step2-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "03 · 去梗破碎 · De-stem / crush",
+     "fields": [
+      {
+       "id": "step3-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step3-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "04 · 发酵前浸渍 · Pre-fermentation maceration",
+     "fields": [
+      {
+       "id": "step4-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step4-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "05 · 发酵 · Fermentation",
+     "fields": [
+      {
+       "id": "step5-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step5-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "06 · 发酵后浸渍 · Post-ferment maceration",
+     "fields": [
+      {
+       "id": "step6-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step6-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "07 · 压榨 · Press",
+     "fields": [
+      {
+       "id": "step7-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step7-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "08 · 苹果酸–乳酸转化 · MLC",
+     "fields": [
+      {
+       "id": "step8-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step8-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "09 · 熟化 · Maturation",
+     "fields": [
+      {
+       "id": "step9-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step9-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "10 · 混合 · Blending",
+     "fields": [
+      {
+       "id": "step10-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step10-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "11 · 完善 · Finishing",
+     "fields": [
+      {
+       "id": "step11-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step11-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "12 · 装瓶 · Bottling",
+     "fields": [
+      {
+       "id": "step12-1",
+       "zh": "大区级 Bourgogne",
+       "en": "Bourgogne",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step12-2",
+       "zh": "特级园 Grand Cru",
+       "en": "Grand Cru",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    }
+   ],
+   "flow": "burgundy-red",
+   "unscored": true
+  },
+  {
+   "session": 5,
+   "id": "white-options",
+   "marks": null,
+   "page": 9,
+   "zh": "勃艮第：干型白葡萄酒酿造方法的选择",
+   "en": "Burgundy — dry white wine options",
+   "layout": "worksheet",
+   "hint": "这是原练习册未标分值的工艺比较表。先写原料成熟与浓度，再逐步解释筛选、接触／提取、温度容器、MLC、酒泥、橡木、混合、完善。高等级不等于所有增强工艺全做；同等级生产者也可以选择不同。",
+   "refs": [
+    {
+     "href": "#read/15/winemaking/book-15-winemaking-5",
+     "label": "对应工艺比较"
+    },
+    {
+     "href": "#read/15/hierarchy/book-15-hierarchy-1",
+     "label": "等级与地块"
+    }
+   ],
+   "rows": [
+    {
+     "title": "01 · 筛选葡萄 · Grape sorting",
+     "fields": [
+      {
+       "id": "step1-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step1-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step1-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "02 · 破碎葡萄 · Crush fruit",
+     "fields": [
+      {
+       "id": "step2-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step2-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step2-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "03 · 浸皮 · Skin contact",
+     "fields": [
+      {
+       "id": "step3-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step3-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step3-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "04 · 压榨／自流葡萄汁 · Press / free run juice",
+     "fields": [
+      {
+       "id": "step4-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step4-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step4-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "05 · 澄清 · Clarification",
+     "fields": [
+      {
+       "id": "step5-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step5-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step5-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "06 · 酒精发酵 · Alcoholic fermentation",
+     "fields": [
+      {
+       "id": "step6-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step6-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step6-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "07 · 倒罐去除粗酒泥 · Rack off gross lees",
+     "fields": [
+      {
+       "id": "step7-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step7-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step7-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "08 · 苹果酸–乳酸转化 · MLC",
+     "fields": [
+      {
+       "id": "step8-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step8-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step8-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "09 · 混合① · Blending",
+     "fields": [
+      {
+       "id": "step9-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step9-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step9-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "10 · 熟化：惰性容器／橡木／酒泥 · Maturation: inert / oak / lees",
+     "fields": [
+      {
+       "id": "step10-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step10-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step10-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    },
+    {
+     "title": "11 · 混合② · Blending",
+     "fields": [
+      {
+       "id": "step11-1",
+       "zh": "超高价位特级葡萄园级酒",
+       "en": "Super premium priced grand cru wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step11-2",
+       "zh": "一级葡萄园级或高价位村庄级酒",
+       "en": "Premier cru or high priced commune wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      },
+      {
+       "id": "step11-3",
+       "zh": "中等价位或低价位大区酒",
+       "en": "Mid-priced or inexpensive generic wine",
+       "note": "写选择、原因和对风格／成本的影响。"
+      }
+     ]
+    }
+   ],
+   "flow": "burgundy-white",
+   "unscored": true
   }
  ]
 };
@@ -376,13 +1058,13 @@ function winemakingWorkbookField(q,f){return workbookField(winemakingWorkbookKey
 function winemakingWorkbookQuestion(q,i){
  const fields=winemakingWorkbookFields(q),filled=fields.filter(f=>String(read(notesKey('workbook-'+winemakingWorkbookKey(q,f)), '')).trim()).length;
  const grid=fs=>`<div class="wm-wb-fields ${fs.length===3?'wm-wb-three':fs.length===2?'wm-wb-two':''}">${fs.map(f=>`<div>${winemakingWorkbookField(q,f)}</div>`).join('')}</div>`;
- const body=q.rows?q.rows.map(row=>`<fieldset class="wm-wb-row"><legend>${safe(row.title)} <span>${row.marks} 分 / ${row.marks} ${row.marks===1?'mark':'marks'}</span></legend>${grid(row.fields)}</fieldset>`).join(''):grid(fields);
- return `<section id="wbq-s${q.session}-${q.id}" class="quiz-card wb-question wm-wb-question" data-wm-workbook="${q.session}/${q.id}"><div class="eyebrow">QUESTION ${i+1} · ${q.marks} 分 / MARKS · 练习册 p.${winemakingWorkbookSession(q.session).page}</div><h2>${safe(q.zh)}</h2><p class="wb-english" lang="en">${safe(q.en)}</p>${q.context?`<p class="wm-wb-context">${safe(q.context)}</p>`:''}${q.marksNote?`<p class="fine">${safe(q.marksNote)}</p>`:''}<details class="wm-wb-answer"><summary><strong>展开作答</strong><span data-wm-wb-count>已填 ${filled} / ${fields.length} 栏</span></summary><div class="wm-wb-answer-body">${body}<div class="wm-wb-save"><button type="button" class="primary" data-wm-wb-save>保存本题</button><p data-wm-wb-status role="status">${filled?'已恢复当前浏览器中的作答。':'填写后自动保存，也可点击“保存本题”。'}</p></div></div></details><details class="recall"><summary>复习提示 · 自编，非机构答案</summary><p>${safe(q.hint)}</p><div class="wm-wb-refs">${q.refs.map(r=>`<a href="${r.href}">回看「${safe(r.label)}」 ↗</a>`).join('')}</div></details></section>`;
+ const body=q.rows?q.rows.map(row=>`<fieldset class="wm-wb-row"><legend>${safe(row.title)} ${row.marks!=null?`<span>${row.marks} 分 / ${row.marks} ${row.marks===1?'mark':'marks'}</span>`:''}</legend>${grid(row.fields)}</fieldset>`).join(''):grid(fields);
+ return `<section id="wbq-s${q.session}-${q.id}" class="quiz-card wb-question wm-wb-question ${q.unscored?'wm-wb-worksheet':''}" data-wm-workbook="${q.session}/${q.id}"><div class="eyebrow">${q.unscored?'PROCESS WORKSHEET · 原表未标分值':`QUESTION ${i+1} · ${q.marks} 分 / MARKS`} · 练习册 p.${q.page||winemakingWorkbookSession(q.session).page}</div><h2>${safe(q.zh)}</h2><p class="wb-english" lang="en">${safe(q.en)}</p>${q.context?`<p class="wm-wb-context">${safe(q.context)}</p>`:''}${q.image?`<figure class="wm-wb-label"><img src="${q.image}" width="${q.imageWidth}" height="${q.imageHeight}" alt="${safe(q.imageCaption)}" loading="lazy"><figcaption>${safe(q.imageCaption)}</figcaption></figure>`:''}${q.flow?regionOptionsFlow(q.flow):''}${q.marksNote?`<p class="fine">${safe(q.marksNote)}</p>`:''}<details class="wm-wb-answer"><summary><strong>展开作答</strong><span data-wm-wb-count>已填 ${filled} / ${fields.length} 栏</span></summary><div class="wm-wb-answer-body">${body}<div class="wm-wb-save"><button type="button" class="primary" data-wm-wb-save>保存本题</button><p data-wm-wb-status role="status">${filled?'已恢复当前浏览器中的作答。':'填写后自动保存，也可点击“保存本题”。'}</p></div></div></details><details class="recall"><summary>复习提示 · 自编，非机构答案</summary><p>${safe(q.hint)}</p><div class="wm-wb-refs">${q.refs.map(r=>`<a href="${r.href}">回看「${safe(r.label)}」 ↗</a>`).join('')}</div></details></section>`;
 }
 workbookView=function(which){
  const s=winemakingWorkbookSession(which);if(!s)return legacyWorkbookView(which);
  const qs=winemakingWorkbook.questions.filter(q=>q.session===s.id);
- return `<main id="main" class="wrap wb-page wm-wb-page"><div class="page-intro"><a class="back" href="#practice">← 全部课程练习</a><div class="eyebrow">WORKBOOK / SESSION ${s.id} · PAGE ${s.page}</div><h1 class="page-title">${s.label} · 练习册</h1><p>${s.title} · 原练习册第 ${s.page} 页 · ${qs.length} 道题 · 共 ${s.marks} 分</p><nav class="wb-tabs" aria-label="酿造课程练习册">${winemakingWorkbook.sessions.map(t=>`<a href="#workbook/${t.id}" ${t.id===s.id?'aria-current="page"':''}>${t.label} · 第 ${t.page} 页</a>`).join('')}</nav><div class="wm-wb-refs">${s.chapters.map(ch=>`<a href="#chapter/${ch}">回看第 ${ch} 章 →</a>`).join('')}</div></div><aside class="callout"><strong>原题作答</strong><p>按提供的照片保留中英文题干、原表分项与分值。先独立作答，再看自编提示；尚未收到机构参考答案，不自动评分。</p><small>作答自动保存在当前浏览器，不跨设备同步。每题可展开、收起及手动保存；保存失败会在该题下提示。</small></aside><nav class="wm-wb-question-nav" aria-label="本课题目">${qs.map((q,i)=>`<a href="#workbook/${s.id}/wbq-s${s.id}-${q.id}">第 ${i+1} 题 · ${q.marks} 分</a>`).join('')}</nav>${qs.map(winemakingWorkbookQuestion).join('')}</main>`;
+ return `<main id="main" class="wrap wb-page wm-wb-page"><div class="page-intro"><a class="back" href="#practice">← 全部课程练习</a><div class="eyebrow">WORKBOOK / SESSION ${s.id} · PAGE ${s.page}</div><h1 class="page-title">${s.label} · 练习册</h1><p>${s.title} · 原练习册第 ${s.page} 页 · ${qs.filter(q=>!q.unscored).length} 道题 · 共 ${s.marks} 分${s.worksheets?` · 另有${s.worksheets}张未标分值工艺表`:''}</p><nav class="wb-tabs" aria-label="酿造课程练习册">${winemakingWorkbook.sessions.map(t=>`<a href="#workbook/${t.id}" ${t.id===s.id?'aria-current="page"':''}>${t.label} · 第 ${t.page} 页</a>`).join('')}</nav><div class="wm-wb-refs">${s.chapters.map(ch=>`<a href="#chapter/${ch}">回看第 ${ch} 章 →</a>`).join('')}</div></div><aside class="callout"><strong>原题作答</strong><p>按提供的照片保留中英文题干、原表分项与分值。先独立作答，再看自编提示；尚未收到机构参考答案，不自动评分。</p><small>作答自动保存在当前浏览器，不跨设备同步。每题可展开、收起及手动保存；保存失败会在该题下提示。</small></aside><nav class="wm-wb-question-nav" aria-label="本课题目">${qs.map((q,i)=>`<a href="#workbook/${s.id}/wbq-s${s.id}-${q.id}">${q.unscored?`第${q.page}页 · 工艺表`:`第 ${i+1} 题 · ${q.marks} 分`}</a>`).join('')}</nav>${qs.map(winemakingWorkbookQuestion).join('')}</main>`;
 };
 bindWorkbook=function(){
  legacyBindWorkbook();
@@ -394,4 +1076,4 @@ bindWorkbook=function(){
   section.querySelector('[data-wm-wb-save]').addEventListener('click',()=>persist(true));
  }
 };
-function winemakingWorkbookHub(){return `<section class="wm-wb-hub"><div class="hub-section-head"><h2>第三、四课 · 原练习册</h2><span>第 5、6 页已收录</span></div><div class="practice-courses">${winemakingWorkbook.sessions.map(s=>`<article class="practice-course"><div class="eyebrow">SESSION 0${s.id} · WORKBOOK p.${s.page}</div><h3>${s.title}</h3><p>${s.label} · ${winemakingWorkbook.questions.filter(q=>q.session===s.id).length} 道原题 · ${s.marks} 分</p><p class="fine">${s.id===3?'葡萄醪调节、培养酵母、旧橡木桶与甜酒对比':'桃红工艺、新橡木桶、MLC 与霞多丽工艺'}</p><a class="primary" href="#workbook/${s.id}">打开${s.label}练习册 →</a></article>`).join('')}</div><p class="fine">原题按照片转录，复习提示为自编；与下方知识地图自查分别使用。</p></section>`;}
+function winemakingWorkbookHub(){return `<section class="wm-wb-hub"><div class="hub-section-head"><h2>第三至五课 · 原练习册</h2><span>第 5–9 页已收录</span></div><div class="practice-courses">${winemakingWorkbook.sessions.map(s=>`<article class="practice-course"><div class="eyebrow">SESSION 0${s.id} · WORKBOOK p.${s.page}</div><h3>${s.title}</h3><p>${s.label} · ${winemakingWorkbook.questions.filter(q=>q.session===s.id&&!q.unscored).length} 道原题 · ${s.marks} 分</p><p class="fine">${s.id===3?'葡萄醪调节、培养酵母、旧橡木桶与甜酒对比':s.id===4?'桃红工艺、新橡木桶、MLC 与霞多丽工艺':'园址、红酒工艺、霜冻、新酒；另有红白两张工艺比较表'}</p><a class="primary" href="#workbook/${s.id}">打开${s.label}练习册 →</a></article>`).join('')}</div><p class="fine">原题按照片转录，复习提示为自编；与下方知识地图自查分别使用。</p></section>`;}

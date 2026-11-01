@@ -3216,8 +3216,8 @@ const winemakingData={
    "textbookPart": "第二部分",
    "workbookPage": "7–9",
    "materialsReceived": true,
-   "workbookReceived": false,
-   "materialSummary": "课本、讲义与两份课堂转写已整合；练习册原题待补充。"
+   "workbookReceived": true,
+   "materialSummary": "课本、讲义与两份课堂转写已整合；练习册p.7–9可填写，四题17分及两张工艺表。"
   },
   {
    "id": 6,
@@ -3236,7 +3236,9 @@ const winemakingData={
    ],
    "textbookPart": "第二部分",
    "workbookPage": "10–11",
-   "materialsReceived": false
+   "materialsReceived": true,
+   "workbookReceived": false,
+   "materialSummary": "课本p.110–118、讲义p.91–111已整合；第六课转写／录音和原练习册p.10–11仍待提供。"
   }
  ],
  "handoutMap": [

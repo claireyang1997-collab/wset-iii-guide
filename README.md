@@ -92,3 +92,14 @@ python3 scripts/build-workbook-winemaking.py
 `content/workbook-winemaking.json` 按新收到的p.5、6两张照片转录8道中英文原题，共33分：第三课14分、第四课19分。糖分／酸度与两类甜酒的分项分值、A→B→C三栏、运抵／发酵／熟化三阶段和“红葡萄品种”提示保留。原表未分配的每栏分值不自行拆分。
 
 `scripts/build-workbook-winemaking.py` 与 `scripts/workbook-winemaking.js` 生成 `dist/workbook-winemaking.js`；版式在 `dist/workbook-winemaking.css`。`#workbook/3`、`#workbook/4` 支持22个新填写栏、自动保存、每题手动保存、恢复、收起和保存失败重试；使用独立的 `wset3-notes-workbook-s3-*`／`s4-*` 键，原第一、二课125个填写栏及批注、笔记、进度键不变。新增题目可按 `#workbook/3/wbq-s3-must` 直接定位。复习提示为自编，机构答案尚未提供，不自动评分。
+
+
+## 法国产区与第五课练习册（2026-11-01）
+
+当前已收录第4–11、13–16章，共78个阅读单元；第12章尚未提供。`content/regions-session5.json` 维护法规、勃艮第与博若莱；`content/regions-session6.json` 维护波尔多、多尔多涅与西南部，以及4张原生工艺图。分别运行 `scripts/build-regions-session5.py` 与 `scripts/build-regions-session6.py`。脚本顺序按入口文件，Session 6模块在Session 5后加载并将章节按数字排序，既有笔记、进度和作答键不变。
+
+本批37张照片逐页核对：课本p.110–118，讲义24张（p.91–111、幻灯片301–364及重复放大地图），练习册p.6–9。p.6重复合并；p.7四题17分，p.8红酒12步与p.9白酒11步为未标分值工艺比较表。第五课新增68个填写栏，全部原练习册合计215栏；`#workbook/5`支持自动／手动保存、恢复、折叠及失败重试，自编复习提示与原题分开。
+
+第13、14章新增16个单元、51张主体裁图（含练习册酒标），知识地图新增10个自查主题及2个情境，合计43个主题、9个情境。每页与每图去向在`#review/13`、`#review/14`，第五课练习册补充记录在`#review/15`。第六课课堂转写／录音、原练习册p.10–11及机构参考答案仍待提供。
+
+原图不整页公开，裁图保留可核实标注和独立图注。1855苏玳原始与现行数量、Entre-Deux-Mers的2023红酒扩展、2025 Cru Bourgeois适用年份与卡奥尔≥70%马尔贝克等均在对应段落注明版本和官方依据。

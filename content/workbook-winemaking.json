@@ -1,362 +1,1044 @@
 {
- "version": 1,
- "received": "2026-10-31",
- "sourceNote": "按用户提供练习册第5、6页照片逐题转录；未收到机构参考答案。分项分值按原表保留，总分由分项相加。",
- "sessions": [
-  {
-   "id": 3,
-   "page": 5,
-   "label": "第三课",
-   "title": "葡萄酒的酿造 1",
-   "chapters": [
-    7,
-    8
-   ],
-   "marks": 14
-  },
-  {
-   "id": 4,
-   "page": 6,
-   "label": "第四课",
-   "title": "葡萄酒的酿造 2",
-   "chapters": [
-    9,
-    10
-   ],
-   "marks": 19
-  }
- ],
- "questions": [
-  {
-   "session": 3,
-   "id": "must",
-   "marks": 3,
-   "marksNote": "糖分1分，酸度2分；分项合计3分",
-   "zh": "发酵前，酿酒师可能会调节“葡萄醪”，解释酿酒师将如何调整以下成分：",
-   "en": "Before fermentation, the winemaker may adjust the must. Explain how the winemaker may adjust the following levels of:",
-   "layout": "rows",
-   "columns": [
-    "成分 Component",
-    "解释它是如何调节的 Explain how it is adjusted"
-   ],
-   "rows": [
+  "version": 1,
+  "received": "2026-10-31",
+  "sourceNote": "按用户提供的练习册p.5–9逐题转录；p.6重复页合并并保留原作答键。第五课p.7四题共17分，p.8、9工艺比较表未标分值。未收到机构参考答案。",
+  "sessions": [
     {
-     "title": "糖分 Sugar",
-     "marks": 1,
-     "fields": [
-      {
-       "id": "sugar",
-       "zh": "解释它是如何调节的",
-       "en": "Explain how it is adjusted"
-      }
-     ]
+      "id": 3,
+      "page": 5,
+      "label": "第三课",
+      "title": "葡萄酒的酿造 1",
+      "chapters": [
+        7,
+        8
+      ],
+      "marks": 14
     },
     {
-     "title": "酸度 Acid",
-     "marks": 2,
-     "fields": [
-      {
-       "id": "acid",
-       "zh": "解释它是如何调节的",
-       "en": "Explain how it is adjusted"
-      }
-     ]
+      "id": 4,
+      "page": 6,
+      "label": "第四课",
+      "title": "葡萄酒的酿造 2",
+      "chapters": [
+        9,
+        10
+      ],
+      "marks": 19
+    },
+    {
+      "id": 5,
+      "page": "7–9",
+      "label": "第五课",
+      "title": "勃艮第和博若莱",
+      "chapters": [
+        11,
+        15,
+        16
+      ],
+      "marks": 17,
+      "worksheets": 2
     }
-   ],
-   "hint": "先区分糖分和酸度。糖分调节怎样影响潜在酒精度？酸度调节需要分别考虑增加与降低。题目限定在发酵前，不要把成酒增甜混入同一答案。",
-   "refs": [
+  ],
+  "questions": [
     {
-     "href": "#read/7/adjustments/book-7-adjustments-1",
-     "label": "糖分与潜在酒精度"
+      "session": 3,
+      "id": "must",
+      "marks": 3,
+      "marksNote": "糖分1分，酸度2分；分项合计3分",
+      "zh": "发酵前，酿酒师可能会调节“葡萄醪”，解释酿酒师将如何调整以下成分：",
+      "en": "Before fermentation, the winemaker may adjust the must. Explain how the winemaker may adjust the following levels of:",
+      "layout": "rows",
+      "columns": [
+        "成分 Component",
+        "解释它是如何调节的 Explain how it is adjusted"
+      ],
+      "rows": [
+        {
+          "title": "糖分 Sugar",
+          "marks": 1,
+          "fields": [
+            {
+              "id": "sugar",
+              "zh": "解释它是如何调节的",
+              "en": "Explain how it is adjusted"
+            }
+          ]
+        },
+        {
+          "title": "酸度 Acid",
+          "marks": 2,
+          "fields": [
+            {
+              "id": "acid",
+              "zh": "解释它是如何调节的",
+              "en": "Explain how it is adjusted"
+            }
+          ]
+        }
+      ],
+      "hint": "先区分糖分和酸度。糖分调节怎样影响潜在酒精度？酸度调节需要分别考虑增加与降低。题目限定在发酵前，不要把成酒增甜混入同一答案。",
+      "refs": [
+        {
+          "href": "#read/7/adjustments/book-7-adjustments-1",
+          "label": "糖分与潜在酒精度"
+        },
+        {
+          "href": "#read/7/adjustments/book-7-adjustments-2",
+          "label": "增酸与降酸"
+        }
+      ]
     },
     {
-     "href": "#read/7/adjustments/book-7-adjustments-2",
-     "label": "增酸与降酸"
+      "session": 3,
+      "id": "cultivated-yeast",
+      "marks": 3,
+      "zh": "解释使用培养酵母的优势和劣势。",
+      "en": "Explain the advantages and disadvantages of using cultivated yeast.",
+      "layout": "chain",
+      "fields": [
+        {
+          "id": "a",
+          "zh": "因为有 A",
+          "en": "Because of A:",
+          "note": "使用培养酵母 using cultivated yeast"
+        },
+        {
+          "id": "b",
+          "zh": "所以有 B 的影响",
+          "en": "Thus there is B:"
+        },
+        {
+          "id": "c",
+          "zh": "于是 C 的效果",
+          "en": "So it results in C:",
+          "note": "优势或劣势 advantages or disadvantages"
+        }
+      ],
+      "hint": "按A→B→C写清培养酵母的特点、对发酵控制或风味的影响，再说明在哪种目标下属于优势或劣势。原题共3分，不另行给三栏分配分值。",
+      "refs": [
+        {
+          "href": "#read/7/fermentation/book-7-fermentation-2",
+          "label": "野生／环境酵母与培养酵母"
+        }
+      ]
+    },
+    {
+      "session": 3,
+      "id": "old-oak",
+      "marks": 2,
+      "zh": "解释为什么酿酒师在生产一款葡萄酒时会只使用旧橡木桶。",
+      "en": "Explain why a producer may use only old oak and not new oak in the production of a wine.",
+      "layout": "text",
+      "fields": [
+        {
+          "id": "answer",
+          "zh": "我的作答",
+          "en": "My answer"
+        }
+      ],
+      "hint": "分别检查木材风味和缓慢氧气接触。为什么生产者可能需要熟化的作用，却不希望明显的新橡木风味掩盖果味？",
+      "refs": [
+        {
+          "href": "#read/7/containers/book-7-containers-2",
+          "label": "TOAST：新旧与其他橡木选择"
+        },
+        {
+          "href": "#read/7/oxygen/book-7-oxygen-3",
+          "label": "陈年中的氧气接触"
+        }
+      ]
+    },
+    {
+      "session": 3,
+      "id": "sweet-comparison",
+      "marks": 6,
+      "marksNote": "贵腐甜酒3分，加强甜酒3分；分项合计6分",
+      "zh": "对比贵腐甜酒和加强甜酒的生产过程，并解释生产如何影响葡萄酒的最终风格。",
+      "en": "Compare the production of a sweet botrytis wine with that of a fortified sweet wine and explain how the production influences the resulting style of wine.",
+      "layout": "rows",
+      "columns": [
+        "葡萄酒 Wine",
+        "对比生产过程 Compare how they are made",
+        "如何影响最终风格 How it influences the resulting style"
+      ],
+      "rows": [
+        {
+          "title": "贵腐甜酒 Botrytised sweet wine",
+          "marks": 3,
+          "fields": [
+            {
+              "id": "botrytis-made",
+              "zh": "对比生产过程",
+              "en": "Compare how they are made"
+            },
+            {
+              "id": "botrytis-style",
+              "zh": "如何影响最终风格",
+              "en": "How it influences the resulting style"
+            }
+          ]
+        },
+        {
+          "title": "加强甜酒 Fortified sweet wine",
+          "marks": 3,
+          "fields": [
+            {
+              "id": "fortified-made",
+              "zh": "对比生产过程",
+              "en": "Compare how they are made"
+            },
+            {
+              "id": "fortified-style",
+              "zh": "如何影响最终风格",
+              "en": "How it influences the resulting style"
+            }
+          ]
+        }
+      ],
+      "hint": "每种酒都写“生产过程→糖怎样留下→酒精与风味的结果”。贵腐的原料浓缩与加强中断发酵不是同一机制；原题分别给每种酒3分，不是每个填写栏3分。",
+      "refs": [
+        {
+          "href": "#read/8/concentration/book-8-concentration-1",
+          "label": "贵腐与失水浓缩"
+        },
+        {
+          "href": "#read/8/concentration/book-8-concentration-5",
+          "label": "高糖不等于高酒精"
+        },
+        {
+          "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
+          "label": "冷却、过滤与加强的区别"
+        }
+      ]
+    },
+    {
+      "session": 4,
+      "id": "early-rose",
+      "marks": 6,
+      "zh": "如果想要酿造一款颜色淡、酒体轻，带有浓郁的甜美糖果的一类香气以及中等甜度适合尽早饮用的桃红葡萄酒，酿酒师有哪些酿酒选择？",
+      "en": "What winemaking techniques and steps would you choose to make a pale coloured light-bodied rosé with lots of sweet candy primary flavours and medium sweetness level suitable for early drinking?",
+      "context": "红葡萄品种 RED GRAPES",
+      "layout": "stages",
+      "fields": [
+        {
+          "id": "reception",
+          "zh": "葡萄运抵选择",
+          "en": "Reception choices"
+        },
+        {
+          "id": "fermentation",
+          "zh": "发酵选择（容器，温度，酵母）",
+          "en": "Fermentation choices (vessel, temperature, yeast)"
+        },
+        {
+          "id": "maturation",
+          "zh": "熟化选择（MLC，熟化时间+容器）",
+          "en": "Maturation choices (MLC, time + vessel)"
+        }
+      ],
+      "hint": "把目标拆为颜色、酒体、一类香气、甜度和饮用时间，再逐项连接到三个阶段的工艺。别遗漏怎样保留中等甜度，以及装瓶后避免再发酵所需的处理。",
+      "refs": [
+        {
+          "href": "#read/9/rose/book-9-rose-1",
+          "label": "桃红葡萄酒的三条路径"
+        },
+        {
+          "href": "#read/7/fermentation/book-7-fermentation-3",
+          "label": "温度与香气"
+        },
+        {
+          "href": "#read/7/fermentation/book-7-fermentation-2",
+          "label": "培养酵母与风味选择"
+        },
+        {
+          "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
+          "label": "中断发酵及后续稳定"
+        }
+      ]
+    },
+    {
+      "session": 4,
+      "id": "new-oak",
+      "marks": 3,
+      "zh": "解释为什么酿酒师会选择新的橡木桶来熟化一款高单宁、味道浓郁的红葡萄酒。",
+      "en": "Explain why a winemaker would choose new oak to mature a high tannin, richly flavoured red wine.",
+      "layout": "chain",
+      "fields": [
+        {
+          "id": "a",
+          "zh": "因为有 A",
+          "en": "Because of A:"
+        },
+        {
+          "id": "b",
+          "zh": "所以有 B 的影响",
+          "en": "Thus there is B:"
+        },
+        {
+          "id": "c",
+          "zh": "于是 C 的效果",
+          "en": "So it results in C:",
+          "note": "选择用新橡木桶来熟化 choose new oak to mature this wine"
+        }
+      ],
+      "hint": "先从高单宁与浓郁果味出发，分别解释缓慢氧气接触、橡木赋味以及匹配原酒强度的关系。不要只写“新桶更好”或把全部熟化作用都归因于桶味。",
+      "refs": [
+        {
+          "href": "#read/9/red-maturation/book-9-red-maturation-2",
+          "label": "橡木与风味强度匹配"
+        },
+        {
+          "href": "#read/7/oxygen/book-7-oxygen-3",
+          "label": "氧气与单宁的变化"
+        }
+      ]
+    },
+    {
+      "session": 4,
+      "id": "white-mlc",
+      "marks": 4,
+      "zh": "解释在白葡萄酒的酿造中使用苹果酸-乳酸转化（MLC）的优点和缺点。",
+      "en": "Explain the advantages and disadvantages of using MLC in the making of a white wine.",
+      "layout": "chain",
+      "fields": [
+        {
+          "id": "a",
+          "zh": "因为有 A",
+          "en": "Because of A:",
+          "note": "在白葡萄酒的酿造中使用苹果酸-乳酸转化 using MLC in the making of a white wine"
+        },
+        {
+          "id": "b",
+          "zh": "所以有 B 的影响",
+          "en": "Thus there is B:"
+        },
+        {
+          "id": "c",
+          "zh": "于是 C 的效果",
+          "en": "So it results in C:",
+          "note": "优势或劣势 advantages or disadvantages"
+        }
+      ],
+      "hint": "先说明酸的转化，再连接酸感、风味和稳定性。相同变化是否有利，须结合原酒酸度、品种香气和目标风格；本题要求同时写优点与缺点。",
+      "refs": [
+        {
+          "href": "#read/7/fermentation/book-7-fermentation-5",
+          "label": "苹果酸—乳酸转化"
+        },
+        {
+          "href": "#read/8/white-process/book-8-white-process-4",
+          "label": "白葡萄酒的发酵后选择"
+        }
+      ]
+    },
+    {
+      "session": 4,
+      "id": "quality-chardonnay",
+      "marks": 6,
+      "zh": "如果想要酿造一款充满香草和咸鲜味、口感饱满复杂且清爽的高质量霞多丽，酿酒师有哪些酿酒选择？",
+      "en": "What winemaking techniques and steps would you choose to make a high-quality Chardonnay with vanilla and savoury notes and a rich, complex and refreshing mouthfeel?",
+      "layout": "stages",
+      "fields": [
+        {
+          "id": "reception",
+          "zh": "葡萄运抵选择",
+          "en": "Reception choices"
+        },
+        {
+          "id": "fermentation",
+          "zh": "发酵选择（容器，温度）",
+          "en": "Fermentation choices (vessel, temperature)"
+        },
+        {
+          "id": "maturation",
+          "zh": "熟化选择（MLC，熟化时间+容器）",
+          "en": "Maturation choices (MLC, maturation time + vessel)"
+        }
+      ],
+      "hint": "逐项对应香草、咸鲜、饱满、复杂与清爽。解释原料、橡木、细酒泥／搅桶和MLC的选择怎样组合；增加饱满度的同时，仍须说明如何保留清新酸度。",
+      "refs": [
+        {
+          "href": "#read/8/nonaromatic/book-8-nonaromatic-1",
+          "label": "霞多丽的原料与成熟度"
+        },
+        {
+          "href": "#read/8/nonaromatic/book-8-nonaromatic-3",
+          "label": "酿造选择与口感"
+        },
+        {
+          "href": "#read/8/nonaromatic/book-8-nonaromatic-4",
+          "label": "细酒泥与搅桶"
+        }
+      ]
+    },
+    {
+      "session": 5,
+      "id": "grand-cru-site",
+      "marks": 3,
+      "page": 7,
+      "zh": "勃艮第特级葡萄园（Grand Cru）能够产出非常高质量的葡萄酒与其独特的地形有关。请解释特级葡萄园所在的位置为什么对葡萄的生长和成熟有利？",
+      "en": "Grand Cru vineyards can provide the grapes for high-quality wines due to their location. Explain why these Grand Cru sites are beneficial for grape growing and ripening in Burgundy.",
+      "layout": "chain",
+      "hint": "先给园址条件，再写受光、温度、排水与冷空气下沉的作用，最后明确“有助健康成熟与优质原料”。不能把Grand Cru标签本身当因。",
+      "refs": [
+        {
+          "href": "#read/15/cote-or/book-15-cote-or-1",
+          "label": "金丘坡位"
+        },
+        {
+          "href": "#read/15/growing/book-15-growing-1",
+          "label": "气候与栽培"
+        }
+      ],
+      "fields": [
+        {
+          "id": "a",
+          "zh": "因为有A：园址条件",
+          "en": "Because of A"
+        },
+        {
+          "id": "b",
+          "zh": "所以有B的影响：作用机制",
+          "en": "Thus there is B"
+        },
+        {
+          "id": "c",
+          "zh": "于是C的效果：有利生长与成熟",
+          "en": "So it results in C",
+          "note": "特级园的地理位置对葡萄的生长和成熟有利。These Grand Cru sites are beneficial for grape growing and ripening."
+        }
+      ]
+    },
+    {
+      "session": 5,
+      "id": "bourgogne-rouge",
+      "marks": 6,
+      "page": 7,
+      "zh": "描述并解释上面的这款葡萄酒可能使用的发酵（以及萃取）、熟化和混合方式。",
+      "en": "Describe and explain how this wine is fermented, matured and blended.",
+      "layout": "rows",
+      "hint": "酒标明确为Bourgogne Rouge。围绕大区红酒可能的果味、早饮与成本目标，把每种工艺和原因配对；混合可来自不同地块／批次，不能只答不同品种，也不要凭酒标猜生产者未给出的确切做法。",
+      "refs": [
+        {
+          "href": "#read/15/winemaking/book-15-winemaking-2",
+          "label": "红勃艮第酿造"
+        },
+        {
+          "href": "#read/15/hierarchy/book-15-hierarchy-1",
+          "label": "大区等级"
+        }
+      ],
+      "context": "原题配Bourgogne Rouge酒标；下图保留原标签主体。",
+      "image": "assets/s6-bourgogne-workbook-label.webp",
+      "imageCaption": "原练习册p.7酒标：Bourgogne Rouge。原题问“可能”的方式，未提供该瓶具体技术表。",
+      "rows": [
+        {
+          "title": "发酵以及萃取方式 · Fermentation including extraction",
+          "fields": [
+            {
+              "id": "ferment-description",
+              "zh": "描述",
+              "en": "Description"
+            },
+            {
+              "id": "ferment-reason",
+              "zh": "原因",
+              "en": "Reasons for the choice"
+            }
+          ]
+        },
+        {
+          "title": "熟化方式 · Maturation",
+          "fields": [
+            {
+              "id": "maturation-description",
+              "zh": "描述",
+              "en": "Description"
+            },
+            {
+              "id": "maturation-reason",
+              "zh": "原因",
+              "en": "Reasons for the choice"
+            }
+          ]
+        },
+        {
+          "title": "混合方式 · Blending",
+          "fields": [
+            {
+              "id": "blending-description",
+              "zh": "描述",
+              "en": "Description"
+            },
+            {
+              "id": "blending-reason",
+              "zh": "原因",
+              "en": "Reasons for the choice"
+            }
+          ]
+        }
+      ],
+      "imageWidth": 613,
+      "imageHeight": 441
+    },
+    {
+      "session": 5,
+      "id": "spring-frost",
+      "marks": 4,
+      "page": 7,
+      "zh": "勃艮第具有凉爽到温和的大陆性气候，在生长季经常会遇到春季霜冻的威胁。请解释春季的霜冻会对葡萄生长产生什么影响？请列举2个可以减少上述天气灾害对葡萄生长的影响的措施。",
+      "en": "Burgundy has a cool to moderate continental climate which may experience spring frost. Please explain the adverse impacts that spring frosts can have on grape growing. Please list 2 methods that can be taken to minimize the adverse effects of spring frost.",
+      "layout": "text",
+      "hint": "先解释萌芽后幼嫩组织受冻与产量损失，再列两种合适方法并说明适用前提。加热、风机、喷水等机制不同；风机需要辐射霜冻逆温条件，喷水需持续正确操作。",
+      "refs": [
+        {
+          "href": "#read/15/growing/book-15-growing-2",
+          "label": "勃艮第霜冻"
+        },
+        {
+          "href": "#read/5/heat/book-5-heat-5",
+          "label": "霜冻机制与管理"
+        }
+      ],
+      "fields": [
+        {
+          "id": "answer",
+          "zh": "影响及两种减轻措施",
+          "en": "Impacts and two mitigation methods"
+        }
+      ]
+    },
+    {
+      "session": 5,
+      "id": "nouveau-method",
+      "marks": 4,
+      "page": 7,
+      "zh": "酿造博若莱新酒需要使用一种特殊的酿造工艺，描述这种酿造工艺并解释该工艺如何影响葡萄酒最终的风格？",
+      "en": "Beaujolais Nouveau is made through a particular winemaking technique. Describe how this winemaking technique works and explain how it influences the style of the final wine.",
+      "layout": "text",
+      "hint": "说明整串完整果、缺氧条件、果粒内变化，再说明破裂或压榨后酵母完成发酵；二氧化碳与半二氧化碳的气体来源分开。结论应连到低单宁、浓郁鲜果／糖果联想及适合早饮，不能漏后续酒精发酵。",
+      "refs": [
+        {
+          "href": "#read/16/whole-bunch/book-16-whole-bunch-1",
+          "label": "完整果与工艺原理"
+        },
+        {
+          "href": "#read/16/nouveau/book-16-nouveau-1",
+          "label": "新酒风格与饮用"
+        }
+      ],
+      "fields": [
+        {
+          "id": "answer",
+          "zh": "工艺与最终风格",
+          "en": "Technique and resulting style"
+        }
+      ]
+    },
+    {
+      "session": 5,
+      "id": "red-options",
+      "marks": null,
+      "page": 8,
+      "zh": "科多尔红葡萄酒：不同等级的酿造选择",
+      "en": "Côte d’Or Red Wine — Winemaking: how do these levels differ?",
+      "layout": "worksheet",
+      "hint": "这是原练习册未标分值的工艺比较表。先写原料成熟与浓度，再逐步解释筛选、接触／提取、温度容器、MLC、酒泥、橡木、混合、完善。高等级不等于所有增强工艺全做；同等级生产者也可以选择不同。",
+      "refs": [
+        {
+          "href": "#read/15/winemaking/book-15-winemaking-4",
+          "label": "对应工艺比较"
+        },
+        {
+          "href": "#read/15/hierarchy/book-15-hierarchy-1",
+          "label": "等级与地块"
+        }
+      ],
+      "rows": [
+        {
+          "title": "01 · 采收选择 · Harvest choices",
+          "fields": [
+            {
+              "id": "step1-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step1-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "02 · 筛选 · Sorting",
+          "fields": [
+            {
+              "id": "step2-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step2-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "03 · 去梗破碎 · De-stem / crush",
+          "fields": [
+            {
+              "id": "step3-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step3-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "04 · 发酵前浸渍 · Pre-fermentation maceration",
+          "fields": [
+            {
+              "id": "step4-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step4-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "05 · 发酵 · Fermentation",
+          "fields": [
+            {
+              "id": "step5-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step5-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "06 · 发酵后浸渍 · Post-ferment maceration",
+          "fields": [
+            {
+              "id": "step6-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step6-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "07 · 压榨 · Press",
+          "fields": [
+            {
+              "id": "step7-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step7-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "08 · 苹果酸–乳酸转化 · MLC",
+          "fields": [
+            {
+              "id": "step8-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step8-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "09 · 熟化 · Maturation",
+          "fields": [
+            {
+              "id": "step9-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step9-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "10 · 混合 · Blending",
+          "fields": [
+            {
+              "id": "step10-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step10-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "11 · 完善 · Finishing",
+          "fields": [
+            {
+              "id": "step11-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step11-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "12 · 装瓶 · Bottling",
+          "fields": [
+            {
+              "id": "step12-1",
+              "zh": "大区级 Bourgogne",
+              "en": "Bourgogne",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step12-2",
+              "zh": "特级园 Grand Cru",
+              "en": "Grand Cru",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        }
+      ],
+      "flow": "burgundy-red",
+      "unscored": true
+    },
+    {
+      "session": 5,
+      "id": "white-options",
+      "marks": null,
+      "page": 9,
+      "zh": "勃艮第：干型白葡萄酒酿造方法的选择",
+      "en": "Burgundy — dry white wine options",
+      "layout": "worksheet",
+      "hint": "这是原练习册未标分值的工艺比较表。先写原料成熟与浓度，再逐步解释筛选、接触／提取、温度容器、MLC、酒泥、橡木、混合、完善。高等级不等于所有增强工艺全做；同等级生产者也可以选择不同。",
+      "refs": [
+        {
+          "href": "#read/15/winemaking/book-15-winemaking-5",
+          "label": "对应工艺比较"
+        },
+        {
+          "href": "#read/15/hierarchy/book-15-hierarchy-1",
+          "label": "等级与地块"
+        }
+      ],
+      "rows": [
+        {
+          "title": "01 · 筛选葡萄 · Grape sorting",
+          "fields": [
+            {
+              "id": "step1-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step1-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step1-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "02 · 破碎葡萄 · Crush fruit",
+          "fields": [
+            {
+              "id": "step2-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step2-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step2-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "03 · 浸皮 · Skin contact",
+          "fields": [
+            {
+              "id": "step3-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step3-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step3-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "04 · 压榨／自流葡萄汁 · Press / free run juice",
+          "fields": [
+            {
+              "id": "step4-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step4-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step4-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "05 · 澄清 · Clarification",
+          "fields": [
+            {
+              "id": "step5-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step5-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step5-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "06 · 酒精发酵 · Alcoholic fermentation",
+          "fields": [
+            {
+              "id": "step6-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step6-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step6-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "07 · 倒罐去除粗酒泥 · Rack off gross lees",
+          "fields": [
+            {
+              "id": "step7-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step7-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step7-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "08 · 苹果酸–乳酸转化 · MLC",
+          "fields": [
+            {
+              "id": "step8-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step8-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step8-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "09 · 混合① · Blending",
+          "fields": [
+            {
+              "id": "step9-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step9-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step9-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "10 · 熟化：惰性容器／橡木／酒泥 · Maturation: inert / oak / lees",
+          "fields": [
+            {
+              "id": "step10-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step10-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step10-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        },
+        {
+          "title": "11 · 混合② · Blending",
+          "fields": [
+            {
+              "id": "step11-1",
+              "zh": "超高价位特级葡萄园级酒",
+              "en": "Super premium priced grand cru wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step11-2",
+              "zh": "一级葡萄园级或高价位村庄级酒",
+              "en": "Premier cru or high priced commune wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            },
+            {
+              "id": "step11-3",
+              "zh": "中等价位或低价位大区酒",
+              "en": "Mid-priced or inexpensive generic wine",
+              "note": "写选择、原因和对风格／成本的影响。"
+            }
+          ]
+        }
+      ],
+      "flow": "burgundy-white",
+      "unscored": true
     }
-   ]
-  },
-  {
-   "session": 3,
-   "id": "cultivated-yeast",
-   "marks": 3,
-   "zh": "解释使用培养酵母的优势和劣势。",
-   "en": "Explain the advantages and disadvantages of using cultivated yeast.",
-   "layout": "chain",
-   "fields": [
-    {
-     "id": "a",
-     "zh": "因为有 A",
-     "en": "Because of A:",
-     "note": "使用培养酵母 using cultivated yeast"
-    },
-    {
-     "id": "b",
-     "zh": "所以有 B 的影响",
-     "en": "Thus there is B:"
-    },
-    {
-     "id": "c",
-     "zh": "于是 C 的效果",
-     "en": "So it results in C:",
-     "note": "优势或劣势 advantages or disadvantages"
-    }
-   ],
-   "hint": "按A→B→C写清培养酵母的特点、对发酵控制或风味的影响，再说明在哪种目标下属于优势或劣势。原题共3分，不另行给三栏分配分值。",
-   "refs": [
-    {
-     "href": "#read/7/fermentation/book-7-fermentation-2",
-     "label": "野生／环境酵母与培养酵母"
-    }
-   ]
-  },
-  {
-   "session": 3,
-   "id": "old-oak",
-   "marks": 2,
-   "zh": "解释为什么酿酒师在生产一款葡萄酒时会只使用旧橡木桶。",
-   "en": "Explain why a producer may use only old oak and not new oak in the production of a wine.",
-   "layout": "text",
-   "fields": [
-    {
-     "id": "answer",
-     "zh": "我的作答",
-     "en": "My answer"
-    }
-   ],
-   "hint": "分别检查木材风味和缓慢氧气接触。为什么生产者可能需要熟化的作用，却不希望明显的新橡木风味掩盖果味？",
-   "refs": [
-    {
-     "href": "#read/7/containers/book-7-containers-2",
-     "label": "TOAST：新旧与其他橡木选择"
-    },
-    {
-     "href": "#read/7/oxygen/book-7-oxygen-3",
-     "label": "陈年中的氧气接触"
-    }
-   ]
-  },
-  {
-   "session": 3,
-   "id": "sweet-comparison",
-   "marks": 6,
-   "marksNote": "贵腐甜酒3分，加强甜酒3分；分项合计6分",
-   "zh": "对比贵腐甜酒和加强甜酒的生产过程，并解释生产如何影响葡萄酒的最终风格。",
-   "en": "Compare the production of a sweet botrytis wine with that of a fortified sweet wine and explain how the production influences the resulting style of wine.",
-   "layout": "rows",
-   "columns": [
-    "葡萄酒 Wine",
-    "对比生产过程 Compare how they are made",
-    "如何影响最终风格 How it influences the resulting style"
-   ],
-   "rows": [
-    {
-     "title": "贵腐甜酒 Botrytised sweet wine",
-     "marks": 3,
-     "fields": [
-      {
-       "id": "botrytis-made",
-       "zh": "对比生产过程",
-       "en": "Compare how they are made"
-      },
-      {
-       "id": "botrytis-style",
-       "zh": "如何影响最终风格",
-       "en": "How it influences the resulting style"
-      }
-     ]
-    },
-    {
-     "title": "加强甜酒 Fortified sweet wine",
-     "marks": 3,
-     "fields": [
-      {
-       "id": "fortified-made",
-       "zh": "对比生产过程",
-       "en": "Compare how they are made"
-      },
-      {
-       "id": "fortified-style",
-       "zh": "如何影响最终风格",
-       "en": "How it influences the resulting style"
-      }
-     ]
-    }
-   ],
-   "hint": "每种酒都写“生产过程→糖怎样留下→酒精与风味的结果”。贵腐的原料浓缩与加强中断发酵不是同一机制；原题分别给每种酒3分，不是每个填写栏3分。",
-   "refs": [
-    {
-     "href": "#read/8/concentration/book-8-concentration-1",
-     "label": "贵腐与失水浓缩"
-    },
-    {
-     "href": "#read/8/concentration/book-8-concentration-5",
-     "label": "高糖不等于高酒精"
-    },
-    {
-     "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
-     "label": "冷却、过滤与加强的区别"
-    }
-   ]
-  },
-  {
-   "session": 4,
-   "id": "early-rose",
-   "marks": 6,
-   "zh": "如果想要酿造一款颜色淡、酒体轻，带有浓郁的甜美糖果的一类香气以及中等甜度适合尽早饮用的桃红葡萄酒，酿酒师有哪些酿酒选择？",
-   "en": "What winemaking techniques and steps would you choose to make a pale coloured light-bodied rosé with lots of sweet candy primary flavours and medium sweetness level suitable for early drinking?",
-   "context": "红葡萄品种 RED GRAPES",
-   "layout": "stages",
-   "fields": [
-    {
-     "id": "reception",
-     "zh": "葡萄运抵选择",
-     "en": "Reception choices"
-    },
-    {
-     "id": "fermentation",
-     "zh": "发酵选择（容器，温度，酵母）",
-     "en": "Fermentation choices (vessel, temperature, yeast)"
-    },
-    {
-     "id": "maturation",
-     "zh": "熟化选择（MLC，熟化时间+容器）",
-     "en": "Maturation choices (MLC, time + vessel)"
-    }
-   ],
-   "hint": "把目标拆为颜色、酒体、一类香气、甜度和饮用时间，再逐项连接到三个阶段的工艺。别遗漏怎样保留中等甜度，以及装瓶后避免再发酵所需的处理。",
-   "refs": [
-    {
-     "href": "#read/9/rose/book-9-rose-1",
-     "label": "桃红葡萄酒的三条路径"
-    },
-    {
-     "href": "#read/7/fermentation/book-7-fermentation-3",
-     "label": "温度与香气"
-    },
-    {
-     "href": "#read/7/fermentation/book-7-fermentation-2",
-     "label": "培养酵母与风味选择"
-    },
-    {
-     "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
-     "label": "中断发酵及后续稳定"
-    }
-   ]
-  },
-  {
-   "session": 4,
-   "id": "new-oak",
-   "marks": 3,
-   "zh": "解释为什么酿酒师会选择新的橡木桶来熟化一款高单宁、味道浓郁的红葡萄酒。",
-   "en": "Explain why a winemaker would choose new oak to mature a high tannin, richly flavoured red wine.",
-   "layout": "chain",
-   "fields": [
-    {
-     "id": "a",
-     "zh": "因为有 A",
-     "en": "Because of A:"
-    },
-    {
-     "id": "b",
-     "zh": "所以有 B 的影响",
-     "en": "Thus there is B:"
-    },
-    {
-     "id": "c",
-     "zh": "于是 C 的效果",
-     "en": "So it results in C:",
-     "note": "选择用新橡木桶来熟化 choose new oak to mature this wine"
-    }
-   ],
-   "hint": "先从高单宁与浓郁果味出发，分别解释缓慢氧气接触、橡木赋味以及匹配原酒强度的关系。不要只写“新桶更好”或把全部熟化作用都归因于桶味。",
-   "refs": [
-    {
-     "href": "#read/9/red-maturation/book-9-red-maturation-2",
-     "label": "橡木与风味强度匹配"
-    },
-    {
-     "href": "#read/7/oxygen/book-7-oxygen-3",
-     "label": "氧气与单宁的变化"
-    }
-   ]
-  },
-  {
-   "session": 4,
-   "id": "white-mlc",
-   "marks": 4,
-   "zh": "解释在白葡萄酒的酿造中使用苹果酸-乳酸转化（MLC）的优点和缺点。",
-   "en": "Explain the advantages and disadvantages of using MLC in the making of a white wine.",
-   "layout": "chain",
-   "fields": [
-    {
-     "id": "a",
-     "zh": "因为有 A",
-     "en": "Because of A:",
-     "note": "在白葡萄酒的酿造中使用苹果酸-乳酸转化 using MLC in the making of a white wine"
-    },
-    {
-     "id": "b",
-     "zh": "所以有 B 的影响",
-     "en": "Thus there is B:"
-    },
-    {
-     "id": "c",
-     "zh": "于是 C 的效果",
-     "en": "So it results in C:",
-     "note": "优势或劣势 advantages or disadvantages"
-    }
-   ],
-   "hint": "先说明酸的转化，再连接酸感、风味和稳定性。相同变化是否有利，须结合原酒酸度、品种香气和目标风格；本题要求同时写优点与缺点。",
-   "refs": [
-    {
-     "href": "#read/7/fermentation/book-7-fermentation-5",
-     "label": "苹果酸—乳酸转化"
-    },
-    {
-     "href": "#read/8/white-process/book-8-white-process-4",
-     "label": "白葡萄酒的发酵后选择"
-    }
-   ]
-  },
-  {
-   "session": 4,
-   "id": "quality-chardonnay",
-   "marks": 6,
-   "zh": "如果想要酿造一款充满香草和咸鲜味、口感饱满复杂且清爽的高质量霞多丽，酿酒师有哪些酿酒选择？",
-   "en": "What winemaking techniques and steps would you choose to make a high-quality Chardonnay with vanilla and savoury notes and a rich, complex and refreshing mouthfeel?",
-   "layout": "stages",
-   "fields": [
-    {
-     "id": "reception",
-     "zh": "葡萄运抵选择",
-     "en": "Reception choices"
-    },
-    {
-     "id": "fermentation",
-     "zh": "发酵选择（容器，温度）",
-     "en": "Fermentation choices (vessel, temperature)"
-    },
-    {
-     "id": "maturation",
-     "zh": "熟化选择（MLC，熟化时间+容器）",
-     "en": "Maturation choices (MLC, maturation time + vessel)"
-    }
-   ],
-   "hint": "逐项对应香草、咸鲜、饱满、复杂与清爽。解释原料、橡木、细酒泥／搅桶和MLC的选择怎样组合；增加饱满度的同时，仍须说明如何保留清新酸度。",
-   "refs": [
-    {
-     "href": "#read/8/nonaromatic/book-8-nonaromatic-1",
-     "label": "霞多丽的原料与成熟度"
-    },
-    {
-     "href": "#read/8/nonaromatic/book-8-nonaromatic-3",
-     "label": "酿造选择与口感"
-    },
-    {
-     "href": "#read/8/nonaromatic/book-8-nonaromatic-4",
-     "label": "细酒泥与搅桶"
-    }
-   ]
-  }
- ]
+  ]
 }
