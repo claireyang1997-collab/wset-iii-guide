@@ -19,6 +19,13 @@
 #s5fig-chauvet-photo{--s5-compact-width:280px}
 #s5fig-nouveau-label{--s5-compact-width:300px}
 .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;max-width:664px}
+@media(min-width:601px){
+ .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){align-items:stretch}
+ .s5-figure:is(#s5fig-gamay-training,#s5fig-gamay-bush){max-width:none;display:flex;flex-direction:column}
+ #s5fig-gamay-training .s5-figure-heading,#s5fig-gamay-bush .s5-figure-heading{min-height:48px;align-items:flex-start}
+ #s5fig-gamay-training .s5-image-link,#s5fig-gamay-bush .s5-image-link{aspect-ratio:4/5;flex:none}
+ #s5fig-gamay-training img,#s5fig-gamay-bush img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+}
 .s5-conclusion{padding:18px 22px;border-left:3px solid #8c9b73;background:#f0f1e6;color:#394537;line-height:1.9}
 .s5-conclusion strong{display:block;margin-bottom:5px;font-size:13px;letter-spacing:.06em;color:#697758}
 .s5-references{font-size:12px!important;color:#6e7464;line-height:1.8}
