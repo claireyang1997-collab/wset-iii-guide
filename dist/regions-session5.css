@@ -12,6 +12,8 @@
 /* Small supporting photographs and labels should not fill the reading column. */
 .s5-figure:is(#s5fig-gamay-photo,#s5fig-gamay-training,#s5fig-gamay-bush,#s5fig-chauvet-photo,#s5fig-nouveau-label){width:100%;max-width:var(--s5-compact-width);justify-self:start}
 #s5fig-gamay-photo{--s5-compact-width:320px}
+#s5fig-beaujolais-map{width:100%;max-width:416px;justify-self:start}
+.s5-figures:has(>#s5fig-gamay-photo):has(>#s5fig-beaujolais-map){grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);align-items:start;max-width:760px}
 #s5fig-gamay-training{--s5-compact-width:360px}
 #s5fig-gamay-bush{--s5-compact-width:280px}
 #s5fig-chauvet-photo{--s5-compact-width:280px}
@@ -27,5 +29,6 @@
  #s5fig-gamay-training{--s5-compact-width:300px}
  #s5fig-chauvet-photo{--s5-compact-width:240px}
  #s5fig-nouveau-label{--s5-compact-width:280px}
+ .s5-figures:has(>#s5fig-gamay-photo):has(>#s5fig-beaujolais-map){grid-template-columns:1fr}
  .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){grid-template-columns:1fr}
 }
