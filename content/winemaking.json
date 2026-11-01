@@ -3214,7 +3214,9 @@
    ],
    "textbookPart": "第二部分",
    "workbookPage": "7–9",
-   "materialsReceived": false
+   "materialsReceived": true,
+   "workbookReceived": false,
+   "materialSummary": "课本、讲义与两份课堂转写已整合；练习册原题待补充。"
   },
   {
    "id": 6,
