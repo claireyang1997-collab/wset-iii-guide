@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="790" viewBox="0 0 1280 790" role="img" aria-labelledby="title desc">
+<title id="title">法国 AOP 的总面积 · 讲义列示数据复现</title>
+<desc id="desc">波尔多 Bordeaux：107,748 公顷；罗讷河谷 Rhône Valley：64,467 公顷；卢瓦尔河谷 Loire Valley：47,475 公顷；朗格多克 Languedoc：33,000 公顷；勃艮第 Burgundy：32,301 公顷；阿尔萨斯 Alsace：15,529 公顷；博若莱 Beaujolais：13,500 公顷。统计年份未注明，扇形按上述七项数值计算；不是当前法国全部 AOP 面积。</desc>
+<style>
+text{font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;fill:#303d35}
+.muted{fill:#6b766e} .number{font-family:Arial,Helvetica,sans-serif;font-variant-numeric:tabular-nums}
+</style>
+<rect width="1280" height="790" rx="12" fill="#fcfaf4"/>
+<text x="44" y="64" font-size="36" font-weight="600">法国 AOP 的总面积</text>
+<text x="46" y="99" class="muted" font-size="20">French AOPs total area</text>
+<rect x="1014" y="34" width="220" height="38" rx="19" fill="#e9ece2"/>
+<text x="1124" y="59" text-anchor="middle" font-size="17" fill="#62714e">讲义列示数据复现</text>
+<path d="M44 121H1236" stroke="#d9ded2" stroke-width="1.5"/>
+
+<path d="M312 391L312.000000 171.000000A220 220 0 0 1 495.402155 512.505760Z" fill="#d3dcdf" stroke="#fcfaf4" stroke-width="3"><title>波尔多：107,748 ha</title></path>
+<text x="461.240" y="318.852" text-anchor="middle" class="number" style="fill:#304d5b" font-size="24" font-weight="600">1</text>
+<path d="M312 391L495.402155 512.505760A220 220 0 0 1 246.096081 600.896816Z" fill="#aebfc5" stroke="#fcfaf4" stroke-width="3"><title>罗讷河谷：64,467 ha</title></path>
+<text x="368.608" y="558.662" text-anchor="middle" class="number" style="fill:#304d5b" font-size="24" font-weight="600">2</text>
+<path d="M312 391L246.096081 600.896816A220 220 0 0 1 102.936885 459.502656Z" fill="#8ca6b0" stroke="#fcfaf4" stroke-width="3"><title>卢瓦尔河谷：47,475 ha</title></path>
+<text x="192.961" y="519.525" text-anchor="middle" class="number" style="fill:#304d5b" font-size="24" font-weight="600">3</text>
+<path d="M312 391L102.936885 459.502656A220 220 0 0 1 104.863318 316.875814Z" fill="#6f919f" stroke="#fcfaf4" stroke-width="3"><title>朗格多克：33,000 ha</title></path>
+<text x="142.615" y="396.712" text-anchor="middle" class="number" style="fill:#ffffff" font-size="24" font-weight="600">4</text>
+<path d="M312 391L104.863318 316.875814A220 220 0 0 1 191.280661 207.079253Z" fill="#557d8e" stroke="#fcfaf4" stroke-width="3"><title>勃艮第：32,301 ha</title></path>
+<text x="178.885" y="294.230" text-anchor="middle" class="number" style="fill:#ffffff" font-size="24" font-weight="600">5</text>
+<path d="M312 391L191.280661 207.079253A220 220 0 0 1 253.293695 178.977431Z" fill="#3c657a" stroke="#fcfaf4" stroke-width="3"><title>阿尔萨斯：15,529 ha</title></path>
+<text x="242.079" y="244.703" text-anchor="middle" class="number" style="fill:#ffffff" font-size="24" font-weight="600">6</text>
+<path d="M312 391L253.293695 178.977431A220 220 0 0 1 312.000000 171.000000Z" fill="#294f68" stroke="#fcfaf4" stroke-width="3"><title>博若莱：13,500 ha</title></path>
+<text x="289.190" y="231.143" text-anchor="middle" class="number" style="fill:#ffffff" font-size="24" font-weight="600">7</text>
+<text x="312" y="652" text-anchor="middle" class="muted" font-size="18">图示 7 个产区合计</text>
+<text x="312" y="692" text-anchor="middle" class="number" font-size="34" font-weight="600">314,020<tspan font-size="19" font-weight="400"> ha</tspan></text>
+<text x="663" y="158" class="muted" font-size="17">产区 / Region</text>
+<text x="1060" y="158" text-anchor="end" class="muted" font-size="17">面积（公顷）</text>
+<text x="1226" y="158" text-anchor="end" class="muted" font-size="17">占图示合计</text>
+<g id="region-1">
+<circle cx="620" cy="200" r="16" fill="#d3dcdf"/>
+<text x="620" y="206" class="number" text-anchor="middle" style="fill:#304d5b" font-size="17" font-weight="600">1</text>
+<text x="663" y="202" font-size="24" font-weight="500">波尔多</text>
+<text x="663" y="227" class="muted" font-size="17">Bordeaux</text>
+<text x="1060" y="207" text-anchor="end" class="number" font-size="26">107,748</text>
+<text x="1226" y="207" text-anchor="end" class="number muted" font-size="22">34.3%</text>
+<path d="M600 239H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-2">
+<circle cx="620" cy="264" r="16" fill="#aebfc5"/>
+<text x="620" y="270" class="number" text-anchor="middle" style="fill:#304d5b" font-size="17" font-weight="600">2</text>
+<text x="663" y="266" font-size="24" font-weight="500">罗讷河谷</text>
+<text x="663" y="291" class="muted" font-size="17">Rhône Valley</text>
+<text x="1060" y="271" text-anchor="end" class="number" font-size="26">64,467</text>
+<text x="1226" y="271" text-anchor="end" class="number muted" font-size="22">20.5%</text>
+<path d="M600 303H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-3">
+<circle cx="620" cy="328" r="16" fill="#8ca6b0"/>
+<text x="620" y="334" class="number" text-anchor="middle" style="fill:#304d5b" font-size="17" font-weight="600">3</text>
+<text x="663" y="330" font-size="24" font-weight="500">卢瓦尔河谷</text>
+<text x="663" y="355" class="muted" font-size="17">Loire Valley</text>
+<text x="1060" y="335" text-anchor="end" class="number" font-size="26">47,475</text>
+<text x="1226" y="335" text-anchor="end" class="number muted" font-size="22">15.1%</text>
+<path d="M600 367H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-4">
+<circle cx="620" cy="392" r="16" fill="#6f919f"/>
+<text x="620" y="398" class="number" text-anchor="middle" style="fill:#ffffff" font-size="17" font-weight="600">4</text>
+<text x="663" y="394" font-size="24" font-weight="500">朗格多克</text>
+<text x="663" y="419" class="muted" font-size="17">Languedoc</text>
+<text x="1060" y="399" text-anchor="end" class="number" font-size="26">33,000</text>
+<text x="1226" y="399" text-anchor="end" class="number muted" font-size="22">10.5%</text>
+<path d="M600 431H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-5">
+<circle cx="620" cy="456" r="16" fill="#557d8e"/>
+<text x="620" y="462" class="number" text-anchor="middle" style="fill:#ffffff" font-size="17" font-weight="600">5</text>
+<text x="663" y="458" font-size="24" font-weight="500">勃艮第</text>
+<text x="663" y="483" class="muted" font-size="17">Burgundy</text>
+<text x="1060" y="463" text-anchor="end" class="number" font-size="26">32,301</text>
+<text x="1226" y="463" text-anchor="end" class="number muted" font-size="22">10.3%</text>
+<path d="M600 495H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-6">
+<circle cx="620" cy="520" r="16" fill="#3c657a"/>
+<text x="620" y="526" class="number" text-anchor="middle" style="fill:#ffffff" font-size="17" font-weight="600">6</text>
+<text x="663" y="522" font-size="24" font-weight="500">阿尔萨斯</text>
+<text x="663" y="547" class="muted" font-size="17">Alsace</text>
+<text x="1060" y="527" text-anchor="end" class="number" font-size="26">15,529</text>
+<text x="1226" y="527" text-anchor="end" class="number muted" font-size="22">4.9%</text>
+<path d="M600 559H1236" stroke="#e1e4da"/>
+</g>
+<g id="region-7">
+<circle cx="620" cy="584" r="16" fill="#294f68"/>
+<text x="620" y="590" class="number" text-anchor="middle" style="fill:#ffffff" font-size="17" font-weight="600">7</text>
+<text x="663" y="586" font-size="24" font-weight="500">博若莱</text>
+<text x="663" y="611" class="muted" font-size="17">Beaujolais</text>
+<text x="1060" y="591" text-anchor="end" class="number" font-size="26">13,500</text>
+<text x="1226" y="591" text-anchor="end" class="number muted" font-size="22">4.3%</text>
+<path d="M600 623H1236" stroke="#e1e4da"/>
+</g>
+<path d="M44 719H1236" stroke="#d9ded2" stroke-width="1.5"/>
+<text x="46" y="748" class="muted" font-size="17">面积沿用讲义原值；占比按这 7 项面积的合计计算，并四舍五入。</text>
+<text x="46" y="775" class="muted" font-size="17">原图未注明统计年份；图示合计不代表法国全部 AOP 面积。</text>
+</svg>

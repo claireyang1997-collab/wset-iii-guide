@@ -1,0 +1,22 @@
+{
+  "title": "法国 AOP 的总面积",
+  "subtitle": "French AOPs total area",
+  "source": "讲义 p.69，图 249",
+  "sourceFigure": "assets/s5-france-area-chart.webp",
+  "year": null,
+  "scope": "原图列示的 7 个产区",
+  "unit": "ha",
+  "regions": [
+    {"name": "波尔多", "english": "Bordeaux", "area": 107748, "color": "#d3dcdf"},
+    {"name": "罗讷河谷", "english": "Rhône Valley", "area": 64467, "color": "#aebfc5"},
+    {"name": "卢瓦尔河谷", "english": "Loire Valley", "area": 47475, "color": "#8ca6b0"},
+    {"name": "朗格多克", "english": "Languedoc", "area": 33000, "color": "#6f919f"},
+    {"name": "勃艮第", "english": "Burgundy", "area": 32301, "color": "#557d8e"},
+    {"name": "阿尔萨斯", "english": "Alsace", "area": 15529, "color": "#3c657a"},
+    {"name": "博若莱", "english": "Beaujolais", "area": 13500, "color": "#294f68"}
+  ],
+  "notes": [
+    "面积沿用讲义原值；占比按这 7 项面积的合计计算，并四舍五入。",
+    "原图未注明统计年份；图示合计不代表法国全部 AOP 面积。"
+  ]
+}

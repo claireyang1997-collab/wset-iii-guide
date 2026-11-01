@@ -1,7 +1,9 @@
 """Generate canonical Session 5 data with source crops and reviewed teaching illustrations."""
 from pathlib import Path
 import json
+import runpy
 root=Path(__file__).resolve().parents[1]
+runpy.run_path(str(root/'scripts/build-france-aop-area.py'))
 data=json.loads((root/'content/regions-session5.json').read_text())
 assert len({(u['chapter'],u['id']) for u in data['units']})==len(data['units'])
 assert len({p['sourceId'] for p in data['pages']})==41

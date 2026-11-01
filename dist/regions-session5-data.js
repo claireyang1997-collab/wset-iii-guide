@@ -1638,11 +1638,16 @@ const regionsSession5={
     0.421
    ],
    "title": "讲义中的法国 AOP 面积图",
-   "caption": "讲义p.69。保留原图的区域、面积和占比作为课堂资料快照；统计年份未注明，不据此断定当前排名或面积。",
+   "caption": "据讲义p.69原值复现，中英文产区名称与面积完整保留。占比按图中7个产区合计计算，统计年份未注明；图示合计不代表法国全部AOP面积。",
    "kind": "diagram",
-   "src": "assets/s5-france-area-chart.webp",
-   "width": 1496,
-   "height": 847
+   "src": "assets/s5-france-area-chart-redrawn.svg",
+   "width": 1280,
+   "height": 790,
+   "originalSrc": "assets/s5-france-area-chart.webp",
+   "mobileSrc": "assets/s5-france-area-chart-mobile.svg",
+   "mobileWidth": 640,
+   "mobileHeight": 1090,
+   "alt": "讲义中的法国AOP面积图。波尔多（Bordeaux）107,748公顷；罗讷河谷（Rhône Valley）64,467公顷；卢瓦尔河谷（Loire Valley）47,475公顷；朗格多克（Languedoc）33,000公顷；勃艮第（Burgundy）32,301公顷；阿尔萨斯（Alsace）15,529公顷；博若莱（Beaujolais）13,500公顷。年份未注明，占比按这七项合计计算，不代表法国全部AOP面积。"
   },
   {
    "id": "horse-vineyard",
