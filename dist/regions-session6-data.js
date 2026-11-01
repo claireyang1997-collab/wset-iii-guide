@@ -9,8 +9,8 @@ const regionsSession6={
    "en": "BORDEAUX",
    "pages": "110–116",
    "desc": "海洋影响与年份 → 土壤和混合 → 两岸、干白、贵腐甜酒与列级",
-   "art": "assets/chapter-7-editorial.webp",
-   "artAlt": "波尔多章节主题插画",
+   "art": "assets/chapter-13-bordeaux-v1.webp",
+   "artAlt": "河口远景、砾石小径与石灰岩酒庄构成的波尔多葡萄园插画",
    "status": "integrated"
   },
   {
@@ -20,8 +20,8 @@ const regionsSession6={
    "en": "DORDOGNE & SOUTH WEST FRANCE",
    "pages": "117–118",
    "desc": "从波尔多的近邻出发，比较马尔贝克、丹娜、白玉霓与小满胜",
-   "art": "assets/session2-management.webp",
-   "artAlt": "多尔多涅和法国西南部章节主题插画",
+   "art": "assets/chapter-14-southwest-france-v1.webp",
+   "artAlt": "河谷、石拱桥与葡萄园构成的法国西南部风景插画",
    "status": "integrated"
   }
  ],

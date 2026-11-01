@@ -16,7 +16,7 @@ function winemakingUnitBody(u){
 }
 for(const ch of winemakingData.chapters)bookChapters.push({...ch,framework:false});
 for(const u of winemakingData.units)bookUnits.push({...u,framework:false,origins:[],body:winemakingUnitBody(u)});
-function bookChapterCover(ch){return `<img src="${ch.art}" alt="${ch.artAlt}" loading="lazy" width="1536" height="1024"><span>${String(ch.id).padStart(2,'0')}</span>`;}
+function bookChapterCover(ch){return `<img src="${ch.art}" alt="${ch.artAlt}"${ch.artPosition?` style="object-position:${ch.artPosition}"`:''} loading="lazy" width="1536" height="1024"><span>${String(ch.id).padStart(2,'0')}</span>`;}
 function bookChapterCard(ch){const us=bookUnits.filter(u=>u.chapter===ch.id),n=us.filter(bookUnitDone).length;return `<article class="book-chapter-card ${ch.framework?'wm-framework-card':''}"><a class="book-chapter-cover" href="#chapter/${ch.id}" aria-label="进入第 ${ch.id} 章：${ch.title}">${bookChapterCover(ch)}</a><div class="eyebrow">CHAPTER ${ch.id} · ${ch.en}</div><h2><a href="#chapter/${ch.id}">${ch.short||ch.title}</a></h2><p>${ch.desc}</p><small>课本 p.${ch.pages} · ${us.length} 个阅读单元</small>${ch.framework?`<div class="book-progress wm-card-status"><small>框架预览</small><small>正文整理中</small></div>`:`<div class="book-progress"><span><i style="width:${n/us.length*100}%"></i></span><small>已读 ${n} / ${us.length}</small></div>`}<a class="primary" href="#chapter/${ch.id}">进入章节 →</a></article>`;}
 function winemakingCourseRecords(){
  const courses=winemakingData.courses;

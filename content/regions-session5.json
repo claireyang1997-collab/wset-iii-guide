@@ -8,8 +8,9 @@
       "en": "WINE LAW",
       "pages": "103–106",
       "desc": "食品安全与真实标签 → 地理标志 → 读酒标与负责任饮酒",
-      "art": "assets/chapter-7-editorial.webp",
-      "artAlt": "葡萄酒法律法规主题配图",
+      "art": "assets/chapter-11-wine-law-v1.webp",
+      "artAlt": "酒标、产地边界文件与葡萄酒瓶构成的法规章节期刊插画",
+      "artPosition": "50% 20%",
       "status": "integrated"
     },
     {
@@ -19,8 +20,8 @@
       "en": "BURGUNDY",
       "pages": "119–126",
       "desc": "气候、坡地与品种 → 葡萄园等级 → 夏布利、金丘、夏隆内丘与马孔内",
-      "art": "assets/vineyard.webp",
-      "artAlt": "勃艮第主题配图",
+      "art": "assets/chapter-15-burgundy-v1.webp",
+      "artAlt": "石墙围合的葡萄园地块与村庄构成的勃艮第秋日插画",
       "status": "integrated"
     },
     {
@@ -30,8 +31,8 @@
       "en": "BEAUJOLAIS",
       "pages": "127–129",
       "desc": "佳美与花岗岩丘陵 → 整串工艺 → 法定产区与新酒风格",
-      "art": "assets/chapter-9-editorial.webp",
-      "artAlt": "博若莱主题配图",
+      "art": "assets/chapter-16-beaujolais-v1.webp",
+      "artAlt": "花岗岩、杯状葡萄藤与风车构成的博若莱丘陵插画",
       "status": "integrated"
     }
   ],
