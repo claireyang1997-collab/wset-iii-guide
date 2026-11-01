@@ -1027,11 +1027,13 @@
         0.811
       ],
       "title": "坡位与等级分布示意",
-      "caption": "讲义p.69。中坡常有良好受光与排水条件，坡顶、坡脚和平原情况不同；这是概括示意，不能把每一块坡地的等级仅凭高度推定。",
+      "caption": "据讲义p.69重绘。典型分布示意：坡顶与平原为大区级，上坡与下坡为一级园，中坡为特级园，坡脚为村庄级；保留泥灰岩、石灰岩与黏土标注。具体法定等级不能仅凭高度或坡位推定。",
       "kind": "diagram",
-      "src": "assets/s5-burgundy-slope.webp",
-      "width": 903,
-      "height": 826
+      "src": "assets/s5-burgundy-slope-redrawn.webp",
+      "width": 1536,
+      "height": 1024,
+      "originalSrc": "assets/s5-burgundy-slope.webp",
+      "alt": "勃艮第坡位与等级分布概括示意。编号1：坡顶，大区级 Regional AOP；编号2：上坡与下坡，一级园 Premiers Crus；编号3：中坡，特级园 Grands Crus；编号4：坡脚，村庄级 Villages AOP；编号5：平原，大区级 Regional AOP。两处一级园共用编号2。土壤标注：泥灰岩 Marl，石灰岩与黏土 Limestone and clay。并非法定等级划界图，不能仅凭坡位判断等级。"
     },
     {
       "id": "pinot-photo",
