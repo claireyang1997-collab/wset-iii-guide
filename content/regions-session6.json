@@ -1801,11 +1801,16 @@
         1210
       ],
       "title": "讲义 · 法国产区面积比较",
-      "caption": "保留讲义图中各产区及公顷数字，未注明统计年份；用于认识相对规模，不作2026年实时排名或完整法国葡萄园总面积。",
+      "caption": "据讲义p.91原图复现，与勃艮第章节同组数据统一绘制。保留全部7个产区及面积，单位为公顷（ha）；图示合计314,020 ha，占比按这7项合计计算。原图未注明统计年份，不能视为最新排名或法国全部AOP面积。",
       "kind": "map",
-      "src": "assets/s6-historical-area.webp",
-      "width": 1788,
-      "height": 1026
+      "src": "assets/s5-france-area-chart-redrawn.svg",
+      "width": 1280,
+      "height": 790,
+      "originalSrc": "assets/s6-historical-area.webp",
+      "mobileSrc": "assets/s5-france-area-chart-mobile.svg",
+      "mobileWidth": 640,
+      "mobileHeight": 1090,
+      "alt": "法国产区面积比较：波尔多Bordeaux 107,748 ha，罗讷河谷Rhône Valley 64,467 ha，卢瓦尔河谷Loire Valley 47,475 ha，朗格多克Languedoc 33,000 ha，勃艮第Burgundy 32,301 ha，阿尔萨斯Alsace 15,529 ha，博若莱Beaujolais 13,500 ha。饼图按这七项实际数值绘制，编号对应明细表，合计314,020 ha。统计年份未注明；仅比较原图列出的七个产区，不代表法国全部AOP面积。"
     },
     {
       "id": "history-portrait",
