@@ -1126,11 +1126,13 @@ const regionsSession5={
     0.458
    ],
    "title": "勃艮第四层等级与坡位",
-   "caption": "讲义p.75。保留33个Grand Cru、635个一级园climat、44个村庄产区、23个大区产区及1%、10%、37%、52%的原图统计；未注明年份，不作2026年最新名录。坡位图为概括。",
+   "caption": "据讲义p.75重绘。完整保留33个Grand Cru AOP、635个一级园climats、44个村庄AOP、23个大区AOP及1%、10%、37%、52%的原图统计。原图未注明年份及占比口径，不作最新名录；坡位与两项土壤标注均保留，不能仅凭坡位判断等级。",
    "kind": "diagram",
-   "src": "assets/s5-burgundy-levels.webp",
-   "width": 1714,
-   "height": 795
+   "src": "assets/s5-burgundy-levels-redrawn.webp",
+   "width": 1546,
+   "height": 1017,
+   "originalSrc": "assets/s5-burgundy-levels.webp",
+   "alt": "勃艮第四层等级与坡位。原图统计：Grand Cru特级园33 AOPs、1%；Premier Cru一级园635 climats、10%；Village村庄级44 AOPs、37%；Regional大区级23 AOPs、52%。坡位字母依次为R、P、G、P、V、R：坡顶与平原大区级，上坡与下坡一级园，中坡特级园，坡脚村庄级。保留泥灰岩Marl与石灰岩、黏土Limestone and clay标注。数量与占比沿用原图，年份与统计口径未注明；金字塔与坡位为概括示意，并非法定边界图，不能仅凭高度判断等级。"
   },
   {
    "id": "label-bourgogne",
@@ -1446,11 +1448,13 @@ const regionsSession5={
     0.825
    ],
    "title": "同一白酒流程，不同目标选择",
-   "caption": "讲义p.86。12个步骤全部保留：采收→筛选→去梗破碎→浸皮→压榨→澄清→发酵→MLC→熟化→混合→完善→装瓶。浸皮、MLC等是需判断的选择，图中箭头不代表全部必做。",
+   "caption": "据讲义p.86重绘。12环节全部保留：采收→筛选→去梗破碎→浸皮→压榨→澄清→发酵→MLC→熟化→混合→完善→装瓶。左侧产区对照保留；浸皮、MLC等需判断，不是全部必做，村庄产区与获准一级园须分别看待。设备图标仅作环节示意，不限定容器。",
    "kind": "diagram",
-   "src": "assets/s5-macon-process.webp",
-   "width": 1822,
-   "height": 983
+   "src": "assets/s5-macon-process-redrawn.webp",
+   "width": 1546,
+   "height": 1017,
+   "originalSrc": "assets/s5-macon-process.webp",
+   "alt": "12环节白葡萄酒流程：1采收 Harvest，2筛选 Sorting，3去梗破碎 De-stem/crush，4浸皮 Skin contact，5压榨 Press，6澄清 Clarification，7发酵 Fermentation，8苹果酸—乳酸转化 MLC，9熟化 Maturation，10混合 Blending，11完善 Finishing，12装瓶 Bottling。左侧原图比较范围：Cru/1er Cru村庄级或获准一级园情境，例Pouilly-Fuissé、Saint-Véran；Mâcon Villages与Mâcon加村名；Mâcon。村庄产区与一级园须分别判断，并非所有示例都有一级园。流程环节不代表全部必做，浸皮和MLC等须按原料与目标选择。设备图标仅作示意，并非限定发酵或熟化容器。"
   },
   {
    "id": "gamay-photo",
