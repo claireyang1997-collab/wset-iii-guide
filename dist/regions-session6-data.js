@@ -813,9 +813,6 @@ const regionsSession6={
       "多尔多涅仍与波尔多气候相似，向内陆海洋调节逐渐减弱。整个西南部横跨河谷、山坡与山麓，海洋、海拔和比利牛斯山影响因地而异。",
       "讲义用“更大陆性、更稳定、疾病少、果实更成熟”作比较概括；不能据此推导西南部所有园址都少雨、无年份差异或必然更浓。仍需给出具体位置、天气和成熟条件。"
      ],
-     "figures": [
-      "southwest-landscape"
-     ],
      "conclusion": "不要用“法国西南部”一个标签代替每个产区的环境、品种和酒款目标。"
     },
     {
@@ -1666,22 +1663,6 @@ const regionsSession6={
    "src": "assets/s6-buzet-cellar.webp",
    "width": 650,
    "height": 374
-  },
-  {
-   "id": "southwest-landscape",
-   "sourceId": "325",
-   "box": [
-    675,
-    888,
-    868,
-    1208
-   ],
-   "title": "讲义 · 法国西南部园地景观",
-   "caption": "区域跨河谷、山坡与山麓，环境有差别；成熟度、疾病和年份差异必须按具体产区与年份解释。",
-   "kind": "labels",
-   "src": "assets/s6-southwest-landscape.webp",
-   "width": 427,
-   "height": 707
   },
   {
    "id": "malbec",
