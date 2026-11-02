@@ -28,3 +28,6 @@
  .s5-figure:is(#s6fig-wet-vineyard,#s6fig-bordeaux-landscape) .s5-image-link{aspect-ratio:4/3;flex:none}
  .s5-figure:is(#s6fig-wet-vineyard,#s6fig-bordeaux-landscape) img{width:100%;height:100%;max-height:none;object-fit:contain}
 }
+
+/* Keep the replacement vineyard-operation illustration compact in the text. */
+#s6fig-spraying{width:100%;max-width:680px;justify-self:start}
