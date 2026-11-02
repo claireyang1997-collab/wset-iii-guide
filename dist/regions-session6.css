@@ -31,3 +31,7 @@
 
 /* Keep the replacement vineyard-operation illustration compact in the text. */
 #s6fig-spraying{width:100%;max-width:680px;justify-self:start}
+
+/* Supporting gravel photograph: preserve the full portrait at a smaller width. */
+#s6fig-gravel{width:100%;max-width:360px;justify-self:start}
+@media(max-width:600px){#s6fig-gravel{max-width:280px}}
