@@ -11,7 +11,9 @@
 .s5-figures-labels:has(>.s5-figure:only-child){grid-template-columns:minmax(0,1fr)}
 .s5-figure-labels img{max-height:360px}
 /* Small supporting photographs and labels should not fill the reading column. */
-.s5-figure:is(#s5fig-gamay-photo,#s5fig-gamay-training,#s5fig-gamay-bush,#s5fig-chauvet-photo,#s5fig-nouveau-label){width:100%;max-width:var(--s5-compact-width);justify-self:start}
+.s5-figure:is(#s5fig-gamay-photo,#s5fig-gamay-training,#s5fig-gamay-bush,#s5fig-chauvet-photo,#s5fig-nouveau-label,#s5fig-corton-vsp,#s5fig-horse-vineyard,#s5fig-pinot-photo,#s5fig-kir-photo){width:100%;max-width:var(--s5-compact-width);justify-self:start}
+#s5fig-corton-vsp{--s5-compact-width:420px}
+#s5fig-horse-vineyard,#s5fig-pinot-photo,#s5fig-kir-photo{--s5-compact-width:280px}
 #s5fig-gamay-photo{--s5-compact-width:320px}
 #s5fig-beaujolais-map{width:100%;max-width:416px;justify-self:start}
 .s5-figures:has(>#s5fig-gamay-photo):has(>#s5fig-beaujolais-map){grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);align-items:start;max-width:760px}
@@ -34,6 +36,8 @@
 .book-chapter-footer{flex-wrap:wrap}
 @media(max-width:600px){.s5-figure{padding:12px}.s5-figure-heading{align-items:flex-start;gap:8px}.s5-figure figcaption{font-size:12px}.s5-figures-labels{grid-template-columns:1fr}.s5-conclusion{padding:16px}.s5-figure img{max-height:none}}
 @media(max-width:600px){
+ #s5fig-corton-vsp{--s5-compact-width:320px}
+ #s5fig-horse-vineyard,#s5fig-pinot-photo,#s5fig-kir-photo{--s5-compact-width:260px}
  #s5fig-gamay-photo,#s5fig-gamay-bush{--s5-compact-width:260px}
  #s5fig-gamay-training{--s5-compact-width:300px}
  #s5fig-chauvet-photo{--s5-compact-width:240px}

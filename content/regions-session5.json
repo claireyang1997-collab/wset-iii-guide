@@ -1676,11 +1676,13 @@
         0.82
       ],
       "title": "气候与工艺对霞多丽的影响",
-      "caption": "讲义p.70。保留三种气候果味与工艺影响对照。原图把火柴／燧石列入酿造联想，正文同时说明这些香气不能唯一归因于酒泥。",
+      "caption": "据讲义p.70重绘。保留三种气候下的酸度与果味，以及工艺带来的香气、口感变化。实际风格受年份、成熟度和酿造选择共同影响；燧石、火柴等香气不能唯一归因于酒泥。",
       "kind": "diagram",
-      "src": "assets/s5-chardonnay-flavour.webp",
-      "width": 1673,
-      "height": 931
+      "src": "assets/s5-chardonnay-flavour-redrawn.webp",
+      "width": 1504,
+      "height": 1046,
+      "originalSrc": "assets/s5-chardonnay-flavour.webp",
+      "alt": "气候与工艺对霞多丽的影响。凉爽 Cool：高酸、苹果和柠檬；温和 Moderate：中酸、桃子和香瓜；温暖 Warm：低酸、热带水果。酿造影响：咸鲜、燧石、火柴（Savoury, flint, matchstick）；清爽或绵密口感（Refreshing or creamy mouthfeel），与MLC、酒泥及熟化选择相关；香料与烘烤（Spice, toast），受橡木、烘烤程度和时间影响。气候是典型趋势，实际风格也受年份、成熟度与酿造选择影响；燧石、火柴气味不能唯一归因于酒泥。"
     },
     {
       "id": "nouveau-label",
