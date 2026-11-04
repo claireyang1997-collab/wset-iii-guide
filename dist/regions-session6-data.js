@@ -1228,9 +1228,9 @@ const regionsSession6={
    "title": "波尔多园地与河流",
    "caption": "河流、园地与低起伏地形构成区域背景。对照地图判断位置，不凭一张景观照推断所有波尔多都采用同一土壤和品种。",
    "kind": "photo",
-   "src": "assets/s6-bordeaux-landscape.webp",
-   "width": 1379,
-   "height": 562
+   "src": "assets/s6-bordeaux-landscape-supplied.jpg",
+   "width": 2048,
+   "height": 837
   },
   {
    "id": "gulf-stream",
@@ -1244,9 +1244,9 @@ const regionsSession6={
    "title": "大西洋暖流影响",
    "caption": "红箭头表示暖流的区域影响方向，非精确洋流轨迹。海洋调节温度并延长生长季，同时西风与大西洋带来降雨。",
    "kind": "map",
-   "src": "assets/s6-gulf-stream.webp",
-   "width": 3623,
-   "height": 1992
+   "src": "assets/s6-gulf-stream-supplied.jpg",
+   "width": 2048,
+   "height": 1124
   },
   {
    "id": "soils",
@@ -1276,9 +1276,9 @@ const regionsSession6={
    "title": "多雨条件的园地",
    "caption": "积水照片帮助理解排水与病害管理，不能据此认定波尔多所有葡萄园长期水浸。雨发生在开花、成熟或采收前，后果也不同。",
    "kind": "labels",
-   "src": "assets/s6-wet-vineyard.webp",
-   "width": 750,
-   "height": 696
+   "src": "assets/s6-wet-vineyard-supplied.jpg",
+   "width": 2048,
+   "height": 1950
   },
   {
    "id": "spraying",
