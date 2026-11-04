@@ -126,7 +126,7 @@
           "note": "优势或劣势 advantages or disadvantages"
         }
       ],
-      "hint": "按A→B→C写清培养酵母的特点、对发酵控制或风味的影响，再说明在哪种目标下属于优势或劣势。原题共3分，不另行给三栏分配分值。",
+      "hint": "按A→B→C写清特点、影响与结果。优势可从经筛选的已知菌株、发酵与香气结果较可预测、批次一致性展开；劣势需写出一些酿酒师担心的潜在复杂性限制，同时避免说成必然低品质。原题共3分，不另行给三栏分配分值；这里是自查提示，不是机构评分答案。",
       "refs": [
         {
           "href": "#read/7/fermentation/book-7-fermentation-2",
@@ -398,8 +398,8 @@
           "label": "金丘坡位"
         },
         {
-          "href": "#read/15/growing/book-15-growing-1",
-          "label": "气候与栽培"
+          "href": "#read/15/overview/book-15-overview-3",
+          "label": "坡位怎样影响成熟与品质"
         }
       ],
       "fields": [
@@ -1172,7 +1172,7 @@
       "hint": "按原表三列比较：品种怎样提供果香、酸和酒体；发酵容器与温度怎样保果味或增加质感；发酵后MLC、熟化时间与容器怎样服务风格。桶酿、MLC和品种比例都要有条件，不把高价酒机械写成全新桶或全部MLC。",
       "refs": [
         {
-          "href": "#read/13/grapes/book-13-grapes-3",
+          "href": "#read/13/grapes/book-13-grapes-4",
           "label": "白品种的混合角色"
         },
         {
