@@ -1128,7 +1128,7 @@
         974,
         534
       ],
-      "title": "讲义 · 梅多克历史景观",
+      "title": "梅多克历史景观",
       "caption": "讲义以风车照片搭配17世纪荷兰排水工程的历史；照片不是排水作业现场，也不能证明整个梅多克由海底新造。",
       "kind": "labels",
       "src": "assets/s6-medoc-windmill.webp",
@@ -1144,7 +1144,7 @@
         1271,
         532
       ],
-      "title": "讲义 · 罗伯特·帕克",
+      "title": "罗伯特·帕克",
       "caption": "讲义原肖像用于说明现代酒评与市场声誉的影响；1982年是其讨论的代表年份，不是所有酒庄统一复兴的起点。",
       "kind": "labels",
       "src": "assets/s6-parker.webp",
@@ -1160,7 +1160,7 @@
         890,
         776
       ],
-      "title": "讲义 · Château d’Yquem",
+      "title": "Château d’Yquem",
       "caption": "看Sauternes产地与d’Yquem名称。该庄在1855甜白体系中独居Premier Cru Supérieur，与红酒五等分开。",
       "kind": "labels",
       "src": "assets/s6-yquem.webp",
@@ -1176,7 +1176,7 @@
         1166,
         796
       ],
-      "title": "讲义 · 副牌Carruades de Lafite",
+      "title": "副牌Carruades de Lafite",
       "caption": "看酒标的独立酒款名称与Pauillac。副牌常承接年轻藤或未选入正牌的批次，不自动承袭正牌的列级身份。",
       "kind": "labels",
       "src": "assets/s6-second-wine.webp",
@@ -1192,7 +1192,7 @@
         438,
         1300
       ],
-      "title": "讲义 · Cru Bourgeois标识",
+      "title": "Cru Bourgeois标识",
       "caption": "这是士族名庄体系的识别标志，属于梅多克另一评价体系；不是1855列级的第六等。现行名单须按评选年份核对。",
       "kind": "labels",
       "src": "assets/s6-cru-bourgeois.webp",
@@ -1208,7 +1208,7 @@
         1550,
         1130
       ],
-      "title": "讲义 · 格拉夫红白列级",
+      "title": "格拉夫红白列级",
       "caption": "照片同时有红、白酒，提示Graves列级分别评红白，所有列级酒庄今天位于Pessac-Léognan。它们内部不再分一、二等。",
       "kind": "labels",
       "src": "assets/s6-graves-labels.webp",
@@ -1224,7 +1224,7 @@
         912,
         1114
       ],
-      "title": "讲义 · 波尔多园地与河流",
+      "title": "波尔多园地与河流",
       "caption": "河流、园地与低起伏地形构成区域背景。对照地图判断位置，不凭一张景观照推断所有波尔多都采用同一土壤和品种。",
       "kind": "photo",
       "src": "assets/s6-bordeaux-landscape.webp",
@@ -1240,7 +1240,7 @@
         1733,
         1214
       ],
-      "title": "讲义 · 大西洋暖流影响",
+      "title": "大西洋暖流影响",
       "caption": "红箭头表示暖流的区域影响方向，非精确洋流轨迹。海洋调节温度并延长生长季，同时西风与大西洋带来降雨。",
       "kind": "map",
       "src": "assets/s6-gulf-stream.webp",
@@ -1256,7 +1256,7 @@
         1715,
         1100
       ],
-      "title": "讲义 · 土壤的区域概括",
+      "title": "土壤的区域概括",
       "caption": "左岸砾石、右岸黏土／石灰石、两海之间冲积土是简化分区，内部仍多样。湿润时排水重要，干旱时也需适当保水。下方原问题已在正文回答其前提。",
       "kind": "map",
       "src": "assets/s6-soils.webp",
@@ -1272,7 +1272,7 @@
         1323,
         693
       ],
-      "title": "讲义 · 多雨条件的园地",
+      "title": "多雨条件的园地",
       "caption": "积水照片帮助理解排水与病害管理，不能据此认定波尔多所有葡萄园长期水浸。雨发生在开花、成熟或采收前，后果也不同。",
       "kind": "labels",
       "src": "assets/s6-wet-vineyard.webp",
@@ -1306,7 +1306,7 @@
         1458,
         640
       ],
-      "title": "讲义 · 运抵后的筛选",
+      "title": "运抵后的筛选",
       "caption": "看筛选台上的整串葡萄与人工挑选。剔除不健康、未成熟果有助一致性，同时降低可用数量、增加人力成本。",
       "kind": "labels",
       "src": "assets/s6-sorting.webp",
@@ -1322,7 +1322,7 @@
         1315,
         1006
       ],
-      "title": "讲义 · 人工采收",
+      "title": "人工采收",
       "caption": "人工可在采收时选择并保持整串完整，适合有精细筛选目标的原料；不把所有列级酒一概视为法定手采。",
       "kind": "labels",
       "src": "assets/s6-harvest-hand.webp",
@@ -1338,7 +1338,7 @@
         1319,
         1240
       ],
-      "title": "讲义 · 机械采收",
+      "title": "机械采收",
       "caption": "机械采收可提高效率、控制成本，也要看地形、种植方式和目标。贵腐逐次精选不能由普通机采等同完成。",
       "kind": "labels",
       "src": "assets/s6-harvest-machine.webp",
@@ -1354,7 +1354,7 @@
         451,
         1232
       ],
-      "title": "讲义 · 梅洛",
+      "title": "梅洛",
       "caption": "较早成熟，适应较凉黏土，给混合增加果味与饱满度；普通早饮酒和右岸顶级酒都可能以它为主。",
       "kind": "labels",
       "src": "assets/s6-merlot.webp",
@@ -1370,7 +1370,7 @@
         1780,
         1210
       ],
-      "title": "讲义 · 品丽珠",
+      "title": "品丽珠",
       "caption": "成熟时可增加果味与花香；不够成熟时可有草本或果梗味。不要仅凭果串外形辨定葡萄酒风格。",
       "kind": "labels",
       "src": "assets/s6-cab-franc.webp",
@@ -1386,7 +1386,7 @@
         427,
         564
       ],
-      "title": "讲义 · 赤霞珠",
+      "title": "赤霞珠",
       "caption": "较晚成熟，偏好波尔多温暖、排水好的园址，常提供黑醋栗、酸、单宁和结构。",
       "kind": "labels",
       "src": "assets/s6-cab-sauvignon.webp",
@@ -1402,7 +1402,7 @@
         1323,
         566
       ],
-      "title": "讲义 · 小维多",
+      "title": "小维多",
       "caption": "成熟更晚，传统上多在炎热年份使用少量，增加颜色、单宁和香料感；较耐腐烂不等于抗所有病害。",
       "kind": "labels",
       "src": "assets/s6-petit-verdot.webp",
@@ -1418,7 +1418,7 @@
         1187,
         1199
       ],
-      "title": "讲义 · Bordeaux大区红酒",
+      "title": "Bordeaux大区红酒",
       "caption": "酒标可见Bordeaux大区名称。清新早饮和梅洛比例高是常见市场类型，不是所有Bordeaux的固定配方或品质上限。",
       "kind": "labels",
       "src": "assets/s6-generic-red.webp",
@@ -1434,7 +1434,7 @@
         1609,
         627
       ],
-      "title": "讲义 · Pétrus与Pomerol",
+      "title": "Pétrus与Pomerol",
       "caption": "看Pomerol和Grand Vin。波美侯没有同类Grand Cru Classé酒庄列级，仍可以拥有极高声誉的生产者；Grand Vin不是自动的分级等级。",
       "kind": "labels",
       "src": "assets/s6-petrus.webp",
@@ -1466,7 +1466,7 @@
         800,
         1307
       ],
-      "title": "讲义 · 梅多克四村放大图",
+      "title": "梅多克四村放大图",
       "caption": "由北到南读Saint-Estèphe、Pauillac、Saint-Julien、Margaux。Haut-Médoc是较大范围，不是四村中某一个村庄的别名。",
       "kind": "map",
       "src": "assets/s6-medoc-detail.webp",
@@ -1482,7 +1482,7 @@
         1734,
         824
       ],
-      "title": "讲义 · 右岸与波尔多丘放大图",
+      "title": "右岸与波尔多丘放大图",
       "caption": "Pomerol、Saint-Émilion及Blaye、Francs、Castillon Côtes de Bordeaux在图中各有位置；相邻不代表同一AOP或同一列级制度。",
       "kind": "map",
       "src": "assets/s6-right-detail.webp",
@@ -1498,7 +1498,7 @@
         1735,
         1308
       ],
-      "title": "讲义 · 格拉夫、巴萨克与苏玳",
+      "title": "格拉夫、巴萨克与苏玳",
       "caption": "沿加龙河向南定位Pessac-Léognan、Graves和Sauternes；Barsac位于苏玳范围内，可依规则使用Barsac或Sauternes名称。",
       "kind": "map",
       "src": "assets/s6-graves-detail.webp",
@@ -1514,7 +1514,7 @@
         341,
         639
       ],
-      "title": "讲义 · 两个车库酒例子",
+      "title": "两个车库酒例子",
       "caption": "Valandraud与La Mondotte是讲义用于介绍右岸车库酒风潮的酒标例子；车库酒不是AOP，也不代表所有生产者都采用有机或重桶风格。",
       "kind": "labels",
       "src": "assets/s6-garage-labels.webp",
@@ -1530,7 +1530,7 @@
         1164,
         625
       ],
-      "title": "讲义 · 赛美蓉",
+      "title": "赛美蓉",
       "caption": "薄皮、容易感染贵腐，干白混合可增加酒体；相对不如长相思芳香，不代表没有自身风味或酸。",
       "kind": "labels",
       "src": "assets/s6-semillon.webp",
@@ -1546,7 +1546,7 @@
         789,
         1178
       ],
-      "title": "讲义 · 长相思",
+      "title": "长相思",
       "caption": "常给混合提供酸度、果香和清新感。优质桶酿混合白酒可以陈年，不能把“通常早饮”扩成品种永不耐陈年。",
       "kind": "labels",
       "src": "assets/s6-sauvignon.webp",
@@ -1562,7 +1562,7 @@
         1172,
         1186
       ],
-      "title": "讲义 · 密思卡岱",
+      "title": "密思卡岱",
       "caption": "浓郁葡萄味与花香，通常少量辅助；Muscadelle不是Muscat麝香葡萄的别名。",
       "kind": "labels",
       "src": "assets/s6-muscadelle.webp",
@@ -1578,7 +1578,7 @@
         1194,
         524
       ],
-      "title": "讲义 · 干白的地理位置",
+      "title": "干白的地理位置",
       "caption": "对照Graves、Pessac-Léognan与Entre-Deux-Mers的位置。原图为旧教材口径，今天Entre-Deux-Mers亦已获准产红酒；地理区域与AOP范围须分开。",
       "kind": "map",
       "src": "assets/s6-white-map.webp",
@@ -1594,7 +1594,7 @@
         375,
         1046
       ],
-      "title": "讲义 · Bordeaux Blanc",
+      "title": "Bordeaux Blanc",
       "caption": "大区干白常清新、果味主导且较早饮用，也有优质酒例外；法定产地名称不自动规定必须廉价。",
       "kind": "labels",
       "src": "assets/s6-generic-white.webp",
@@ -1610,7 +1610,7 @@
         1593,
         635
       ],
-      "title": "讲义 · 苏玳在格拉夫南部的位置",
+      "title": "苏玳在格拉夫南部的位置",
       "caption": "看Sauternes相对于Pessac-Léognan、Graves及波尔多市的位置。具体贵腐条件还要结合加龙河与锡龙河、秋雾和后续干燥天气。",
       "kind": "map",
       "src": "assets/s6-sauternes-map.webp",
@@ -1626,7 +1626,7 @@
         1609,
         1169
       ],
-      "title": "讲义 · Sauternes甜白例子",
+      "title": "Sauternes甜白例子",
       "caption": "酒标显示Sauternes产地，结合赛美蓉、贵腐、酸糖平衡和桶熟化学习；不是以酒标颜色判断残糖。",
       "kind": "labels",
       "src": "assets/s6-sweet-label.webp",
@@ -1642,7 +1642,7 @@
         1191,
         1225
       ],
-      "title": "讲义 · 多尔多涅园地",
+      "title": "多尔多涅园地",
       "caption": "葡萄园、坡地和聚落作为地区背景；海洋影响比波尔多弱，但不能据一张景观图断言所有年份稳定、没有病害。",
       "kind": "labels",
       "src": "assets/s6-bergerac-landscape.webp",
@@ -1658,7 +1658,7 @@
         455,
         612
       ],
-      "title": "讲义 · 合作社与共享酿造设施",
+      "title": "合作社与共享酿造设施",
       "caption": "讲义以Buzet及其酒窖讨论合作社的重要性。共享设备、规模与熟化选择影响成本，合作社不是必然低品质的同义词。",
       "kind": "labels",
       "src": "assets/s6-buzet-cellar.webp",
@@ -1674,7 +1674,7 @@
         1104,
         936
       ],
-      "title": "讲义 · 马尔贝克",
+      "title": "马尔贝克",
       "caption": "卡奥尔的核心品种，常带深色与较高单宁；同一品种也在波尔多少量出现，不把地区差异绝对化。",
       "kind": "labels",
       "src": "assets/s6-malbec.webp",
@@ -1690,7 +1690,7 @@
         1237,
         940
       ],
-      "title": "讲义 · 小满胜",
+      "title": "小满胜",
       "caption": "Petit Manseng，小满胜／小芒森是不同中译。高酸与风干浓缩，是理解朱朗松甜酒平衡的重点。",
       "kind": "labels",
       "src": "assets/s6-petit-manseng.webp",
@@ -1706,7 +1706,7 @@
         1227,
         1160
       ],
-      "title": "讲义 · 丹娜",
+      "title": "丹娜",
       "caption": "Tannat是马迪朗重点品种。单宁含量高与口感粗糙不是同一概念，成熟和酿造能改变质地。",
       "kind": "labels",
       "src": "assets/s6-tannat.webp",
@@ -1722,7 +1722,7 @@
         1252,
         584
       ],
-      "title": "讲义 · Côtes de Gascogne IGP例子",
+      "title": "Côtes de Gascogne IGP例子",
       "caption": "原酒标以Sauvignon Blanc举例，提醒加斯科涅并非只有白玉霓；课本仍以白玉霓等酿清新干白为典型。",
       "kind": "labels",
       "src": "assets/s6-gascogne-label.webp",
@@ -1738,7 +1738,7 @@
         456,
         1159
       ],
-      "title": "讲义 · 卡奥尔与洛特河谷",
+      "title": "卡奥尔与洛特河谷",
       "caption": "看河流、城镇与山坡地形，对应河谷底部、山坡及高原的园址差异；照片本身不用于判定具体葡萄园质量。",
       "kind": "labels",
       "src": "assets/s6-cahors-landscape.webp",
@@ -1754,7 +1754,7 @@
         1738,
         1147
       ],
-      "title": "讲义 · Château Montus例子",
+      "title": "Château Montus例子",
       "caption": "讲义用Montus说明马迪朗生产者；AOP核心是以丹娜为主的红酒，不是只认一个品牌。",
       "kind": "labels",
       "src": "assets/s6-montus.webp",
@@ -1770,7 +1770,7 @@
         415,
         398
       ],
-      "title": "讲义 · Jurançon酒标",
+      "title": "Jurançon酒标",
       "caption": "看Jurançon名称；需要进一步辨明干白或甜白，不用酒瓶颜色代替风格信息。",
       "kind": "labels",
       "src": "assets/s6-jurancon-label.webp",
@@ -1786,7 +1786,7 @@
         420,
         599
       ],
-      "title": "讲义 · 朱朗松山麓园地",
+      "title": "朱朗松山麓园地",
       "caption": "葡萄与山麓背景对应比利牛斯山附近园址，甜酒重点解释自然风干浓缩，不以贵腐解释本课路线。",
       "kind": "labels",
       "src": "assets/s6-jurancon-vines.webp",
@@ -1802,7 +1802,7 @@
         856,
         1210
       ],
-      "title": "讲义 · 法国产区面积比较",
+      "title": "法国产区面积比较",
       "caption": "据讲义p.91原图复现，与勃艮第章节同组数据统一绘制。保留全部7个产区及面积，单位为公顷（ha）；图示合计314,020 ha，占比按这7项合计计算。原图未注明统计年份，不能视为最新排名或法国全部AOP面积。",
       "kind": "map",
       "src": "assets/s5-france-area-chart-redrawn.svg",
@@ -1823,7 +1823,7 @@
         1797,
         1220
       ],
-      "title": "讲义 · 贸易历史配图",
+      "title": "贸易历史配图",
       "caption": "原讲义用历史人物图配亨利二世与埃莉诺的婚姻及统治联系；用于历史背景，不作为可识别的现代酿造证据。",
       "kind": "labels",
       "src": "assets/s6-history-portrait.webp",
@@ -1855,7 +1855,7 @@
         1634,
         1142
       ],
-      "title": "讲义 · 地理区域与典型酒色",
+      "title": "地理区域与典型酒色",
       "caption": "这是讲义旧版的区域风格概览，不是每个同名AOP全部允许酒色的清单。2025年规范已允许Médoc干白，未自动扩成各村庄干白AOP；Entre-Deux-Mers“只有干白”标注已随2023规则扩展到红酒而改变。正文分别解释地理、酒色和法定名称。",
       "kind": "map",
       "src": "assets/s6-style-map.webp",
