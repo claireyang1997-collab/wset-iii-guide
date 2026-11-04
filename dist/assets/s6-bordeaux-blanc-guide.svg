@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="650" viewBox="0 0 600 650" role="img" aria-labelledby="title desc">
+<title id="title">Bordeaux Blanc 名称怎样读</title><desc id="desc">Bordeaux 是波尔多法定产区名称，Blanc 表示白葡萄酒。本节讨论的干白，糖分较少，常以清新的果味为主。</desc>
+<rect width="600" height="650" rx="18" fill="#f8f6ed"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle" fill="#354333">
+<text x="300" y="52" font-size="27" font-weight="600">Bordeaux Blanc 怎样读？</text>
+<path d="M265 100H335V167C335 205 391 218 391 263V376Q391 392 375 392H225Q209 392 209 376V263C209 218 265 205 265 167Z" fill="#899754" stroke="#65743f" stroke-width="3"/>
+<rect x="262" y="91" width="76" height="76" rx="5" fill="#cfc394"/><path d="M226 257V368" stroke="#dae0a5" stroke-width="9" opacity=".5" stroke-linecap="round"/>
+<rect x="224" y="248" width="152" height="103" rx="5" fill="#fffcf0" stroke="#d7cfb4"/>
+<text x="300" y="289" font-family="Georgia,serif" font-size="21">BORDEAUX</text><text x="300" y="325" font-family="Georgia,serif" font-size="24">BLANC</text>
+<rect x="35" y="420" width="255" height="106" rx="11" fill="#e7ead9"/><rect x="310" y="420" width="255" height="106" rx="11" fill="#eee6cf"/>
+<text x="162" y="459" font-size="25" font-weight="600">Bordeaux</text><text x="162" y="497" font-size="20">波尔多法定产区名称</text>
+<text x="438" y="459" font-size="25" font-weight="600">Blanc</text><text x="438" y="497" font-size="20">法语“白葡萄酒”</text>
+<text x="300" y="576" font-size="20">本节讨论干白：糖分较少，</text><text x="300" y="608" font-size="20">许多酒款强调清新的果味。</text>
+</g></svg>

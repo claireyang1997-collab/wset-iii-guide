@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="650" viewBox="0 0 1000 650" role="img" aria-labelledby="title desc">
+<title id="title">读懂 Bordeaux 大区红酒酒标</title><desc id="desc">以附件酒标为例，Kressmann 是品牌，Bordeaux 是波尔多大区法定产区名称，2010 是葡萄采收年份。产区名本身不说明品种比例、用桶情况或具体品质。</desc>
+<rect width="1000" height="650" rx="18" fill="#f8f6ed"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#354333">
+<text x="50" y="56" font-size="29" font-weight="600">先认清品牌、产区和年份</text>
+<text x="50" y="87" font-size="18" fill="#777b67">以附件中的酒标为例</text>
+<path d="M176 117H248V199C248 237 314 248 314 300V542Q314 560 296 560H128Q110 560 110 542V300C110 248 176 237 176 199Z" fill="#27372a"/>
+<rect x="173" y="111" width="78" height="83" rx="5" fill="#7a3544"/><path d="M125 291V538" stroke="#758375" opacity=".4" stroke-width="8" stroke-linecap="round"/>
+<rect x="127" y="297" width="170" height="186" rx="5" fill="#f8f1db" stroke="#d0c5a5"/>
+<g text-anchor="middle"><text x="212" y="339" font-family="Georgia,serif" font-size="21" letter-spacing="1">KRESSMANN</text><path d="M152 361H272" stroke="#a39575"/><text x="212" y="398" font-family="Georgia,serif" font-size="26" fill="#803f4d">BORDEAUX</text><text x="212" y="451" font-family="Georgia,serif" font-size="24">2010</text></g>
+<g stroke="#acb398" fill="none" stroke-width="2"><path d="M305 332H368V169H436"/><path d="M305 390H407V300H436" stroke="#995563"/><path d="M305 445H376V444H436"/></g>
+<g fill="#fcfaf4" stroke="#d8ddcc"><rect x="442" y="116" width="510" height="104" rx="11"/><rect x="442" y="241" width="510" height="132" rx="11" fill="#f1e8e6" stroke="#d5b9be"/><rect x="442" y="394" width="510" height="104" rx="11"/></g>
+<text x="466" y="153" font-size="23" font-weight="600">KRESSMANN · 品牌名称</text><text x="466" y="187" font-size="19">告诉我们这款酒使用的品牌。</text>
+<text x="466" y="279" font-size="23" font-weight="600" fill="#803f4d">BORDEAUX · 法定产区名称</text><text x="466" y="313" font-size="19">说明这款酒来自波尔多大区，</text><text x="466" y="344" font-size="19">并符合该产区名称的生产要求。</text>
+<text x="466" y="431" font-size="23" font-weight="600">2010 · 葡萄采收年份</text><text x="466" y="466" font-size="19">通常指葡萄的采收年份，而非装瓶年份。</text>
+<rect x="50" y="580" width="902" height="44" rx="8" fill="#e9ecdf"/><text x="501" y="609" text-anchor="middle" font-size="19">品种比例、是否用桶、具体品质，需要另外查看酒款资料。</text>
+</g></svg>

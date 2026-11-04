@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="780" viewBox="0 0 600 780" role="img" aria-labelledby="title desc">
+<title id="title">正牌和副牌怎样挑选</title><desc id="desc">不同地块和品种的酒分批酿造，逐批品尝，再按正牌、副牌各自的风格选择并混合。其余批次可另作酒款或出售。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10" fill="none" stroke="#8b957c" stroke-width="1.5"/></marker></defs><rect width="600" height="780" rx="16" fill="#f8f6ed"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" fill="#354333" text-anchor="middle"><text x="300" y="52" font-size="29" font-weight="600">同一酒庄，挑选不同酒款</text>
+<rect x="50" y="86" width="500" height="112" rx="12" fill="#eeeee0" stroke="#ccd3bf"/><text x="300" y="131" font-size="27" font-weight="600">不同地块、不同品种</text><text x="300" y="171" font-size="25">先分别酿成一批批酒</text>
+<path d="M300 200V243" stroke="#8b957c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="50" y="253" width="500" height="112" rx="12" fill="#e2e8d5"/><text x="300" y="298" font-size="27" font-weight="600">逐批品尝，再尝试混合</text><text x="300" y="338" font-size="24">比较果味、酸度、单宁和口感</text>
+<path d="M300 365V401H163V446M300 401H437V446" stroke="#8b957c" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/><path d="M163 401V446" stroke="#8b957c" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="30" y="456" width="266" height="208" rx="12" fill="#f0e2e4"/><rect x="314" y="456" width="256" height="208" rx="12" fill="#e5ead9"/>
+<text x="163" y="507" font-size="32" font-weight="600" fill="#803f4d">正牌</text><text x="442" y="507" font-size="32" font-weight="600">副牌</text>
+<g font-size="25"><text x="163" y="553">符合主要酒款的</text><text x="163" y="592">风格与挑选标准</text><text x="442" y="553">按另一款酒的风格</text><text x="442" y="592">选择、混合批次</text></g>
+<text x="300" y="714" font-size="24">其余批次还可以另作酒款，</text><text x="300" y="750" font-size="24">或出售给其他生产者、酒商。</text></g></svg>

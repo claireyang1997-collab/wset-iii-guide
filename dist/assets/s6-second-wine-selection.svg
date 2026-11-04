@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="560" viewBox="0 0 780 560" role="img" aria-labelledby="title desc">
+<title id="title">同一酒庄怎样挑选正牌和副牌</title><desc id="desc">不同地块和品种分别酿酒，逐批品尝并尝试混合。符合主要酒款标准的批次用于正牌；按副牌自己的风格选择批次；其余批次另作酒款或出售。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="none" stroke="#8b957c" stroke-width="1.5"/></marker></defs>
+<rect width="780" height="560" rx="16" fill="#f8f6ed"/>
+<g font-family="PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle" fill="#354333">
+<text x="390" y="47" font-size="25" font-weight="600">先分别酿造，再为每款酒挑选批次</text>
+<g fill="#eeeee0" stroke="#ccd3bf"><rect x="44" y="76" width="210" height="70" rx="10"/><rect x="285" y="76" width="210" height="70" rx="10"/><rect x="526" y="76" width="210" height="70" rx="10"/></g>
+<g font-size="21"><text x="149" y="119">地块 A 的酒</text><text x="390" y="119">地块 B 的酒</text><text x="631" y="119">其他批次</text></g>
+<path d="M149 146V173H631V146M390 146V203" fill="none" stroke="#8b957c" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="192" y="211" width="396" height="76" rx="12" fill="#e5e9db" stroke="#bfc9b0"/>
+<text x="390" y="244" font-size="23" font-weight="600">逐批品尝，尝试不同比例的混合</text><text x="390" y="270" font-size="17" fill="#67755d">比较果味、酸度、单宁和口感</text>
+<path d="M390 287V311H193V337M390 311H587V337" fill="none" stroke="#8b957c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M193 311V337" fill="none" stroke="#8b957c" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="347" width="299" height="133" rx="12" fill="#f0e3e5" stroke="#caa5ad"/><rect x="437" y="347" width="299" height="133" rx="12" fill="#e9ecdf" stroke="#bac7a8"/>
+<text x="193" y="385" font-size="27" font-weight="600" fill="#803f4d">正牌</text><text x="587" y="385" font-size="27" font-weight="600">副牌</text>
+<g font-size="19"><text x="193" y="422">符合主要酒款的</text><text x="193" y="451">风格与挑选标准</text><text x="587" y="422">按另一款酒的风格</text><text x="587" y="451">选择、混合合适的批次</text></g>
+<text x="390" y="525" font-size="18" fill="#6c735f">其余批次还可以另作酒款或出售。</text>
+</g></svg>

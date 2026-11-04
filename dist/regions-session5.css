@@ -45,3 +45,6 @@
  .s5-figures:has(>#s5fig-gamay-photo):has(>#s5fig-beaujolais-map){grid-template-columns:1fr}
  .s5-figures:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush){grid-template-columns:1fr}
 }
+
+
+.article-section .s5-conclusion p{margin:8px 0 0;font-size:inherit;line-height:1.9}.article-section .s5-conclusion p:first-of-type{margin-top:4px}

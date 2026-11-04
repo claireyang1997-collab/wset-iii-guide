@@ -101,3 +101,43 @@
 .s5-figures:has(>#s6fig-semillon) img{width:100%;height:100%;max-height:none;object-fit:contain}
 .s5-figures:has(>#s6fig-semillon) .s5-figure-heading{min-height:24px;margin-bottom:12px}
 @container(max-width:500px){.s5-figures:has(>#s6fig-semillon){grid-template-columns:repeat(3,minmax(190px,1fr));overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}.s5-figures:has(>#s6fig-semillon)>.s5-figure{scroll-snap-align:start}}
+
+/* Compact map references and a paired wine-selection explanation. */
+#s6fig-medoc-detail{width:100%;max-width:440px;justify-self:start}
+#s6fig-graves-detail,#s6fig-right-detail{width:100%;max-width:580px;justify-self:start}
+#s6fig-cooperage{width:100%;max-width:640px;justify-self:start}
+#s6fig-generic-red{width:100%;max-width:800px;justify-self:start}
+#s6fig-generic-red img{max-height:none}
+.s5-figures:has(>#s6fig-second-wine-selection){grid-template-columns:minmax(0,1fr);align-items:stretch;gap:20px}
+.s5-figures:has(>#s6fig-second-wine-selection)>.s5-figure{display:flex;flex-direction:column}
+#s6fig-second-wine .s5-image-link{background:transparent}
+#s6fig-second-wine img{max-height:280px;width:100%;object-fit:contain}
+#s6fig-second-wine-selection img{max-height:none}
+.article-section:has(>#book-13-red-winemaking-2){container-type:inline-size}
+@container(min-width:680px){
+ .s5-figures:has(>#s6fig-second-wine-selection){grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr)}
+ .s5-figures:has(>#s6fig-second-wine-selection) .s5-figure-heading{min-height:48px;align-items:flex-start}
+ #s6fig-second-wine .s5-image-link,#s6fig-second-wine-selection .s5-image-link{height:300px;display:flex;align-items:center;justify-content:center}
+ #s6fig-second-wine-selection img{width:100%;height:100%;object-fit:contain}
+}
+.s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus){grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;max-width:640px}
+.s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus) .s5-image-link{height:340px;background:transparent;display:flex;align-items:center;justify-content:center}
+#s6fig-garage-labels img,#s6fig-petrus img{max-height:340px;object-fit:contain}
+@media(max-width:600px){
+ .s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus){gap:12px}
+ .s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus) .s5-image-link{height:240px}
+ #s6fig-garage-labels img,#s6fig-petrus img{max-height:240px}
+}
+
+/* One compact map above two white-wine explanation cards. */
+.article-section:has(>#book-13-dry-white-3){container-type:inline-size}
+.s5-figures:has(>#s6fig-white-blend-guide){grid-template-columns:minmax(0,1fr);gap:20px}
+#s6fig-white-map{width:100%;max-width:360px;justify-self:start}
+#s6fig-generic-white img,#s6fig-white-blend-guide img{max-height:none}
+@container(min-width:600px){
+ .s5-figures:has(>#s6fig-white-blend-guide){grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+ #s6fig-white-map{grid-column:1/-1}
+}
+
+#s6fig-second-wine-selection picture{width:100%}
+@container(min-width:680px){#s6fig-second-wine-selection picture{height:100%}}
