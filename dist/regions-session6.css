@@ -36,5 +36,5 @@
 #s6fig-gravel{width:100%;max-width:360px;justify-self:start}
 @media(max-width:600px){#s6fig-gravel{max-width:280px}}
 
-/* Keep the bilingual map compact, with full-size viewing through its link. */
-#s6fig-bordeaux-map{width:100%;max-width:610px;justify-self:start}
+/* Keep the two Bordeaux overview maps compact, with full-size viewing through their links. */
+:is(#s6fig-bordeaux-map,#s6fig-style-map){width:100%;max-width:540px;justify-self:start}
