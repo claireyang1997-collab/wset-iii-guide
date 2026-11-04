@@ -4,24 +4,14 @@ const fullSourceAudit={
  "scope": "目前已收到的第1–6次线上课资料；网站第4–11、13–16章，共78个阅读单元。",
  "method": "逐张查看可用原图，对照实际网页正文、表格、图注与练习回看位置；同时核查条件、数量、因果、例子及例外。重复页与局部放大保留记录，但不重复计入页数。",
  "counts": {
-  "textbookPages": 95,
-  "handoutPages": 110,
-  "imageRecords": 212,
-  "repairs": 39,
+  "textbookPages": 97,
+  "handoutPages": 111,
+  "imageRecords": 215,
+  "repairs": 42,
   "workbookPages": 11
  },
  "limits": "这不是整本三级教材或全部考试范围的完成声明。课本第1–3、12及17章之后等未提供的章节不在本次范围；原音频没有在本轮重新核听。另查看12页AI课堂纪要，其内容与课本核对后处理，不作为更高优先级的原始证据。",
  "pending": [
-  {
-   "source": "讲义 p.38",
-   "status": "未找到原页",
-   "detail": "现有第37页结束于幻灯片140，第39页从145开始；141–144不能假定没有知识点。需要原页才能核对。"
-  },
-  {
-   "source": "课本 p.63、97",
-   "status": "已对照旧文字提取，原图待复核",
-   "detail": "相关文字主题已在网页；当前找不到可打开的原始照片，图示与文字细节不能算本轮目视核对完成。"
-  },
   {
    "source": "机构参考答案",
    "status": "尚未提供",
@@ -262,6 +252,24 @@ const fullSourceAudit={
    "anchor": "book-15-overview-3",
    "source": "练习册 p.7",
    "repair": "把特级园选址题的回看链接直接指向坡位作用"
+  },
+  {
+   "route": "7/oxygen",
+   "anchor": "wmfig-7-so2-stages",
+   "source": "补交讲义p.38，幻灯片143–144；UC Davis发酵管理资料",
+   "repair": "补二氧化硫四阶段流程，说明按需要使用及对发酵的条件性影响"
+  },
+  {
+   "route": "7/oxygen",
+   "anchor": "book-7-oxygen-1",
+   "source": "补交课本p.63",
+   "repair": "核对氧气控制与陈年，补明确自然葡萄酒及保护性／厌氧酿造名称"
+  },
+  {
+   "route": "9/red-styles",
+   "anchor": "book-9-red-styles-6",
+   "source": "补交课本p.97",
+   "repair": "补齐歌海娜的混合伙伴、整串风味、发酵后皮渣分离与晚熟品种的作用"
   }
  ],
  "records": [
@@ -1043,6 +1051,33 @@ const fullSourceAudit={
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
   },
   {
+   "sourceId": "B63-supplement-20261105",
+   "kind": "textbook",
+   "page": 63,
+   "concepts": [
+    "严格控制与少干预酿造、自然葡萄酒及持续监测",
+    "氧气可能有利或有害；以保留一类果香为目标的保护性／厌氧酿造",
+    "低温与夜间采收、二氧化硫、密封设备和氮气／二氧化碳保护",
+    "满装密封容器、不锈钢及内壁环氧涂层水泥罐；木桶防水但不完全隔气",
+    "缓慢接氧使红酒单宁柔化；果香减弱、皮革／泥土等三类香气，红酒变浅偏棕与白酒加深偏橙"
+   ],
+   "targets": [
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-1",
+     "label": "酿造中氧气的作用"
+    },
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-2",
+     "label": "减少氧化的四组措施"
+    },
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-3",
+     "label": "陈年中的氧气与变化"
+    }
+   ],
+   "result": "已目视复核补交原页；多数内容与既有正文一致，补明确自然葡萄酒及保护性／厌氧酿造名称。本页没有独立知识配图。"
+  },
+  {
    "sourceId": "B64-145",
    "kind": "textbook",
    "page": 64,
@@ -1751,6 +1786,27 @@ const fullSourceAudit={
     }
    ],
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+  },
+  {
+   "sourceId": "B97-supplement-20261105",
+   "kind": "textbook",
+   "page": 97,
+   "concepts": [
+    "晚熟、耐旱、薄皮，温暖炎热气候；高酒精、较低酸、饱满酒体、柔和单宁与红果",
+    "西班牙普里奥拉／佳丽酿、里奥哈东方／丹魄及卡拉塔尤德、卡里涅纳、纳瓦拉和桃红",
+    "南罗讷与教皇新堡；朗格多克、鲁西永的西拉、慕合怀特、佳丽酿、神索混合",
+    "澳大利亚巴罗萨和麦克拉伦谷老灌木藤、低产浓郁红浆果／胡椒与更克制的风格",
+    "去梗破碎、发酵前浸渍、整串的成熟红果风味；开口不锈钢／水泥／木容器与温和压帽",
+    "发酵后浸渍增加单宁，但更常在发酵结束时分离皮渣；旧大桶避免木味掩盖果香",
+    "晚熟佳丽酿与慕合怀特为炎热地区的混合增加清新果味、单宁和颜色"
+   ],
+   "targets": [
+    {
+     "href": "#read/9/red-styles/book-9-red-styles-6",
+     "label": "歌海娜／加尔纳恰"
+    }
+   ],
+   "result": "已目视复核补交原页；补齐混合品种、整串与浸渍细节，保留原有产区和风格例子。本页没有独立知识配图。"
   },
   {
    "sourceId": "B98-180",
@@ -3152,6 +3208,28 @@ const fullSourceAudit={
     }
    ],
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+  },
+  {
+   "sourceId": "H38-supplement-20261105",
+   "kind": "handout",
+   "page": 38,
+   "concepts": [
+    "幻灯片141：第7章酿造与熟化的基本要素导入",
+    "幻灯片142：果梗与籽的单宁、籽的苦油；果皮的颜色、单宁和风味；果肉的糖、水、酒石酸与苹果酸",
+    "幻灯片143：二氧化硫的抗微生物及抗氧化作用；对发酵的抑制须结合菌株和条件理解",
+    "幻灯片144：采收、发酵、熟化、装瓶阶段均可按需要使用二氧化硫"
+   ],
+   "targets": [
+    {
+     "href": "#read/7/grape/wmfig-7-1",
+     "label": "葡萄的组成成分"
+    },
+    {
+     "href": "#read/7/oxygen/wmfig-7-so2-stages",
+     "label": "二氧化硫的作用与四个阶段"
+    }
+   ],
+   "result": "已逐项查看补交原图；葡萄结构复用图7.1，二氧化硫四阶段流程补到同一主题。化学结构式用于标识SO₂，不另增重复图。"
   },
   {
    "sourceId": "H39-185",
@@ -4838,7 +4916,58 @@ const fullSourceAudit={
    "contents": "波尔多红酒3种目标、10个步骤；两次混合保留，未标分值",
    "href": "#workbook/6"
   }
- ]
+ ],
+ "recentlyVerified": [
+  {
+   "source": "讲义 p.38",
+   "detail": "已逐项查看补交原图；葡萄结构复用图7.1，二氧化硫四阶段流程补到同一主题。化学结构式用于标识SO₂，不另增重复图。",
+   "targets": [
+    {
+     "href": "#read/7/grape/wmfig-7-1",
+     "label": "葡萄的组成成分"
+    },
+    {
+     "href": "#read/7/oxygen/wmfig-7-so2-stages",
+     "label": "二氧化硫的作用与四个阶段"
+    }
+   ]
+  },
+  {
+   "source": "课本 p.63",
+   "detail": "已目视复核补交原页；多数内容与既有正文一致，补明确自然葡萄酒及保护性／厌氧酿造名称。本页没有独立知识配图。",
+   "targets": [
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-1",
+     "label": "酿造中氧气的作用"
+    },
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-2",
+     "label": "减少氧化的四组措施"
+    },
+    {
+     "href": "#read/7/oxygen/book-7-oxygen-3",
+     "label": "陈年中的氧气与变化"
+    }
+   ]
+  },
+  {
+   "source": "课本 p.97",
+   "detail": "已目视复核补交原页；补齐混合品种、整串与浸渍细节，保留原有产区和风格例子。本页没有独立知识配图。",
+   "targets": [
+    {
+     "href": "#read/9/red-styles/book-9-red-styles-6",
+     "label": "歌海娜／加尔纳恰"
+    }
+   ]
+  }
+ ],
+ "references": [
+  {
+   "href": "https://wine.ucdavis.edu/industry-info/enology/fermentation-management-guides/wine-fermentation/problem-fermentations",
+   "label": "UC Davis：Problem Fermentations（二氧化硫、菌株耐受及发酵中断）"
+  }
+ ],
+ "reviewSummary": "本次已目视核对补交的讲义第38页和课本第63、97页；三项原页缺口已补齐，知识并入原有主题。"
 };
 function fullSourceAuditView(){
  const a=fullSourceAudit,e=wmEscape;
@@ -4847,7 +4976,7 @@ function fullSourceAuditView(){
  const groups=[...new Set(a.repairs.map(c=>c.route.split('/')[0]))];
  const repairs=groups.map(g=>{const list=a.repairs.filter(c=>c.route.split('/')[0]===g);return `<details class="review-fold"><summary>${g==='guide'?'课程资料':'第 '+g+' 章'} · ${list.length}处补充／修正</summary><ul>${list.map(c=>`<li><a href="${repairLink(c)}">${e(c.repair)} →</a><p class="fine">${e(c.source)}</p></li>`).join('')}</ul></details>`}).join('');
  const records=['textbook','handout'].map(kind=>{const rows=a.records.filter(x=>x.kind===kind);return `<details class="review-fold"><summary>${kind==='textbook'?'课本':'讲义'}逐页记录 · ${new Set(rows.map(x=>x.page)).size}个不同页码</summary>${rows.map(r=>`<details class="review-fold"><summary>p.${r.page} · ${e(r.concepts.slice(0,2).join('；'))}</summary><ul>${r.concepts.map(c=>`<li>${e(c)}</li>`).join('')}</ul><p>${e(r.result)}</p><p>正文位置：${r.targets.map(link).join(' · ')}</p></details>`).join('')}</details>`}).join('');
- return `<main id="main" class="wrap book-review wm-review"><a class="back" href="#home">← 章节目录</a><header class="page-intro"><div class="eyebrow">SOURCE AUDIT · ${a.date}</div><h1 class="page-title">逐页核对与本次补漏</h1><p>${e(a.scope)}</p><p><strong>95页课本 · 110页讲义 · 练习册第1–11页 · ${a.counts.repairs}处补充或修正</strong></p><p>${e(a.method)}</p></header><section><h2>尚未完成的原件核对</h2><dl>${a.pending.map(p=>`<dt><strong>${e(p.source)} · ${e(p.status)}</strong></dt><dd>${e(p.detail)}</dd>`).join('')}</dl><p class="fine">${e(a.limits)}</p></section><section><h2>本次改了什么</h2><p>补充已放回相关正文，点击条目可直接跳转。本清单记录本轮发现与修订，不代替课本、讲义或考试评分标准。</p>${repairs}</section><section><h2>每页知识的正文去向</h2><p>212张可用照片包含重复页和局部放大，共覆盖205个不同原页。下列记录保留重复来源，页数统计已去重；无法辨认的非页面照片不计入。</p>${records}</section><section><h2>练习册核对</h2><p>核查题干、分值、工艺节点和填写字段，并检查回看链接是否指向相应知识。原有作答键保留。</p><ul>${a.workbook.map(w=>`<li><a href="${e(w.href)}">第${w.page}页 →</a>：${e(w.contents)}</li>`).join('')}</ul><p>品种表包含尚未提供详细产区章节的品种；练习表已录入，不等于相应全部教材已收到。</p></section></main>`;
+ return `<main id="main" class="wrap book-review wm-review"><a class="back" href="#home">← 章节目录</a><header class="page-intro"><div class="eyebrow">SOURCE AUDIT · ${a.date}</div><h1 class="page-title">逐页核对与本次补漏</h1><p>${e(a.scope)}</p><p><strong>${a.counts.textbookPages}页课本 · ${a.counts.handoutPages}页讲义 · 练习册第1–11页 · ${a.counts.repairs}处补充或修正</strong></p><p>${e(a.method)}</p></header><section><h2>本次补交资料已核对</h2><dl>${a.recentlyVerified.map(r=>`<dt><strong>${e(r.source)}</strong></dt><dd>${e(r.detail)}<p>${r.targets.map(link).join(' · ')}</p></dd>`).join('')}</dl><p class="fine">发酵作用的补充核对依据：${a.references.map(link).join(' · ')}</p></section><section><h2>仍待提供的资料</h2><dl>${a.pending.map(p=>`<dt><strong>${e(p.source)} · ${e(p.status)}</strong></dt><dd>${e(p.detail)}</dd>`).join('')}</dl><p class="fine">${e(a.limits)}</p></section><section><h2>本次改了什么</h2><p>补充已放回相关正文，点击条目可直接跳转。本清单记录本轮发现与修订，不代替课本、讲义或考试评分标准。</p>${repairs}</section><section><h2>每页知识的正文去向</h2><p>${a.counts.imageRecords}张可用照片包含重复页和局部放大，共覆盖${a.counts.textbookPages+a.counts.handoutPages}个不同原页。下列记录保留重复来源，页数统计已去重；无法辨认的非页面照片不计入。</p>${records}</section><section><h2>练习册核对</h2><p>核查题干、分值、工艺节点和填写字段，并检查回看链接是否指向相应知识。原有作答键保留。</p><ul>${a.workbook.map(w=>`<li><a href="${e(w.href)}">第${w.page}页 →</a>：${e(w.contents)}</li>`).join('')}</ul><p>品种表包含尚未提供详细产区章节的品种；练习表已录入，不等于相应全部教材已收到。</p></section></main>`;
 }
 const beforeFullSourceAuditReview=bookReviewView;
-bookReviewView=function(id){const h=beforeFullSourceAuditReview(id);return h.replace('<section>','<section><h2>2026年11月5日 · 全部已收资料复核</h2><p>本轮重新核对95页课本与110页讲义；课本63、97页原图及讲义38页仍待补齐。<a href="#audit">查看逐页清单、补漏和范围 →</a></p></section><section>');};
+bookReviewView=function(id){const h=beforeFullSourceAuditReview(id);return h.replace('<section>',`<section><h2>${fullSourceAudit.date} · 资料复核</h2><p>${wmEscape(fullSourceAudit.reviewSummary)}累计核对${fullSourceAudit.counts.textbookPages}页课本与${fullSourceAudit.counts.handoutPages}页讲义。<a href="#audit">查看逐页清单、补漏和范围 →</a></p></section><section>`);};

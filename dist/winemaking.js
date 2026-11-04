@@ -52,14 +52,14 @@ function winemakingReviewView(id){
  <div class="page-intro"><div class="eyebrow">CHAPTER ${ch.id} · INTAKE RECORD</div><h1 class="page-title">资料与配图进度</h1><p>第 ${ch.id} 章 · ${ch.title} · 课本 p.${ch.pages}</p></div>
  <div class="wm-review-status"><strong>课本、讲义与课堂转写已整合</strong><p>本章 ${units.length} 个阅读单元，按主题合并重复讲解，保留工艺、条件、数字与实例。下表可回到对应正文。</p></div>
  <section><h2>资料状态</h2><dl class="wm-source-list">
- <div><dt>课本</dt><dd>第 62–102 页共 ${winemakingData.intake.uniquePages} 页已收齐，第 63、97 页已补入。全批 ${winemakingData.intake.photos} 张照片中，p.68 重复，编号 179 未拍到课本。</dd></div>
- <div><dt>讲义</dt><dd>收到 ${winemakingData.intake.handoutPhotos} 张，印刷页 p.39–65，幻灯片 145–240。已按主题融入正文，流程与机制图放在对应段落。</dd></div>
+ <div><dt>课本</dt><dd>第 62–102 页共 ${winemakingData.intake.uniquePages} 页已收齐，第 63、97 页原图已于2026年11月5日复核。全批 ${winemakingData.intake.photos} 张照片中，p.68 重复，编号 179 未拍到课本。</dd></div>
+ <div><dt>讲义</dt><dd>收到 ${winemakingData.intake.handoutPhotos} 张，印刷页 p.${winemakingData.intake.handoutPageRange}，幻灯片 ${winemakingData.intake.handoutSlideRange}。已按主题融入正文，流程与机制图放在对应段落。</dd></div>
  <div><dt>课堂转写</dt><dd>收到 3 份 Word 转写，教学内容已按主题整合。未收到原始音频，未核听；转写中的含混处不作确定事实。</dd></div>
  <div><dt>练习册</dt><dd>第 5、6 页已收录，共8道题、33分；<a href="#workbook/3">第三课（14分）</a>、<a href="#workbook/4">第四课（19分）</a>。机构参考答案仍待提供。</dd></div></dl></section>
  <section><h2>课本主题去向</h2><div class="comparison-wrap"><table class="comparison wm-review-table"><thead><tr><th>课本页</th><th>阅读单元</th><th>状态</th></tr></thead><tbody>${units.map(u=>`<tr><td>p.${u.pages}</td><td>${unitLink(`${u.chapter}/${u.id}`)}</td><td>已整合</td></tr>`).join('')}</tbody></table></div></section>
  <details class="review-fold"><summary>讲义主题去向 · ${handouts.length} 张</summary><div class="comparison-wrap"><table class="comparison wm-review-table"><thead><tr><th>讲义页</th><th>主题</th><th>对应单元</th></tr></thead><tbody>${handouts.map(h=>`<tr><td>p.${h.page}</td><td>${h.topic}${h.duplicateOfPage?'；重复图合并到同一解释':''}</td><td>${h.routes.filter(r=>r.startsWith(ch.id+'/')).map(unitLink).join('<br>')}</td></tr>`).join('')}</tbody></table></div></details>
  ${figs.length?`<section><h2>课本编号配图 · ${figs.length} 组</h2><ul class="wm-figure-list">${figs.map(f=>`<li><strong><a href="${figureLink(f)}">${f.title} →</a></strong><span>对应主题图解</span></li>`).join('')}</ul><p class="fine">流程图区分必经步骤与可选选择；结构图标出对象、作用与去向。</p></section>`:''}
- ${lectureFigs.length?`<section><h2>讲义趋势图</h2><ul class="wm-figure-list">${lectureFigs.map(f=>`<li><a href="#read/${f.route}/wmfig-${f.id}">${f.title} →</a><span>定性示意，非实测曲线</span></li>`).join('')}</ul></section>`:''}
+ ${lectureFigs.length?`<section><h2>讲义图示</h2><ul class="wm-figure-list">${lectureFigs.map(f=>`<li><a href="#read/${f.route}/wmfig-${f.id}">${f.title} →</a><span>${wmEscape(f.note||'定性示意，非实测曲线')}</span></li>`).join('')}</ul></section>`:''}
  <details class="review-fold"><summary>资料中的差异与待确认项</summary><ul><li>讲义中的简化说法不作为固定规则：发酵并非一到 15% 酒精就停止；红酒苹果酸乳酸转化按主流做法讲解，不能脱离风格一概而论。</li><li>脱酸依据课本的碱性物质原理；讲义中与此不符的名称未直接照录。橡木香精的适用法规未核实，不作为通用工艺建议。</li><li>课堂关于二氧化硫敏感与食物用量的延伸说法未经独立确认，未作为医学或剂量结论。合作社也不等同于政府机构或低品质生产者。</li></ul></details><details class="review-fold"><summary>本批转写文件</summary><ul>${winemakingData.intake.transcripts.map(t=>`<li>${t}</li>`).join('')}</ul><p>原始音频仍待提供；练习册第 5、6 页已于2026-10-31收录。</p></details></main>`;
 }
 
