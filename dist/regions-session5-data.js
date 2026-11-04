@@ -979,7 +979,7 @@ const regionsSession5={
     0.835,
     0.485
    ],
-   "title": "图11.1 · 两种酒标重点",
+   "title": "两种酒标重点",
    "caption": "左：Chablis 突出法定产地；右：Napa Valley 指产地，Chardonnay 明示品种。两款均为霞多丽。图注文字已移至图片下方。",
    "kind": "labels",
    "src": "assets/s5-labels-11-1.webp",
@@ -1109,7 +1109,7 @@ const regionsSession5={
     0.785,
     0.813
    ],
-   "title": "图15.1 · 科通的 VSP 葡萄藤",
+   "title": "科通的 VSP 葡萄藤",
    "caption": "课本p.120。经过长枝修剪的葡萄藤，新梢垂直分布；阳光可以穿过冠层照到葡萄。图中园地实例与第6章的修剪结构图互相参照。",
    "kind": "photo",
    "src": "assets/s5-corton-vsp.webp",
@@ -1255,7 +1255,7 @@ const regionsSession5={
     0.89,
     0.55
    ],
-   "title": "图15.2 · 勃艮第地图",
+   "title": "勃艮第地图",
    "caption": "课本p.122。保留夏布利插图、一级与特级园颜色、地形高度、比例尺和指北针。看清夏布利与金丘之间的空间距离。",
    "kind": "map",
    "src": "assets/s5-textbook-burgundy-map.webp",
@@ -1303,7 +1303,7 @@ const regionsSession5={
     0.84,
     0.47
    ],
-   "title": "图15.3 · 金丘地图",
+   "title": "金丘地图",
    "caption": "课本p.123。图例同时区分特级园、夜丘／伯讷丘、上夜丘／上伯讷丘及大区范围，并保留海拔、比例尺与指北针。",
    "kind": "map",
    "src": "assets/s5-textbook-cote-map.webp",
@@ -1319,7 +1319,7 @@ const regionsSession5={
     0.866,
     0.763
    ],
-   "title": "图15.4 · 从科通看金丘坡地",
+   "title": "从科通看金丘坡地",
    "caption": "课本p.124。左侧为科通，右侧为金丘主要坡面，远处为伯讷丘。原图用平地与坡地对照村庄级和一级／特级园的常见位置；这是该景观的观察，不是所有园的普遍定律。",
    "kind": "photo",
    "src": "assets/s5-corton-landscape.webp",
@@ -1383,7 +1383,7 @@ const regionsSession5={
     0.86,
     0.46
    ],
-   "title": "图15.5 · 夏隆内丘与马孔内",
+   "title": "夏隆内丘与马孔内",
    "caption": "课本p.125。完整保留产区边界、村庄位置、河流、图例、比例尺、海拔与指北针，供两个分区共同参照。",
    "kind": "map",
    "src": "assets/s5-textbook-chal-macon-map.webp",
@@ -1415,7 +1415,7 @@ const regionsSession5={
     0.876,
     0.786
    ],
-   "title": "图15.6 · 索鲁特岩石下的普依–富赛",
+   "title": "索鲁特岩石下的普依–富赛",
    "caption": "课本p.126。保留索鲁特岩石、坡面葡萄园与周边景观。日照充分的朝东／东南坡有利于成熟、较饱满的霞多丽。",
    "kind": "photo",
    "src": "assets/s5-pouilly-landscape.webp",
@@ -1481,7 +1481,7 @@ const regionsSession5={
     0.85,
     0.49
    ],
-   "title": "图16.2 · 博若莱地图",
+   "title": "博若莱地图",
    "caption": "课本p.128。保留大区、村庄及Cru的北南位置、马孔、里昂、索恩河、图例、比例尺和指北针。",
    "kind": "map",
    "src": "assets/s5-beaujolais-map.webp",
@@ -1497,7 +1497,7 @@ const regionsSession5={
     0.669,
     0.9
    ],
-   "title": "图16.1 · 生长季初期经过整枝的佳美",
+   "title": "生长季初期经过整枝的佳美",
    "caption": "课本p.127。观察行列和初季冠层，配合杯形整枝、短枝修剪与现代搭架的文字阅读。",
    "kind": "photo",
    "src": "assets/s5-gamay-training.webp",

@@ -197,7 +197,7 @@
             "harvest-hand",
             "harvest-machine"
           ],
-          "conclusion": "把条件→具体操作→受光、通风或负载的变化→健康与成熟→品质／成本写完整；冷湿年份与炎热年份的选择可以不同。"
+          "conclusion": "葡萄园的管理方法要跟着天气调整。冷湿年份，排水和整理过密的枝叶，可以让果实多接触阳光、雨后更快干燥，帮助葡萄成熟并减少病害；炎热干旱年份，则要保留适当遮阴，避免果实晒伤，也要留意土壤是否能提供足够水分。采收后再剔除不健康或未成熟的果实，有助于保持酒的品质。这些工作通常需要额外的人工或设备，因此可能增加成本；并不是操作越多，品质就一定越高。"
         }
       ],
       "links": [
@@ -219,10 +219,18 @@
       "chapter": 13,
       "id": "grapes",
       "title": "混合中，每个品种提供什么？",
-      "desc": "三个主导黑品种、两个主要白品种和辅助品种",
+      "desc": "认识波尔多常用的葡萄品种，理解为什么要把不同品种酿成的酒混合",
       "pages": "110–112",
-      "intro": "混合既分散栽培风险，也让酒体、酸度、单宁和香气互补；比例随园址、年份与酒款目标变化。",
+      "intro": "波尔多红葡萄酒常用赤霞珠、梅洛和品丽珠；白葡萄酒主要用赛美蓉和长相思，也可能加入其他品种。酿酒师经常把不同品种酿成的酒混合在一起，再决定最终装瓶的酒是什么风格。",
       "sections": [
+        {
+          "title": "为什么要混合不同品种？",
+          "paragraphs": [
+            "种植多种葡萄，可以减少把收成押在单一品种上的风险。不同品种的开花和成熟时间不同，对天气的反应也不同。例如，在较凉的年份，较早成熟的梅洛可能已经成熟，而晚熟的赤霞珠还不够成熟。酒庄可以根据各批酒的实际表现调整混合比例，但这不能完全消除坏天气带来的损失。",
+            "混合也可以调整酒的味道和口感。例如，赤霞珠通常提供较高的酸度、单宁和黑醋栗等黑果香；梅洛可以补充李子等成熟果味，让口感更饱满、柔和。白葡萄酒中，长相思常带来清新酸度和明显果香，赛美蓉则可以增加酒体和质感。",
+            "混合没有适用于所有酒庄、所有年份的固定配方。酿酒师会看葡萄种在哪里、当年成熟得怎么样，以及想做出什么风格的酒，再决定每个品种用多少。辅助品种通常用量较少，用来补充某些特点，例如小维多可以增加颜色、单宁和香料感。"
+          ]
+        },
         {
           "title": "主要黑葡萄品种",
           "paragraphs": [
@@ -1095,7 +1103,7 @@
         1260,
         1600
       ],
-      "title": "图13.1 · 加热与制桶",
+      "title": "加热与制桶",
       "caption": "制桶工场加热橡木，使木板软化、弯成桶形。看工人手中弯曲的桶板与右侧火源；成桶的烘烤程度还会影响葡萄酒风味。",
       "kind": "photo",
       "src": "assets/s6-cooperage.webp",
@@ -1111,12 +1119,12 @@
         1048,
         1690
       ],
-      "title": "图13.2 · 上梅多克砾石园地",
+      "title": "上梅多克砾石园地",
       "caption": "看藤下大量砾石。湿润环境下，排水与较温暖土壤帮助晚熟赤霞珠成熟；不是砾石直接赋予黑醋栗或雪松味。",
       "kind": "photo",
-      "src": "assets/s6-gravel.webp",
-      "width": 1355,
-      "height": 1691
+      "src": "assets/s6-gravel-supplied-20261104.jpg",
+      "width": 1638,
+      "height": 2048
     },
     {
       "id": "botrytis-picking",
@@ -1127,7 +1135,7 @@
         988,
         1280
       ],
-      "title": "图13.3 · 苏玳选择性采收",
+      "title": "苏玳选择性采收",
       "caption": "手工选择同一串中适合的贵腐果，多次巡视采摘。逐粒选择和低出汁率增加成本；不把普通灰腐果混同于健康贵腐。",
       "kind": "photo",
       "src": "assets/s6-botrytis-picking.webp",
@@ -1143,7 +1151,7 @@
         1216,
         1480
       ],
-      "title": "图14.1 · 多尔多涅与法国西南部",
+      "title": "多尔多涅与法国西南部",
       "caption": "保留原图河流、比例尺、海拔图例与IGP范围。沿多尔多涅河找贝尔热拉克与蒙巴兹雅克；再找洛特河卡奥尔、南面的马迪朗和朱朗松。黑色大范围轮廓表示加斯科涅丘IGP。",
       "kind": "map",
       "src": "assets/s6-southwest-map.webp",
@@ -1290,9 +1298,9 @@
       "title": "土壤的区域概括",
       "caption": "左岸砾石、右岸黏土／石灰石、两海之间冲积土是简化分区，内部仍多样。湿润时排水重要，干旱时也需适当保水。下方原问题已在正文回答其前提。",
       "kind": "map",
-      "src": "assets/s6-soils.webp",
-      "width": 3475,
-      "height": 1939
+      "src": "assets/s6-soils-supplied-20261104.jpg",
+      "width": 2047,
+      "height": 1133
     },
     {
       "id": "wet-vineyard",
@@ -1340,9 +1348,9 @@
       "title": "运抵后的筛选",
       "caption": "看筛选台上的整串葡萄与人工挑选。剔除不健康、未成熟果有助一致性，同时降低可用数量、增加人力成本。",
       "kind": "labels",
-      "src": "assets/s6-sorting.webp",
-      "width": 858,
-      "height": 836
+      "src": "assets/s6-sorting-supplied-20261104.jpg",
+      "width": 1710,
+      "height": 1666
     },
     {
       "id": "harvest-hand",
@@ -1356,9 +1364,9 @@
       "title": "人工采收",
       "caption": "人工可在采收时选择并保持整串完整，适合有精细筛选目标的原料；不把所有列级酒一概视为法定手采。",
       "kind": "labels",
-      "src": "assets/s6-harvest-hand.webp",
-      "width": 575,
-      "height": 400
+      "src": "assets/s6-harvest-hand-supplied-20261104.jpg",
+      "width": 2048,
+      "height": 1402
     },
     {
       "id": "harvest-machine",
@@ -1372,9 +1380,9 @@
       "title": "机械采收",
       "caption": "机械采收可提高效率、控制成本，也要看地形、种植方式和目标。贵腐逐次精选不能由普通机采等同完成。",
       "kind": "labels",
-      "src": "assets/s6-harvest-machine.webp",
-      "width": 588,
-      "height": 449
+      "src": "assets/s6-harvest-machine-supplied-20261104.jpg",
+      "width": 2048,
+      "height": 1568
     },
     {
       "id": "merlot",
@@ -1388,9 +1396,9 @@
       "title": "梅洛",
       "caption": "较早成熟，适应较凉黏土，给混合增加果味与饱满度；普通早饮酒和右岸顶级酒都可能以它为主。",
       "kind": "labels",
-      "src": "assets/s6-merlot.webp",
-      "width": 599,
-      "height": 955
+      "src": "assets/s6-merlot-supplied-20261104.jpg",
+      "width": 1155,
+      "height": 2048
     },
     {
       "id": "cab-franc",
@@ -1404,9 +1412,9 @@
       "title": "品丽珠",
       "caption": "成熟时可增加果味与花香；不够成熟时可有草本或果梗味。不要仅凭果串外形辨定葡萄酒风格。",
       "kind": "labels",
-      "src": "assets/s6-cab-franc.webp",
-      "width": 571,
-      "height": 900
+      "src": "assets/s6-cab-franc-supplied-20261104.jpg",
+      "width": 1144,
+      "height": 2048
     },
     {
       "id": "cab-sauvignon",
@@ -1420,9 +1428,9 @@
       "title": "赤霞珠",
       "caption": "较晚成熟，偏好波尔多温暖、排水好的园址，常提供黑醋栗、酸、单宁和结构。",
       "kind": "labels",
-      "src": "assets/s6-cab-sauvignon.webp",
-      "width": 546,
-      "height": 876
+      "src": "assets/s6-cab-sauvignon-supplied-20261104.jpg",
+      "width": 1193,
+      "height": 2047
     },
     {
       "id": "petit-verdot",
@@ -1436,9 +1444,9 @@
       "title": "小维多",
       "caption": "成熟更晚，传统上多在炎热年份使用少量，增加颜色、单宁和香料感；较耐腐烂不等于抗所有病害。",
       "kind": "labels",
-      "src": "assets/s6-petit-verdot.webp",
-      "width": 737,
-      "height": 853
+      "src": "assets/s6-petit-verdot-supplied-20261104.jpg",
+      "width": 1384,
+      "height": 1700
     },
     {
       "id": "generic-red",
@@ -1481,7 +1489,7 @@
         1497,
         1226
       ],
-      "title": "图13.4 · 波尔多双语地图",
+      "title": "波尔多双语地图",
       "caption": "沿吉伦特河／加龙河找左岸、沿多尔多涅河找右岸；两河间是两海之间。逐一定位四个梅多克重点村庄、格拉夫、巴萨克和苏玳。",
       "kind": "map",
       "src": "assets/s6-bordeaux-map-v2.webp",
@@ -1564,9 +1572,9 @@
       "title": "赛美蓉",
       "caption": "薄皮、容易感染贵腐，干白混合可增加酒体；相对不如长相思芳香，不代表没有自身风味或酸。",
       "kind": "labels",
-      "src": "assets/s6-semillon.webp",
-      "width": 584,
-      "height": 843
+      "src": "assets/s6-semillon-supplied-20261104.jpg",
+      "width": 1419,
+      "height": 2047
     },
     {
       "id": "sauvignon",
@@ -1580,9 +1588,9 @@
       "title": "长相思",
       "caption": "常给混合提供酸度、果香和清新感。优质桶酿混合白酒可以陈年，不能把“通常早饮”扩成品种永不耐陈年。",
       "kind": "labels",
-      "src": "assets/s6-sauvignon.webp",
-      "width": 559,
-      "height": 690
+      "src": "assets/s6-sauvignon-supplied-20261104.jpg",
+      "width": 1660,
+      "height": 2048
     },
     {
       "id": "muscadelle",
@@ -1596,9 +1604,9 @@
       "title": "密思卡岱",
       "caption": "浓郁葡萄味与花香，通常少量辅助；Muscadelle不是Muscat麝香葡萄的别名。",
       "kind": "labels",
-      "src": "assets/s6-muscadelle.webp",
-      "width": 602,
-      "height": 847
+      "src": "assets/s6-muscadelle-supplied-20261104.jpg",
+      "width": 1452,
+      "height": 2048
     },
     {
       "id": "white-map",

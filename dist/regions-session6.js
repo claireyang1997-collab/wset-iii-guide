@@ -7,7 +7,7 @@ function s6Figure(id){
  const f=regionsSession6.figures.find(f=>f.id===id);if(!f)return '';
  const img=`<img src="${f.src}" width="${f.width}" height="${f.height}" alt="${wmEscape(f.alt||f.title+'。'+f.caption)}" loading="lazy" decoding="async">`;
  const media=f.mobileSrc?`<picture><source media="(max-width:600px)" srcset="${f.mobileSrc}" width="${f.mobileWidth}" height="${f.mobileHeight}">${img}</picture>`:img;
- return `<figure id="s6fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s6-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong><a href="${f.src}" target="_blank" rel="noopener" aria-label="打开大图：${wmEscape(f.title)}">打开大图 ↗</a></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener">${media}</a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
+ return `<figure id="s6fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s6-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener" aria-label="查看${wmEscape(f.title)}大图">${media}</a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
 }
 function s6FigureGroup(s){
  if(!s.figures?.length)return '';
@@ -17,7 +17,7 @@ function s6FigureGroup(s){
 }
 function s6UnitBody(u){
  const sources=regionsSession6.sources.filter(s=>s.routes.includes(`${u.chapter}/${u.id}`));
- return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${s.paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow?regionOptionsFlow(s.flow):''}${s6FigureGroup(s)}${s.conclusion?`<p class="s5-conclusion"><strong>学到这里，应该能说：</strong>${wmEscape(s.conclusion)}</p>`:''}</section>`).join('')+`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>${sources.length?`<p class="s5-references">核对依据：${sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a>`).join('；')}</p>`:''}`;
+ return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${s.paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow?regionOptionsFlow(s.flow):''}${s6FigureGroup(s)}${s.conclusion?`<div class="s5-conclusion"><strong>学到这里，应该能说：</strong>${wmEscape(s.conclusion)}</div>`:''}</section>`).join('')+`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>${sources.length?`<p class="s5-references">核对依据：${sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a>`).join('；')}</p>`:''}`;
 }
 for(const ch of regionsSession6.chapters)bookChapters.push({...ch,framework:false});
 for(const u of regionsSession6.units)bookUnits.push({...u,framework:false,origins:[],body:s6UnitBody(u)});
@@ -38,3 +38,4 @@ bookReviewView=function(id){
 };
 const s6PreviousPractice=learnerPracticeSection;
 learnerPracticeSection=function(){return s6PreviousPractice()+`<section class="learner-practice"><div class="eyebrow">EXPLAIN A REGIONAL STYLE</div><h2>波尔多与西南部 · 自编自查</h2><p>${regionsSession6.topics.length}个主题与2个跨区情境；先写因果，再看提示。<a href="#workbook/6">第六课原练习册p.10–11</a>已另设填写页；这里仍是自编自查，不冒充原题。</p><div class="learner-chapters">${regionsSession6.chapters.map(c=>`<article><h3>第${c.id}章 · ${wmEscape(c.title)}</h3>${learnerChapterPractice(c.id)}</article>`).join('')}</div></section>`;};
+

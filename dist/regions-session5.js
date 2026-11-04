@@ -3,7 +3,7 @@ function s5Figure(id){
  const f=regionsSession5.figures.find(f=>f.id===id);if(!f)return '';
  const img=`<img src="${f.src}" width="${f.width}" height="${f.height}" alt="${wmEscape(f.alt||f.title+'。'+f.caption)}" loading="lazy" decoding="async">`;
  const media=f.mobileSrc?`<picture><source media="(max-width:600px)" srcset="${f.mobileSrc}" width="${f.mobileWidth}" height="${f.mobileHeight}">${img}</picture>`:img;
- return `<figure id="s5fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s5-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong><a href="${f.src}" target="_blank" rel="noopener" aria-label="打开大图：${wmEscape(f.title)}">打开大图 ↗</a></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener">${media}</a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
+ return `<figure id="s5fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s5-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener" aria-label="查看${wmEscape(f.title)}大图">${media}</a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
 }
 function s5UnitBody(u){
  const sources=regionsSession5.sources.filter(s=>s.routes.includes(`${u.chapter}/${u.id}`));
@@ -24,3 +24,4 @@ bookReviewView=function(id){
 };
 const s5PreviousPractice=learnerPracticeSection;
 learnerPracticeSection=function(){return s5PreviousPractice()+`<section class="learner-practice"><div class="eyebrow">APPLY IT TO A REGION</div><h2>法规、勃艮第与博若莱 · 自编自查</h2><p>${regionsSession5.topics.length}个主题，练习解释、比较与应用。先写结论与原因，再看提示；本课练习册第7–9页原题已另行收录，可到第五课原练习册填写。</p><div class="learner-chapters">${regionsSession5.chapters.map(c=>`<article><h3>第${c.id}章 · ${wmEscape(c.title)}</h3>${learnerChapterPractice(c.id)}</article>`).join('')}</div></section>`;};
+
