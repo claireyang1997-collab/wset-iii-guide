@@ -103,7 +103,7 @@
 @container(max-width:500px){.s5-figures:has(>#s6fig-semillon){grid-template-columns:repeat(3,minmax(190px,1fr));overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}.s5-figures:has(>#s6fig-semillon)>.s5-figure{scroll-snap-align:start}}
 
 /* Compact map references and a paired wine-selection explanation. */
-#s6fig-medoc-detail{width:100%;max-width:440px;justify-self:start}
+#s6fig-medoc-detail{width:100%;max-width:360px;justify-self:start}
 #s6fig-graves-detail,#s6fig-right-detail{width:100%;max-width:580px;justify-self:start}
 #s6fig-cooperage{width:100%;max-width:640px;justify-self:start}
 #s6fig-generic-red{width:100%;max-width:800px;justify-self:start}
@@ -120,7 +120,7 @@
  #s6fig-second-wine .s5-image-link,#s6fig-second-wine-selection .s5-image-link{height:300px;display:flex;align-items:center;justify-content:center}
  #s6fig-second-wine-selection img{width:100%;height:100%;object-fit:contain}
 }
-.s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus){grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;max-width:640px}
+.s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus){grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;max-width:none}
 .s5-figures:has(>#s6fig-garage-labels):has(>#s6fig-petrus) .s5-image-link{height:340px;background:transparent;display:flex;align-items:center;justify-content:center}
 #s6fig-garage-labels img,#s6fig-petrus img{max-height:340px;object-fit:contain}
 @media(max-width:600px){
@@ -129,14 +129,25 @@
  #s6fig-garage-labels img,#s6fig-petrus img{max-height:240px}
 }
 
-/* One compact map above two white-wine explanation cards. */
+/* Complete white-grape comparison spans the full reading width. */
 .article-section:has(>#book-13-dry-white-3){container-type:inline-size}
 .s5-figures:has(>#s6fig-white-blend-guide){grid-template-columns:minmax(0,1fr);gap:20px}
-#s6fig-white-map{width:100%;max-width:360px;justify-self:start}
-#s6fig-generic-white img,#s6fig-white-blend-guide img{max-height:none}
+#s6fig-white-map{width:100%;max-width:none;justify-self:start}
+#s6fig-white-map img,#s6fig-generic-white img,#s6fig-white-blend-guide img{max-height:none;width:100%}
+#s6fig-white-blend-guide{grid-column:1/-1}
+#s6fig-white-blend-guide picture{width:100%}
+@container(min-width:720px){
+ .s5-figures:has(>#s6fig-white-blend-guide){grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);align-items:stretch}
+}
+/* Supplied Sauternes location and label share aligned, uncropped image windows. */
+.article-section:has(>#book-13-sweet-white-1){container-type:inline-size}
+.s5-figures:has(>#s6fig-sauternes-map):has(>#s6fig-sweet-label){grid-template-columns:minmax(0,1fr);align-items:stretch;gap:20px}
+.s5-figure:is(#s6fig-sauternes-map,#s6fig-sweet-label){display:flex;flex-direction:column}
+.s5-figure:is(#s6fig-sauternes-map,#s6fig-sweet-label) .s5-image-link{height:300px;display:flex;align-items:center;justify-content:center;background:transparent}
+.s5-figure:is(#s6fig-sauternes-map,#s6fig-sweet-label) img{width:100%;height:100%;max-height:none;object-fit:contain}
 @container(min-width:600px){
- .s5-figures:has(>#s6fig-white-blend-guide){grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
- #s6fig-white-map{grid-column:1/-1}
+ .s5-figures:has(>#s6fig-sauternes-map):has(>#s6fig-sweet-label){grid-template-columns:repeat(2,minmax(0,1fr))}
+ .s5-figure:is(#s6fig-sauternes-map,#s6fig-sweet-label) .s5-figure-heading{min-height:48px}
 }
 
 #s6fig-second-wine-selection picture{width:100%}
@@ -152,4 +163,19 @@
 .s5-figures:is(:has(>#s6fig-premium-red),:has(>#s6fig-cooperage-barrels)) img{width:100%;height:100%;max-height:none;object-fit:contain}
 @container(min-width:600px){
  .s5-figures:is(:has(>#s6fig-premium-red),:has(>#s6fig-cooperage-barrels)){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Newly supplied Southwest photos: full images and aligned captions. */
+#s6fig-southwest-map{width:100%;max-width:640px;justify-self:start}
+#s6fig-southwest-map img{max-height:none}
+#s6fig-yquem{width:100%;max-width:620px;justify-self:start}
+#s6fig-yquem img{width:100%;height:auto;max-height:none;object-fit:contain}
+.article-section:has(>:is(#book-14-dordogne-1,#book-14-cahors-1)){container-type:inline-size}
+.s5-figures:is(:has(>#s6fig-bergerac-landscape),:has(>#s6fig-cahors-landscape)){grid-template-columns:minmax(0,1fr);gap:20px;align-items:stretch}
+.s5-figure:is(#s6fig-bergerac-landscape,#s6fig-buzet-cellar,#s6fig-cahors-landscape,#s6fig-malbec){display:flex;flex-direction:column}
+.s5-figure:is(#s6fig-bergerac-landscape,#s6fig-buzet-cellar,#s6fig-cahors-landscape,#s6fig-malbec) .s5-image-link{height:260px;background:transparent;display:flex;align-items:center;justify-content:center}
+.s5-figure:is(#s6fig-bergerac-landscape,#s6fig-buzet-cellar,#s6fig-cahors-landscape,#s6fig-malbec) img{width:100%;height:100%;max-height:none;object-fit:contain}
+@container(min-width:600px){
+ .s5-figures:is(:has(>#s6fig-bergerac-landscape),:has(>#s6fig-cahors-landscape)){grid-template-columns:repeat(2,minmax(0,1fr))}
+ .s5-figure:is(#s6fig-bergerac-landscape,#s6fig-buzet-cellar,#s6fig-cahors-landscape,#s6fig-malbec) .s5-figure-heading{min-height:48px}
 }
