@@ -1451,11 +1451,11 @@
         1226
       ],
       "title": "图13.4 · 波尔多双语地图",
-      "caption": "采用讲义中同一幅较清晰双语图，合并课本重复地图。沿吉伦特河／加龙河找左岸、沿多尔多涅河找右岸；两河间是两海之间。逐一定位四个梅多克重点村庄、格拉夫、巴萨克和苏玳。",
+      "caption": "沿吉伦特河／加龙河找左岸、沿多尔多涅河找右岸；两河间是两海之间。逐一定位四个梅多克重点村庄、格拉夫、巴萨克和苏玳。",
       "kind": "map",
-      "src": "assets/s6-bordeaux-map.webp",
-      "width": 2646,
-      "height": 2580
+      "src": "assets/s6-bordeaux-map-v2.webp",
+      "width": 1648,
+      "height": 1588
     },
     {
       "id": "medoc-detail",
@@ -1948,7 +1948,7 @@
         "13/classifications",
         "13/overview"
       ],
-      "visual": "图13.4同一地图改用双语讲义大图；等级重绘为文字对照表",
+      "visual": "图13.4保留双语地图；等级重绘为文字对照表",
       "status": "integrated"
     },
     {

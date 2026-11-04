@@ -35,3 +35,6 @@
 /* Supporting gravel photograph: preserve the full portrait at a smaller width. */
 #s6fig-gravel{width:100%;max-width:360px;justify-self:start}
 @media(max-width:600px){#s6fig-gravel{max-width:280px}}
+
+/* Keep the bilingual map compact, with full-size viewing through its link. */
+#s6fig-bordeaux-map{width:100%;max-width:610px;justify-self:start}

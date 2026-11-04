@@ -79,6 +79,48 @@
  .book-reading .wm-content-table th,.book-reading .wm-content-table td{font-size:15px;padding:12px 14px}
  .wm-table-wrap::before{content:'表格可左右滑动查看 →';display:block;position:sticky;left:0;font-size:12px;color:var(--olive);margin-bottom:8px}
 }
+
+/* Cost stages use the actual reading column width to choose their direction. */
+.wm-stage-flow{container:wm-stages / inline-size}
+.wm-stage-layout{display:grid;gap:12px}
+.wm-stage-label{color:var(--wine);font-size:15px;line-height:1.55;white-space:nowrap}
+.book-reading .wm-stage-list{display:grid;gap:18px;list-style:none;margin:0;padding:0;min-width:0}
+.book-reading .wm-stage-list>.wm-stage{
+ display:grid;grid-template-columns:24px minmax(0,1fr);
+ grid-template-areas:"number title" "number detail";gap:2px 10px;
+ align-content:start;position:relative;min-width:0;margin:0;padding:10px 12px;
+ border:1px solid #dde1d2;border-radius:6px;background:#f0f1e7;
+}
+.wm-stage-number{
+ grid-area:number;display:grid;place-items:center;align-self:start;
+ width:24px;height:24px;border-radius:50%;background:#e4e8d7;
+ color:#525d3b;font:700 11px/1 var(--sans);font-variant-numeric:tabular-nums;
+}
+.wm-stage-title{grid-area:title;color:var(--ink);font-size:15px;line-height:1.6}
+.wm-stage-detail{grid-area:detail;color:#5d6557;font-size:13px;line-height:1.55;overflow-wrap:anywhere}
+.book-reading .wm-stage-list>.wm-stage:last-child{background:#f5ecea;border-color:#e6d4d5}
+.wm-stage:last-child .wm-stage-title{color:var(--wine)}
+.wm-stage:last-child .wm-stage-number{background:#eadbdd;color:var(--wine)}
+.wm-stage:not(:last-child)::after{
+ content:"";position:absolute;left:50%;bottom:-13px;width:7px;height:7px;
+ border:solid var(--olive);border-width:0 2px 2px 0;
+ transform:translateX(-50%) rotate(45deg);
+}
+@container wm-stages (min-width:600px){
+ .book-reading .wm-stage-list{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .book-reading .wm-stage-list>.wm-stage{
+  grid-template-columns:minmax(0,1fr);grid-template-areas:"number" "title" "detail";
+  gap:4px;padding:10px;
+ }
+ .wm-stage-title{white-space:nowrap}
+ .wm-stage:not(:last-child)::after{
+  left:auto;right:-13px;bottom:auto;top:50%;transform:translateY(-50%) rotate(-45deg);
+ }
+}
+@container wm-stages (min-width:730px){
+ .wm-stage-layout{grid-template-columns:max-content minmax(0,1fr);gap:16px;align-items:center}
+}
+
 /* Fig. 7.1: detailed cutaway with complete, selectable explanations. */
 .book-reading .wm-grape-intro{font:400 14px/1.85 var(--sans);color:var(--muted);margin:0 0 18px}
 .wm-grape-plate{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(0,1.35fr);gap:28px;align-items:center}

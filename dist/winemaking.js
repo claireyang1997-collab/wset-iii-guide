@@ -1,7 +1,23 @@
 /* Integrated textbook, handout and teaching transcript chapter content. */
 function wmEscape(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function wmTable(t){return `<div class="comparison-wrap wm-table-wrap"><table class="comparison wm-content-table"><thead><tr>${t.headers.map(h=>`<th scope="col">${wmEscape(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map((v,i)=>i===0?`<th scope="row">${wmEscape(v)}</th>`:`<td>${wmEscape(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
-function wmFlow(f){if(f.processGraph)return wmProcessFlow(winemakingData.processGraphs.find(g=>g.id===f.processGraph),f);return `<figure ${f.id?`id="wmfig-${wmEscape(f.id)}"`:""} class="wm-flow" data-wm-figure="flow"><div class="wm-flow-lanes">${f.lanes.map(l=>`<div class="wm-flow-lane"><strong>${wmEscape(l.label)}</strong><ol>${l.steps.map(step=>`<li>${wmEscape(step)}</li>`).join('')}</ol></div>`).join('')}</div>${f.caption?`<figcaption>${wmEscape(f.caption)}</figcaption>`:''}</figure>`;}
+function wmFlow(f){if(f.stages)return wmStageFlow(f);if(f.processGraph)return wmProcessFlow(winemakingData.processGraphs.find(g=>g.id===f.processGraph),f);return `<figure ${f.id?`id="wmfig-${wmEscape(f.id)}"`:""} class="wm-flow" data-wm-figure="flow"><div class="wm-flow-lanes">${f.lanes.map(l=>`<div class="wm-flow-lane"><strong>${wmEscape(l.label)}</strong><ol>${l.steps.map(step=>`<li>${wmEscape(step)}</li>`).join('')}</ol></div>`).join('')}</div>${f.caption?`<figcaption>${wmEscape(f.caption)}</figcaption>`:''}</figure>`;}
+function wmStageFlow(f){
+ const {label,steps}=f.stages;
+ const cards=steps.map(({title,detail},i)=>`
+  <li class="wm-stage">
+   <span class="wm-stage-number" aria-hidden="true">${String(i+1).padStart(2,"0")}</span>
+   <strong class="wm-stage-title">${wmEscape(title)}</strong>
+   <span class="wm-stage-detail">${wmEscape(detail)}</span>
+  </li>`).join('');
+ return `<figure id="wmfig-${wmEscape(f.id)}" class="wm-flow wm-stage-flow" data-wm-figure="flow">
+  <div class="wm-stage-layout">
+   <strong class="wm-stage-label">${wmEscape(label)}</strong>
+   <ol class="wm-stage-list" role="list" aria-label="${wmEscape(label)}">${cards}</ol>
+  </div>
+  ${f.caption?`<figcaption>${wmEscape(f.caption)}</figcaption>`:''}
+ </figure>`;
+}
 function wmProcessFlow(g,f){
  const compact=g.id==='red-rose',image=g.image+(compact?'?v=20261028-compact':'');
  return `<figure id="wmfig-${wmEscape(f.id)}" class="wm-flow wm-process-flow${compact?' wm-process-compact':''}" data-wm-figure="flow"><div class="wm-process-heading"><strong>${wmEscape(g.title)}</strong><div><a href="${wmEscape(image)}" target="_blank" rel="noopener">查看大图 ↗</a><a href="${wmEscape(image)}" download>下载 SVG ↓</a></div></div><p class="wm-process-hint">${compact?'已缩小预览，可打开大图查看全部步骤与分支。':'图较宽时可横向滚动，或打开大图查看全部连线。'}</p><div class="wm-process-viewport" tabindex="0" role="region" aria-label="${wmEscape(g.title)}${compact?'，缩略预览':'，可横向滚动'}"><img src="${wmEscape(image)}" width="${g.width}" height="${g.height}" style="--flow-min:${g.minWidth}px" data-flow-focus="${g.focusX/g.width}" alt="${wmEscape(g.title)}：含全部${g.nodes.length}个框、${g.edges.length}条连接及图例。" loading="lazy" decoding="async"></div><figcaption>${wmEscape(g.caption)}</figcaption></figure>`;
