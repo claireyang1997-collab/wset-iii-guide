@@ -41,3 +41,23 @@
 
 /* Keep each Bordeaux rainfall mechanism on one line within the scrollable table. */
 .article-section:has(>#book-13-climate-2) .wm-content-table tr>:nth-child(2){width:1%;white-space:nowrap}
+
+/* Pair the vineyard operation image with an optional chapter refresher. */
+.s6-figure-context{container-type:inline-size;margin:28px 0 32px;min-width:0}
+.s6-figure-context-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start}
+.s6-figure-context .s5-figures{margin:0}
+.s6-figure-context #s6fig-spraying{max-width:none}
+.s6-refresher{min-width:0;padding:22px;background:#f0f1e6;border:1px solid #d9ddcc;border-radius:8px}
+.s6-refresher-kicker{display:block;font-size:12px;letter-spacing:.08em;color:#6e795c}
+.article-section .s6-refresher h3{margin:8px 0 3px;font-family:inherit;font-size:20px;line-height:1.5;color:#36432f}
+.article-section .s6-refresher p{margin:10px 0;font-size:14px;line-height:1.85}
+.article-section .s6-refresher .s6-refresher-en{margin:0 0 14px;font-size:12px;color:#737c67}
+.s6-refresher dl{margin:18px 0 0}
+.s6-refresher dl>div+div{margin-top:16px}
+.s6-refresher dt{margin:0 0 4px;font-size:14px;font-weight:600;color:#36432f}
+.s6-refresher dd{margin:0;font-size:14px;line-height:1.85;color:#59634f}
+.article-section .s6-refresher .s6-refresher-source{margin:20px 0 10px;padding-top:14px;border-top:1px solid #d9ddcc;font-size:12px;color:#737c67}
+.s6-refresher-links{display:grid;gap:9px}
+.s6-refresher-links a{font-size:13px;line-height:1.7;color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+@container(min-width:760px){.s6-figure-context-layout{grid-template-columns:minmax(0,1.45fr) minmax(280px,1fr)}}
+@media(max-width:600px){.s6-refresher{padding:18px}.article-section .s6-refresher h3{font-size:18px}}
