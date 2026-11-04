@@ -3,7 +3,8 @@ function s5Figure(id){
  const f=regionsSession5.figures.find(f=>f.id===id);if(!f)return '';
  const img=`<img src="${f.src}" width="${f.width}" height="${f.height}" alt="${wmEscape(f.alt||f.title+'。'+f.caption)}" loading="lazy" decoding="async">`;
  const media=f.mobileSrc?`<picture><source media="(max-width:600px)" srcset="${f.mobileSrc}" width="${f.mobileWidth}" height="${f.mobileHeight}">${img}</picture>`:img;
- return `<figure id="s5fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s5-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong></div><a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener" aria-label="查看${wmEscape(f.title)}大图">${media}</a><figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
+ const linkedMedia=f.images?.length?`<div class="s5-media-pair">${f.images.map(p=>`<a class="s5-image-link" href="${wmEscape(p.src)}" target="_blank" rel="noopener" aria-label="查看${wmEscape(p.alt)}大图"><img src="${wmEscape(p.src)}" width="${p.width}" height="${p.height}" alt="${wmEscape(p.alt)}" loading="lazy" decoding="async"></a>`).join('')}</div>`:`<a class="s5-image-link" href="${f.src}" target="_blank" rel="noopener" aria-label="查看${wmEscape(f.title)}大图">${media}</a>`;
+ return `<figure id="s5fig-${wmEscape(id)}" class="s5-figure s5-figure-${f.kind}" data-s5-figure="${wmEscape(id)}"><div class="s5-figure-heading"><strong>${wmEscape(f.title)}</strong></div>${linkedMedia}<figcaption>${wmEscape(f.caption)}</figcaption></figure>`;
 }
 function s5LearningSummary(content){
  if(!content)return "";

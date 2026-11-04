@@ -179,3 +179,16 @@
  .s5-figures:is(:has(>#s6fig-bergerac-landscape),:has(>#s6fig-cahors-landscape)){grid-template-columns:repeat(2,minmax(0,1fr))}
  .s5-figure:is(#s6fig-bergerac-landscape,#s6fig-buzet-cellar,#s6fig-cahors-landscape,#s6fig-malbec) .s5-figure-heading{min-height:48px}
 }
+
+/* November photo refresh: keep comparisons on one row with aligned media. */
+.s5-figures:is(:has(>#s6fig-tannat),:has(>#s6fig-petit-manseng),:has(>#s6fig-bordeaux-map),:has(>#s6fig-sorting)){gap:18px;align-items:stretch;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}
+.s5-figures:has(>#s6fig-tannat){grid-template-columns:repeat(2,minmax(230px,1fr))}
+.s5-figures:is(:has(>#s6fig-petit-manseng),:has(>#s6fig-sorting)){grid-template-columns:repeat(3,minmax(210px,1fr))}
+.s5-figures:has(>#s6fig-bordeaux-map){grid-template-columns:repeat(2,minmax(270px,1fr))}
+.s5-figures:is(:has(>#s6fig-tannat),:has(>#s6fig-petit-manseng),:has(>#s6fig-bordeaux-map),:has(>#s6fig-sorting))>.s5-figure{display:flex;flex-direction:column;max-width:none;padding:14px;scroll-snap-align:start}
+.s5-figures:is(:has(>#s6fig-tannat),:has(>#s6fig-petit-manseng),:has(>#s6fig-bordeaux-map),:has(>#s6fig-sorting)) .s5-figure-heading{min-height:48px;align-items:start;margin-bottom:12px}
+.s5-figures:is(:has(>#s6fig-tannat),:has(>#s6fig-petit-manseng),:has(>#s6fig-sorting)) .s5-image-link{height:260px;aspect-ratio:auto;background:transparent;flex:none}
+.s5-figures:has(>#s6fig-bordeaux-map) .s5-image-link{height:420px;background:transparent}
+.s5-figures:is(:has(>#s6fig-tannat),:has(>#s6fig-petit-manseng),:has(>#s6fig-bordeaux-map),:has(>#s6fig-sorting)) img{width:100%;height:100%;max-height:none;object-fit:contain}
+.article-section .s5-figures .s5-figure:is(#s6fig-sorting,#s6fig-harvest-hand,#s6fig-harvest-machine,#s6fig-tannat,#s6fig-petit-manseng,#s6fig-jurancon-vines) img{object-fit:cover}
+@media(max-width:600px){.s5-figures:has(>#s6fig-bordeaux-map) .s5-image-link{height:330px}}

@@ -2775,11 +2775,11 @@ const winemakingData={
       "title": "图 10.1 · 陡坡葡萄园与成本",
       "photos": [
        {
-        "image": "assets/photo-vineyard-cost-v3.webp",
+        "image": "assets/wm-mosel-vineyard-supplied-20261105.jpg",
         "title": "摩泽尔陡坡葡萄园",
         "caption": "极为陡峭的葡萄园，正如图片中这座摩泽尔产区的葡萄园，栽培成本比平地葡萄园高得多，酒庄的成本也随之增加。",
-        "width": 1514,
-        "height": 856
+        "width": 2257,
+        "height": 1279
        }
       ],
       "wide": true

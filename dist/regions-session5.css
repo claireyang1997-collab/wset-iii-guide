@@ -48,3 +48,33 @@
 
 
 .article-section .s5-conclusion p{margin:8px 0 0;font-size:inherit;line-height:1.9}.article-section .s5-conclusion p:first-of-type{margin-top:4px}
+
+/* Supplied photographs and compact, full-content map comparisons. */
+.s5-figures:is(:has(>#s5fig-france-map),:has(>#s5fig-chablis-map)){grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:stretch}
+.s5-figure:is(#s5fig-france-map,#s5fig-burgundy-map,#s5fig-chablis-map,#s5fig-textbook-burgundy-map){display:flex;flex-direction:column}
+.s5-figure:is(#s5fig-france-map,#s5fig-burgundy-map,#s5fig-chablis-map,#s5fig-textbook-burgundy-map) .s5-figure-heading{min-height:48px}
+.s5-figure:is(#s5fig-france-map,#s5fig-burgundy-map) img{height:340px;max-height:none;object-fit:contain}
+.s5-figure:is(#s5fig-chablis-map,#s5fig-textbook-burgundy-map) img{height:290px;max-height:none;object-fit:contain}
+#s5fig-france-area-chart{grid-column:1/-1}
+#s5fig-chablis-vineyard{max-width:580px;width:100%;justify-self:start}
+#s5fig-chardonnay-photo{max-width:640px;width:100%;justify-self:start}
+.s5-media-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#s5fig-chardonnay-photo .s5-image-link{height:300px;background:transparent}
+#s5fig-chardonnay-photo img{width:100%;height:100%;max-height:none;object-fit:contain}
+.s5-figures:is(:has(>#s5fig-kir-photo),:has(>#s5fig-chauvet-photo)){gap:18px;align-items:stretch;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}
+.s5-figures:has(>#s5fig-kir-photo){grid-template-columns:repeat(2,minmax(220px,1fr));max-width:820px}
+.s5-figures:has(>#s5fig-chauvet-photo){grid-template-columns:repeat(3,minmax(210px,1fr))}
+.s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels,#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label){max-width:none;display:flex;flex-direction:column;scroll-snap-align:start}
+.s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels,#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label) .s5-figure-heading{min-height:48px;align-items:start}
+.s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels) .s5-image-link{height:340px;background:transparent}
+.s5-figure:is(#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label) .s5-image-link{height:280px;background:transparent}
+.s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels,#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label) img{width:100%;height:100%;max-height:none;object-fit:contain}
+@media(max-width:600px){
+ .s5-figures:is(:has(>#s5fig-france-map),:has(>#s5fig-chablis-map)){grid-template-columns:minmax(0,1fr)}
+ .s5-figure:is(#s5fig-france-map,#s5fig-burgundy-map,#s5fig-chablis-map,#s5fig-textbook-burgundy-map) .s5-figure-heading{min-height:0}
+ .s5-figure:is(#s5fig-france-map,#s5fig-burgundy-map) img{height:300px}
+ .s5-figure:is(#s5fig-chablis-map,#s5fig-textbook-burgundy-map) img{height:auto;max-height:290px}
+ #s5fig-chardonnay-photo .s5-image-link{height:210px}
+ .s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels) .s5-image-link{height:290px}
+ .s5-figure:is(#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label) .s5-image-link{height:250px}
+}

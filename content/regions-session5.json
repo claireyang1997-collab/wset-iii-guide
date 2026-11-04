@@ -544,7 +544,7 @@
         {
           "title": "六张酒标：先看名称，再找等级",
           "paragraphs": [
-            "上排依次是 Bourgogne Pinot Noir、Côte de Beaune-Villages、Beaune；下排是 Gevrey-Chambertin、Gevrey-Chambertin Premier Cru Combe aux Moines、Chambertin Grand Cru。第二张虽有 Villages，仍须按其具体法定产区辨认。"
+            "六张酒标依次是 Bourgogne Pinot Noir、Côte de Beaune-Villages、Beaune；接着是 Gevrey-Chambertin、Gevrey-Chambertin Premier Cru Combe aux Moines、Chambertin Grand Cru。第二张虽有 Villages，仍须按其具体法定产区辨认。"
           ],
           "figures": [
             "label-bourgogne",
@@ -1074,7 +1074,7 @@
       "title": "两种酒标重点",
       "caption": "左边的 Chablis 是产区名称，右边的 Chardonnay 是葡萄品种名称。两款酒都由霞多丽酿造，但酒标强调的信息不同。",
       "kind": "labels",
-      "src": "assets/s5-labels-11-1.webp",
+      "src": "assets/s5-labels-11-1-supplied-20261105.jpg",
       "width": 1981,
       "height": 766
     },
@@ -1090,9 +1090,9 @@
       "title": "法国：勃艮第与博若莱的位置",
       "caption": "勃艮第与博若莱都位于法国东部的内陆地区。图中的第戎（Dijon）和里昂（Lyon），可以帮助我们找到这两个产区的位置。",
       "kind": "map",
-      "src": "assets/s5-france-map.webp",
-      "width": 2200,
-      "height": 2154
+      "src": "assets/s5-france-map-supplied-20261105.jpg",
+      "width": 1315,
+      "height": 1279
     },
     {
       "id": "burgundy-map",
@@ -1106,9 +1106,9 @@
       "title": "勃艮第：由北往南",
       "caption": "从北向南，勃艮第依次包括夏布利、金丘、夏隆内丘和马孔内。夏布利距离其他分区较远，所以在地图中单独画出。",
       "kind": "map",
-      "src": "assets/s5-burgundy-map.webp",
-      "width": 2200,
-      "height": 2326
+      "src": "assets/s5-burgundy-map-supplied-20261105.jpg",
+      "width": 1279,
+      "height": 1330
     },
     {
       "id": "burgundy-slope",
@@ -1140,9 +1140,9 @@
       "title": "黑皮诺果串",
       "caption": "黑皮诺果皮较薄，潮湿天气下容易受到病害影响。种植时需要留意通风、果实健康和采收时间。",
       "kind": "photo",
-      "src": "assets/s5-pinot-photo.webp",
-      "width": 665,
-      "height": 983
+      "src": "assets/s5-pinot-photo-supplied-20261105.jpg",
+      "width": 5760,
+      "height": 3840
     },
     {
       "id": "chardonnay-photo",
@@ -1156,9 +1156,23 @@
       "title": "霞多丽与 Bourgogne Chardonnay 酒标",
       "caption": "Chardonnay 指霞多丽品种，Bourgogne 指勃艮第大区。把两个词放在一起，就说明这是一款来自勃艮第的霞多丽葡萄酒。",
       "kind": "labels",
-      "src": "assets/s5-chardonnay-photo.webp",
-      "width": 1443,
-      "height": 680
+      "src": "assets/s5-chardonnay-photo-supplied-20261105.jpg",
+      "width": 270,
+      "height": 400,
+      "images": [
+        {
+          "src": "assets/s5-chardonnay-photo-supplied-20261105.jpg",
+          "width": 270,
+          "height": 400,
+          "alt": "霞多丽葡萄果串"
+        },
+        {
+          "src": "assets/s5-chardonnay-label-supplied-20261105.jpg",
+          "width": 451,
+          "height": 564,
+          "alt": "Bourgogne Chardonnay 酒标"
+        }
+      ]
     },
     {
       "id": "kir-photo",
@@ -1172,9 +1186,9 @@
       "title": "Kir 的混调示例",
       "caption": "Kir 由白葡萄酒与黑醋栗利口酒混合而成。传统上常使用酸度较高的阿里高特白葡萄酒。",
       "kind": "photo",
-      "src": "assets/s5-kir-photo.webp",
-      "width": 617,
-      "height": 901
+      "src": "assets/s5-kir-photo-supplied-20261105.jpg",
+      "width": 1279,
+      "height": 1869
     },
     {
       "id": "burgundy-red-labels",
@@ -1188,9 +1202,9 @@
       "title": "黑皮诺与佳美酒标例子",
       "caption": "上方的 Bourgogne Pinot Noir 使用黑皮诺；下方的 Beaujolais-Villages 红酒主要使用佳美。辨认品种时，要看完整酒名和产区。",
       "kind": "labels",
-      "src": "assets/s5-burgundy-red-labels.webp",
-      "width": 645,
-      "height": 786
+      "src": "assets/s5-burgundy-red-labels-supplied-20261105.jpg",
+      "width": 1280,
+      "height": 1560
     },
     {
       "id": "corton-vsp",
@@ -1204,9 +1218,9 @@
       "title": "科通的 VSP 葡萄藤",
       "caption": "葡萄藤的新梢被向上固定，形成较薄、留有空隙的枝叶层。这种 VSP 管理方式有助于改善受光和通风。",
       "kind": "photo",
-      "src": "assets/s5-corton-vsp.webp",
-      "width": 1745,
-      "height": 1343
+      "src": "assets/s5-corton-vsp-supplied-20261105.jpg",
+      "width": 1697,
+      "height": 1338
     },
     {
       "id": "burgundy-levels",
@@ -1238,9 +1252,9 @@
       "title": "Bourgogne Pinot Noir",
       "caption": "Bourgogne 表示勃艮第大区来源，Pinot Noir 表示使用黑皮诺品种。",
       "kind": "labels",
-      "src": "assets/s5-label-bourgogne.webp",
-      "width": 1656,
-      "height": 1204
+      "src": "assets/s5-label-bourgogne-supplied-20261105.jpg",
+      "width": 4096,
+      "height": 2976
     },
     {
       "id": "label-cdbv",
@@ -1254,9 +1268,9 @@
       "title": "Côte de Beaune-Villages",
       "caption": "Côte de Beaune-Villages 是村庄级红酒产区名称，允许葡萄来自规定范围内的多个村庄。",
       "kind": "labels",
-      "src": "assets/s5-label-cdbv.webp",
-      "width": 1525,
-      "height": 1174
+      "src": "assets/s5-label-cdbv-supplied-20261105.jpg",
+      "width": 2920,
+      "height": 2248
     },
     {
       "id": "label-beaune",
@@ -1270,9 +1284,9 @@
       "title": "Beaune",
       "caption": "Beaune 是伯讷村庄产区名称。这张酒标没有标示 Premier Cru，因此按村庄级酒理解。",
       "kind": "labels",
-      "src": "assets/s5-label-beaune.webp",
-      "width": 1582,
-      "height": 1157
+      "src": "assets/s5-label-beaune-supplied-20261105.jpg",
+      "width": 1685,
+      "height": 1280
     },
     {
       "id": "label-gevrey",
@@ -1286,8 +1300,8 @@
       "title": "Gevrey-Chambertin",
       "caption": "Gevrey-Chambertin 是完整的村庄名称。这里的 Chambertin 属于村名的一部分，与单独标示的 Chambertin 特级园不同。",
       "kind": "labels",
-      "src": "assets/s5-label-gevrey.webp",
-      "width": 1542,
+      "src": "assets/s5-label-gevrey-supplied-20261105.jpg",
+      "width": 1536,
       "height": 1032
     },
     {
@@ -1302,9 +1316,9 @@
       "title": "Gevrey-Chambertin · Combe aux Moines",
       "caption": "酒标同时写出村庄 Gevrey-Chambertin、葡萄园 Combe aux Moines 和 Premier Cru，说明这是一款一级园葡萄酒。",
       "kind": "labels",
-      "src": "assets/s5-label-premier.webp",
-      "width": 1485,
-      "height": 1032
+      "src": "assets/s5-label-premier-supplied-20261105.jpg",
+      "width": 1736,
+      "height": 1280
     },
     {
       "id": "label-chambertin",
@@ -1318,9 +1332,9 @@
       "title": "Chambertin Grand Cru",
       "caption": "Chambertin 是独立的特级园名称，酒标上的 Grand Cru 明确标示了这一身份。",
       "kind": "labels",
-      "src": "assets/s5-label-chambertin.webp",
-      "width": 1457,
-      "height": 985
+      "src": "assets/s5-label-chambertin-supplied-20261105.jpg",
+      "width": 1821,
+      "height": 1280
     },
     {
       "id": "chablis-map",
@@ -1334,9 +1348,9 @@
       "title": "夏布利：Petit、Village、Premier 与 Grand Cru",
       "caption": "瑟兰河穿过夏布利产区。地图展示小夏布利、夏布利、一级园和特级园的分布，帮助比较不同葡萄园的位置与朝向。",
       "kind": "map",
-      "src": "assets/s5-chablis-map.webp",
-      "width": 2200,
-      "height": 1484
+      "src": "assets/s5-chablis-map-supplied-20261105.jpg",
+      "width": 2048,
+      "height": 1381
     },
     {
       "id": "textbook-burgundy-map",
@@ -1350,9 +1364,9 @@
       "title": "勃艮第地图",
       "caption": "夏布利位于勃艮第北部，与金丘等主要分区有一段距离。地图中的插图和比例尺帮助我们理解这种地理分布。",
       "kind": "map",
-      "src": "assets/s5-textbook-burgundy-map.webp",
-      "width": 2200,
-      "height": 1663
+      "src": "assets/s5-textbook-burgundy-map-supplied-20261105.jpg",
+      "width": 1693,
+      "height": 1280
     },
     {
       "id": "chablis-vineyard",
@@ -1366,9 +1380,9 @@
       "title": "夏布利坡地葡萄园",
       "caption": "朝向阳光的坡地通常能获得更多热量，有利于葡萄成熟。这也是凉爽的夏布利需要重视坡向的原因。",
       "kind": "photo",
-      "src": "assets/s5-chablis-vineyard.webp",
-      "width": 1726,
-      "height": 538
+      "src": "assets/s5-chablis-vineyard-supplied-20261105.jpg",
+      "width": 650,
+      "height": 330
     },
     {
       "id": "cote-or-map",
@@ -1706,9 +1720,9 @@
       "title": "讲义中的 Jules Chauvet",
       "caption": "Jules Chauvet 是博若莱的酿酒研究者。他对发酵和酿造的研究，影响了当地一些生产者的做法。",
       "kind": "photo",
-      "src": "assets/s5-chauvet-photo.webp",
-      "width": 613,
-      "height": 720
+      "src": "assets/s5-chauvet-photo-supplied-20261105.jpg",
+      "width": 500,
+      "height": 582
     },
     {
       "id": "nouveau-labels",
@@ -1722,9 +1736,9 @@
       "title": "Cru 名称 Fleurie",
       "caption": "Fleurie 是博若莱十个 Cru 之一。酒标主要标示村庄产区名称，与写有 Nouveau 的新酒标签不同。",
       "kind": "labels",
-      "src": "assets/s5-nouveau-labels.webp",
-      "width": 492,
-      "height": 423
+      "src": "assets/s5-nouveau-labels-supplied-20261105.jpg",
+      "width": 508,
+      "height": 692
     },
     {
       "id": "france-area-chart",
@@ -1759,9 +1773,9 @@
       "title": "小地块中的马匹作业",
       "caption": "小地块或不便使用大型机械的园地，可以选择马匹进行部分作业。不同作业方式需要的人工、时间和费用也不同。",
       "kind": "photo",
-      "src": "assets/s5-horse-vineyard.webp",
-      "width": 673,
-      "height": 986
+      "src": "assets/s5-horse-vineyard-supplied-20261105.jpg",
+      "width": 480,
+      "height": 319
     },
     {
       "id": "chardonnay-flavour",
@@ -1793,9 +1807,9 @@
       "title": "Beaujolais Nouveau 酒标",
       "caption": "Beaujolais Nouveau 表示博若莱新酒。这类酒在采收后不久上市，重视新鲜果香，适合年轻时饮用。",
       "kind": "labels",
-      "src": "assets/s5-nouveau-label.webp",
-      "width": 431,
-      "height": 257
+      "src": "assets/s5-nouveau-label-supplied-20261105.jpg",
+      "width": 300,
+      "height": 304
     }
   ],
   "pages": [

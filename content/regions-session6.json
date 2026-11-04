@@ -1333,9 +1333,9 @@
       "title": "罗伯特·帕克",
       "caption": "罗伯特·帕克是一位葡萄酒评论家。他的评分与评论曾对波尔多酒庄的国际声誉和市场需求产生显著影响。",
       "kind": "labels",
-      "src": "assets/s6-parker.webp",
-      "width": 500,
-      "height": 855
+      "src": "assets/s6-parker-supplied-20261105.jpg",
+      "width": 300,
+      "height": 300
     },
     {
       "id": "yquem",
@@ -1462,9 +1462,9 @@
       "title": "多雨条件的园地",
       "caption": "雨水过多时，葡萄园需要良好排水；潮湿的枝叶和果串也更容易受到真菌病害影响。因此，排水、通风和防病都是波尔多的重要管理工作。",
       "kind": "labels",
-      "src": "assets/s6-wet-vineyard-supplied.jpg",
-      "width": 2048,
-      "height": 1950
+      "src": "assets/s6-wet-vineyard-supplied-20261105.jpg",
+      "width": 700,
+      "height": 461
     },
     {
       "id": "spraying",
@@ -1639,9 +1639,9 @@
       "title": "波尔多双语地图",
       "caption": "吉伦特河口和加龙河西侧是左岸，多尔多涅河北侧及东侧是右岸，两河之间是两海之间。先辨认河流，再定位各个产区。",
       "kind": "map",
-      "src": "assets/s6-bordeaux-map-v2.webp",
-      "width": 1648,
-      "height": 1588
+      "src": "assets/s6-bordeaux-map-redrawn-20261105.jpg",
+      "width": 1122,
+      "height": 1402
     },
     {
       "id": "medoc-detail",
@@ -1842,9 +1842,9 @@
       "title": "小满胜",
       "caption": "小满胜的英文名是 Petit Manseng，也译作小芒森。它酸度高，适合在藤上风干浓缩后酿成甜白。",
       "kind": "labels",
-      "src": "assets/s6-petit-manseng.webp",
-      "width": 287,
-      "height": 292
+      "src": "assets/s6-petit-manseng-supplied-20261105.jpg",
+      "width": 469,
+      "height": 550
     },
     {
       "id": "tannat",
@@ -1858,9 +1858,9 @@
       "title": "丹娜",
       "caption": "丹娜是马迪朗红酒的主要品种，单宁含量较高。充分成熟和适当熟化，可以让酒保留力量感，同时减少生硬涩感。",
       "kind": "labels",
-      "src": "assets/s6-tannat.webp",
-      "width": 579,
-      "height": 298
+      "src": "assets/s6-tannat-supplied-20261105.jpg",
+      "width": 884,
+      "height": 672
     },
     {
       "id": "gascogne-label",
@@ -1908,9 +1908,9 @@
       "title": "Château Montus例子",
       "caption": "Château Montus 是马迪朗的生产者之一。理解当地红酒风格时，重点是主要品种丹娜及其较多的单宁。",
       "kind": "labels",
-      "src": "assets/s6-montus.webp",
-      "width": 707,
-      "height": 605
+      "src": "assets/s6-montus-supplied-20261105.jpg",
+      "width": 620,
+      "height": 620
     },
     {
       "id": "jurancon-label",
@@ -1924,9 +1924,9 @@
       "title": "Jurançon酒标",
       "caption": "Jurançon 是朱朗松产区名称。标有 Jurançon Sec 的是干白；本节重点介绍葡萄经风干浓缩后酿造的甜白。",
       "kind": "labels",
-      "src": "assets/s6-jurancon-label.webp",
-      "width": 630,
-      "height": 436
+      "src": "assets/s6-jurancon-label-supplied-20261105.jpg",
+      "width": 1024,
+      "height": 1024
     },
     {
       "id": "jurancon-vines",
@@ -1940,9 +1940,9 @@
       "title": "朱朗松山麓园地",
       "caption": "朱朗松靠近比利牛斯山。当地甜白可让葡萄在藤上继续停留、逐渐失水，从而浓缩糖和风味。",
       "kind": "labels",
-      "src": "assets/s6-jurancon-vines.webp",
-      "width": 623,
-      "height": 391
+      "src": "assets/s6-jurancon-vines-supplied-20261105.jpg",
+      "width": 450,
+      "height": 300
     },
     {
       "id": "historical-area",
@@ -1977,9 +1977,9 @@
       "title": "贸易历史配图",
       "caption": "亨利二世与埃莉诺的婚姻及之后的统治关系，加强了波尔多与英国的联系，也为葡萄酒贸易的发展提供了历史背景。",
       "kind": "labels",
-      "src": "assets/s6-history-portrait.webp",
-      "width": 789,
-      "height": 990
+      "src": "assets/s6-history-portrait-supplied-20261105.jpg",
+      "width": 228,
+      "height": 468
     },
     {
       "id": "bourgogne-workbook-label",
@@ -2007,11 +2007,11 @@
         1142
       ],
       "title": "地理区域与典型酒色",
-      "caption": "这张图帮助认识波尔多各区域常见的酒色与风格。图中部分说明来自旧教材：两海之间已获准生产红酒，Médoc 也已获准生产干白，详细范围见正文。",
+      "caption": "左岸梅多克以干红为主；格拉夫与佩萨克–雷奥良有干红和干白；右岸波美侯与圣埃美隆以干红著称；苏玳与巴萨克以贵腐甜白著称。两海之间传统重点为干白，其同名 AOP 自2023年也允许红酒；Médoc AOP 自2025年也允许干白。图示为典型风格与相对位置，不代表精确法定边界。",
       "kind": "map",
-      "src": "assets/s6-style-map.webp",
-      "width": 3391,
-      "height": 1856
+      "src": "assets/s6-style-map-redrawn-20261105.jpg",
+      "width": 1122,
+      "height": 1402
     },
     {
       "id": "second-wine-selection",
