@@ -38,3 +38,6 @@
 
 /* Keep the two Bordeaux overview maps compact, with full-size viewing through their links. */
 :is(#s6fig-bordeaux-map,#s6fig-style-map){width:100%;max-width:540px;justify-self:start}
+
+/* Keep each Bordeaux rainfall mechanism on one line within the scrollable table. */
+.article-section:has(>#book-13-climate-2) .wm-content-table tr>:nth-child(2){width:1%;white-space:nowrap}
