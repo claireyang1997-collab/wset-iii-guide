@@ -1741,10 +1741,11 @@ const regionsSession6={
    "id": "generic-white",
    "title": "Bordeaux Blanc：认识这个名称",
    "caption": "Bordeaux 说明法定产地，Blanc 表示白葡萄酒。具体的品种比例和酿造方法，需要进一步查看酒款资料。",
-   "kind": "diagram",
-   "src": "assets/s6-bordeaux-blanc-guide.svg",
-   "width": 600,
-   "height": 650
+   "kind": "labels",
+   "src": "assets/s6-bordeaux-blanc-supplied-20261105.jpg",
+   "width": 1716,
+   "height": 2038,
+   "alt": "Kirkland Signature 白葡萄酒实拍，酒标写有 Bordeaux Blanc 和 Appellation Bordeaux Contrôlée。"
   },
   {
    "id": "sauternes-map",
