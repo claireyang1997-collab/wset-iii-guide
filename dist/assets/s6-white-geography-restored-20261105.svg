@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1381" height="2178" viewBox="0 0 1381 2178" role="img" aria-labelledby="title desc">
+<title id="title">干白的地理位置 · 依原图复原</title>
+<desc id="desc">保留原图的河流、城镇与产区位置关系。河流包括Gironde吉伦特河口、Garonne加龙河与Dordogne多尔多涅河；城镇包括Blaye布莱、Bordeaux波尔多、Libourne利布尔讷和Langon朗贡。产区标注包括Côtes et Premières Côtes de Blaye、Graves-de-Vayres、Pessac-Léognan、Graves、Bordeaux et Entre-Deux-Mers、Bordeaux et Entre-Deux-Mers-Haut-Benauge。上北下南。轮廓依原图整理，非精确AOP法定边界。</desc>
+<defs>
+ <pattern id="grain" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r=".7" fill="#adb58c" opacity=".13"/><circle cx="19" cy="20" r=".7" fill="#adb58c" opacity=".13"/></pattern>
+ <linearGradient id="land" x2="1" y2="1"><stop stop-color="#f5f3e6"/><stop offset="1" stop-color="#e9eddd"/></linearGradient>
+ <linearGradient id="water" x2="1" y2="1"><stop stop-color="#b9d9de"/><stop offset="1" stop-color="#77adb9"/></linearGradient>
+</defs>
+<rect width="1381" height="2178" rx="22" fill="#fcfaf4"/>
+<g font-family="PingFang SC,Microsoft YaHei,Arial,sans-serif" fill="#344330">
+<text x="66" y="74" font-size="43" font-weight="650">波尔多干白 · 地理位置</text>
+<text x="68" y="120" font-size="25" fill="#7b826b">BORDEAUX · WHITE WINE REGIONS</text>
+<g transform="translate(0 125)">
+<rect x="24" y="34" width="1333" height="1922" rx="22" fill="url(#land)"/>
+<rect x="24" y="34" width="1333" height="1922" rx="22" fill="url(#grain)"/>
+<!-- Regional contours follow the supplied map, rather than substitute circles. -->
+<g stroke-linejoin="round" stroke-width="3.5">
+<path d="M190 220 L233 219 L268 158 L310 255 L346 270 L390 267 L431 280 L472 273 Q523 277 523 328 L546 346 L539 400 L550 438 L534 478 L555 511 L579 505 L600 526 L657 537 L675 586 L700 607 L677 642 L675 682 L656 717 L656 752 L617 766 L584 740 L550 737 L529 716 L495 713 L452 721 L451 686 Q433 645 403 679 L383 705 L372 642 L347 662 L324 657 L307 683 L264 677 L238 692 L215 667 L196 618 L212 588 L207 561 L225 534 L206 503 L211 454 L240 440 L266 489 L287 514 L289 449 L304 402 L282 391 L260 403 L216 393 L203 369 L235 315 Z" fill="#e4cf7f" stroke="#b4a264"/>
+<path d="M188 1200 L262 1196 L312 1240 L357 1293 L406 1320 L440 1374 L461 1418 L510 1442 L542 1456 L565 1490 L607 1509 L636 1551 L615 1584 L571 1615 L597 1652 L633 1679 L670 1695 L705 1680 L731 1717 L743 1775 L788 1810 L852 1849 L850 1881 L770 1861 L696 1842 L639 1829 L565 1802 L495 1759 L464 1719 L433 1669 L395 1632 L329 1601 L290 1579 L268 1537 L265 1484 L227 1447 L208 1408 L194 1351 L172 1304 L187 1277 Z" fill="#e8ddb1" stroke="#baa97d"/>
+<path d="M190 1200 L260 1201 L303 1228 L325 1274 L356 1295 L405 1325 L431 1359 L454 1408 L458 1461 L431 1475 L410 1498 L318 1510 L312 1462 L289 1433 L246 1410 L224 1364 L195 1328 L171 1284 L192 1250 Z" fill="#d6b957" stroke="#a58a36"/>
+<path d="M477 1021 L504 1024 L525 1042 L541 1017 L564 1046 L592 1035 L595 1005 L628 1006 L655 1028 L687 1049 L701 1080 L733 1111 L779 1127 L812 1160 L851 1160 L871 1182 L911 1180 L942 1205 L972 1195 L999 1211 L1007 1186 L1033 1160 L1054 1133 L1090 1110 L1125 1115 L1165 1133 L1195 1135 L1209 1162 L1242 1182 L1240 1233 L1217 1230 L1215 1254 L1241 1284 L1232 1320 L1244 1368 L1231 1406 L1242 1454 L1205 1468 L1165 1493 L1135 1518 L1077 1533 L1031 1558 L984 1583 L963 1609 L940 1632 L924 1691 L898 1685 L895 1637 L875 1599 L838 1577 L808 1538 L784 1498 L757 1465 L741 1428 L706 1400 L680 1362 L651 1323 L622 1358 L595 1371 L566 1353 L551 1331 L517 1322 L514 1289 L483 1272 L477 1230 L449 1214 L434 1171 L450 1131 L474 1110 L469 1085 L488 1061 Z" fill="#e8dca4" stroke="#b7aa71"/>
+<path d="M651 1025 L680 1019 L704 1038 L712 1062 L733 1074 L738 1097 L725 1118 L681 1111 L651 1095 L639 1057 Z" fill="#cdaa4f" stroke="#9d8135"/>
+<path d="M680 1362 L720 1350 L743 1324 L773 1327 L788 1354 L812 1384 L832 1415 L840 1460 L871 1484 L893 1523 L922 1535 L922 1579 L883 1593 L855 1564 L825 1545 L806 1523 L771 1520 L735 1501 L714 1453 L718 1412 L697 1389 Z" fill="#9ebeb0" stroke="#628e7c"/>
+</g>
+<!-- River junction and meanders retained from the reference. -->
+<path d="M24 35 L62 35 Q76 113 103 167 Q124 223 133 303 Q152 430 172 522 Q190 624 221 690 Q244 746 305 783 Q332 797 358 806 L335 846 Q289 830 251 809 Q209 784 179 746 Q132 683 110 602 Q84 511 73 423 Q61 339 44 284 L24 235 Z" fill="url(#water)" stroke="#86b6c1" stroke-width="3"/>
+<path d="M315 812 Q357 834 366 874 Q380 906 369 954 Q359 994 376 1031 Q396 1072 381 1113 Q366 1159 387 1200 Q402 1231 409 1284 Q421 1331 447 1357 Q470 1383 500 1392 Q535 1411 540 1442 Q548 1471 577 1451 Q604 1433 615 1463 Q611 1498 641 1490 Q662 1489 675 1519 Q691 1558 724 1584 Q761 1616 789 1629 Q822 1650 831 1686 Q848 1706 879 1692 Q908 1679 924 1694" fill="none" stroke="#76aab6" stroke-width="14" stroke-linecap="round"/>
+<path d="M315 812 Q372 818 418 841 Q458 861 471 910 Q481 955 510 968 Q547 975 577 955 Q599 970 625 976 Q668 977 681 1005 Q695 1040 710 1060 Q730 1081 731 1031 Q744 992 788 1002 Q807 1019 782 1058 Q775 1089 801 1088 Q823 1059 842 1068 Q865 1090 849 1126 Q837 1155 865 1161 Q889 1171 908 1144 Q941 1130 942 1161 Q941 1183 963 1185 Q998 1190 1009 1160 Q1044 1126 1088 1113 Q1118 1097 1152 1122 Q1181 1143 1214 1135 Q1234 1130 1265 1152 L1356 1138" fill="none" stroke="#76aab6" stroke-width="12" stroke-linecap="round"/>
+<g fill="#325866" font-size="28" font-style="italic">
+<text x="75" y="280" transform="rotate(79 75 280)">Gironde · 吉伦特河口</text>
+<text x="301" y="921" transform="rotate(83 301 921)">Garonne</text>
+<text x="455" y="874" transform="rotate(21 455 874)">Dordogne</text>
+</g>
+<!-- Town markers. -->
+<g fill="#674451" stroke="#fcfaf4" stroke-width="3"><circle cx="199" cy="623" r="9"/><circle cx="353" cy="1170" r="11"/><circle cx="794" cy="1002" r="9"/><circle cx="803" cy="1720" r="9"/></g>
+<g font-size="29" font-weight="600">
+<text x="220" y="624">Blaye · 布莱</text>
+<text x="54" y="1141">Bordeaux</text><text x="54" y="1177" font-size="27">波尔多</text>
+<text x="820" y="995">Libourne</text><text x="821" y="1032" font-size="26">利布尔讷</text>
+<text x="823" y="1722">Langon</text><text x="824" y="1758" font-size="26">朗贡</text>
+</g>
+<path d="M230 1162 H333" fill="none" stroke="#887a77" stroke-width="2"/>
+<!-- Region names retain the complete French names from the original. -->
+<g fill="#344330">
+<text x="278" y="98" font-size="36" font-weight="650">Côtes et Premières</text>
+<text x="278" y="143" font-size="36" font-weight="650">Côtes de Blaye</text>
+<text x="280" y="183" font-size="27" fill="#7f805b">布莱地区 · 原图名称</text>
+<path d="M510 210 L413 440" stroke="#8a895c" stroke-width="3" fill="none"/>
+<text x="754" y="475" font-size="39" font-weight="600">Graves-de-Vayres</text>
+<path d="M920 505 L685 1064" stroke="#928253" stroke-width="3" fill="none"/>
+<text x="64" y="1283" font-size="35" font-weight="650">Pessac–</text><text x="64" y="1327" font-size="35" font-weight="650">Léognan</text>
+<text x="64" y="1366" font-size="25" fill="#787c54">佩萨克–雷奥良</text>
+<path d="M286 1321 L340 1389" stroke="#9d893f" stroke-width="3" fill="none"/>
+<text x="384" y="1563" font-size="43" font-weight="650">Graves</text><text x="410" y="1605" font-size="29" fill="#787c54">格拉夫</text>
+<text x="798" y="1255" font-size="37" font-weight="650" text-anchor="middle">Bordeaux et</text>
+<text x="890" y="1303" font-size="39" font-weight="650" text-anchor="middle">Entre-Deux-Mers</text>
+<text x="1010" y="1347" font-size="28" fill="#787c54" text-anchor="middle">波尔多与两海之间</text>
+<path d="M549 1783 L777 1454" stroke="#638676" stroke-width="3" fill="none"/>
+<text x="77" y="1791" font-size="34" font-weight="600">Bordeaux et</text>
+<text x="77" y="1835" font-size="34" font-weight="600">Entre-Deux-Mers–</text>
+<text x="77" y="1879" font-size="34" font-weight="600">Haut-Benauge</text>
+</g>
+<!-- Compass, with the original north-up orientation. -->
+<g transform="translate(1233 157)"><path d="M0 -51 L13 -4 L0 -12 L-13 -4 Z" fill="#5b6d54"/><path d="M0 49 L13 4 L0 12 L-13 4 Z" fill="#c0c9b5"/><path d="M-46 0 H46 M0 -42 V42" stroke="#78876b" stroke-width="2"/><text x="0" y="-64" font-size="26" text-anchor="middle">N</text><text x="0" y="76" font-size="21" fill="#839078" text-anchor="middle">S</text><text x="-64" y="7" font-size="21" fill="#839078" text-anchor="middle">W</text><text x="64" y="7" font-size="21" fill="#839078" text-anchor="middle">E</text></g>
+</g>
+<text x="65" y="2114" font-size="25" fill="#7b826b">依原图复原地名、河流与轮廓 · 地理位置示意，非精确 AOP 法定边界</text>
+</g></svg>

@@ -1553,9 +1553,9 @@ const regionsSession5={
    "title": "佳美果粒特写",
    "caption": "佳美是博若莱红酒的主要品种，通常带有鲜明果香。它既能酿成轻盈的新酒，也能酿成较浓郁、适合陈年的酒。",
    "kind": "photo",
-   "src": "assets/s5-gamay-photo-photo-20261105.png",
-   "width": 626,
-   "height": 554
+   "src": "assets/s5-gamay-photo-supplied-20261105-refresh.jpg",
+   "width": 886,
+   "height": 934
   },
   {
    "id": "beaujolais-map",
@@ -1569,9 +1569,9 @@ const regionsSession5={
    "title": "博若莱地图",
    "caption": "博若莱的村庄级产区和十个 Cru 主要集中在北部，较广的大区级范围向南延伸。",
    "kind": "map",
-   "src": "assets/s5-beaujolais-map-photo-20261105.jpg",
-   "width": 1734,
-   "height": 1280
+   "src": "assets/s5-beaujolais-map-supplied-20261105-refresh.jpg",
+   "width": 1800,
+   "height": 1329
   },
   {
    "id": "gamay-training",
@@ -1585,9 +1585,9 @@ const regionsSession5={
    "title": "生长季初期经过整枝的佳美",
    "caption": "整枝调节受光与通风；行距和支架影响作业。",
    "kind": "photo",
-   "src": "assets/s5-gamay-training-photo-20261105.jpg",
-   "width": 1280,
-   "height": 1454
+   "src": "assets/s5-gamay-training-supplied-20261105-refresh.jpg",
+   "width": 1585,
+   "height": 1800
   },
   {
    "id": "gamay-bush",
@@ -1601,9 +1601,9 @@ const regionsSession5={
    "title": "传统独立佳美葡萄藤",
    "caption": "短主干向外分枝；整串酿造通常需人工采收。",
    "kind": "photo",
-   "src": "assets/s5-gamay-bush-photo-20261105.jpg",
-   "width": 1332,
-   "height": 1957
+   "src": "assets/s5-gamay-bush-supplied-20261105-refresh.jpg",
+   "width": 1224,
+   "height": 1800
   },
   {
    "id": "wholebunch-three",
@@ -1651,12 +1651,14 @@ const regionsSession5={
    "title": "二氧化碳浸渍的两阶段流程",
    "caption": "完整果粒先在缺氧环境中发生部分发酵，后续仍需酵母完成酒精发酵。较早压榨或继续带皮发酵，会改变颜色、单宁与果味强度。",
    "kind": "diagram",
-   "src": "assets/s5-carbonic-process-redrawn.svg",
-   "width": 1200,
-   "height": 960,
-   "mobileSrc": "assets/s5-carbonic-process-mobile.svg",
-   "mobileWidth": 480,
-   "mobileHeight": 2160
+   "src": "assets/s5-carbonic-process-redrawn-20261105.svg",
+   "width": 1400,
+   "height": 1110,
+   "mobileSrc": "assets/s5-carbonic-process-mobile-20261105.svg",
+   "mobileWidth": 640,
+   "mobileHeight": 1770,
+   "originalSrc": "assets/s5-carbonic-process.webp",
+   "alt": "二氧化碳浸渍的变种。完整佳美果串入罐并通入CO₂，第一阶段发生缺氧代谢：气体中的完整果粒、缺氧液体中的完整果粒，以及被自重压破果粒流出的葡萄汁。随后分离自流汁，剩余果实压榨得到压榨汁，两者合并，由酵母完成第二阶段酒精发酵。原图对该流程标注压榨酒优于自流酒，此为原图流程说明，并非普遍品质结论。后续不带皮发酵：简单易饮、单宁少、颜色浅；带皮发酵：果味浓郁、单宁较多、颜色较深。"
   },
   {
    "id": "beaujolais-handout-map",
@@ -1670,9 +1672,9 @@ const regionsSession5={
    "title": "博若莱三个层次与重点 Cru",
    "caption": "风磨坊、芙蓉、摩尔贡和布鲁依都位于博若莱北部，是十个 Cru 中的四个。它们各自使用独立的法定产区名称。",
    "kind": "map",
-   "src": "assets/s5-beaujolais-handout-map-photo-20261105.jpg",
-   "width": 1280,
-   "height": 1611
+   "src": "assets/s5-beaujolais-handout-map-supplied-20261105-refresh.jpg",
+   "width": 1429,
+   "height": 1800
   },
   {
    "id": "beaujolais-hierarchy",
@@ -1686,12 +1688,11 @@ const regionsSession5={
    "title": "Cru、Villages、Beaujolais",
    "caption": "博若莱常分为大区级、村庄级和十个 Cru。新酒 Nouveau 可以来自前两类，它说明的是新酒类型，并不是额外的第四级。",
    "kind": "diagram",
-   "src": "assets/s5-beaujolais-hierarchy-redrawn.svg",
-   "width": 1000,
-   "height": 730,
-   "mobileSrc": "assets/s5-beaujolais-hierarchy-mobile.svg",
-   "mobileWidth": 480,
-   "mobileHeight": 820
+   "src": "assets/s5-beaujolais-hierarchy-redrawn-20261105.svg",
+   "width": 680,
+   "height": 680,
+   "originalSrc": "assets/s5-beaujolais-hierarchy.webp",
+   "alt": "博若莱三层金字塔：顶层 Beaujolais Cru，中层 Beaujolais Villages，底层 Beaujolais。"
   },
   {
    "id": "chauvet-photo",

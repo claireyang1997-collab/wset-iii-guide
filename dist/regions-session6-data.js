@@ -1368,9 +1368,9 @@ const regionsSession6={
    "title": "拉菲副牌：Carruades de Lafite",
    "caption": "Carruades de Lafite 是拉菲酒庄的副牌。酒标上的 Pauillac 是产区名称；“副牌”表示它是同一酒庄的另一款酒。",
    "kind": "labels",
-   "src": "assets/s6-second-wine.webp",
-   "width": 450,
-   "height": 686
+   "src": "assets/s6-second-wine-supplied-20261105-refresh.jpg",
+   "width": 387,
+   "height": 516
   },
   {
    "id": "cru-bourgeois",
@@ -1548,9 +1548,9 @@ const regionsSession6={
    "title": "梅洛",
    "caption": "梅洛较早成熟，常带来成熟果味和饱满口感。它是许多右岸红酒的主要品种，也广泛用于波尔多其他酒款。",
    "kind": "labels",
-   "src": "assets/s6-merlot-photo-20261105.png",
-   "width": 287,
-   "height": 400
+   "src": "assets/s6-merlot-supplied-20261105-refresh.jpg",
+   "width": 526,
+   "height": 782
   },
   {
    "id": "cab-franc",
@@ -1564,9 +1564,9 @@ const regionsSession6={
    "title": "品丽珠",
    "caption": "品丽珠可以为混合红酒增添果香、花香和清新感。成熟不足时，草本或青味可能较明显。",
    "kind": "labels",
-   "src": "assets/s6-cab-franc-photo-20261105.png",
-   "width": 270,
-   "height": 400
+   "src": "assets/s6-cab-franc-supplied-20261105-refresh.jpg",
+   "width": 784,
+   "height": 1070
   },
   {
    "id": "cab-sauvignon",
@@ -1580,9 +1580,9 @@ const regionsSession6={
    "title": "赤霞珠",
    "caption": "赤霞珠较晚成熟，适合波尔多较温暖、排水良好的园地。它常带来黑醋栗风味、较高酸度和较多单宁。",
    "kind": "labels",
-   "src": "assets/s6-cab-sauvignon-photo-20261105.png",
-   "width": 356,
-   "height": 450
+   "src": "assets/s6-cab-sauvignon-supplied-20261105-refresh.jpg",
+   "width": 270,
+   "height": 400
   },
   {
    "id": "petit-verdot",
@@ -1596,9 +1596,9 @@ const regionsSession6={
    "title": "小维多",
    "caption": "小维多成熟较晚，天气足够温暖时更容易成熟。酒庄常少量加入，用来增加颜色、单宁和香料风味。",
    "kind": "labels",
-   "src": "assets/s6-petit-verdot-photo-20261105.png",
-   "width": 853,
-   "height": 1280
+   "src": "assets/s6-petit-verdot-supplied-20261105-refresh.jpg",
+   "width": 768,
+   "height": 1126
   },
   {
    "id": "generic-red",
@@ -1606,10 +1606,10 @@ const regionsSession6={
    "title": "大区红葡萄酒",
    "caption": "酒标上的 Bordeaux 是波尔多大区的法定产区名称。讲义举例：这类红酒常以梅洛为主，部分混酿可超过 80%；通常果味直接、价格较低，适合早饮。具体品种比例、用桶和品质要看酒款，酒标上的产区名本身不能说明这些。",
    "kind": "labels",
-   "src": "assets/s6-generic-red.webp",
-   "width": 341,
-   "height": 906,
-   "alt": "讲义第 332 张幻灯片所示的 Kressmann 酒瓶，正标可见 Bordeaux 字样。"
+   "src": "assets/s6-generic-red-supplied-20261105-refresh.jpg",
+   "width": 592,
+   "height": 1082,
+   "alt": "Château La Grande Gelleyre 大区红葡萄酒酒瓶，正标可见 Bordeaux 字样。"
   },
   {
    "id": "premium-red",
@@ -1617,19 +1617,19 @@ const regionsSession6={
    "title": "优质红葡萄酒",
    "caption": "以 Pétrus 2011 为例：Pomerol 是产区，2011 是年份，Grand Vin 通常指酒庄的主要酒款。讲义所述优质红酒通常果味成熟浓郁、结构强、较复杂，可有明显橡木影响和较强陈年潜力，价格也较高。混酿比例随产区和酒款而变。",
    "kind": "labels",
-   "src": "assets/s6-petrus-supplied-20261104.jpg",
-   "width": 1077,
-   "height": 2048,
-   "alt": "讲义第 334 张幻灯片所示的 Pétrus 酒标，标有 2011、Pomerol 和 Grand Vin。"
+   "src": "assets/s6-premium-red-supplied-20261105-refresh.jpg",
+   "width": 365,
+   "height": 547,
+   "alt": "Pétrus 2011 酒标，标有 Pomerol 和 Grand Vin。"
   },
   {
    "id": "petrus",
    "title": "Pétrus与Pomerol",
    "caption": "Pétrus 位于波美侯。波美侯没有酒庄列级制度，但仍有像 Pétrus 这样知名的生产者；Grand Vin 通常指酒庄的主要酒款。",
    "kind": "labels",
-   "src": "assets/s6-petrus-supplied-20261104.jpg",
-   "width": 1077,
-   "height": 2048
+   "src": "assets/s6-petrus-supplied-20261105-refresh.jpg",
+   "width": 365,
+   "height": 547
   },
   {
    "id": "bordeaux-map",
@@ -1677,11 +1677,12 @@ const regionsSession6={
   {
    "id": "garage-labels",
    "title": "两个车库酒例子",
-   "caption": "Valandraud 和 La Mondotte 是介绍右岸“车库酒”风潮时的常见例子。这类酒以小规模、高投入和浓郁风味受到关注。",
+   "caption": "左图为 Confidence de Valandraud，右图为 La Mondotte。Valandraud 和 La Mondotte 是介绍右岸“车库酒”风潮时的常见例子，这类酒以小规模、高投入和浓郁风味受到关注。",
    "kind": "labels",
-   "src": "assets/s6-garage-labels-supplied-20261104.jpg",
-   "width": 1029,
-   "height": 2048
+   "src": "assets/s6-garage-labels-supplied-20261105-refresh.jpg",
+   "width": 920,
+   "height": 718,
+   "alt": "左为 Confidence de Valandraud，右为 La Mondotte 的酒标。"
   },
   {
    "id": "semillon",
@@ -1695,7 +1696,7 @@ const regionsSession6={
    "title": "赛美蓉",
    "caption": "赛美蓉薄皮、易感染贵腐，通常酸度较低、香气较含蓄；在干白中增加酒体与饱满质感，也是苏玳贵腐甜白的重要品种。",
    "kind": "labels",
-   "src": "assets/s6-semillon-photo-20261105.png",
+   "src": "assets/s6-semillon-supplied-20261105-refresh.jpg",
    "width": 266,
    "height": 400
   },
@@ -1711,7 +1712,7 @@ const regionsSession6={
    "title": "长相思",
    "caption": "长相思非常芳香，常有柑橘、绿色水果与草本香气；为赛美蓉补酸度、新鲜度和果味。普通清新型通常早饮，优质桶酿或混合酒可陈年。",
    "kind": "labels",
-   "src": "assets/s6-sauvignon-photo-20261105.png",
+   "src": "assets/s6-sauvignon-supplied-20261105-refresh.jpg",
    "width": 760,
    "height": 960
   },
@@ -1727,18 +1728,20 @@ const regionsSession6={
    "title": "密思卡岱",
    "caption": "密思卡岱有浓郁葡萄味和花香，可让人联想到Muscat，但二者不是同一品种，也无亲缘关系。讲义的少量混合（小于10%）是常见风格示例，非全区统一上限。",
    "kind": "labels",
-   "src": "assets/s6-muscadelle-photo-20261105.png",
-   "width": 570,
-   "height": 700
+   "src": "assets/s6-muscadelle-supplied-20261105-refresh.jpg",
+   "width": 594,
+   "height": 758
   },
   {
    "id": "white-map",
    "title": "干白的地理位置",
-   "caption": "先看两条河：格拉夫与佩萨克–雷奥良位于加龙河左岸、波尔多市以南；两海之间位于加龙河和多尔多涅河之间。布莱、Graves-de-Vayres和Haut-Benauge保留作原图定位参照。色块仅示意位置，不表示精确AOP边界或全部干白产地。",
+   "caption": "依原图保留法文地名、河流与产区轮廓：格拉夫与佩萨克–雷奥良位于加龙河左岸、波尔多市以南；两海之间位于加龙河与多尔多涅河之间。原图名称用于地理定位，不表示精确AOP边界。",
    "kind": "map",
-   "src": "assets/s6-white-geography-guide.svg",
-   "width": 800,
-   "height": 800
+   "src": "assets/s6-white-geography-restored-20261105.svg",
+   "width": 1381,
+   "height": 2178,
+   "originalSrc": "assets/s6-white-map-supplied-20261104.jpg",
+   "alt": "依原图复原波尔多干白产区。保留吉伦特河口 Gironde、加龙河 Garonne、多尔多涅河 Dordogne，布莱 Blaye、波尔多 Bordeaux、利布尔讷 Libourne、朗贡 Langon，以及 Côtes et Premières Côtes de Blaye、Graves-de-Vayres、Pessac-Léognan、Graves、Bordeaux et Entre-Deux-Mers、Bordeaux et Entre-Deux-Mers-Haut-Benauge。北向上，非精确法定边界。"
   },
   {
    "id": "generic-white",

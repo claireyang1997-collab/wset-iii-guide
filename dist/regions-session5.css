@@ -143,3 +143,23 @@
  .s5-figure:is(#s5fig-gamay-training,#s5fig-gamay-bush) .s5-image-link{height:280px}
  #s5fig-beaujolais-handout-map img{max-height:380px}
 }
+
+/* Two compact, aligned Beaujolais comparisons; narrow screens retain each row. */
+.s5-figures:is(:has(>#s5fig-gamay-photo):has(>#s5fig-beaujolais-map),:has(>#s5fig-gamay-training):has(>#s5fig-gamay-bush)){
+ grid-template-columns:repeat(2,minmax(210px,1fr));max-width:760px;gap:18px;align-items:stretch;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity;
+}
+.s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush){max-width:none;display:flex;flex-direction:column;scroll-snap-align:start}
+.s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush) .s5-figure-heading{min-height:48px;align-items:flex-start}
+.s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush) .s5-image-link{height:320px;aspect-ratio:auto;flex:none;background:transparent}
+.s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush) img{width:100%;height:100%;max-height:none;object-fit:contain}
+/* A smaller map and hierarchy retain complete information and click-to-enlarge. */
+.s5-figures:has(>#s5fig-beaujolais-handout-map):has(>#s5fig-beaujolais-hierarchy){grid-template-columns:minmax(250px,1.2fr) minmax(230px,1fr);max-width:700px;gap:18px;align-items:stretch;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}
+.s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy){display:flex;flex-direction:column;scroll-snap-align:start}
+.s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy) .s5-figure-heading{min-height:48px;align-items:flex-start}
+.s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy) .s5-image-link{height:360px;background:transparent;display:flex;align-items:center}
+.s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy) img{width:100%;height:100%;max-height:none;object-fit:contain}
+#s5fig-carbonic-process{max-width:1040px;width:100%}
+@media(max-width:600px){
+ .s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush) .s5-image-link{height:280px}
+ .s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy) .s5-image-link{height:300px}
+}
