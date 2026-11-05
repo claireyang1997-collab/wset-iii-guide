@@ -394,9 +394,7 @@
       "葡萄园地块小、产量低，或需要大量人工时，每瓶酒分摊的生产成本可能更高。著名园址的稀缺性和酒庄声誉也会影响售价。",
       "酒由酒庄、酒商还是合作社生产，说明的是经营方式。评价品质时，仍要看葡萄、酿造和成酒表现。"
      ],
-     "figures": [
-      "horse-vineyard"
-     ]
+     "figures": []
     }
    ],
    "links": [
@@ -1379,7 +1377,7 @@
     0.28
    ],
    "title": "夏布利坡地葡萄园",
-   "caption": "朝向阳光的坡地通常能获得更多热量，有利于葡萄成熟。这也是凉爽的夏布利需要重视坡向的原因。",
+   "caption": "朝阳坡获得更多热量，有利于葡萄成熟，因此凉爽的夏布利尤其重视坡向。",
    "kind": "photo",
    "src": "assets/s5-chablis-vineyard-supplied-20261105.jpg",
    "width": 650,
@@ -1459,7 +1457,7 @@
     0.89
    ],
    "title": "伯讷丘 · Côte de Beaune",
-   "caption": "伯讷丘既有以红酒闻名的玻玛、沃尔奈，也有以白酒闻名的默尔索、普里尼–蒙哈榭和夏山–蒙哈榭。",
+   "caption": "伯讷丘既有以红葡萄酒闻名的玻玛、沃尔奈，也有以白葡萄酒闻名的默尔索、普里尼–蒙哈榭和夏山–蒙哈榭。",
    "kind": "map",
    "src": "assets/s5-beaune-map.webp",
    "width": 2200,
@@ -1500,7 +1498,7 @@
   {
    "id": "maconnais-map",
    "title": "马孔内 · Mâconnais",
-   "caption": "马孔内位于勃艮第南部，主要生产霞多丽白酒。普依–富赛和圣韦朗是其中的重要村庄产区。",
+   "caption": "马孔内位于勃艮第南部，主要生产霞多丽白葡萄酒。普依–富赛和圣韦朗是其中的重要村庄产区。",
    "kind": "map",
    "src": "assets/s5-maconnais-map-supplied-20261105.jpg",
    "width": 2048,
@@ -1509,7 +1507,7 @@
   {
    "id": "pouilly-landscape",
    "title": "索鲁特岩石下的普依–富赛",
-   "caption": "索鲁特岩石附近的坡地属于普依–富赛的重要景观。受光良好的坡面有利于霞多丽成熟，酿出果味较浓、口感较饱满的白酒。",
+   "caption": "索鲁特岩石附近的坡地属于普依–富赛的重要景观。受光良好的坡面有利于霞多丽成熟，酿出果味较浓、口感较饱满的白葡萄酒。",
    "kind": "photo",
    "src": "assets/s5-pouilly-landscape-supplied-20261105.jpg",
    "width": 1248,
@@ -1518,7 +1516,7 @@
   {
    "id": "macon-beaujolais-map",
    "title": "马孔内与博若莱相邻区域",
-   "caption": "马孔内与博若莱相邻。Mâcon、Pouilly-Fuissé 等名称主要联系到霞多丽白酒，南面的博若莱则主要联系到佳美红酒。",
+   "caption": "马孔内与博若莱相邻。Mâcon、Pouilly-Fuissé 等名称主要联系到霞多丽白葡萄酒，南面的博若莱则主要联系到佳美红葡萄酒。",
    "kind": "map",
    "src": "assets/s5-macon-beaujolais-map-supplied-20261105.jpg",
    "width": 2048,
@@ -1740,22 +1738,6 @@
    "mobileWidth": 640,
    "mobileHeight": 1090,
    "alt": "讲义中的法国AOP面积图。波尔多（Bordeaux）107,748公顷；罗讷河谷（Rhône Valley）64,467公顷；卢瓦尔河谷（Loire Valley）47,475公顷；朗格多克（Languedoc）33,000公顷；勃艮第（Burgundy）32,301公顷；阿尔萨斯（Alsace）15,529公顷；博若莱（Beaujolais）13,500公顷。年份未注明，占比按这七项合计计算，不代表法国全部AOP面积。"
-  },
-  {
-   "id": "horse-vineyard",
-   "sourceId": 257,
-   "box": [
-    0.528,
-    0.556,
-    0.695,
-    0.882
-   ],
-   "title": "小地块中的马匹作业",
-   "caption": "小地块或不便使用大型机械的园地，可以选择马匹进行部分作业。不同作业方式需要的人工、时间和费用也不同。",
-   "kind": "photo",
-   "src": "assets/s5-horse-vineyard-supplied-20261105.jpg",
-   "width": 480,
-   "height": 319
   },
   {
    "id": "chardonnay-flavour",
