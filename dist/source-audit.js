@@ -95,7 +95,7 @@ const fullSourceAudit={
    "route": "8/white-process",
    "anchor": "book-8-white-process-4",
    "source": "课本 p.78",
-   "repair": "补回白酒澄清稳定与外观的联系"
+   "repair": "补回白葡萄酒澄清稳定与外观的联系"
   },
   {
    "route": "8/bulk-white",
@@ -203,7 +203,7 @@ const fullSourceAudit={
    "route": "16/environment",
    "anchor": "book-16-environment-3",
    "source": "课本 p.127",
-   "repair": "补回白酒与桃红的存在"
+   "repair": "补回白葡萄酒与桃红的存在"
   },
   {
    "route": "16/appellations",
@@ -1059,7 +1059,7 @@ const fullSourceAudit={
     "氧气可能有利或有害；以保留一类果香为目标的保护性／厌氧酿造",
     "低温与夜间采收、二氧化硫、密封设备和氮气／二氧化碳保护",
     "满装密封容器、不锈钢及内壁环氧涂层水泥罐；木桶防水但不完全隔气",
-    "缓慢接氧使红酒单宁柔化；果香减弱、皮革／泥土等三类香气，红酒变浅偏棕与白酒加深偏橙"
+    "缓慢接氧使红酒单宁柔化；果香减弱、皮革／泥土等三类香气，红酒变浅偏棕与白葡萄酒加深偏橙"
    ],
    "targets": [
     {
@@ -1367,7 +1367,7 @@ const fullSourceAudit={
    "kind": "textbook",
    "page": 77,
    "concepts": [
-    "常规白酒分皮先发酵",
+    "常规白葡萄酒分皮先发酵",
     "直接整串压榨减少氧化",
     "芳香品种低温数小时浸皮",
     "橙琥珀酒传统与单宁风味",
@@ -1391,7 +1391,7 @@ const fullSourceAudit={
     "高温非果味风险",
     "桶小散热仍常偏高温",
     "MLC酒泥橡木混合",
-    "白酒浅色更显沉淀"
+    "白葡萄酒浅色更显沉淀"
    ],
    "targets": [
     {
@@ -1399,14 +1399,14 @@ const fullSourceAudit={
      "label": "白葡萄酒酿造的关键选择"
     }
    ],
-   "result": "已补充／修正：补回白酒澄清稳定与外观的联系"
+   "result": "已补充／修正：补回白葡萄酒澄清稳定与外观的联系"
   },
   {
    "sourceId": "B79-161",
    "kind": "textbook",
    "page": 79,
    "concepts": [
-    "图8.1全白酒流程",
+    "图8.1全白葡萄酒流程",
     "必经与可选",
     "自流压榨汁分流",
     "粗酒泥MLC",
@@ -2397,7 +2397,7 @@ const fullSourceAudit={
      "label": "佳美与博若莱的园地"
     }
    ],
-   "result": "已补充／修正：补回白酒与桃红的存在"
+   "result": "已补充／修正：补回白葡萄酒与桃红的存在"
   },
   {
    "sourceId": "B128-photo-289",
@@ -3358,7 +3358,7 @@ const fullSourceAudit={
    "concepts": [
     "温度速度与酯类糖果香",
     "红白带皮差异",
-    "小桶白酒融合木香和成本"
+    "小桶白葡萄酒融合木香和成本"
    ],
    "targets": [
     {
@@ -3408,7 +3408,7 @@ const fullSourceAudit={
    "kind": "handout",
    "page": 47,
    "concepts": [
-    "白酒接收破碎浸皮澄清发酵选择",
+    "白葡萄酒接收破碎浸皮澄清发酵选择",
     "浸皮避免情形"
    ],
    "targets": [
@@ -4693,7 +4693,7 @@ const fullSourceAudit={
    "page": 104,
    "concepts": [
     "简单干白与优质桶酿",
-    "两海白酒旧规则",
+    "两海白葡萄酒旧规则",
     "大区例外",
     "佩萨克格拉夫混合陈年"
    ],
