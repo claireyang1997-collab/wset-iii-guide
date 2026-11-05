@@ -1499,51 +1499,30 @@ const regionsSession5={
   },
   {
    "id": "maconnais-map",
-   "sourceId": 271,
-   "box": [
-    0.065,
-    0.25,
-    0.7,
-    0.87
-   ],
    "title": "马孔内 · Mâconnais",
    "caption": "马孔内位于勃艮第南部，主要生产霞多丽白酒。普依–富赛和圣韦朗是其中的重要村庄产区。",
    "kind": "map",
-   "src": "assets/s5-maconnais-map.webp",
-   "width": 2200,
-   "height": 1611
+   "src": "assets/s5-maconnais-map-supplied-20261105.jpg",
+   "width": 2048,
+   "height": 1369
   },
   {
    "id": "pouilly-landscape",
-   "sourceId": 287,
-   "box": [
-    0.113,
-    0.43,
-    0.876,
-    0.786
-   ],
    "title": "索鲁特岩石下的普依–富赛",
    "caption": "索鲁特岩石附近的坡地属于普依–富赛的重要景观。受光良好的坡面有利于霞多丽成熟，酿出果味较浓、口感较饱满的白酒。",
    "kind": "photo",
-   "src": "assets/s5-pouilly-landscape.webp",
-   "width": 2200,
-   "height": 1368
+   "src": "assets/s5-pouilly-landscape-supplied-20261105.jpg",
+   "width": 1248,
+   "height": 792
   },
   {
    "id": "macon-beaujolais-map",
-   "sourceId": 275,
-   "box": [
-    0.034,
-    0.218,
-    0.443,
-    0.725
-   ],
    "title": "马孔内与博若莱相邻区域",
    "caption": "马孔内与博若莱相邻。Mâcon、Pouilly-Fuissé 等名称主要联系到霞多丽白酒，南面的博若莱则主要联系到佳美红酒。",
    "kind": "map",
-   "src": "assets/s5-macon-beaujolais-map.webp",
-   "width": 1649,
-   "height": 1533
+   "src": "assets/s5-macon-beaujolais-map-supplied-20261105.jpg",
+   "width": 2048,
+   "height": 1830
   },
   {
    "id": "macon-process",

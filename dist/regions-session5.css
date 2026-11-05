@@ -78,3 +78,8 @@
  .s5-figure:is(#s5fig-kir-photo,#s5fig-burgundy-red-labels) .s5-image-link{height:290px}
  .s5-figure:is(#s5fig-chauvet-photo,#s5fig-nouveau-labels,#s5fig-nouveau-label) .s5-image-link{height:250px}
 }
+
+/* Compact supplied Maconnais photographs and maps; keep the full image. */
+#s5fig-pouilly-landscape,#s5fig-maconnais-map{width:100%;max-width:560px;justify-self:start}
+#s5fig-macon-beaujolais-map{width:100%;max-width:460px;justify-self:start}
+#s5fig-pouilly-landscape img,#s5fig-maconnais-map img,#s5fig-macon-beaujolais-map img{width:100%;height:auto;max-height:none;object-fit:contain}
