@@ -1285,9 +1285,10 @@ const regionsSession6={
    "title": "苏玳选择性采收",
    "caption": "贵腐发展速度不同，采收者需要多次进入葡萄园，挑出状态合适的果实。人工反复挑选，加上葡萄失水后出汁少，使生产成本提高。",
    "kind": "photo",
-   "src": "assets/s6-botrytis-picking.webp",
-   "width": 977,
-   "height": 1304
+   "src": "assets/s6-botrytis-picking-supplied-20261105.jpg",
+   "width": 1197,
+   "height": 1600,
+   "sourceNote": "用户2026-11-05提供的替换图片；完整保留画面。"
   },
   {
    "id": "southwest-map",
@@ -1383,9 +1384,10 @@ const regionsSession6={
    "title": "Cru Bourgeois标识",
    "caption": "Cru Bourgeois 是梅多克士族名庄的标识。这套评选有自己的名单和适用年份，与 1855 列级分别运行。",
    "kind": "labels",
-   "src": "assets/s6-cru-bourgeois.webp",
-   "width": 659,
-   "height": 836
+   "src": "assets/s6-cru-bourgeois-supplied-20261105.jpg",
+   "width": 1168,
+   "height": 1072,
+   "sourceNote": "用户2026-11-05提供的替换图片；完整保留画面。"
   },
   {
    "id": "graves-labels",
@@ -1399,9 +1401,10 @@ const regionsSession6={
    "title": "格拉夫红白列级",
    "caption": "格拉夫列级分别评定红酒和白酒，有些酒庄只有其中一种酒获得列级。现今这些列级酒庄都位于佩萨克–雷奥良。",
    "kind": "labels",
-   "src": "assets/s6-graves-labels.webp",
-   "width": 1282,
-   "height": 422
+   "src": "assets/s6-graves-labels-supplied-20261105.jpg",
+   "width": 627,
+   "height": 895,
+   "sourceNote": "用户2026-11-05提供的替换图片；完整保留画面。"
   },
   {
    "id": "bordeaux-landscape",
@@ -1774,12 +1777,12 @@ const regionsSession6={
     1169
    ],
    "title": "Sauternes甜白例子",
-   "caption": "Château Rieussec 的 Sauternes 甜白例子。酒标的 Sauternes 是产区名称；1er Grand Cru Classé 1855 指1855年苏玳与巴萨克甜白列级中的一级庄，不能套用梅多克红酒的五级体系。",
+   "caption": "Carmes de Rieussec 的甜白酒标。Sauternes 是苏玳产区名称，图中也可看到酒液的金黄色。",
    "kind": "labels",
-   "src": "assets/s6-rieussec-supplied-20261104.jpg",
-   "width": 1026,
-   "height": 2100,
-   "sourceNote": "用户2026-11-04提供的替换原图；未裁切、未重绘图中文字。"
+   "src": "assets/s6-sweet-label-supplied-20261105.jpg",
+   "width": 312,
+   "height": 418,
+   "sourceNote": "用户2026-11-05提供的替换图片；完整保留画面。"
   },
   {
    "id": "bergerac-landscape",

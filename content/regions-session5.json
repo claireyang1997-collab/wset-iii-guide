@@ -1140,9 +1140,10 @@
    "title": "黑皮诺果串",
    "caption": "黑皮诺果皮较薄，潮湿天气下容易受到病害影响。种植时需要留意通风、果实健康和采收时间。",
    "kind": "photo",
-   "src": "assets/s5-pinot-photo-supplied-20261105.jpg",
-   "width": 5760,
-   "height": 3840
+   "src": "assets/s5-pinot-photo-refresh-20261105.jpg",
+   "width": 768,
+   "height": 512,
+   "sourceNote": "用户2026-11-05提供的替换图片；完整保留画面。"
   },
   {
    "id": "chardonnay-photo",
