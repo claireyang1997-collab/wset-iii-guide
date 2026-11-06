@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "note": "按用户提供的三张速记截图整理；重复表合并，结合现有课本正文保留适用条件。为复习辅助，非机构标准答案或逐分评分表。",
+  "items": [
+    {
+      "id": "vsp",
+      "zh": "新梢垂直定位",
+      "en": "VSP",
+      "cue": "凉爽至温和 · 排开新梢",
+      "cause": "新梢向上排列并用铁丝定位 → 减少相互遮阴，改善果区受光与通风。",
+      "result": "帮助成熟、降低潮湿病害风险；规则冠层也便于喷药和机械作业。",
+      "limit": "常适合低至中等长势；旺盛枝叶需控制拥挤。炎热强光时要保留遮阴，可用调整型 VSP。",
+      "href": "#read/6/canopy/book-6-canopy-4",
+      "questions": [
+        "2/vsp"
+      ]
+    },
+    {
+      "id": "bush",
+      "zh": "灌木形／杯型",
+      "en": "Bush vines / Goblet",
+      "cue": "暖热干燥 · 遮阴 · 难机采",
+      "cause": "头状整枝＋短枝修剪，不搭连续铁丝架 → 新梢自然展开，叶片遮护果实。",
+      "result": "降低晒伤风险；省去部分支柱、铁丝及绑缚投入。",
+      "limit": "凉湿条件下，拥挤冠层会阻碍成熟、增加病害；常规机械采收较难，人工采收可增加成本。",
+      "href": "#read/6/canopy/book-6-canopy-2",
+      "questions": [
+        "2/bush"
+      ]
+    },
+    {
+      "id": "machine",
+      "zh": "机械采收",
+      "en": "Mechanical harvesting",
+      "cue": "速度快 · 大批量 · 看地形",
+      "cause": "机器可在短时间内采收较大面积 → 减少采收用工，并抓住适宜采收时机。",
+      "result": "适合大批量生产；规模合适时单位采收成本通常较低，也可夜间采收。",
+      "limit": "取决于坡度、行距、整枝和机器投入；精细逐粒挑选有限，不能仅凭 AOP 名称判断是否能机采。",
+      "href": "#read/6/harvest/book-6-harvest-2",
+      "questions": [
+        "2/harvest",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "hand",
+      "zh": "人工采收",
+      "en": "Hand harvesting",
+      "cue": "陡坡 · 挑选 · 贵腐",
+      "cause": "人工可在机器难以作业的坡地采收，并选择健康、成熟或达到适当贵腐程度的果实。",
+      "result": "适合精细挑选与完整果串；有助于获得符合目标的原料。",
+      "limit": "速度较慢、用工较多、成本较高。人工本身不保证品质更高；选择性采收与后续筛选才是关键。",
+      "href": "#read/6/harvest/book-6-harvest-2",
+      "questions": [
+        "2/harvest",
+        "6/vineyard-quality",
+        "6/sauternes-conditions-price"
+      ]
+    },
+    {
+      "id": "bordeaux",
+      "zh": "波尔多海洋性气候",
+      "en": "Bordeaux maritime climate",
+      "cue": "春霜 · 潮湿病害 · 采收雨",
+      "cause": "春霜伤害嫩芽与新梢；潮湿利于真菌病害；采收期降雨增加稀释和腐烂风险。",
+      "result": "分别联系产量减少、健康果实减少，以及成熟与采收安排受影响。",
+      "limit": "题目要求列举时写三个不同问题；解释时再说明机制，不能把所有年份或园址都视为同样严重。",
+      "href": "#read/13/climate/book-13-climate-2",
+      "questions": [
+        "2/bordeaux",
+        "6/vineyard-quality"
+      ]
+    },
+    {
+      "id": "chaptalisation",
+      "zh": "发酵前加糖",
+      "en": "Chaptalisation",
+      "cue": "加糖 → 潜在酒精度",
+      "cause": "向发酵前葡萄醪加糖 → 酵母可将新增的糖转化为酒精。",
+      "result": "提高潜在及最终酒精度，帮助糖分不足的原料达到目标。",
+      "limit": "不是直接给成酒增甜；实际操作须符合当地规定。",
+      "href": "#read/7/adjustments/book-7-adjustments-1",
+      "questions": [
+        "3/must"
+      ]
+    },
+    {
+      "id": "yeast",
+      "zh": "培养酵母",
+      "en": "Cultivated yeast",
+      "cue": "稳定可预测 · 风味可选择",
+      "cause": "接种已知、筛选的菌株 → 启动、速度与发酵结果更可预测，便于维持批次一致性。",
+      "result": "可选择有利于目标香气的菌株；适合需要稳定生产的酒款。",
+      "limit": "相较多种环境酵母参与，可能减少一部分复杂性来源；并非必然简单或品质低。",
+      "href": "#read/7/fermentation/book-7-fermentation-2",
+      "questions": [
+        "3/cultivated-yeast",
+        "4/early-rose"
+      ]
+    },
+    {
+      "id": "old-oak",
+      "zh": "旧橡木桶",
+      "en": "Old oak",
+      "cue": "少木香 · 仍能熟化",
+      "cause": "木材可提取风味逐渐减少 → 较少添加新橡木味，同时仍可有少量氧气接触。",
+      "result": "保留品种果味，并让质地、单宁和熟化风味逐步变化。",
+      "limit": "旧桶不是完全隔氧；氧气接触需要控制，不等于任由葡萄酒氧化。",
+      "href": "#read/7/containers/book-7-containers-2",
+      "questions": [
+        "3/old-oak",
+        "5/bourgogne-rouge",
+        "5/red-options",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "botrytis",
+      "zh": "贵腐与贵腐甜酒",
+      "en": "Noble rot / Botrytised sweet wine",
+      "cue": "湿润促菌 · 干燥失水 · 浓缩",
+      "cause": "成熟、健康果实在潮湿条件下感染贵腐菌，随后干燥天气促进失水 → 糖分与风味浓缩。",
+      "result": "可酿浓郁甜酒，带蜂蜜、杏干等风味；最终甜度仍取决于残糖。",
+      "limit": "失水降低出汁率；不均匀贵腐需多轮人工挑选，增加成本。持续潮湿可能转为破坏性灰霉。",
+      "href": "#read/13/sweet-white/book-13-sweet-white-1",
+      "questions": [
+        "3/sweet-comparison",
+        "6/sauternes-conditions-price"
+      ]
+    },
+    {
+      "id": "fortified",
+      "zh": "加强甜酒",
+      "en": "Fortified sweet wine",
+      "cue": "发酵中加烈酒 → 留糖",
+      "cause": "在糖未耗尽时加入烈酒 → 酒精度迅速升高，酵母活动停止，保留未发酵的糖。",
+      "result": "高酒精度，并保留甜度。",
+      "limit": "这里指中断发酵来酿甜酒的路径；不是所有加强葡萄酒都甜。",
+      "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
+      "questions": [
+        "3/sweet-comparison"
+      ]
+    },
+    {
+      "id": "direct",
+      "zh": "直接压榨",
+      "en": "Direct pressing",
+      "cue": "少浸皮 → 浅色、低单宁",
+      "cause": "黑葡萄直接轻柔压榨，果汁与果皮接触较短 → 限制色素和单宁提取。",
+      "result": "通常形成颜色较浅、单宁低的桃红葡萄酒。",
+      "limit": "糖果香主要还需结合酵母与发酵；中等甜度须另选留糖或调甜方法，不能只答直接压榨。",
+      "href": "#read/9/rose/book-9-rose-1",
+      "questions": [
+        "4/early-rose"
+      ]
+    },
+    {
+      "id": "cool",
+      "zh": "较低温度发酵",
+      "en": "Cool fermentation",
+      "cue": "保留果香 · 促进酯香",
+      "cause": "控制较凉的发酵温度 → 减少易挥发香气损失，并可促进某些果香酯的形成。",
+      "result": "新鲜果香更鲜明，适合果味主导、早饮的风格。",
+      "limit": "要结合酒款和酵母；低温不直接决定残糖，温度过低也可能使发酵迟缓。",
+      "href": "#read/7/fermentation/book-7-fermentation-3",
+      "questions": [
+        "4/early-rose",
+        "5/white-options",
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "new-oak",
+      "zh": "新橡木桶",
+      "en": "New oak",
+      "cue": "香草、烘烤、香料 · 风味匹配",
+      "cause": "新木提供较多风味和橡木单宁；桶中少量氧气接触也影响熟化。",
+      "result": "可增加香草、烘烤和香料风味及复杂性，影响结构；熟化也可使葡萄单宁逐渐柔和。",
+      "limit": "桶龄、大小、烘烤程度、使用时间与原酒强度共同决定结果。浓郁原酒更能承受木香；新桶成本较高。",
+      "href": "#read/7/containers/book-7-containers-2",
+      "questions": [
+        "4/new-oak",
+        "4/quality-chardonnay",
+        "5/red-options",
+        "5/white-options",
+        "6/white-comparison",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "mlc",
+      "zh": "苹果酸—乳酸转化",
+      "en": "MLC",
+      "cue": "较尖锐苹果酸 → 较柔和乳酸",
+      "cause": "乳酸菌把苹果酸转为乳酸 → 降低酸度，改变口感；有时形成黄油／奶油风味。",
+      "result": "酒更柔和、圆润，可增加复杂性，并降低瓶中再发生 MLC 的风险。",
+      "limit": "高酸酒可能受益；酸度已低或追求清新果香时可能不适合。不是每款发生 MLC 的酒都有明显奶油味。",
+      "href": "#read/7/fermentation/book-7-fermentation-5",
+      "questions": [
+        "4/white-mlc",
+        "4/quality-chardonnay",
+        "5/white-options"
+      ]
+    },
+    {
+      "id": "lees",
+      "zh": "酒泥接触",
+      "en": "Lees contact",
+      "cue": "质感 · 饱满 · 咸鲜复杂性",
+      "cause": "保留合适的细酒泥与酒接触，必要时搅桶 → 增加接触并影响质地和风味。",
+      "result": "可增加饱满度、圆润度及咸鲜复杂性；较长自溶接触可能带面包或酵母风味。",
+      "limit": "面包香不是每次酒泥接触的必然结果；需要时间、卫生与监测。清爽酸度仍需靠原料与酸度管理保留。",
+      "href": "#read/8/nonaromatic/book-8-nonaromatic-4",
+      "questions": [
+        "4/quality-chardonnay",
+        "5/white-options",
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "semi-carbonic",
+      "zh": "半二氧化碳浸渍",
+      "en": "Semi-carbonic maceration",
+      "cue": "完整果 · 缺氧 · 两阶段",
+      "cause": "整串入罐，底部破裂果实经酵母发酵产生 CO₂ → 上层完整果粒在缺氧环境内发生细胞内发酵；之后压榨，果汁由酵母完成酒精发酵。",
+      "result": "通常提取较少单宁，形成果味鲜明、适合早饮的风格，可出现香蕉、泡泡糖等香气。",
+      "limit": "仍有常规酵母发酵阶段；与外加 CO₂ 的全二氧化碳浸渍区分，香气也受菌株与温度影响。",
+      "href": "#read/16/whole-bunch/book-16-whole-bunch-1",
+      "questions": [
+        "5/nouveau-method"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "session": 2,
+      "title": "葡萄园管理",
+      "items": [
+        "vsp",
+        "bush",
+        "machine",
+        "hand",
+        "bordeaux"
+      ]
+    },
+    {
+      "session": 3,
+      "title": "酿造基础与甜酒",
+      "items": [
+        "chaptalisation",
+        "yeast",
+        "old-oak",
+        "botrytis",
+        "fortified"
+      ]
+    },
+    {
+      "session": 4,
+      "title": "桃红、橡木与霞多丽",
+      "items": [
+        "direct",
+        "cool",
+        "new-oak",
+        "mlc",
+        "lees",
+        "yeast"
+      ]
+    },
+    {
+      "session": 5,
+      "title": "勃艮第与博若莱",
+      "items": [
+        "semi-carbonic",
+        "old-oak",
+        "new-oak",
+        "cool",
+        "mlc",
+        "lees"
+      ]
+    },
+    {
+      "session": 6,
+      "title": "波尔多品质与成本",
+      "items": [
+        "bordeaux",
+        "hand",
+        "machine",
+        "cool",
+        "new-oak",
+        "old-oak",
+        "lees",
+        "botrytis"
+      ]
+    }
+  ]
+}

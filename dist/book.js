@@ -32,6 +32,7 @@ function bookReplaceCardImage(html,title,name,alt,label){
  return html.slice(0,at)+bookOriginalImage(name,alt)+`<p class="textbook-image-label">${label}</p>`+html.slice(end);
 }
 function bookTextbookFigure(key){
+ if(key==='bush-goblet')return bookBushGobletFigure();
  const refined=bookRefinedStudyFigure(key);if(refined!==null)return refined;
  if(key==='frost')return bookFrostIllustration();
  if(key==='propagation')return bookPropagationIllustration();
@@ -73,6 +74,14 @@ function bookTrainingImage(a,summer){
  const alt=summer?`${a.name}：转色后的冠层，绿色当年新梢从保留枝条的芽长出，果串长在新梢上`:`${a.name}：冬季修剪后，粗糙多年生木与细的一年生结果母枝对照`;
  return `<a class="training-art-link" href="${a.src}" target="_blank" rel="noopener" aria-label="查看${a.name}完整冬夏对照插画"><span class="training-art-stage"><span class="training-art-slice" style="width:${fit}%;aspect-ratio:${ratio};--art-width:${10000/portion}%;--art-left:${offset}%"><img src="${a.src}" alt="${alt}" width="1774" height="887" loading="lazy"></span></span></a>`;
 }
+function bookBushGobletFigure(){
+ const winter=bookTrainingImage(bookTrainingArt[0],false),summer=bookTrainingImage(bookTrainingArt[0],true);
+ const panel=(title,art,overlay,caption)=>`<section class="study-card"><h4>${title}</h4><div class="refined-annotated">${art}${overlay}</div><p>${caption}</p></section>`;
+ const before=bookBotanicalOverlay('bush-winter',[['M130 150L245 380'],['M775 620L520 650']],[[100,125,1],[810,620,2]],'0 0 1000 1000');
+ const after=bookBotanicalOverlay('bush-summer',[['M760 105L640 365'],['M90 545L205 515']],[[780,75,3],[60,555,4]],'0 0 1000 1000');
+ return studyPlate('bush-goblet','杯型：从冬季骨架看到生长季冠层',`<div class="study-pair">${panel('① 冬剪后 · 看杯状骨架',winter,before,'<strong>① 一年生短枝：</strong>通常保留 2–3 芽。<br><strong>② 多年生木：</strong>主干与向外展开的短干臂长期保留，形成杯状骨架。')}${panel('② 生长季 · 看新梢与果串',summer,after,'<strong>③ 当年新梢：</strong>由保留芽萌发，自然展开；叶片可遮护果实。<br><strong>④ 果串：</strong>长在绿色新梢上，通常需要人工采收。')}</div>`,'课本 p.52–53 · 讲义 p.31','这里展示杯型的侧面结构，省略后侧部分枝条；不表示整株固定的干臂数或留芽总量。与 VSP 相比，图中没有把新梢沿连续铁丝向上排列。');
+}
+
 function bookTrainingIllustrated(){
  let example=0;
  return studyDiagram('training-comparison').replace(/<article class="study-example">[\s\S]*?<\/article>/g,article=>{

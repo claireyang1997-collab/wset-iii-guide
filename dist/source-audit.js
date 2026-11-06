@@ -833,6 +833,10 @@ const fullSourceAudit={
     {
      "href": "#read/6/canopy/book-6-canopy-1",
      "label": "搭架与冠层管理"
+    },
+    {
+     "href": "#read/6/canopy/study-bush-goblet",
+     "label": "灌木形／杯型：冬季骨架与生长季冠层图示"
     }
    ],
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
@@ -851,6 +855,10 @@ const fullSourceAudit={
     {
      "href": "#read/6/pruning/book-6-pruning-1",
      "label": "修剪"
+    },
+    {
+     "href": "#read/6/canopy/study-bush-goblet",
+     "label": "灌木形／杯型：冬季骨架与生长季冠层图示"
     }
    ],
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
@@ -3078,7 +3086,7 @@ const fullSourceAudit={
    "concepts": [
     "四组合Guyot/Sylvoz/Bush/Midwire cordon",
     "搭架支撑",
-    "灌木头短梢",
+    "灌木形／杯型（Bush vine / Gobelet）：头状整枝＋短枝修剪",
     "VSP头主蔓长短枝均可"
    ],
    "targets": [
@@ -3089,6 +3097,10 @@ const fullSourceAudit={
     {
      "href": "#read/6/canopy/book-6-canopy-1",
      "label": "搭架与冠层管理"
+    },
+    {
+     "href": "#read/6/canopy/study-bush-goblet",
+     "label": "灌木形／杯型：冬季骨架与生长季冠层图示"
     }
    ],
    "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
