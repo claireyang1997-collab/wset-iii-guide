@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "note": "按用户提供的三张速记截图整理；重复表合并，结合现有课本正文保留适用条件。为复习辅助，非机构标准答案或逐分评分表。",
+  "version": 2,
+  "note": "保留用户截图的16个要点，按已核对的练习册第1–11页题目与现有知识正文补充18个易漏考点。为复习辅助，非机构标准答案或逐分评分表。",
   "items": [
     {
       "id": "vsp",
@@ -12,7 +12,8 @@
       "limit": "常适合低至中等长势；旺盛枝叶需控制拥挤。炎热强光时要保留遮阴，可用调整型 VSP。",
       "href": "#read/6/canopy/book-6-canopy-4",
       "questions": [
-        "2/vsp"
+        "2/vsp",
+        "6/vineyard-quality"
       ]
     },
     {
@@ -199,7 +200,9 @@
       "questions": [
         "4/white-mlc",
         "4/quality-chardonnay",
-        "5/white-options"
+        "5/white-options",
+        "5/red-options",
+        "6/white-comparison"
       ]
     },
     {
@@ -229,9 +232,269 @@
       "questions": [
         "5/nouveau-method"
       ]
+    },
+    {
+      "id": "grafting",
+      "zh": "嫁接与根瘤蚜",
+      "en": "Grafting / Phylloxera",
+      "cue": "虫伤根 → 藤衰弱 → 换抗性根系",
+      "cause": "根瘤蚜取食欧亚葡萄根系，伤口可继发感染 → 根部功能受损，植株逐渐衰弱甚至死亡。",
+      "result": "把所需酿酒品种接到抗性砧木上，保护根系、维持生长；地上结果的品种仍由接穗决定。",
+      "limit": "嫁接不等于杀灭害虫，也不会创造杂交品种；砧木还要适应土壤、水分和所需长势。",
+      "href": "#read/4/grafting/book-4-grafting-2",
+      "questions": [
+        "1/graft"
+      ]
+    },
+    {
+      "id": "mediterranean",
+      "zh": "地中海气候",
+      "en": "Mediterranean climate",
+      "cue": "夏暖干 · 冬较湿 · 成熟与缺水并存",
+      "cause": "夏季温暖、干燥，降雨集中在冬季，季节温差通常较小 → 生长季日照与热量利于成熟，少雨降低潮湿相关病害压力。",
+      "result": "有助糖分与风味积累，果实较健康；冬雨可补充土壤储水。夏季干旱、酷热和晒伤则是主要挑战。",
+      "limit": "缺水严重会使光合作用与成熟受阻；保水、适当遮阴及允许条件下的灌溉有投入，不能只背“炎热所以高品质”。",
+      "href": "#read/5/climate/book-5-climate-3",
+      "questions": [
+        "1/mediterranean"
+      ]
+    },
+    {
+      "id": "freeze-comparison",
+      "zh": "春季霜冻与冬季冰冻",
+      "en": "Spring frost / Winter freeze",
+      "cue": "春霜伤嫩梢 · 冬冻可伤整株",
+      "cause": "春霜伤害萌芽后的嫩芽、新梢与幼小花序 → 当季潜在产量下降；严重冬冻可损伤永久木质部分、嫁接口，甚至杀死整株。",
+      "result": "比较长期后果时，严重冬冻可能更大：需重植、投入资金，并等待恢复商业产量；春霜也可能造成严重当年减产。",
+      "limit": "危害取决于低温强度、持续时间、组织与生长阶段，不把某个温度当成所有葡萄藤的统一损伤线。",
+      "href": "#read/5/heat/book-5-heat-5",
+      "questions": [
+        "1/freeze",
+        "5/spring-frost"
+      ]
+    },
+    {
+      "id": "heat-style",
+      "zh": "高温、强光与红酒风格",
+      "en": "Heat, sunlight and wine style",
+      "cue": "糖升酸降 ≠ 越热越成熟",
+      "cause": "热量与日照充足时，糖分积累、酸度下降，风味趋于成熟；若发酵至干，较高起始糖通常带来较高酒精度。",
+      "result": "常表现为较成熟果味、较饱满酒体与较低酸度；极端酷热或严重缺水却会抑制光合作用，造成晒伤、脱水或成熟失衡。",
+      "limit": "糖、风味和单宁成熟不同步；高糖不保证单宁成熟，也不自动意味着甜酒。",
+      "href": "#read/5/needs/book-5-needs-2",
+      "questions": [
+        "1/heat"
+      ]
+    },
+    {
+      "id": "acid-adjustment",
+      "zh": "葡萄醪的酸度调节",
+      "en": "Acidification / Deacidification",
+      "cue": "酸不足可增酸 · 酸过高可降酸",
+      "cause": "酸不足时，可按需要添加酒石酸；酸过高时，可用适当碱性物质降酸 → 调整葡萄醪及未来成酒的酸度。",
+      "result": "目标是改善平衡与清新感。与发酵前加糖提高潜在酒精度分开记，题目中的糖分和酸度都要回答。",
+      "limit": "按原料和目标判断，并遵守当地规定；热区不一定增酸、冷区不一定降酸，pH也不等于总酸。",
+      "href": "#read/7/adjustments/book-7-adjustments-2",
+      "questions": [
+        "3/must"
+      ]
+    },
+    {
+      "id": "rose-sweetness",
+      "zh": "早饮桃红：留糖与稳定",
+      "en": "Residual sugar and stability",
+      "cue": "浅色保果香 · 留糖后还要稳定",
+      "cause": "浅色靠有限浸皮；低单宁、轻盈风格避免过强提取。果香可用保护性处理、适合的酵母与较凉发酵保留或增强。",
+      "result": "中等甜度可通过冷却抑制发酵并过滤移除酵母，或在允许时向干酒调甜；随后卫生装瓶、防再污染，并较早装瓶保鲜。",
+      "limit": "低温发酵本身不保证留糖；“糖果香”不等于残糖。只冷却却不控制酵母，回温后仍可能再发酵。",
+      "href": "#read/8/sweet-paths/book-8-sweet-paths-2",
+      "questions": [
+        "4/early-rose"
+      ]
+    },
+    {
+      "id": "chardonnay-balance",
+      "zh": "霞多丽：饱满也要清爽",
+      "en": "Chardonnay: richness and freshness",
+      "cue": "香草找橡木 · 咸鲜找酒泥 · 清爽留酸",
+      "cause": "健康、成熟且有足够风味浓度和酸度的原料是基础；适量新橡木带香草，细酒泥接触及按需搅桶增加质感和咸鲜复杂性。",
+      "result": "MLC可柔化酸感、增加圆润度；是否采用及采用程度须结合原酒酸度。让果味、桶味和质感融合，同时保留清新感。",
+      "limit": "“饱满复杂”不等于最多新桶、最长搅桶或全部MLC；低酸原料若继续大幅降酸，可能失去题目要求的清爽。",
+      "href": "#read/8/nonaromatic/book-8-nonaromatic-3",
+      "questions": [
+        "4/quality-chardonnay",
+        "5/white-options"
+      ]
+    },
+    {
+      "id": "grand-cru-site",
+      "zh": "特级园的有利坡位",
+      "en": "Grand Cru vineyard sites",
+      "cue": "朝向受光 · 中坡排冷 · 土壤排水",
+      "cause": "金丘许多优质园在向东、东南或南的适宜坡面 → 增加有效受光；中坡有利冷空气下沉，排水良好可减少积水与过旺长势。",
+      "result": "在凉爽至温和背景下帮助健康、均匀成熟，降低部分霜冻风险，为浓郁、平衡的优质原料提供条件。",
+      "limit": "并非所有特级园坡位相同；具体园址仍看坡向、海拔、土壤与水分。“是Grand Cru”是等级，不能用作优质的原因。",
+      "href": "#read/15/overview/book-15-overview-3",
+      "questions": [
+        "5/grand-cru-site"
+      ]
+    },
+    {
+      "id": "spring-frost-protection",
+      "zh": "春霜防护的机制",
+      "en": "Frost protection",
+      "cue": "风机混暖气 · 水结冰放热",
+      "cause": "风机混合近地冷空气与上方较暖空气；防霜喷灌利用水持续结冰释放潜热；加热器则直接向园内补热。",
+      "result": "目标是保护萌芽后的幼嫩组织、减少当年减产。原题要求两种措施时，选两种并分别说明机制。",
+      "limit": "风机需有可利用的暖空气层，强冷风天气效果有限；喷灌需正确时机、流量与持续供水，不能中途随意停水。",
+      "href": "#read/5/heat/book-5-heat-5",
+      "questions": [
+        "5/spring-frost"
+      ]
+    },
+    {
+      "id": "extraction-stages",
+      "zh": "红酒提取的三个阶段",
+      "en": "Pre-, during and post-fermentation",
+      "cue": "发酵前偏色香 · 酒精增加更易提单宁",
+      "cause": "发酵前低温浸渍以颜色、风味提取为主；发酵中温度、酒精与酒帽管理共同影响提取；发酵后继续浸渍可增加单宁并改变其质感。",
+      "result": "清新早饮目标通常控制提取，避免生硬苦涩；成熟浓郁、有陈年目标的原料可支持不同强度的提取和较长熟化。",
+      "limit": "压帽、淋皮等操作要看频率与强度；颜色和单宁不同时达峰。更热、更久、更用力都不自动更优质。",
+      "href": "#read/9/extraction/book-9-extraction-2",
+      "questions": [
+        "5/bourgogne-rouge",
+        "5/red-options",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "press-wine",
+      "zh": "自流酒与压榨酒",
+      "en": "Free-run wine / Press wine",
+      "cue": "先放自流 · 再压固体 · 分开试混",
+      "cause": "红酒发酵后先排出自流酒，再对果皮等固体施压取得压榨酒；后者通常含较多单宁，且不同压榨段可有差异。",
+      "result": "分开保存、品尝，再按目标比例混合，可调整颜色、结构与口感，并回收一部分酒液。",
+      "limit": "不是把全部压榨酒自动混回；原料不成熟或提取过强时，额外压榨部分可能带来苦涩。此处是发酵后的“酒”，不是发酵前葡萄汁。",
+      "href": "#read/9/extraction/book-9-extraction-4",
+      "questions": [
+        "5/red-options",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "blending",
+      "zh": "混合：对象、目的与时机",
+      "en": "Blending",
+      "cue": "同品种也可混 · 熟化前后都能调",
+      "cause": "分别酿造不同地块、品种、采收批次、容器或压榨段，再品尝试混 → 用各部分的酸度、果味、单宁和质感互补。",
+      "result": "黑皮诺也可混合不同地块／批次；波尔多还常有品种混合。熟化前确定主体，熟化后可再调整平衡，因此两次混合并不重复。",
+      "limit": "只能在相应产地与酒款规则允许范围内混合；混合不是把坏酒自动变好，也不保证每年完全同味。",
+      "href": "#read/13/red-winemaking/book-13-red-winemaking-2",
+      "questions": [
+        "5/bourgogne-rouge",
+        "5/red-options",
+        "5/white-options",
+        "6/red-options",
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "white-clarification",
+      "zh": "白葡萄酒流程：澄清、粗细酒泥",
+      "en": "Juice clarification / Gross and fine lees",
+      "cue": "汁先澄清 · 粗泥移走 · 细泥可留",
+      "cause": "发酵前沉降或离心控制葡萄汁悬浮固体；发酵后倒罐主要移除粗酒泥，后续仍可选择保留合适的细酒泥。",
+      "result": "减少不需要的粗杂质，让发酵与卫生更易管理；细酒泥可另用于增加质感和复杂性。两个阶段各有目的。",
+      "limit": "澄清不是把所有固体清到零；倒罐也不等于彻底去掉细酒泥。装瓶前是否稳定，还需另行评估。",
+      "href": "#read/13/dry-white/book-13-dry-white-4",
+      "questions": [
+        "5/white-options",
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "finishing",
+      "zh": "完善处理：清澈与稳定",
+      "en": "Clarification / Stabilisation",
+      "cue": "现在清澈 ≠ 以后稳定",
+      "cause": "下胶可结合并移除不稳定成分；过滤移除颗粒或目标微生物；冷稳定促使酒石酸盐在装瓶前析出并被移除。",
+      "result": "分别降低浑浊、再发酵等微生物变化和酒石结晶风险。含残糖酒尤其要控制酵母与装瓶后污染。",
+      "limit": "一种处理不能解决所有风险；按试验选择方式和强度。高价酒并非必须不过滤，过滤也并非必然损害品质。",
+      "href": "#read/7/finishing/book-7-finishing-4",
+      "questions": [
+        "4/early-rose",
+        "5/red-options",
+        "5/white-options",
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "style-cost",
+      "zh": "工艺比较：先定目标与原料",
+      "en": "Style, quality and production costs",
+      "cue": "先原料 → 再提取与熟化 → 算成本",
+      "cause": "清新早饮酒重果味、柔和口感与较快周转；成熟浓郁、希望陈年的原料，可支持严格筛选、分批处理和合适的桶与熟化时间。",
+      "result": "筛选降低可用量并增加人工／设备投入；新桶增加采购费，长期熟化增加仓储、管理及资金占用，影响每瓶成本。",
+      "limit": "价格与法定等级都不是固定配方；高价酒不等于全新桶、最长浸渍或全部MLC。每一步都应说明它怎样服务目标。",
+      "href": "#read/15/winemaking/book-15-winemaking-4",
+      "questions": [
+        "5/bourgogne-rouge",
+        "5/red-options",
+        "5/white-options",
+        "6/red-options"
+      ]
+    },
+    {
+      "id": "vineyard-quality",
+      "zh": "葡萄园品质：三条不同因果链",
+      "en": "Viticultural practices and quality",
+      "cue": "冠层通风 · 负载适量 · 采收合时",
+      "cause": "①VSP与适量摘叶改善受光通风、减少潮湿病害；②负载过大时适当绿色采收，帮助剩余果实成熟；③按糖酸、风味、单宁及天气择时采收、挑选健康果。",
+      "result": "分别连接健康度、成熟均匀度和成分平衡，才是三项操作如何提高原料及成酒品质的完整解释。",
+      "limit": "热年过度摘叶会晒伤；低产不自动高品质；晚采可能失酸、遇雨。管理、减产和选择性采收也会增加成本。",
+      "href": "#read/13/climate/book-13-climate-4",
+      "questions": [
+        "6/vineyard-quality"
+      ]
+    },
+    {
+      "id": "bordeaux-white",
+      "zh": "波尔多两类干白对比",
+      "en": "Bordeaux Blanc / Pessac-Léognan",
+      "cue": "品种 → 发酵 → 发酵后，三列成对比",
+      "cause": "入门果味型常用长相思，或与赛美蓉混合，惰性容器较凉发酵；优质佩萨克–雷奥良常用赛美蓉＋长相思，可桶发酵或结合其他容器。",
+      "result": "前者常阻止MLC、短期储存以保酸果；后者可桶与细酒泥熟化，增加酒体和复杂性，并有陈年潜力。长相思补酸与果香，赛美蓉补酒体。",
+      "limit": "两者都需按酸度选择MLC；优质酒不等于全新桶或越低温越好。用相同三项逐列比较，不能只答两款酒各自的香气。",
+      "href": "#read/13/dry-white/book-13-dry-white-1",
+      "questions": [
+        "6/white-comparison"
+      ]
+    },
+    {
+      "id": "sauternes-price",
+      "zh": "苏玳高价：成本与市场分开",
+      "en": "Sauternes: costs and price",
+      "cue": "多轮采收＋少汁＋桶和时间＋声誉",
+      "cause": "贵腐不均需多轮人工挑选；失水和筛选减少可用汁液，天气带来收成风险 → 每瓶分摊的原料与人工成本增加。",
+      "result": "采用新桶、较长熟化时，再增加采购、仓储和资金成本。稀缺供应、列级／酒庄声誉与需求，可进一步支持高售价。",
+      "limit": "生产成本与市场售价不是一回事；不能只写“名庄所以贵”，也不能仅凭投入昂贵就断定品质高。",
+      "href": "#read/13/sweet-white/book-13-sweet-white-2",
+      "questions": [
+        "6/sauternes-conditions-price"
+      ]
     }
   ],
   "groups": [
+    {
+      "session": 1,
+      "title": "葡萄藤与气候",
+      "items": [
+        "grafting",
+        "mediterranean",
+        "freeze-comparison",
+        "heat-style"
+      ]
+    },
     {
       "session": 2,
       "title": "葡萄园管理",
@@ -248,6 +511,7 @@
       "title": "酿造基础与甜酒",
       "items": [
         "chaptalisation",
+        "acid-adjustment",
         "yeast",
         "old-oak",
         "botrytis",
@@ -260,22 +524,35 @@
       "items": [
         "direct",
         "cool",
+        "yeast",
+        "rose-sweetness",
         "new-oak",
         "mlc",
         "lees",
-        "yeast"
+        "chardonnay-balance",
+        "finishing"
       ]
     },
     {
       "session": 5,
       "title": "勃艮第与博若莱",
       "items": [
+        "grand-cru-site",
+        "freeze-comparison",
+        "spring-frost-protection",
         "semi-carbonic",
+        "style-cost",
+        "extraction-stages",
+        "press-wine",
+        "blending",
+        "white-clarification",
         "old-oak",
         "new-oak",
         "cool",
         "mlc",
-        "lees"
+        "lees",
+        "chardonnay-balance",
+        "finishing"
       ]
     },
     {
@@ -283,13 +560,24 @@
       "title": "波尔多品质与成本",
       "items": [
         "bordeaux",
+        "vineyard-quality",
+        "vsp",
         "hand",
         "machine",
+        "bordeaux-white",
         "cool",
         "new-oak",
         "old-oak",
+        "mlc",
         "lees",
-        "botrytis"
+        "white-clarification",
+        "botrytis",
+        "sauternes-price",
+        "style-cost",
+        "extraction-stages",
+        "press-wine",
+        "blending",
+        "finishing"
       ]
     }
   ]
