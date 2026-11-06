@@ -2316,10 +2316,18 @@ const fullSourceAudit={
    "targets": [
     {
      "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
+     "label": "先看全景：北夜丘、南伯讷丘，西高东低"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-2",
+     "label": "北段 · 夜丘：从热夫雷到夜圣乔治"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-3",
+     "label": "南段 · 伯讷丘：从科通到蒙哈榭"
     }
    ],
-   "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "B124-photo-285",
@@ -2333,11 +2341,19 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
+     "href": "#read/15/cote-or/book-15-cote-or-3",
+     "label": "南段 · 伯讷丘：从科通到蒙哈榭"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-4",
+     "label": "向西上坡：上夜丘、上伯讷丘与大区名称"
+    },
+    {
+     "href": "#read/15/cote-or/s5fig-corton-landscape",
+     "label": "科通景观的朝向与坡位"
     }
    ],
-   "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "B125-photo-286",
@@ -4090,15 +4106,19 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
-    },
-    {
      "href": "#read/15/hierarchy/book-15-hierarchy-1",
      "label": "葡萄园等级与酒标"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-1",
+     "label": "先看全景：北夜丘、南伯讷丘，西高东低"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-4",
+     "label": "向西上坡：上夜丘、上伯讷丘与大区名称"
     }
    ],
-   "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "H80-photo-266",
@@ -4113,15 +4133,19 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
-    },
-    {
      "href": "#read/15/winemaking/book-15-winemaking-1",
      "label": "从葡萄到勃艮第风格"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-2",
+     "label": "北段 · 夜丘：从热夫雷到夜圣乔治"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-3",
+     "label": "南段 · 伯讷丘：从科通到蒙哈榭"
     }
    ],
-   "result": "已补充／修正：补回地形比较与土壤、藤龄、品系共同作用"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "H81-photo-267",
@@ -4132,11 +4156,11 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
+     "href": "#read/15/cote-or/book-15-cote-or-2",
+     "label": "北段 · 夜丘：从热夫雷到夜圣乔治"
     }
    ],
-   "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "H82-photo-268",
@@ -4147,11 +4171,11 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
+     "href": "#read/15/cote-or/book-15-cote-or-3",
+     "label": "南段 · 伯讷丘：从科通到蒙哈榭"
     }
    ],
-   "result": "本页列出的知识和图意，在当前正文及图注中有对应位置。"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "H83-photo-269",
@@ -4165,15 +4189,19 @@ const fullSourceAudit={
    ],
    "targets": [
     {
-     "href": "#read/15/cote-or/book-15-cote-or-1",
-     "label": "金丘：夜丘与伯讷丘"
-    },
-    {
      "href": "#read/15/chalonnaise/book-15-chalonnaise-1",
      "label": "夏隆内丘 Côte Chalonnaise"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-2",
+     "label": "北段 · 夜丘：从热夫雷到夜圣乔治"
+    },
+    {
+     "href": "#read/15/cote-or/book-15-cote-or-3",
+     "label": "南段 · 伯讷丘：从科通到蒙哈榭"
     }
    ],
-   "result": "已补充／修正：补回地形比较与土壤、藤龄、品系共同作用"
+   "result": "2026-11-06 回看原页，按金丘南北主轴及西侧高地逐项对应，保留名园、条件、例子与例外。"
   },
   {
    "sourceId": "H84-photo-270",

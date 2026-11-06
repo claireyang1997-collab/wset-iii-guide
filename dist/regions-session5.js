@@ -11,9 +11,12 @@ function s5LearningSummary(content){
  const paragraphs=Array.isArray(content)?content:[content];
  return `<aside class="s5-conclusion" aria-label="要点回顾"><strong>要点回顾</strong>${paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}</aside>`;
 }
+function s5SectionFigures(s){
+ return `${s.figures?.length?`<div class="s5-figures${s.figures.every(id=>regionsSession5.figures.find(f=>f.id===id).kind==='labels')?' s5-figures-labels':''}">${s.figures.map(s5Figure).join('')}</div>`:''}`;
+}
 function s5UnitBody(u){
  const sources=regionsSession5.sources.filter(s=>s.routes.includes(`${u.chapter}/${u.id}`));
- return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${s.paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.table?wmTable(s.table):''}${s.flow&&typeof regionOptionsFlow==='function'?regionOptionsFlow(s.flow):''}${s.figures?.length?`<div class="s5-figures${s.figures.every(id=>regionsSession5.figures.find(f=>f.id===id).kind==='labels')?' s5-figures-labels':''}">${s.figures.map(s5Figure).join('')}</div>`:''}${s5LearningSummary(s.conclusion)}</section>`).join('')+`${u.links.length?`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>`:''}${sources.length?`<p class="s5-references">核对依据：${sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a>`).join('；')}</p>`:''}`;
+ return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>`<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>${s.paragraphs.map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.figuresBeforeTable?s5SectionFigures(s):''}${s.table?wmTable(s.table):''}${(s.afterTable||[]).map(p=>`<p>${wmEscape(p)}</p>`).join('')}${s.flow&&typeof regionOptionsFlow==='function'?regionOptionsFlow(s.flow):''}${!s.figuresBeforeTable?s5SectionFigures(s):''}${s5LearningSummary(s.conclusion)}</section>`).join('')+`${u.links.length?`<nav class="wm-related" aria-label="相关知识"><strong>相关主题</strong><div>${u.links.map(l=>`<a href="#read/${l.route}">${wmEscape(l.label)} →</a>`).join('')}</div></nav>`:''}${sources.length?`<p class="s5-references">核对依据：${sources.map(s=>`<a href="${s.url}" target="_blank" rel="noopener">${wmEscape(s.title)} ↗</a>`).join('；')}</p>`:''}`;
 }
 for(const ch of regionsSession5.chapters)bookChapters.push({...ch,framework:false});
 for(const u of regionsSession5.units)bookUnits.push({...u,framework:false,origins:[],body:s5UnitBody(u)});

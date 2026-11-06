@@ -1,4 +1,12 @@
 /* Preserve a quiet editorial reading rhythm; detailed maps open at full size. */
+/* Keep each village beside its cru examples while reading north to south. */
+.book-reading .article-section:is(:has(>#book-15-cote-or-2),:has(>#book-15-cote-or-3)) .comparison{width:100%;min-width:0;table-layout:fixed}
+.book-reading .article-section:is(:has(>#book-15-cote-or-2),:has(>#book-15-cote-or-3)) .comparison tr>:first-child{width:42%;min-width:0;white-space:normal}
+.book-reading .article-section:is(:has(>#book-15-cote-or-2),:has(>#book-15-cote-or-3)) .comparison :is(th,td){overflow-wrap:anywhere;vertical-align:top}
+@media(max-width:600px){
+ .book-reading .article-section:is(:has(>#book-15-cote-or-2),:has(>#book-15-cote-or-3)) .comparison :is(th,td){padding:12px 9px;font-size:14px;line-height:1.8}
+ .book-reading .article-section:is(:has(>#book-15-cote-or-2),:has(>#book-15-cote-or-3)) .wm-table-wrap::before{display:none}
+}
 .s5-figures{display:grid;gap:24px;margin:28px 0 32px;min-width:0}
 .s5-figure{margin:0;padding:18px;background:#fcfaf4;border:1px solid #dedfd0;border-radius:8px;min-width:0}
 .s5-figure-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:14px;font-size:15px;line-height:1.6}
