@@ -50,11 +50,44 @@ function practiceSessionInfo(which){
 }
 function practiceModeNav(session,active){
  const info=practiceSessionInfo(session);
- return `<nav class="practice-mode-tabs" aria-label="${info.label}练习方式"><a href="${info.quiz}" ${active==='quiz'?'aria-current="page"':''}><strong>选择自测</strong><small>${info.quizCount} 道选择题 · 即时判分</small></a><a href="#workbook/${info.session}" ${active==='workbook'?'aria-current="page"':''}><strong>练习册</strong><small>简答与填写 · 保存自查</small></a></nav>`;
+ return `<nav class="practice-mode-tabs" aria-label="${info.label}练习方式"><a href="${info.quiz}" ${active==='quiz'?'aria-current="page"':''}><strong>本站自编自测</strong><small>${info.quizCount} 道选择题 · 即时判分</small></a><a href="#workbook/${info.session}" ${active==='workbook'?'aria-current="page"':''}><strong>机构练习册原题</strong><small>简答与填写 · 保存自查</small></a></nav>`;
+}
+function practiceSourceBadge(kind){
+ const labels={workbook:'机构练习册原题',classroom:'老师讲解 · 本站整理',self:'本站自编',notes:'本站整理 · 复习速记'};
+ return `<span class="practice-source practice-source-${kind}">${labels[kind]||labels.self}</span>`;
+}
+function practiceWorkbooks(){
+ return [1,2].map(n=>{const i=practiceSessionInfo(n);return {...i,id:n,count:i.bookCount,worksheets:0};}).concat(winemakingWorkbook.sessions.map(s=>{
+  const qs=winemakingWorkbook.questions.filter(q=>q.session===s.id);
+  const chapters=[...new Set([...s.chapters,...qs.flatMap(q=>(q.refs||[]).map(r=>Number(r.href.split('/')[1])).filter(Number.isFinite))])].sort((a,b)=>a-b);
+  return {...s,chapters,count:qs.filter(q=>!q.unscored).length,extra:s.worksheets?`另有 ${s.worksheets} 张工艺表`:''};
+ }));
+}
+function practiceChapterLinks(chapters){return chapters.map(ch=>`<a href="#chapter/${ch}">第 ${ch} 章</a>`).join('');}
+function practiceOriginalShelf(){
+ return `<section class="practice-panel" aria-labelledby="practice-panel-title"><div class="practice-panel-heading"><div>${practiceSourceBadge('workbook')}<h2 id="practice-panel-title">机构练习册</h2><p>按你提供的练习册保留题目、分值和课程归属。六课统一列在这里。</p></div><p class="practice-answer-status"><strong>机构参考答案尚未提供</strong><span>题后的提示、速记与参考作答均有单独来源标记。</span></p></div><div class="practice-workbook-list">${practiceWorkbooks().map(s=>`<article class="practice-workbook-row"><div class="practice-course-number"><span>第 ${s.id} 课</span>${s.page?`<small>练习册 p.${s.page}</small>`:'<small>机构练习册</small>'}</div><div class="practice-workbook-copy"><h3>${safe(s.title)}</h3><p>${s.count} 道简答题 · ${s.marks} 分${s.extra?' · '+safe(s.extra):''}</p><div class="practice-related"><span>相关课本</span>${practiceChapterLinks(s.chapters)}</div></div><a class="primary" href="#workbook/${s.id}">打开原题 <span aria-hidden="true">→</span></a></article>`).join('')}</div></section>`;
+}
+function practiceClassroomShelf(){
+ return `<section class="practice-panel" aria-labelledby="practice-panel-title"><div class="practice-panel-heading"><div>${practiceSourceBadge('classroom')}<h2 id="practice-panel-title">老师讲解与答题方法</h2><p>依据你提供的课堂照片和讲解文字整理；补充说明有标注，不能当作机构标准答案或评分表。</p></div></div><div class="practice-resource-grid"><article class="practice-resource"><span class="practice-resource-kicker">第一课 · 嫁接题</span><h3>原因 → 作用 → 结果</h3><p>按老师的 A → B → C 逻辑，串起欧亚葡萄、抗性砧木与嫁接，附中英文参考作答。</p><p class="practice-resource-source">来源：Level 3 Logic 课堂讲义照片；由本站整理并补充适用条件。</p><a class="primary" href="#workbook/1/wb-reference-grafting">查看讲解 →</a></article><article class="practice-resource"><span class="practice-resource-kicker">第五、六课 · 价格题</span><h3>一款酒为什么贵？</h3><p>葡萄园的天、地、人 → 发酵前、中、后 → 价格、风格、品质。附按老师讲解顺序展开的苏玳示例。</p><p class="practice-resource-source">来源：课堂白板照片与老师讲解文字；由本站重画、整理。</p><a class="primary" href="#workbook/6/wb-price-method-6">查看逻辑图 →</a></article></div></section>`;
+}
+function practiceSelfShelf(){
+ return `<section class="practice-panel" aria-labelledby="practice-panel-title"><div class="practice-panel-heading"><div>${practiceSourceBadge('self')}<h2 id="practice-panel-title">本站自编练习</h2><p>用于检查理解。这里的题目、解析与自查提示由本站编写，不是机构练习册或 WSET 官方试题。</p></div></div><div class="practice-resource-grid">${[1,2].map(n=>{const s=practiceSessionInfo(n);return `<article class="practice-resource"><span class="practice-resource-kicker">${s.label} · 第 ${s.chapters.join('、')} 章</span><h3>${safe(s.title)}</h3><p>${s.quizCount} 道自编选择题，附解析与解释练习。选择题即时反馈，解释题自行核对。</p><a class="primary" href="${s.quiz}">开始自编自测 →</a></article>`;}).join('')}<article class="practice-resource practice-resource-wide"><div><span class="practice-resource-kicker">按课本章节 · 全部已收录主题</span><h3>解释、比较与情境自查</h3><p>${knowledgeTopics.length} 个本站自编自查主题，${knowledgeCases.length} 个跨主题情境。保存自己的解释，再展开提示核对。</p></div><a class="primary" href="#practice/chapters">按章节选择 →</a><a class="practice-text-link" href="#map">打开知识地图 →</a></article></div><div class="practice-notes-library"><h3>${practiceSourceBadge('notes')}六课复习速记</h3><p>正文要点与因果链的本站归纳，供独立作答后自查。</p><div>${workbookMemoryData.groups.map(g=>`<a href="#workbook/${g.session}/wb-memory-${g.session}">第 ${g.session} 课 · ${safe(g.title)} →</a>`).join('')}</div></div></section>`;
+}
+function practiceChapterShelf(){
+ const books=practiceWorkbooks(),groups=[{title:'葡萄藤与葡萄园',ids:[4,5,6]},{title:'酿造与价格',ids:[7,8,9,10]},{title:'法规与法国产区',ids:[11,12,13,14,15,16]}];
+ return `<section class="practice-panel" aria-labelledby="practice-panel-title"><div class="practice-panel-heading"><div><span class="practice-source practice-source-index">课本章节索引</span><h2 id="practice-panel-title">按课本顺序查找</h2><p>章号沿用课本。课程与章节是不同的编号；一课可涉及多章，原练习册仍按课程保留。</p></div></div><div class="practice-chapter-index">${groups.map(g=>`<section><h3>${g.title}</h3>${g.ids.map(id=>{
+  const ch=bookChapters.find(c=>c.id===id);if(!ch)return `<div class="practice-chapter-row is-pending"><span class="practice-chapter-number">第 ${id} 章</span><span>尚未提供，暂未收录</span></div>`;
+  const count=knowledgeTopics.filter(t=>t.chapters.includes(id)).length,related=books.filter(s=>s.chapters.includes(id));
+  return `<article class="practice-chapter-row"><div class="practice-chapter-name"><span class="practice-chapter-number">第 ${id} 章</span><h4>${safe(ch.short||ch.title)}</h4><a href="#chapter/${id}">阅读正文 →</a></div><div class="practice-chapter-exercises"><div><small>机构练习册 · 相关课程</small>${related.length?related.map(s=>`<a href="#workbook/${s.id}">第 ${s.id} 课原题 →</a>`).join(''):'<span>暂无对应原题</span>'}</div><div><small>本站自编</small>${count?`<a href="#map/chapter/${id}">${count} 个主题自查 →</a>`:'<span>暂无自查主题</span>'}${id<=6?`<a href="${id===6?'#session2quiz':'#quiz'}">选择自测 →</a>`:''}</div></div></article>`;
+ }).join('')}</section>`).join('')}</div></section>`;
 }
 function practiceHub(){
- return `<main id="main" class="wrap practice-hub"><div class="page-intro"><div class="eyebrow">PAUSE & RECALL</div><h1 class="page-title">练习与复习</h1><p>正文按课本章节学习；自测与练习册按原课程配套。先查概念，再练完整作答。</p></div><div class="practice-courses">${[1,2].map(n=>{const info=practiceSessionInfo(n);return `<section class="practice-course"><div class="eyebrow">${info.label} · SESSION 0${n}</div><h2>${info.title}</h2><div class="practice-activities"><article class="practice-activity"><h3>选择自测</h3><p class="practice-purpose">快速检查概念</p><p class="practice-quantity">${info.quizCount} 道选择题<br>附解释练习</p><p class="practice-feedback">选择题判分 · 附解析</p><a class="primary" href="${info.quiz}">开始自测 →</a></article><article class="practice-activity"><h3>练习册</h3><p class="practice-purpose">训练完整作答</p><p class="practice-quantity">${info.bookCount} 道简答题 · ${info.marks} 分<br>${info.extra}</p><p class="practice-feedback">答案保存 · 提示自查</p><a class="primary" href="#workbook/${n}">打开练习册 →</a></article></div><div class="practice-chapter-links">${info.chapters.map(ch=>`<a class="practice-read" href="#chapter/${ch}">回看第 ${ch} 章 →</a>`).join('')}</div></section>`}).join('')}</div><p class="fine">自测为自编题；练习册按机构题目整理。两者按课程配套，题目不逐一对应。</p>${winemakingWorkbookHub()}${learnerPracticeSection()}${winemakingCourseRecords()}</main>`;
+ const tabs=[['workbook','机构练习册'],['classroom','老师讲解整理'],['self','本站自编练习'],['chapters','按章节查找']];
+ const requested=location.hash.split('/')[1],active=tabs.some(([id])=>id===requested)?requested:'workbook';
+ const panels={workbook:practiceOriginalShelf,classroom:practiceClassroomShelf,self:practiceSelfShelf,chapters:practiceChapterShelf};
+ return `<main id="main" class="wrap practice-hub practice-shelf"><header class="page-intro"><div class="eyebrow">PRACTICE & REVIEW</div><h1 class="page-title">练习与复习</h1><p>原题、课堂讲解和本站练习，按来源分别查找。</p></header><nav class="practice-source-tabs" aria-label="练习资料分类">${tabs.map(([id,label])=>`<a href="#practice/${id}"${active===id?' aria-current="page"':''}>${label}</a>`).join('')}</nav>${panels[active]()}</main>`;
 }
+
 function prepareCourseBodies(){
  const labels={
   '1/roots':['根系、接穗与砧木','根瘤蚜与抗性砧木','室内嫁接与田间换接','嫁接与杂交的区别'],
