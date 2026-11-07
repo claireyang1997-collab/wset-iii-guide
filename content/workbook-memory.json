@@ -235,16 +235,19 @@
     },
     {
       "id": "grafting",
-      "zh": "嫁接与根瘤蚜",
-      "en": "Grafting / Phylloxera",
-      "cue": "虫伤根 → 藤衰弱 → 换抗性根系",
-      "cause": "根瘤蚜取食欧亚葡萄根系，伤口可继发感染 → 根部功能受损，植株逐渐衰弱甚至死亡。",
-      "result": "把所需酿酒品种接到抗性砧木上，保护根系、维持生长；地上结果的品种仍由接穗决定。",
-      "limit": "嫁接不等于杀灭害虫，也不会创造杂交品种；砧木还要适应土壤、水分和所需长势。",
+      "zh": "嫁接与抗性砧木",
+      "en": "Grafting / Resistant rootstocks",
+      "cue": "欧亚种抗性不足 → 适宜砧木改善抗性与适应性 → 通常嫁接",
+      "cause": "欧亚葡萄对根瘤蚜抗性不足，也可能难以适应干旱、某些土壤或线虫危害；根瘤蚜取食根系，伤口可继发感染，使植株衰弱甚至死亡。",
+      "result": "选用适宜的美洲葡萄种或其杂交种砧木，可提高对根瘤蚜的抗性，并按砧木特性改善耐旱性、土壤适应性或线虫抗性；因此通常把欧亚葡萄接穗嫁接到这类砧木上，保留所需酿酒品种。",
+      "limit": "并非所有砧木都同时抗根瘤蚜、耐旱、适应所有土壤并抗线虫，须按园地选择；嫁接不等于杀灭害虫，也不创造杂交新品种。",
       "href": "#read/4/grafting/book-4-grafting-2",
       "questions": [
         "1/graft"
-      ]
+      ],
+      "answerZh": "因为欧亚葡萄对根瘤蚜缺乏足够抗性，也可能面临干旱、某些土壤条件及线虫造成的问题（A）；选用适宜的美洲葡萄种或其杂交种砧木，可以提高相应抗性或适应性（B）；所以通常将欧亚葡萄接穗嫁接到这类砧木上，利用砧木根系保护植株，同时保留所需酿酒品种（C）。",
+      "answerEn": "Because Vitis vinifera lacks sufficient resistance to phylloxera and may face problems with drought, certain soils and nematodes (A), suitable rootstocks derived from American vine species or their hybrids can improve the relevant resistance or adaptation (B). Vitis vinifera scions are therefore generally grafted onto such rootstocks, using their root systems while retaining the desired wine grape variety (C).",
+      "source": "依据本次提供的《第三级的逻辑 / Level 3 Logic》课堂讲义照片整理；补充砧木选择条件，非机构逐分评分表。"
     },
     {
       "id": "mediterranean",

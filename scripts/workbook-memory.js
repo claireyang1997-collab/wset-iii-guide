@@ -7,9 +7,13 @@ workbookVarieties=function(kind){
  const tip=kind==='white'?'甜度由残糖决定，不能只凭品种名固定为干或甜。':'颜色深不等于单宁高，要把颜色与口感分开记。';
  return workbookVarietiesBeforeMemory(kind).replace('<div class="wb-variety-tools">',`<aside class="wb-variety-memory" id="wb-variety-memory-${kind}"><strong>四格记忆：${cue}</strong><p>先选产区或典型酒款，再填四格；${tip}先遮住答案回忆，再核对。</p></aside><div class="wb-variety-tools">`);
 };
+function workbookMemoryAnswer(item){
+ if(!item.answerZh)return '';
+ return `<aside class="wb-memory-example"><strong>参考作答 · A → B → C</strong><p>${safe(item.answerZh)}</p>${item.answerEn?`<p lang="en">${safe(item.answerEn)}</p>`:''}<p class="fine">${safe(item.source||'根据已提供资料整理，非机构评分表。')}</p><p class="wb-memory-limit">${safe(item.limit)}</p></aside>`;
+}
 function workbookMemoryLinks(session,id){
  const items=workbookMemoryItems(session).filter(t=>t.questions.includes(`${session}/${id}`));
- return items.length?`<p class="wb-memory-question-links"><strong>本题答案重点：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>`:'';
+ return items.length?`<p class="wb-memory-question-links"><strong>本题答案重点：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>${items.map(workbookMemoryAnswer).join('')}`:'';
 }
 const workbookQuestionBeforeMemory=workbookQuestion;
 workbookQuestion=function(q,i){return workbookQuestionBeforeMemory(q,i).replace('</details></section>',workbookMemoryLinks(q[0],q[1])+'</details></section>');};
