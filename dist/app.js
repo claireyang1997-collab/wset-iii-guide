@@ -104,7 +104,13 @@ const searchTerms=[['根瘤蚜 Phylloxera','roots','根系受损与抗性砧木'
 searchTerms.push(['Session 2 / 葡萄园管理 / 整枝 / 密度 / Training / Cordon / Head','s2:training','第二课 · 空间、骨架与高度'],['修剪 / Spur / Cane / Guyot / 冬剪 / 夏剪 / 芽','s2:pruning','第二课 · 木龄和两种冬剪'],['VSP / 冠层 / 搭架 / 叶幕 / Trellising','s2:canopy','第二课 · 光照、通风与成本'],['产量 / 质量 / 平衡 / 摘青 / Green harvesting','s2:balance','第二课 · 资源与负载'],['有机 / 生物动力 / 可持续 / 线虫 / 卷叶 / 皮尔斯 / 病虫害','s2:health','第二课 · 风险与栽培方式'],['采收 / 贵腐 / Hunter Valley / 人工 / 机械 / TBA / Botrytis','s2:harvest','第二课 · 采收决策']);
 // Index the integrated reading bodies, so later course edits become searchable too.
 const searchPlain=html=>String(html).replace(/<[^>]*>/g,' ').replace(/&(?:amp|lt|gt|quot|apos|nbsp|#39);/g,m=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&nbsp;':' ','&#39;':"'"}[m])).replace(/&#(x[0-9a-f]+|[0-9]+);/gi,(_,n)=>String.fromCodePoint(n[0].toLowerCase()==='x'?parseInt(n.slice(1),16):Number(n))).replace(/\s+/g,' ').trim();
-const searchNormalize=s=>s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+// Known alternate spellings only; Muscat and Muscadet are separate names.
+const searchNameAliases=[['muscadelle','密思卡岱','密斯卡岱']];
+const searchNormalize=s=>{
+ let text=s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
+ for(const [name,...aliases] of searchNameAliases)for(const alias of aliases)text=text.replaceAll(alias,name);
+ return text;
+};
 let searchIndex;
 let pendingSearchAnchor='';
 function buildSearchIndex(){
@@ -127,7 +133,7 @@ function findKnowledge(query){
  return searchIndex.filter(e=>words.every(w=>e.terms.includes(w))).sort((a,b)=>Number(b.anchor!=='')-Number(a.anchor!=='')+2*(Number(searchNormalize(b.title).includes(q))-Number(searchNormalize(a.title).includes(q))));
 }
 function searchSnippet(text,query){
- const words=query.trim().split(/\s+/).filter(Boolean),lower=text.toLowerCase();
+ const words=query.trim().split(/\s+/).filter(Boolean).flatMap(word=>searchNameAliases.find(names=>names[0]===searchNormalize(word))||[word]),lower=text.toLowerCase();
  const hits=words.map(w=>lower.indexOf(w.toLowerCase())).filter(n=>n>=0),start=Math.max(0,(hits.length?Math.min(...hits):0)-28);
  return (start?'…':'')+text.slice(start,start+130)+(text.length>start+130?'…':'');
 }
