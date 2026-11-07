@@ -241,6 +241,8 @@ const regionsSession5={
       "勃艮第位于法国东部内陆。先在法国图中找到巴黎、第戎（Dijon）、博讷（Beaune）及里昂（Lyon），再看勃艮第内部。夏布利在北方，和主产区并不连成一条紧邻的葡萄园。"
      ],
      "figures": [
+      "burgundy-bilingual-redrawn",
+      "burgundy-styles-redrawn",
       "france-map",
       "burgundy-map",
       "france-area-chart"
@@ -1195,7 +1197,8 @@ const regionsSession5={
    "kind": "map",
    "src": "assets/s5-france-map-supplied-20261105.jpg",
    "width": 1315,
-   "height": 1279
+   "height": 1279,
+   "referenceOnly": true
   },
   {
    "id": "burgundy-map",
@@ -1211,7 +1214,8 @@ const regionsSession5={
    "kind": "map",
    "src": "assets/s5-burgundy-map-supplied-20261105.jpg",
    "width": 1279,
-   "height": 1330
+   "height": 1330,
+   "referenceOnly": true
   },
   {
    "id": "burgundy-slope",
@@ -1884,6 +1888,42 @@ const regionsSession5={
    "src": "assets/s5-nouveau-label-supplied-20261105.jpg",
    "width": 300,
    "height": 304
+  },
+  {
+   "id": "burgundy-bilingual-redrawn",
+   "title": "勃艮第双语地图",
+   "kind": "map",
+   "src": "assets/s5-burgundy-bilingual-redrawn-20261107.jpg",
+   "width": 1122,
+   "height": 1402,
+   "largeMap": true,
+   "caption": "按已提供的勃艮第及金丘地图重绘。先看夏布利，再沿主产区由北向南找夜丘、伯讷丘、夏隆内丘和马孔内；两组村庄按北→南列出。上夜丘与上伯讷丘位于对应主坡带以西。夏布利单独示意，插图与主图不同比例；轮廓用于定位，不是精确法定边界。",
+   "alt": "勃艮第中法双语定位示意。夏布利位于主产区西北，单独插图；夜丘和伯讷丘合为金丘，向南依次是夏隆内丘、马孔内，再接博若莱。标出西侧上夜丘与上伯讷丘，以及第戎、博讷、沙尼、索恩河畔沙隆、马孔和索恩河。夜丘重点村庄从热夫雷–香贝丹至夜圣乔治；伯讷丘从阿罗克斯–科通至夏山–蒙哈榭。",
+   "sourceFigureIds": [
+    "burgundy-map",
+    "cote-or-map",
+    "nuits-map",
+    "beaune-map"
+   ],
+   "sourceNote": "本站依据已提供地图重绘；地名与村庄顺序对照第15章现有正文。"
+  },
+  {
+   "id": "burgundy-styles-redrawn",
+   "title": "勃艮第：地理分区与典型酒色",
+   "kind": "map",
+   "src": "assets/s5-burgundy-styles-redrawn-20261107.jpg",
+   "width": 1122,
+   "height": 1402,
+   "largeMap": true,
+   "caption": "夏布利重点是霞多丽干白；夜丘以黑皮诺干红著名；伯讷丘及夏隆内丘兼有干红与干白；马孔内以霞多丽干白为主，Mâcon也有红酒。玻玛、沃尔奈的村庄AOP只产红酒，蒙塔尼只产白酒；默尔索、普里尼–蒙哈榭与夏山–蒙哈榭红白皆有，以白酒著名。酒色和轮廓为学习示意，不代表逐地块酒色或精确法定边界；博若莱作为南邻在第16章另学。",
+   "alt": "勃艮第五个分区的典型酒色。夏布利白；夜丘红为重点；伯讷丘红白兼有；夏隆内丘红白兼有，吕利红白皆有、梅尔居雷和日夫里以红为主、蒙塔尼只白；马孔内以白为主但Mâcon也有红酒。Mâcon-Villages、Pouilly-Fuissé、Saint-Véran为白葡萄酒。颜色仅表达典型风格，不是每块葡萄园的精确生产分布。",
+   "sourceFigureIds": [
+    "burgundy-map",
+    "cote-or-map",
+    "chalonnaise-map",
+    "maconnais-map"
+   ],
+   "sourceNote": "本站依据原地图和第15章现有正文重绘；补充明确典型风格与法定酒色的区别。"
   }
  ],
  "pages": [

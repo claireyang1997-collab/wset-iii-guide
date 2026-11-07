@@ -13,6 +13,10 @@
 .s5-figure-heading a{white-space:nowrap;font-size:12px;color:#6c715c}
 .s5-image-link{display:block;background:#eeede4;border-radius:3px;overflow:hidden}
 .s5-image-link picture{display:block}
+.s5-reference-map{border:1px solid var(--line);border-radius:6px;padding:14px 18px;background:#f5f3e9;min-width:0}
+.s5-reference-map>summary{font-size:13px;color:var(--muted);cursor:pointer}.s5-reference-map>.s5-figure{margin-top:18px}
+.s5-map-scroll{overflow-x:auto;overscroll-behavior-x:contain;min-width:0}.s5-map-hint{display:none}
+@media(max-width:600px){.s5-atlas-map .s5-map-hint{display:block;font-size:12px;color:var(--muted);margin:0 0 10px;line-height:1.7}.s5-atlas-map .s5-map-scroll>.s5-image-link{width:680px;max-width:none}.s5-atlas-map .s5-map-scroll img{width:680px;max-width:none;height:auto}.s5-atlas-map .s5-figure-heading{flex-wrap:wrap;gap:6px 14px}}
 .s5-figure img{display:block;width:100%;height:auto;max-height:850px;object-fit:contain}
 .s5-figure figcaption{padding-top:14px;font-size:13px;color:#666c5c;line-height:1.9}
 .s5-figures-labels{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -171,3 +175,5 @@
  .s5-figure:is(#s5fig-gamay-photo,#s5fig-beaujolais-map,#s5fig-gamay-training,#s5fig-gamay-bush) .s5-image-link{height:280px}
  .s5-figure:is(#s5fig-beaujolais-handout-map,#s5fig-beaujolais-hierarchy) .s5-image-link{height:300px}
 }
+
+.s5-redraw-label{display:inline-block;margin-left:10px;padding:2px 6px;font-size:10px;font-weight:400;color:#697758;border:1px solid #c4cdb6;border-radius:3px;background:#eff1e7;vertical-align:middle}
