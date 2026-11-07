@@ -11,9 +11,16 @@ function workbookMemoryAnswer(item){
  if(!item.answerZh)return '';
  return `<aside class="wb-memory-example"><strong>参考作答 · A → B → C</strong><p>${safe(item.answerZh)}</p>${item.answerEn?`<p lang="en">${safe(item.answerEn)}</p>`:''}<p class="fine">${safe(item.source||'根据已提供资料整理，非机构评分表。')}</p><p class="wb-memory-limit">${safe(item.limit)}</p></aside>`;
 }
+function workbookPriceMethod(session){
+ if(![5,6].includes(Number(session))||!workbookMemoryData.priceMethod)return '';
+ const m=workbookMemoryData.priceMethod,id=`wb-price-method-${session}`;
+ const open=location.hash===`#workbook/${session}/${id}`?' open':'';
+ return `<details class="wb-price-method" id="${id}"${open}><summary><strong>${safe(m.title)}</strong><span>答题逻辑图 · 葡萄园 → 酒庄 → 价格、风格、品质</span></summary><div class="wb-price-body"><p>${safe(m.intro)}</p><figure class="wb-price-map" id="wb-price-map-${session}"><div class="wb-price-stages">${m.stages.map((stage,i)=>`<section class="wb-price-stage"><h3><span>0${i+1}</span> ${safe(stage.title)} <small lang="en">${safe(stage.en)}</small></h3><div class="wb-price-steps">${stage.steps.map(step=>`<div class="wb-price-step"><h4>${safe(step.title)}</h4><small>${safe(step.subtitle)}</small><p>${safe(step.text)}</p></div>`).join('')}</div></section><p class="wb-price-bridge"><span aria-hidden="true">↓</span>${safe(stage.bridge)}</p>`).join('')}</div><div class="wb-price-outcomes">${m.outcomes.map(o=>`<section><h3>${safe(o.title)} <small lang="en">${safe(o.en)}</small></h3><p>${safe(o.text)}</p></section>`).join('')}</div><figcaption>${safe(m.caption)}</figcaption></figure><aside class="wb-price-check"><strong>把图变成答案</strong><p>${safe(m.check)}</p></aside><section class="wb-price-example"><h3>${safe(m.exampleTitle)}</h3><p>${safe(m.exampleIntro)}</p><ol>${m.examples.map(e=>`<li><h4>${safe(e.stage)}</h4><p>${safe(e.cause)}</p><p class="wb-price-effect"><span aria-hidden="true">→</span> ${safe(e.effect)}</p></li>`).join('')}</ol><p class="fine">${safe(m.sourceNote)}</p><nav aria-label="价格题知识回看">${m.links.map(l=>`<a href="${l.href}">${safe(l.label)} →</a>`).join('')}</nav></section></div></details>`;
+}
 function workbookMemoryLinks(session,id){
  const items=workbookMemoryItems(session).filter(t=>t.questions.includes(`${session}/${id}`));
- return items.length?`<p class="wb-memory-question-links"><strong>本题答案重点：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>${items.map(workbookMemoryAnswer).join('')}`:'';
+ const method=workbookMemoryData.priceMethod?.questions.includes(`${session}/${id}`)?`<p><a href="#workbook/${session}/wb-price-method-${session}">为什么贵？按葡萄园到酒庄的顺序答 →</a></p>`:'';
+ return (items.length?`<p class="wb-memory-question-links"><strong>本题答案重点：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>${items.map(workbookMemoryAnswer).join('')}`:'')+method;
 }
 const workbookQuestionBeforeMemory=workbookQuestion;
 workbookQuestion=function(q,i){return workbookQuestionBeforeMemory(q,i).replace('</details></section>',workbookMemoryLinks(q[0],q[1])+'</details></section>');};
@@ -28,5 +35,5 @@ const workbookViewBeforeMemory=workbookView;
 workbookView=function(which){
  const session=Number(which)||1;
  const index=`<nav class="wb-memory-index" aria-label="练习册重点速记"><strong>重点速记</strong>${workbookMemoryData.groups.map(g=>`<a href="#workbook/${g.session}/wb-memory-${g.session}"${session===g.session?' aria-current="page"':''}>第${g.session}课 · ${safe(g.title)}</a>`).join('')}</nav>`;
- return workbookViewBeforeMemory(which).replace('</aside>','</aside>'+index+workbookMemoryPanel(session));
+ return workbookViewBeforeMemory(which).replace('</aside>','</aside>'+index+workbookPriceMethod(session)+workbookMemoryPanel(session));
 };
