@@ -63,8 +63,10 @@
 /* A wider soil map and complete portrait photograph share one aligned row. */
 .article-section:has(>#book-13-climate-3){container-type:inline-size}
 .s5-figures:has(>#s6fig-soils):has(>#s6fig-gravel){gap:20px}
+#s6fig-gravel figcaption{max-inline-size:30em;text-wrap:balance}
+@media(max-width:360px){#s6fig-gravel{padding-inline:6px}}
 @container(min-width:680px){
- .s5-figures:has(>#s6fig-soils):has(>#s6fig-gravel){grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);align-items:stretch}
+ .s5-figures:has(>#s6fig-soils):has(>#s6fig-gravel){grid-template-columns:minmax(0,1.8fr) minmax(20rem,1fr);align-items:stretch}
  .s5-figure:is(#s6fig-soils,#s6fig-gravel){display:flex;flex-direction:column;padding:16px}
  .s5-figure:is(#s6fig-soils,#s6fig-gravel) .s5-figure-heading{min-height:24px}
  #s6fig-soils .s5-image-link{margin:auto 0}
