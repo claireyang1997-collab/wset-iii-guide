@@ -111,7 +111,8 @@ searchTerms.push(['Session 2 / 葡萄园管理 / 整枝 / 密度 / Training / Co
 // Index the integrated reading bodies, so later course edits become searchable too.
 const searchPlain=html=>String(html).replace(/<[^>]*>/g,' ').replace(/&(?:amp|lt|gt|quot|apos|nbsp|#39);/g,m=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&nbsp;':' ','&#39;':"'"}[m])).replace(/&#(x[0-9a-f]+|[0-9]+);/gi,(_,n)=>String.fromCodePoint(n[0].toLowerCase()==='x'?parseInt(n.slice(1),16):Number(n))).replace(/\s+/g,' ').trim();
 // Known alternate spellings only; Muscat and Muscadet are separate names.
-const searchNameAliases=[['muscadelle','密思卡岱','密斯卡岱']];
+const searchNameAliases=[['muscadelle','密思卡岱']];
+const searchAlternates=new Map([['密斯卡岱',['密斯卡岱','muscadelle','muscadet']],['慕斯卡德',['慕斯卡德','muscadet']]]);
 const searchNormalize=s=>{
  let text=s.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\s+/g,' ').trim();
  for(const [name,...aliases] of searchNameAliases)for(const alias of aliases)text=text.replaceAll(alias,name);
@@ -136,10 +137,10 @@ function findKnowledge(query){
  if(!searchIndex)searchIndex=buildSearchIndex();
  const q=searchNormalize(query),words=q.split(' ').filter(Boolean);
  if(!q)return searchIndex.filter(e=>!e.anchor);
- return searchIndex.filter(e=>words.every(w=>e.terms.includes(w))).sort((a,b)=>Number(b.anchor!=='')-Number(a.anchor!=='')+2*(Number(searchNormalize(b.title).includes(q))-Number(searchNormalize(a.title).includes(q))));
+ return searchIndex.filter(e=>words.every(w=>(searchAlternates.get(w)||[w]).some(term=>e.terms.includes(term)))).sort((a,b)=>Number(b.anchor!=='')-Number(a.anchor!=='')+2*(Number(searchNormalize(b.title).includes(q))-Number(searchNormalize(a.title).includes(q))));
 }
 function searchSnippet(text,query){
- const words=query.trim().split(/\s+/).filter(Boolean).flatMap(word=>searchNameAliases.find(names=>names[0]===searchNormalize(word))||[word]),lower=text.toLowerCase();
+ const words=query.trim().split(/\s+/).filter(Boolean).flatMap(word=>searchAlternates.get(searchNormalize(word))||searchNameAliases.find(names=>names[0]===searchNormalize(word))||[word]),lower=text.toLowerCase();
  const hits=words.map(w=>lower.indexOf(w.toLowerCase())).filter(n=>n>=0),start=Math.max(0,(hits.length?Math.min(...hits):0)-28);
  return (start?'…':'')+text.slice(start,start+130)+(text.length>start+130?'…':'');
 }
@@ -156,6 +157,6 @@ function search(){
   if(location.hash===a.getAttribute('href'))render();else location.hash=a.getAttribute('href');
  }));
 }
-$('#search-open').addEventListener('click',()=>{$('#search-dialog').showModal();search();$('#search-input').focus()});$('#search-input').addEventListener('input',search);$('#sources-open').addEventListener('click',()=>$('#sources-dialog').showModal());document.querySelectorAll('#sources-dialog a[href^="#workbook/"]').forEach(a=>a.addEventListener('click',()=>$('#sources-dialog').close()));$('#coverage-link')?.addEventListener('click',()=>$('#sources-dialog').close());$('#session2-coverage-link')?.addEventListener('click',()=>$('#sources-dialog').close());document.querySelectorAll('.close-dialog').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search-open').click()}});$('.skip')?.addEventListener('click',e=>{e.preventDefault();focusReadingTarget('main')});window.addEventListener('hashchange',render);render();
+$('#search-open').addEventListener('click',()=>{$('#search-dialog').showModal();search();$('#search-input').focus()});$('#search-input').addEventListener('input',search);$('#sources-open').addEventListener('click',()=>$('#sources-dialog').showModal());document.querySelectorAll('#sources-dialog a[href^="#workbook/"], #sources-dialog a[href^="#review/"]').forEach(a=>a.addEventListener('click',()=>$('#sources-dialog').close()));$('#coverage-link')?.addEventListener('click',()=>$('#sources-dialog').close());$('#session2-coverage-link')?.addEventListener('click',()=>$('#sources-dialog').close());document.querySelectorAll('.close-dialog').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();$('#search-open').click()}});$('.skip')?.addEventListener('click',e=>{e.preventDefault();focusReadingTarget('main')});window.addEventListener('hashchange',render);render();
 
 document.addEventListener('click',e=>{const a=e.target.closest?.('[data-book-jump]');if(a){e.preventDefault();focusReadingTarget(a.dataset.bookJump);}});

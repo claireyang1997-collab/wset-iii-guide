@@ -1,0 +1,71 @@
+.s7-figure {
+ margin: 1.35rem 0;
+ border: 1px solid #d9dacb;
+ border-radius: .6rem;
+ overflow: hidden;
+ background: #fbf9f2;
+}
+.s7-figure h3, .s7-figure h4 {
+ margin: 0;
+ padding: .8rem 1rem;
+ color: #374032;
+}
+.s7-figure img { display: block; width: 100%; height: auto; }
+.s7-figure figcaption {
+ padding: .7rem 1rem .9rem;
+ color: #56614c;
+ border-top: 1px solid #d9dacb;
+ font-size: .9rem;
+ line-height: 1.55;
+}
+.s7-map-direction {
+ padding: .6rem 1rem;
+ background: #e8eef0;
+ color: #34515c;
+ font-size: .9rem;
+ font-weight: 700;
+}
+.s7-diagram-cells {
+ display: grid;
+ grid-template-columns: repeat(4,minmax(0,1fr));
+ gap: .55rem;
+ list-style: none;
+ margin: 0;
+ padding: .75rem 1rem 1rem;
+}
+.s7-diagram-cells > li {
+ display: flex;
+ flex-direction: column;
+ gap: .2rem;
+ list-style: none;
+ margin: 0;
+ padding: .6rem;
+ border-top: 3px solid #7d8967;
+ background: #efefe4;
+ overflow-wrap: anywhere;
+}
+.s7-diagram-cells > li strong { color: #374032; }
+.s7-diagram-cells > li small { color: #59644d; font-size: .8rem; }
+.s7-diagram-cells > li span { font-size: .87rem; line-height: 1.5; }
+.s7-region-cells > li { background: #edf0e6; }
+.s7-region-cells > li:nth-child(2) { background: #f2e9e1; border-color: #9c6754; }
+.s7-region-cells > li:nth-child(3) { background: #eee8ef; border-color: #8e687e; }
+.s7-region-cells > li:nth-child(4) { background: #e6ecee; border-color: #698793; }
+.s7-region-cells ul { list-style: none; padding: 0; margin: .25rem 0 0; }
+.s7-region-cells ul li { font-size: .79rem; line-height: 1.45; margin: .35rem 0 0; }
+.s7-region-cells b { display: inline-block; border-radius: .2rem; padding: .02rem .26rem; background: #fff9dd; font-weight: 600; }
+.s7-region-cells b[data-color="红"] { background: #783d4e; color: white; }
+.s7-region-cells b[data-color="桃红"] { background: #f1d4d9; color: #5a3443; }
+.s7-region-cells b[data-color="起泡"] { background: #dbe9ef; color: #284b57; }
+@media (max-width: 1020px) {
+ .s7-diagram-cells { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+.s7-map-image {
+ display: block;
+ width: fit-content;
+ max-width: 100%;
+ margin: 0 auto;
+ text-align: center;
+}
+.s7-map-image span { display: block; padding: .35rem; font-size: .85rem; }
