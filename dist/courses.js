@@ -79,11 +79,11 @@ function practiceChapterShelf(){
  }).join('')}</section>`).join('')}</div></section>`;
 }
 function practiceHub(){
- const tabs=[['workbook','机构练习册'],['classroom','老师线下 Tips'],['self','本站自编练习'],['chapters','按章节查找'],['tasting','SAT 品鉴']];
- const [, section, target]=location.hash.split('/');
- const requested=section==='lesson1'?(target==='sat'?'tasting':'classroom'):section;
+ const tabs=[['workbook','机构练习册'],['classroom','老师线下 Tips'],['self','本站自编练习'],['chapters','按章节查找']];
+ const [, section]=location.hash.split('/');
+ const requested=section==='lesson1'?'classroom':section;
  const active=tabs.some(([id])=>id===requested)?requested:'workbook';
- const panels={workbook:practiceOriginalShelf,classroom:classroomTips,self:practiceSelfShelf,chapters:practiceChapterShelf,tasting:classroomTasting};
+ const panels={workbook:practiceOriginalShelf,classroom:classroomTips,self:practiceSelfShelf,chapters:practiceChapterShelf};
  return `<main id="main" class="wrap practice-hub practice-shelf"><header class="page-intro"><div class="eyebrow">PRACTICE & REVIEW</div><h1 class="page-title">练习与复习</h1></header><nav class="practice-source-tabs" aria-label="练习与复习导航">${tabs.map(([id,label])=>`<a href="#practice/${id}"${active===id?' aria-current="page"':''}>${label}</a>`).join('')}</nav>${panels[active]()}</main>`;
 }
 

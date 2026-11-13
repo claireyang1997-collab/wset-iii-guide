@@ -147,19 +147,33 @@ function classroomTips() {
   </div>`;
 }
 
-function classroomTasting() {
-  return `<div class="method-page">
+function tastingView() {
+  const satPdf = "https://www.wsetglobal.cn/wp-content/uploads/WSET_L3Wines_SAT_SC_Jun2023_Issue2C.pdf";
+  return `<main id="main" class="wrap practice-shelf tasting-page">
     <header class="method-intro">
-      <h2>SAT 系统品鉴</h2>
+      <h1 class="page-title">SAT 系统品鉴</h1>
       <p>按顺序记录杯中证据，再判断质量、适饮程度与陈年潜力。</p>
       <nav class="method-jumps" aria-label="品鉴方法">
-        <a href="#practice/tasting/sat">四步品鉴</a>
-        <a href="#practice/tasting/aromas">三类香气</a>
-        <a href="#practice/tasting/blic">BLIC 与陈年</a>
+        <a href="#tasting/charts">中文品鉴表</a>
+        <a href="#tasting/sat">四步品鉴</a>
+        <a href="#tasting/aromas">三类香气</a>
+        <a href="#tasting/blic">BLIC 与陈年</a>
       </nav>
     </header>
+    <section class="method-section" id="charts" aria-labelledby="charts-title">
+      <h2 id="charts-title">WSET 三级中文品鉴表</h2>
+      <div class="tasting-charts">
+        <a href="${satPdf}#page=1" target="_blank" rel="noopener">
+          <strong>品鉴系统方法 ↗</strong><span>第 1 页 · 外观、嗅觉、口感与评估</span>
+        </a>
+        <a href="${satPdf}#page=2" target="_blank" rel="noopener">
+          <strong>葡萄酒词汇表 ↗</strong><span>第 2 页 · 一类、二类与三类香气和风味</span>
+        </a>
+      </div>
+      <p class="method-note">WSET 简体中文 PDF · 2023 年第 2C 版</p>
+    </section>
     <section class="method-section" id="sat" aria-labelledby="sat-title">
-      <h3 id="sat-title">一杯酒，按四步记录</h3>
+      <h2 id="sat-title">一杯酒，按四步记录</h2>
       <figure class="method-figure">
         ${methodFlow('SAT 品鉴顺序', [
           ['看 · 外观','用白底观察。分别记澄清度、颜色深度和色调。'],
@@ -184,7 +198,7 @@ function classroomTasting() {
       <p class="method-note">口感容易混淆的两项是成熟果味与甜度、单宁的量与粗细。各自判断，分开记录。</p>
     </section>
     <section class="method-section" id="aromas" aria-labelledby="aromas-title">
-      <h3 id="aromas-title">把香气写具体</h3>
+      <h2 id="aromas-title">把香气写具体</h2>
       <figure class="method-figure">
         ${methodTerms([
           ['一类 · 葡萄与酒精发酵','柠檬、桃、红樱桃、玫瑰等。'],
@@ -195,7 +209,7 @@ function classroomTasting() {
       </figure>
     </section>
     <section class="method-section" id="blic" aria-labelledby="blic-title">
-      <h3 id="blic-title">用 BLIC 找质量证据</h3>
+      <h2 id="blic-title">用 BLIC 找质量证据</h2>
       <figure class="method-figure">
         ${methodTerms([
           ['B · 平衡 Balance','酸、甜、酒精、单宁与风味是否互相支撑？'],
@@ -205,12 +219,12 @@ function classroomTasting() {
         ])}
         <figcaption>用这些证据解释质量结论。例如，高酸托住甜度，果味集中，余味仍有明显的杏干与柑橘皮。</figcaption>
       </figure>
-      <h4 class="method-subheading">适饮程度与陈年潜力</h4>
+      <h3 class="method-subheading">适饮程度与陈年潜力</h3>
       ${methodFlow('判断陈年潜力', [
         ['看现在','根据杯中表现，判断酒过于年轻、已经适饮，还是已过适饮期。'],
         ['看以后','结合果味浓度与结构，判断再存放是否有机会发展出更多层次。'],
         ['写结论','如果已经适饮，再说明是否适合继续陈年。']
       ])}
     </section>
-  </div>`;
+  </main>`;
 }

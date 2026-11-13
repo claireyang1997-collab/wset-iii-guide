@@ -70,3 +70,22 @@
 @media(max-width:480px){
  .method-lanes,.method-branches,.method-observations{grid-template-columns:minmax(0,1fr)}
 }
+
+.home-tasting{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:clamp(20px,4vw,32px);margin:0 0 48px;border:1px solid var(--line);border-inline-start:3px solid var(--wine);border-radius:6px;background:#f1ebe3}
+.home-tasting h2{font-size:clamp(23px,3.2vw,30px);margin:0 0 6px}
+.home-tasting p{margin:0;font-size:.9375rem;color:#596052}
+.home-tasting .primary{flex-shrink:0}
+.tasting-page{max-width:1020px;padding-top:44px}
+.tasting-page .method-section h2{font:500 clamp(24px,3vw,29px)/1.4 var(--serif);margin:0 0 14px}
+.tasting-page .method-section .method-subheading{font-size:1.05rem;font-weight:650;line-height:1.5;margin:18px 0 10px}
+.tasting-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tasting-charts a{display:block;padding:13px 15px;border:1px solid var(--line);border-radius:6px;background:var(--white);color:var(--wine)}
+.tasting-charts a:hover{border-color:var(--wine)}
+.tasting-charts span{display:block;margin-top:4px;font-size:.875rem;color:#596052}
+.header nav a[data-nav="tasting"]{white-space:nowrap}
+@media(max-width:560px){
+ .home-tasting{align-items:flex-start;flex-direction:column;margin-bottom:32px}
+ .tasting-page{padding-top:25px}
+ .tasting-charts{grid-template-columns:1fr}
+ .header nav{gap:clamp(9px,3vw,16px)}
+}
