@@ -1796,7 +1796,7 @@ const regionsSession5={
    "title": "Cru、Villages、Beaujolais",
    "caption": "博若莱常分为大区级、村庄级和十个 Cru。新酒 Nouveau 可以来自前两类，它说明的是新酒类型，并不是额外的第四级。",
    "kind": "diagram",
-   "src": "assets/s5-beaujolais-hierarchy-redrawn-20261105.svg",
+   "src": "assets/s5-beaujolais-hierarchy-redrawn-20261113.svg",
    "width": 680,
    "height": 680,
    "originalSrc": "assets/s5-beaujolais-hierarchy.webp",
