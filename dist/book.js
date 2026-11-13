@@ -182,7 +182,23 @@ function bookSourceLinks(html,session){
  });
 }
 function bookReadingEnd(u,next,done){
- return `<section class="book-reading-end" aria-label="阅读进度与导航"><div class="book-end-main">${u.framework?`<a class="book-complete" href="#review/${u.chapter}">查看待补内容</a>`:`<button type="button" class="book-complete${done?' is-done':''}" data-book-complete="${u.chapter}/${u.id}" aria-pressed="${done}"><span class="book-complete-icon" aria-hidden="true">${done?'✓':''}</span><span>${done?'已读':'标记已读'}</span></button>`}<a class="book-next-unit" href="${next?bookHref(next):'#practice'}"><span class="book-next-copy"><small>${next?'下一单元':'继续学习'}</small><strong>${next?safe(next.title):'进入练习与复习'}</strong></span><span class="book-next-arrow" aria-hidden="true">→</span></a></div><nav class="book-end-links" aria-label="本章导航"><a href="#chapter/${u.chapter}">本章目录</a><a href="#map/chapter/${u.chapter}" title="解释概念，练习应用">本章自查</a></nav></section>`;
+ const complete=u.framework
+  ? `<a class="book-complete" href="#review/${u.chapter}">查看待补内容</a>`
+  : `<button type="button" class="book-complete${done?' is-done':''}" data-book-complete="${u.chapter}/${u.id}" aria-pressed="${done}">
+      <span class="book-complete-icon" aria-hidden="true">${done?'✓':''}</span>${done?'已读':'标记已读'}
+    </button>`;
+ const nextHref=next?bookHref(next):'#practice';
+ const nextLabel=next?(next.chapter===u.chapter?'下一单元':'下一单元 · 第 '+next.chapter+' 章'):'继续学习';
+ return `<nav class="book-reading-end" aria-label="阅读进度与导航">
+  <a class="book-next-unit" href="${nextHref}"${next?' rel="next"':''}>
+   <span class="book-next-copy"><small>${nextLabel}</small><strong>${next?safe(next.title):'进入练习与复习'}</strong></span>
+   <span class="book-next-arrow" aria-hidden="true">→</span>
+  </a>
+  <div class="book-end-tools">
+   ${complete}
+   <div class="book-end-links"><a href="#chapter/${u.chapter}">本章目录</a><a href="#map/chapter/${u.chapter}" title="解释概念，练习应用">本章自查</a></div>
+  </div>
+ </nav>`;
 }
 function bookReadView(chapter,id){const u=bookUnits.find(u=>u.chapter===Number(chapter)&&u.id===id);if(!u)return bookChapterView(chapter);const ch=bookChapters.find(c=>c.id===u.chapter),idx=bookUnits.indexOf(u),next=bookUnits[idx+1],key=`book-${u.chapter}-${u.id}`,done=bookUnitDone(u);return `<main id="main" class="wrap lesson-layout book-reading">${bookSidebar(u)}<article class="lesson-content"><a class="back" href="#chapter/${u.chapter}">← 第 ${u.chapter} 章 · ${ch.title}</a><div class="eyebrow">CHAPTER ${u.chapter} / ${ch.en}</div><h1>${u.title}</h1><p class="lesson-deck">${u.desc}</p><div class="reading-meta"><span>第 ${u.chapter} 章 · ${ch.title}</span><span>${u.pages.startsWith('讲义')?u.pages:'课本 p.'+u.pages}</span></div>${u.framework?winemakingStatus(u.chapter):''}${bookOutline(u.body)}<div id="reading-body">${bookContent(u)}</div><div class="notes"><label for="book-note-${u.chapter}-${u.id}">笔记 <small id="note-status">仅保存在当前浏览器</small></label><textarea id="book-note-${u.chapter}-${u.id}" data-note="${key}" placeholder="用自己的话回答本页开头的问题，或记录疑问…">${safe(read(notesKey(key),''))}</textarea></div>${bookLegacyNotes(u)}${bookReadingEnd(u,next,done)}</article></main>`}
 function bindBook(){document.querySelectorAll('[data-book-complete]').forEach(b=>b.addEventListener('click',()=>{const key=b.dataset.bookComplete,a=bookDone(),next=a.includes(key)?a.filter(x=>x!==key):[...a,key];if(!save('wset3-book-completed',next)){toast('阅读进度保存失败，请重试。');return;}const y=window.scrollY;render();window.scrollTo(0,y);toast(next.includes(key)?'已保存阅读进度。':'已取消已读标记。')}))}
