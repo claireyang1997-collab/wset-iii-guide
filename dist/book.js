@@ -17,8 +17,30 @@ function bookLegacyNotes(u){const route=bookHref(u),keys=Object.entries(bookLega
 function bookStructureFigure(key){
  if(key==='shoot')return bookShootIllustration();
  if(key==='wood-ages')return `<section class="study-plate textbook-original-plate" id="study-wood-ages" data-study-figure="wood-ages" aria-label="一年生木与多年生木实物对照"><div class="study-plate-head"><strong>先看实物：细枝与永久骨架</strong><span>课本图 4.2、4.3</span></div><div class="textbook-photo-pair"><figure class="textbook-photo-card"><a class="textbook-original-link" href="assets/textbook-4-2-spurs.webp" target="_blank" rel="noopener" aria-label="查看这幅课本图的清晰原图" title="查看清晰原图"><img src="assets/textbook-4-2-spurs.webp" alt="课本图4.2：西班牙短枝修剪葡萄藤，顶部短小枝段与粗糙主干、干臂的对照，保留原图箭头" width="1390" height="900" loading="lazy"></a><figcaption><strong>图 4.2 · 西班牙：短枝修剪</strong><p>上方两支箭头指向<strong>一年生短枝</strong>；中部箭头指干臂，下方箭头指主干。粗糙的主干与干臂属于<strong>多年生木</strong>。</p></figcaption></figure><figure class="textbook-photo-card"><a class="textbook-original-link" href="assets/textbook-4-3-cane.webp" target="_blank" rel="noopener" aria-label="查看这幅课本图的清晰原图" title="查看清晰原图"><img src="assets/textbook-4-3-cane.webp" alt="课本图4.3：法国阿尔萨斯替换长枝修剪葡萄藤，上方弯曲的一年生长枝与下方多年生主干，保留原图箭头" width="1400" height="920" loading="lazy"></a><figcaption><strong>图 4.3 · 阿尔萨斯：替换长枝修剪</strong><p>上方箭头指向弯曲的<strong>一年生长枝</strong>；下方箭头指<strong>多年生主干</strong>。长枝比短枝长，但两者都属于一年生木。</p></figcaption></figure></div><p class="textbook-photo-takeaway">辨认木龄看枝条形成的时间。长短与是否水平，都不能单独用来判断木龄。</p></section>`;
- if(key==='wood-renewal')return `<figure class="study-plate textbook-original-plate" id="study-wood-renewal" data-study-figure="wood-renewal"><div class="study-plate-head"><strong>再看水平枝条：短枝与干臂属于不同木龄</strong><span>课本图 4.4 · p.32</span></div><a class="textbook-original-link" href="assets/textbook-4-4-cordon-v2.webp" target="_blank" rel="noopener" aria-label="查看这幅课本图的清晰原图" title="查看清晰原图"><img class="textbook-cordon-original" src="assets/textbook-4-4-cordon-v2.webp" alt="课本图4.4原图：澳大利亚短枝修剪葡萄藤，水平多年生干臂上留有一年生短枝，下方为多年生主干，保留原图箭头" width="1800" height="1206" loading="lazy"></a><figcaption><strong>图 4.4 · 澳大利亚：水平干臂上的短枝</strong><p>上方箭头指<strong>一年生短枝</strong>；中间斜箭头指<strong>多年生干臂</strong>；下方箭头指<strong>多年生主干</strong>。水平的粗木臂是长期保留的骨架，不能把它当作每年替换的一年生长枝。</p><p class="textbook-season-line"><strong>跨年顺序：</strong>当年绿色新梢上开花结果 → 生长季后段木质化 → 冬剪选留合适的一年生枝与芽 → 次春芽长出新的绿色结果新梢。多年生骨架通常保留，结果母枝则需按系统逐年更新；较早保留的木质结构继续增加木龄。</p></figcaption></figure>`;
+ if(key==='wood-renewal')return bookCordonSpurIllustration();
  return studyDiagram(key);
+}
+
+function bookCordonSpurIllustration(){
+ const overlay=bookBotanicalOverlay('cordon-spur',[
+  ['M610 204L622 339'],['M1150 628L1106 470'],['M501 760L728 756']
+ ],[[610,204,1],[1150,628,2],[501,760,3]]);
+ return `<figure class="study-plate textbook-original-plate" id="study-wood-renewal" data-study-figure="wood-renewal">
+  <div class="study-plate-head"><strong>水平干臂上的短枝</strong><span>冬剪后 · 参照课本图 4.4</span></div>
+  <div class="botanical-art-frame cordon-spur-art">
+   <img src="assets/textbook-4-4-cordon-redrawn.webp" width="1536" height="1024" loading="lazy" alt="冬剪后的葡萄藤，深棕色主干分出两条水平干臂，干臂上留有带芽的浅棕色短枝。">
+   ${overlay}
+  </div>
+  <figcaption>
+   <dl class="cordon-spur-key">
+    <div><dt><b>1</b> 一年生短枝</dt><dd>干臂上方剪短的枝段，留有芽。</dd></div>
+    <div><dt><b>2</b> 多年生干臂</dt><dd>沿水平方向延伸的粗木臂，通常长期保留。</dd></div>
+    <div><dt><b>3</b> 多年生主干</dt><dd>向上支撑两侧干臂，与干臂一起构成永久骨架。</dd></div>
+   </dl>
+   <p class="textbook-season-line"><strong>跨年顺序</strong>　当年绿色新梢上开花结果，生长季后段木质化。冬剪选留一年生枝与芽，次春由这些芽长出新的绿色结果新梢。替换长枝修剪中，横绑的一年生长枝则逐年更新。</p>
+   <a class="cordon-original" href="assets/textbook-4-4-cordon-v2.webp" target="_blank" rel="noopener">查看澳大利亚葡萄园原图 ↗</a>
+  </figcaption>
+ </figure>`;
 }
 
 /* Original textbook photos replace matching panels; other mechanisms remain visible. */

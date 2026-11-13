@@ -502,6 +502,24 @@ main[tabindex="-1"]:focus{outline:none}
 .textbook-reading-keys dt{font-weight:600;color:var(--ink)}
 .textbook-reading-keys dd{margin:3px 0 0}
 .textbook-season-line{padding-top:13px;border-top:1px solid #ded9c9}
+.cordon-spur-art{border:1px solid #e3dac8;border-radius:6px;overflow:hidden}
+.cordon-spur-art .botanical-callouts>g>path{stroke-width:6}
+.cordon-spur-art .botanical-callouts circle{r:39px;stroke-width:4}
+.cordon-spur-art .botanical-callouts text{font-size:47px;transform:translateY(6px)}
+.cordon-spur-key{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px;margin:0 0 16px;
+}
+.cordon-spur-key dt{display:flex;align-items:center;gap:8px;font-weight:650}
+.cordon-spur-key dt b{
+ display:grid;place-items:center;flex:none;width:22px;height:22px;border:1px solid #b69a9e;
+ border-radius:50%;font:600 .8rem/1 system-ui,sans-serif;color:var(--wine);
+}
+.cordon-spur-key dd{margin:4px 0 0;font-size:.875rem;line-height:1.65;color:#56604e}
+.cordon-original{display:inline-block;margin-top:12px;font-size:.8125rem;color:var(--wine);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){
+ .cordon-spur-key{grid-template-columns:minmax(0,1fr);gap:10px}
+ .cordon-spur-key dd{margin-left:30px}
+}
 @container (max-width:640px){.textbook-photo-pair{grid-template-columns:1fr;gap:25px}}
 @media(max-width:760px){.textbook-original-plate{padding:14px}.textbook-photo-pair,.textbook-reading-keys{grid-template-columns:1fr}.textbook-reading-keys{gap:12px}}
 
