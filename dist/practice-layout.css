@@ -20,3 +20,17 @@
 .lesson-review-case .fine{font-size:12px;color:var(--muted)}
 #sat dt{margin-top:14px}
 #sat dd{margin:4px 0 0}
+
+.wb-question .lesson-review-case {
+  display: block;
+  padding: 16px 20px;
+  margin-top: 14px;
+}
+.classroom-question-index li {
+  margin-bottom: 8px;
+}
+.classroom-question-index a {
+  color: var(--wine);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

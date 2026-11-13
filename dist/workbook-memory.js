@@ -25,12 +25,12 @@ function workbookPriceMethod(session){
 function workbookMemoryLinks(session,id){
  const items=workbookMemoryItems(session).filter(t=>t.questions.includes(`${session}/${id}`));
  const method=workbookMemoryData.priceMethod?.questions.includes(`${session}/${id}`)?`<p><a href="#workbook/${session}/wb-price-method-${session}">为什么贵？按葡萄园到酒庄的顺序答 →</a></p>`:'';
- return (items.length?`<p class="wb-memory-question-links"><strong>本站速记：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>`:'')+method+classroomCaseLink(session,id);
+ return (items.length?`<p class="wb-memory-question-links"><strong>本站速记：</strong>${items.map(t=>`<a href="#workbook/${session}/wb-memory-${session}-${t.id}">${safe(t.zh)} →</a>`).join(' ')}</p>`:'')+method;
 }
 const workbookQuestionBeforeMemory=workbookQuestion;
-workbookQuestion=function(q,i){return workbookQuestionBeforeMemory(q,i).replace('<section class="quiz-card wb-question">',`<section id="wbq-s${q[0]}-${q[1]}" class="quiz-card wb-question">${practiceSourceBadge('workbook')}`).replace('<summary>复习提示</summary>','<summary>本站自编提示</summary>').replace('</details></section>',workbookMemoryLinks(q[0],q[1])+'</details>'+workbookTeacherAnswer(q[0],q[1])+'</section>');};
+workbookQuestion=function(q,i){return workbookQuestionBeforeMemory(q,i).replace('<section class="quiz-card wb-question">',`<section id="wbq-s${q[0]}-${q[1]}" class="quiz-card wb-question">${practiceSourceBadge('workbook')}`).replace('<summary>复习提示</summary>','<summary>本站自编提示</summary>').replace('</details></section>',workbookMemoryLinks(q[0],q[1])+'</details>'+workbookTeacherAnswer(q[0],q[1])+classroomQuestionReview(q[0],q[1])+'</section>');};
 const winemakingWorkbookQuestionBeforeMemory=winemakingWorkbookQuestion;
-winemakingWorkbookQuestion=function(q,i){return winemakingWorkbookQuestionBeforeMemory(q,i).replace('<div class="eyebrow">',practiceSourceBadge('workbook')+'<div class="eyebrow">').replace('<summary>复习提示 · 自编，非机构答案</summary>','<summary>本站自编提示</summary>').replace('</details></section>',workbookMemoryLinks(q.session,q.id)+'</details></section>');};
+winemakingWorkbookQuestion=function(q,i){return winemakingWorkbookQuestionBeforeMemory(q,i).replace('<div class="eyebrow">',practiceSourceBadge('workbook')+'<div class="eyebrow">').replace('<summary>复习提示 · 自编，非机构答案</summary>','<summary>本站自编提示</summary>').replace('</details></section>',workbookMemoryLinks(q.session,q.id)+'</details>'+classroomQuestionReview(q.session,q.id)+'</section>');};
 function workbookMemoryPanel(session){
  const items=workbookMemoryItems(session);if(!items.length)return '';
  const open=location.hash.startsWith(`#workbook/${session}/wb-memory-`)?' open':'';
