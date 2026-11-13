@@ -32,7 +32,8 @@
    "17/terroir/s7-alsace-slope",
    "17/grapes",
    "17/winemaking",
-   "17/labels/book-17-labels-3"
+   "17/labels/book-17-labels-3",
+   "17/terroir/s7-alsace-slope-original"
   ],
   [
    "课本照片 49 · p.133",
@@ -49,7 +50,8 @@
    "课本照片 51 · p.135",
    "四个地理分区、AOP 与 IGP、图 18.1 河流与主要产区",
    "18/geography/s7-loire",
-   "18/geography/book-18-geography-3"
+   "18/geography/book-18-geography-3",
+   "18/geography/s7-loire-textbook-map"
   ],
   [
    "课本照片 52 · p.136",
@@ -62,12 +64,14 @@
    "图 18.2 石质葡萄园、默讷图与图赖讷、白诗南分批采收及潜在酒精度",
    "18/sauvignon/s7-sancerre-soil",
    "18/sauvignon/book-18-sauvignon-1",
-   "18/chenin/s7-chenin"
+   "18/chenin/s7-chenin",
+   "18/sauvignon/s7-sancerre-soil-original"
   ],
   [
    "课本照片 54 · p.138",
    "白诗南香气与陈年、武弗雷、索米尔、安茹、萨维涅尔和莱昂丘、图 18.3",
-   "18/chenin"
+   "18/chenin",
+   "18/chenin/s7-savennieres-vines"
   ],
   [
    "课本照片 55 · p.139",
@@ -93,18 +97,22 @@
   [
    "讲义照片 26",
    "土壤分类、孚日山雨影剖面",
-   "17/terroir"
+   "17/terroir",
+   "17/terroir/s7-rain-shadow",
+   "17/terroir/s7-soil-profile"
   ],
   [
    "讲义照片 27",
    "雷司令、琼瑶浆、灰皮诺风格",
-   "17/grapes/book-17-grapes-1"
+   "17/grapes/book-17-grapes-1",
+   "17/grapes/s7-alsace-grapes"
   ],
   [
    "讲义照片 28",
    "麝香、白皮诺、黑皮诺及园地与酿造",
    "17/grapes",
-   "17/winemaking"
+   "17/winemaking",
+   "17/grapes/s7-muscat-grapes"
   ],
   [
    "讲义照片 29",
@@ -120,12 +128,15 @@
   [
    "讲义照片 31",
    "法定品种矩阵、三处白酒例外、VT 与 SGN",
-   "17/labels"
+   "17/labels",
+   "17/labels/book-17-labels-2",
+   "17/labels/book-17-labels-3"
   ],
   [
    "讲义照片 32",
-   "卢瓦尔在法国的位置、各色酒款、市场概览",
-   "18/geography"
+   "法国定位、七个产区的 AOP 面积、卢瓦尔的酒色与起泡比例及出口概览",
+   "18/geography",
+   "18/geography/s7-loire-area"
   ],
   [
    "讲义照片 33",
@@ -141,12 +152,15 @@
    "讲义照片 35",
    "区域品种分布、红白风格与酿造选择",
    "18/geography",
-   "18/reds/s7-red"
+   "18/reds/s7-red",
+   "18/geography/s7-loire-grapes"
   ],
   [
    "讲义照片 36",
    "南特、白瓜、密斯卡岱酒标与 Sur Lie",
-   "18/muscadet"
+   "18/muscadet",
+   "18/muscadet/s7-nantais-map",
+   "18/muscadet/s7-lees-vessel"
   ],
   [
    "讲义照片 37",
@@ -155,29 +169,38 @@
   ],
   [
    "讲义照片 38",
-   "安茹桃红酒标、甜度、品种与酿造",
-   "18/rose"
+   "安茹桃红酒标、三类甜度、讲义 Cabernet 比例与酿造两法",
+   "18/rose",
+   "18/rose/s7-loire-rose-examples",
+   "18/reds/s7-loire-red-map"
   ],
   [
    "讲义照片 39",
-   "索米尔及索米尔–尚皮尼酒标、结构与饮用",
-   "18/reds/book-18-reds-1"
+   "索米尔和尚皮尼地图、酒标、85% 品丽珠、结构与饮用",
+   "18/reds/book-18-reds-1",
+   "18/reds/s7-loire-red-map",
+   "18/reds/s7-saumur-champigny-label"
   ],
   [
    "讲义照片 40",
    "图赖讷红、品丽珠土壤比较、白诗南成熟不均",
    "18/reds",
-   "18/chenin/s7-chenin"
+   "18/chenin/s7-chenin",
+   "18/chenin/s7-chenin-grapes"
   ],
   [
    "讲义照片 41",
-   "萨维涅尔、莱昂丘及甜酒法定产区、酒标",
-   "18/chenin/book-18-chenin-3"
+   "萨维涅尔朝南片岩坡、莱昂丘和独立甜酒产区的地图与酒标",
+   "18/chenin/book-18-chenin-3",
+   "18/chenin/s7-anjou-map",
+   "18/chenin/s7-anjou-chenin-labels"
   ],
   [
    "讲义照片 42",
    "武弗雷、Jasnières、tuffeau 洞窖与白诗南",
-   "18/chenin/book-18-chenin-2"
+   "18/chenin/book-18-chenin-2",
+   "18/chenin/s7-vouvray-map",
+   "18/chenin/s7-vouvray-cellars"
   ],
   [
    "讲义照片 43",
@@ -189,12 +212,15 @@
    "讲义照片 44",
    "图赖讷白与长相思，中央产区地图",
    "18/sauvignon",
-   "18/geography/s7-loire"
+   "18/geography/s7-loire",
+   "18/sauvignon/s7-central-map"
   ],
   [
    "讲义照片 45",
    "桑塞尔、普依–芙美、默讷图–萨隆、酒标与其他地名",
-   "18/sauvignon/book-18-sauvignon-1"
+   "18/sauvignon/book-18-sauvignon-1",
+   "18/sauvignon/s7-central-map",
+   "18/sauvignon/s7-pouilly-fume-bottle"
   ],
   [
    "讲义照片 46",
@@ -246,12 +272,24 @@
    "https://www.vinsalsace.com/assets/files/presse/dossier_presse_en.pdf"
   ],
   [
-   "法国公报 · 武弗雷规范与 Orbois（2011）",
-   "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000024153321"
+   "法国农业部 · Crémant d’Alsace 规范（2026 刊载）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-5738187d-eb02-46ff-97db-2454db638583/telechargement"
   ],
   [
-   "法国公报 · Rosé de Loire 规范（2009）",
-   "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000021136519"
+   "法国农业部 · 武弗雷规范与 Orbois（2023）",
+   "https://info.agriculture.gouv.fr/gedei/site/bo-agri/document_administratif-bf141eb3-e0b2-44aa-aea9-bfb05bdb761c/telechargement"
+  ],
+  [
+   "法国农业部 · Touraine 规范（2025）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-59d3a419-514e-4364-9c6c-526c38d753f5/telechargement"
+  ],
+  [
+   "法国农业部 · Saumur-Champigny 规范（2025）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-23c99bbb-8951-4743-b0a8-af281c7ff19c/telechargement"
+  ],
+  [
+   "法国农业部 · Rosé de Loire 规范（2026）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-74b11813-6abe-40fc-b241-20ce1eb3d5d5/telechargement"
   ]
  ],
  "checks": {

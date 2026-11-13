@@ -1,8 +1,8 @@
 /* Session 7 chapter rendering and source links. */
 const s7Photos = {
- 'alsace-slope':['assets/s7-alsace-slope.jpg','阿尔萨斯特级园的坡度与朝向',741,395,'课本图 17.2 局部。村落背后的山坡与坡脚高差明显。坡度和朝向影响截获的阳光，平原则有不同的春霜管理需求。'],
+ 'alsace-slope':['assets/s7-alsace-vineyard.jpg','阿尔萨斯特级园的坡度与朝向',1295,863,'藤行沿山坡展开，不同坡面的坡度与朝向影响园地接收的阳光。平原则有不同的春霜管理需求。'],
  'alsace-cellar':['assets/s7-alsace-cellar.jpg','阿尔萨斯酒窖的三种容器',525,468,'课本图 17.3 局部。前方的大旧桶、左侧小桶和后方钢罐并存，分别对应传统的中性发酵、部分红酒的用桶选择及现代控温。'],
- 'sancerre-soil':['assets/s7-sancerre-soil.jpg','桑塞尔的石质坡地',748,343,'课本图 18.2 局部。前景藤行可见排水良好的多石土，后方翻整地块准备重新栽植。'],
+ 'sancerre-soil':['assets/s7-sancerre-vineyard.jpg','桑塞尔的石质坡地',1800,1200,'桑塞尔镇坐落在山丘上，葡萄园沿坡分布。前景藤行之间可见浅色石块，多石坡地有利于排水。'],
  'savennieres-vines':['assets/s7-savennieres-vines.jpg','萨维涅尔的杯状整形白诗南',806,371,'课本图 18.3 局部。前景为分开的杯状藤体，后方可见不同高度及朝向的坡地。']
 };
 
@@ -10,6 +10,54 @@ const s7DiagramImages = {
  alsace:['assets/s7-alsace-map.jpg',449,433,'地图上孚日山脉在西、莱茵河在东，葡萄园带夹在山麓与平原之间'],
  loire:['assets/s7-loire-map.jpg',1069,637,'卢瓦尔河从中央产区流经图赖讷、安茹–索米尔和南特，向西注入大西洋'],
  vouvray:['assets/s7-vouvray-profile.jpg',694,402,'剖面依次显示高原、白垩斜坡、酒窖与河岸冲积土']
+};
+
+const s7DetailImages = {
+ 'rain-shadow':['assets/s7-rain-shadow.webp',1250,302,'孚日山雨影剖面','从左往右看：西风带来湿空气，孚日山迎风坡降雨，东侧背风坡的葡萄园较干燥。再向东是平原和莱茵河。'],
+ 'soil-profile':['assets/s7-soil-profile.webp',1250,254,'阿尔萨斯土壤样本与地质剖面','左边是 13 类土壤样本，右边是地质剖面。沿山麓到谷底会经过不同岩层和沉积物，同一山麓也有不同的土壤。'],
+ 'riesling-grapes':['assets/s7-riesling-grapes.webp',610,850,'雷司令 Riesling','图中为浅色果粒。杯中重点看高酸、柑橘和核果。'],
+ 'gewurztraminer-grapes':['assets/s7-gewurztraminer-grapes.webp',521,850,'琼瑶浆 Gewurztraminer','淡粉色果皮可使部分酒款呈较深的金黄色。'],
+ 'pinot-gris-grapes':['assets/s7-pinot-gris-grapes.webp',596,850,'灰皮诺 Pinot Gris','果皮可呈灰粉或紫灰色。成酒颜色可接近琼瑶浆，香气通常更含蓄。'],
+ 'muscat-grapes':['assets/s7-muscat-grapes.webp',636,850,'麝香 Muscat','阿尔萨斯主要对照小粒白麝香和奥托奈麝香，复习时同时记住香气、坐果率和产量稳定性。'],
+ 'hugel-pinot-gris':['assets/s7-hugel-pinot-gris.webp',701,628,'大区单品种','找 Alsace 和 Pinot Gris，分别读出产区和葡萄品种。'],
+ 'hugel-gentil':['assets/s7-hugel-gentil.webp',1044,743,'大区混酿','找 Gentil，读出阿尔萨斯混酿的标示。'],
+ 'schlossberg':['assets/s7-schlossberg.webp',774,805,'特级园单品种','找 Alsace Grand Cru、Schlossberg 和 Riesling，分别读出等级、地块和品种。'],
+ 'sommerberg-sgn':['assets/s7-sommerberg-sgn.webp',799,779,'特级园粒选贵腐','找 Sommerberg、Riesling、2009 和 Sélection de Grains Nobles，分别读出地块、品种、年份和采收术语。'],
+ 'loire-textbook-map':['assets/s7-loire-textbook-map.webp',1250,796,'图 18.1 · 卢瓦尔河谷','从大西洋沿河向东找南特、安茹–索米尔、图赖讷和中央产区，再沿支流找莱昂丘、希侬等产区。'],
+ 'loire-grapes':['assets/s7-loire-grapes.webp',1250,420,'卢瓦尔河谷四个代表品种','从左到右：白瓜、白诗南、长相思、品丽珠。结合上图记住各品种的主要产地。'],
+ 'chenin-grapes':['assets/s7-chenin-grapes.webp',534,850,'白诗南果串','同一串葡萄也可能成熟不均。分批入园，挑选符合起泡、干白或甜酒所需成熟度的葡萄。'],
+ 'nantais-map':['assets/s7-nantais-map.webp',1250,715,'南特与密斯卡岱','先找南特，再向东南找 Muscadet Sèvre et Maine。Muscadet 覆盖面积更大，Sèvre et Maine 的产量更大。'],
+ 'lees-vessel':['assets/s7-lees-vessel.webp',702,850,'酒泥熟化的容器','结合时间线看，酒在容器内与细酒泥接触越冬，次年装瓶。'],
+ 'rose-press':['assets/s7-rose-press.webp',1023,670,'桃红酿造的压榨设备','直接压榨在压榨时短暂接触果皮。短时浸皮则先让汁液与果皮接触，再分离果皮。'],
+ 'cabernet-anjou-label':['assets/s7-cabernet-anjou-label.webp',800,483,'Cabernet d’Anjou 酒标','留意完整产区名。安茹卡贝内通常为半干至半甜，用品丽珠与赤霞珠。'],
+ 'loire-red-map':['assets/s7-loire-red-map.webp',1246,850,'安茹–索米尔与图赖讷的红酒产区','沿河向东找索米尔、索米尔–尚皮尼，再找河岸两侧的希侬和布尔格伊。'],
+ 'saumur-champigny-label':['assets/s7-saumur-champigny-label.webp',458,850,'Saumur-Champigny 酒标','图中是 Clos Rougeard 酒瓶。Saumur-Champigny 是产区名，成酒以品丽珠为主。'],
+ 'anjou-map':['assets/s7-anjou-map.webp',1250,714,'萨维涅尔、莱昂丘与甜酒产区','找昂热附近的萨维涅尔，再沿莱昂河找莱昂丘、Quarts de Chaume 和 Bonnezeaux。'],
+ 'savennieres-label':['assets/s7-savennieres-label.webp',498,850,'Coulée de Serrant 酒标','这是萨维涅尔一带的白诗南实例。认清酒标中的地名，再回看向阳片岩坡地与干白风格。'],
+ 'quarts-chaume-label':['assets/s7-quarts-chaume-label.webp',530,850,'Quarts de Chaume 酒标','与地图一起读：这是莱昂河谷的独立甜酒产区，采用白诗南。'],
+ 'vouvray-map':['assets/s7-vouvray-map.webp',1250,700,'武弗雷与图赖讷局部地图','武弗雷在图尔以东、卢瓦尔河北岸，Jasnières 在较北的卢瓦河（Loir）一带。'],
+ 'tuffeau-cellar':['assets/s7-tuffeau-cellar.webp',736,850,'石灰岩内的洞窖','tuffeau 易于开凿。洞窖环境利于储酒，也用于传统法起泡酒的熟化。'],
+ 'vouvray-cliff':['assets/s7-vouvray-cliff.webp',595,850,'武弗雷石灰岩崖壁','先看崖壁与洞口，再对照剖面图的坡地和白垩岩层。'],
+ 'central-map':['assets/s7-central-map.webp',1250,707,'中央产区五个地名','桑塞尔与普依–芙美隔卢瓦尔河相望，默讷图–萨隆在桑塞尔西南，坎西和勒伊靠近谢尔河一带。'],
+ 'pouilly-fume-bottle':['assets/s7-pouilly-fume-bottle.webp',458,850,'普依–芙美酒瓶上的燧石图案','瓶上的石块呼应烟熏和打火石的品鉴联想。复习时分别记住当地的土壤与杯中的风味。']
+};
+
+const s7ImageGroups = {
+ 'alsace-grapes':['阿尔萨斯贵族品种图组',['riesling-grapes','gewurztraminer-grapes','pinot-gris-grapes','muscat-grapes']],
+ 'alsace-labels':['阿尔萨斯酒标实物',['hugel-pinot-gris','hugel-gentil','schlossberg','sommerberg-sgn']],
+ 'vouvray-cellars':['武弗雷的石灰岩与洞窖',['vouvray-cliff','tuffeau-cellar']],
+ 'anjou-chenin-labels':['安茹白诗南的干型与甜型酒标',['savennieres-label','quarts-chaume-label']],
+ 'loire-rose-examples':['桃红酒的压榨与酒标',['rose-press','cabernet-anjou-label']]
+};
+
+const s7LoireAreas = [
+ ['波尔多',107748], ['罗讷河谷',64467], ['卢瓦尔河谷',47475], ['朗格多克',33000],
+ ['勃艮第',32301], ['阿尔萨斯',15529], ['博若莱',13500]
+];
+
+const s7TextbookPhotos = {
+ 'alsace-slope':['assets/s7-alsace-slope.jpg','图 17.2 · 特级园全景',741,395,'地形的坡度和朝向会影响葡萄园截获的阳光。'],
+ 'sancerre-soil':['assets/s7-sancerre-soil.jpg','图 18.2 · 桑塞尔葡萄园',748,343,'前景是排水良好的多石土，背景地块已经清理，准备重栽。']
 };
 
 const s7Diagrams = {
@@ -23,7 +71,7 @@ const s7Diagrams = {
    ['米卢斯','Mulhouse','南端主要城市']
   ],
   profile:[['西风','Westerlies','湿空气从西侧抬升降雨'],['孚日山','Vosges Mountains','迎风降雨，东坡形成雨影'],['东麓葡萄园','Vineyard slopes','阳光与坡面朝向有利成熟'],['阿尔萨斯平原','Alsace Plain','坡脚往东延至莱茵河 Rhine']],
-  caption:'上方地图为讲义局部。城市沿产区由北到南排列，雨影示意从西向东横切孚日山、东麓与平原。法国东北部的莱茵河对岸是德国。'
+  caption:'城市沿产区由北到南排列，雨影示意从西向东横切孚日山、东麓与平原。法国东北部的莱茵河对岸是德国。'
  },
  loire: {
   title:'卢瓦尔河谷双语地图',
@@ -34,15 +82,7 @@ const s7Diagrams = {
    ['图赖讷','Touraine','Tours 图尔',[['白','Vouvray · 武弗雷'],['红','Chinon · 希侬'],['红','Bourgueil · 布尔格伊'],['白','Sauvignon de Touraine · 图赖讷长相思']]],
    ['中央产区','Central Vineyards','Orléans 奥尔良以南 · Nevers 讷韦尔附近',[['白','Pouilly-Fumé · 普依–芙美'],['白／红／桃红','Sancerre · 桑塞尔'],['白／红／桃红','Menetou-Salon · 默讷图–萨隆'],['白','Quincy · 坎西'],['白／红／桃红','Reuilly · 勒伊']]]
   ],
-  caption:'上方是讲义地图局部，图下按课本图 18.1 的地理顺序列出四区。酒色为图中酒款的典型例子。塞夫勒–曼恩在南特东南，莱昂丘沿安茹南侧支流莱昂河，希侬在图尔西南的维埃纳河一带。图赖讷东段有谢尔河，北侧有卢瓦尔河的支流卢瓦河（Loir）。南特附近可见塞夫勒南特河，波瓦第尔（Poitiers）位于葡萄园带南侧。'
- },
- 'alsace-labels': {
-  title:'阿尔萨斯酒标读法',
-  cells:[['Alsace','Hugel Pinot Gris','先找产区，再看单品种标示。'],
-   ['Gentil','Hugel Gentil','Gentil 指混合酒。'],
-   ['Alsace Grand Cru','Schlossberg','地块名指向特级园，连同年份一起读。'],
-   ['Sélection de Grains Nobles','Sommerberg','在地块名之外，SGN 说明粒选贵腐。']],
-  caption:'按讲义酒标重排关键字段。产区或地块、品种和成熟度术语分别提供不同信息。'
+  caption:'四区按河谷地理顺序排列，酒色为代表酒款的例子。塞夫勒–曼恩在南特东南，莱昂丘沿安茹南侧支流莱昂河，希侬在图尔西南的维埃纳河一带。图赖讷东段有谢尔河，北侧有卢瓦尔河的支流卢瓦河（Loir）。南特附近可见塞夫勒南特河，波瓦第尔（Poitiers）位于葡萄园带南侧。'
  },
  white: {
   title:'阿尔萨斯白葡萄酒酿造选择',
@@ -85,8 +125,8 @@ const s7Diagrams = {
  }
 };
 
-function s7DiagramCells(cells) {
- return `<ol class="s7-diagram-cells">${cells.map(([zh,en,detail])=>
+function s7DiagramCells(cells, className='s7-diagram-cells') {
+ return `<ol class="${className}">${cells.map(([zh,en,detail])=>
   `<li><strong>${wmEscape(zh)}</strong><small lang="en">${wmEscape(en)}</small><span>${wmEscape(detail)}</span></li>`
  ).join('')}</ol>`;
 }
@@ -99,10 +139,24 @@ function s7RegionCells(regions) {
 }
 
 function s7Figure(id) {
+ const group=s7ImageGroups[id];
+ if(group){
+  const [title,images]=group;
+  return `<section class="s7-image-group" id="s7-${id}" aria-labelledby="s7-${id}-title"><h3 id="s7-${id}-title">${wmEscape(title)}</h3><div class="s7-image-grid">${images.map(s7Figure).join('')}</div></section>`;
+ }
+ const detail=s7DetailImages[id];
+ if(detail){
+  const [src,width,height,title,caption]=detail;
+  return s7DetailImage(id,src,title,width,height,caption);
+ }
+ if(id==='alsace-textbook-map')return `<aside class="s7-figure s7-figure-pending" id="s7-alsace-textbook-map"><strong>图 17.1 · 阿尔萨斯地图</strong><p>待补课本第 17 章首页。可先看<a href="#read/17/terroir/s7-alsace">阿尔萨斯双语地图 →</a></p></aside>`;
+ if(id==='loire-area')return `<figure class="s7-figure" id="s7-loire-area"><h3>法国七个产区的 AOP 面积</h3><ul class="s7-area-bars">${s7LoireAreas.map(([name,area])=>`<li><span>${name}</span><span aria-hidden="true" class="s7-area-bar"><span style="width:${100*area/s7LoireAreas[0][1]}%"></span></span><span>${area.toLocaleString('en-US')} 公顷</span></li>`).join('')}</ul><figcaption>按讲义图所列七个产区比较，统计年份未注明。</figcaption></figure>`;
  const photo=s7Photos[id];
  if(photo){
   const [src,title,width,height,caption]=photo;
-  return `<figure class="s5-figure s7-figure" id="s7-${id}"><h3>${title}</h3><img src="${src}" alt="${title}" width="${width}" height="${height}" loading="lazy"><figcaption>${caption}</figcaption></figure>`;
+  const original=s7TextbookPhotos[id];
+  const reference=original?`<details class="s7-map-detail"><summary>对照课本原图</summary>${s7DetailImage(`${id}-original`,...original)}</details>`:'';
+  return `<figure class="s5-figure s7-figure" id="s7-${id}"><h3>${title}</h3><img src="${src}" alt="${title}" width="${width}" height="${height}" loading="lazy">${reference}<figcaption>${caption}</figcaption></figure>`;
  }
  const {title,directions,cells,regions,profile,caption}=s7Diagrams[id];
  const image=s7DiagramImages[id];
@@ -110,16 +164,30 @@ function s7Figure(id) {
  return `<figure class="s7-figure s7-diagram" id="s7-${id}"><h3>${wmEscape(title)}</h3>
   ${map}
   ${directions?`<div class="s7-map-direction">${wmEscape(directions)}</div>`:''}
-  ${regions?s7RegionCells(regions):s7DiagramCells(cells)}
+  ${regions?s7RegionCells(regions):s7DiagramCells(cells,id==='sur-lie'?'s7-lees-flow':undefined)}
   ${profile?`<h4>从西往东看雨影</h4>${s7DiagramCells(profile)}`:''}
+  ${id==='loire'?`<details class="s7-map-detail"><summary>对照课本图 18.1</summary>${s7Figure('loire-textbook-map')}</details>`:''}
   <figcaption>${wmEscape(caption)}</figcaption></figure>`;
 }
 
+function s7DetailImage(id,src,title,width,height,caption) {
+ return `<figure class="s7-figure s7-detail-figure" id="s7-${id}"><h3>${wmEscape(title)}</h3><a class="textbook-original-link" href="${src}" target="_blank" rel="noopener" aria-label="放大查看${wmEscape(title)}"><img src="${src}" width="${width}" height="${height}" alt="${wmEscape(title)}" loading="lazy"></a><figcaption>${wmEscape(caption)}</figcaption></figure>`;
+}
+
+function s7PlaceNames(label) {
+ return label.split('、').map(name=>{
+  const [zh,...fr]=name.trim().split(' ');
+  return `<span class="s7-place-name">${wmEscape(zh)}${fr.length?`<small lang="fr">${wmEscape(fr.join(' '))}</small>`:''}</span>`;
+ }).join('');
+}
+
 function s7UnitBody(u) {
- return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>
-  `<section class="article-section wm-content-section"><h2 id="book-${u.chapter}-${u.id}-${i+1}">${wmEscape(s.title)}</h2>
-  ${s.items.map(item=>item.table?wmTable(item.table):item.figure?s7Figure(item.figure):`<p>${wmEscape(item.text)}</p>`).join('')}</section>`
- ).join('');
+ return `<p class="wm-orientation">${wmEscape(u.intro)}</p>`+u.sections.map((s,i)=>{
+  const heading=`book-${u.chapter}-${u.id}-${i+1}`;
+  const rowHeading=heading==='book-18-reds-1'?s7PlaceNames:undefined;
+  return `<section class="article-section wm-content-section"><h2 id="${heading}">${wmEscape(s.title)}</h2>
+  ${s.items.map(item=>item.table?wmTable(item.table,rowHeading):item.figure?s7Figure(item.figure):`<p>${wmEscape(item.text)}</p>`).join('')}</section>`;
+ }).join('');
 }
 
 for (const chapter of regionsSession7.chapters) bookChapters.push({...chapter,framework:false});
@@ -156,11 +224,11 @@ bookReviewView=function(id) {
  return `<main id="main" class="wrap book-review wm-review"><a class="back" href="#chapter/${chapter.id}">← 第 ${chapter.id} 章</a>
   <header class="page-intro"><div class="eyebrow">CHAPTER ${chapter.id} · SOURCE RECORD</div><h1 class="page-title">资料与配图核对记录</h1><p>${chapter.title} · 第七课</p></header>
   <section><h2>逐页核对</h2><p>收到课本照片 47–56 共 10 张、讲义照片 24–46 共 23 张，以及两份 11 月 8 日 Word 转写。</p>
-  ${chapter.id===17?'<p>课本照片 47 从半句开始。第 17 章开头（含图 17.1）仍待课本原页，地理导读与雨影图依据讲义整理。</p>':''}
+  ${chapter.id===17?'<p>课本 p.131 从半句开始。第 17 章首页（上一页，含图 17.1）待补，正文已留<a href="#read/17/terroir/s7-alsace-textbook-map">图 17.1 的位置 →</a>。</p>':''}
   ${table(regionsSession7.pages)}</section>
   <section><h2>课堂转写</h2><p>两份 Word 只含转写文字。第二份开头有多处识别失真，清楚的段落已按主题归入正文。</p>${table(regionsSession7.transcripts)}</section>
   <section><h2>练习册与版本</h2><p>第七课作业为机构练习册第 12–13 页，原题页待提供。可先使用<a href="#map/chapter/${chapter.id}">本站自编自查 →</a></p>
-  ${chapter.id===17?'<p>课堂讲义以四个白葡萄贵族品种为主。现行文本有指定特级园的红酒例外，正文注明了核对版本。统计数据保留讲义口径。</p>':'<p>讲义的桃红 30% Cabernet、尚皮尼 85% 品丽珠，以及图赖讷白品种简表，均按讲义原表登记。用于答题时优先写代表品种与风格。武弗雷的白诗南为主和少量 Orbois 例外已并入正文，查法规比例时注意区分种植比例和成酒配比。</p>'}
+  ${chapter.id===17?'<p>讲义的法定品种表以四个白葡萄贵族品种为主。特级园白酒例外、指定特级园红酒与 Crémant 的品种规则见<a href="#read/17/labels/book-17-labels-2">品种速查 →</a>。统计数据保留讲义口径。</p>':'<p>尚皮尼的 85% 品丽珠按成酒配比理解，武弗雷的 5% Orbois 按种植比例理解。Rosé de Loire 的 30% Cabernet 是讲义口径，2026 年核准规范的成酒混合条款无该统一比例。通用 Touraine 干白以长相思为主。各处正文已注明。</p>'}
   <ul>${regionsSession7.references.map(([label,url])=>`<li><a href="${url}" target="_blank" rel="noopener">${wmEscape(label)} ↗</a></li>`).join('')}</ul></section></main>`;
 };
 

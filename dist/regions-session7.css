@@ -69,3 +69,113 @@
  text-align: center;
 }
 .s7-map-image span { display: block; padding: .35rem; font-size: .85rem; }
+
+.s7-detail-figure .textbook-original-link { background: #eeede3; }
+.s7-detail-figure .textbook-original-link:focus-visible { outline-offset: -4px; }
+.s7-detail-figure img { max-height: 480px; object-fit: contain; }
+.s7-image-group { margin: 1.7rem 0; container-type: inline-size; }
+.s7-image-group > h3 { margin: 0 0 .8rem; }
+.s7-image-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.s7-image-grid > .s7-detail-figure { min-width: 0; margin: 0; display: flex; flex-direction: column; }
+.s7-image-grid .s7-detail-figure h3 { font: 600 .95rem/1.55 var(--sans); }
+.s7-image-grid .textbook-original-link { height: clamp(155px, 28cqi, 230px); }
+.s7-image-grid .textbook-original-link img { height: 100%; }
+.s7-image-grid .s7-detail-figure figcaption { flex: 1; }
+#s7-lees-vessel, #s7-saumur-champigny-label, #s7-pouilly-fume-bottle, #s7-chenin-grapes { max-width: 29rem; }
+:is(#s7-lees-vessel, #s7-saumur-champigny-label, #s7-pouilly-fume-bottle, #s7-chenin-grapes) img { max-height: 280px; }
+.s7-figure-pending { padding: .8rem 1rem; border-style: dashed; color: #56614c; }
+.book-reading .s7-figure-pending p { margin: .2rem 0 0; font-size: var(--text-meta); }
+.s7-map-detail { margin: .2rem 1rem .95rem; }
+.s7-map-detail summary { color: var(--wine); cursor: pointer; }
+.s7-map-detail .s7-detail-figure { margin: .7rem 0 0; }
+.s7-area-bars { display: grid; gap: .48rem; margin: 0; padding: 0 .85rem 1rem; list-style: none; }
+.book-reading .s7-area-bars > li { display: grid; grid-template-columns: 5.6em minmax(0, 1fr) 7em; gap: .6em; align-items: center; font-size: .85rem; margin: 0; }
+.s7-area-bars > li > :last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.s7-area-bar { display: block; background: #e9ebdf; border-radius: 3px; }
+.s7-area-bar > span { display: block; height: .55em; border-radius: inherit; background: #8d9a75; }
+.s7-area-bars > li:nth-child(3) .s7-area-bar > span { background: var(--wine); }
+@container (max-width: 420px) {
+ .s7-image-grid { grid-template-columns: minmax(0, 1fr); }
+ .s7-image-grid .textbook-original-link { height: 180px; }
+}
+
+#s7-sur-lie { container-type: inline-size; }
+.book-reading .s7-lees-flow {
+ display: grid;
+ gap: 1rem;
+ margin: .4rem 1rem 1.2rem;
+ padding: 0;
+ list-style: none;
+}
+.book-reading .s7-lees-flow > li {
+ position: relative;
+ display: grid;
+ align-content: start;
+ gap: .15rem;
+ min-width: 0;
+ padding: 0 0 0 1.5rem;
+}
+.s7-lees-flow > li::before {
+ content: '';
+ position: absolute;
+ top: .5rem;
+ left: 0;
+ width: .55rem;
+ height: .55rem;
+ border: 2px solid var(--olive);
+ border-radius: 50%;
+ background: #fbf9f2;
+}
+.s7-lees-flow > li:not(:last-child)::after {
+ content: '';
+ position: absolute;
+ top: 1.05rem;
+ bottom: -1.5rem;
+ left: calc(.275rem - .5px);
+ width: 1px;
+ background: #a7af96;
+}
+.s7-lees-flow > li strong { color: var(--ink); }
+.s7-lees-flow > li small { color: #59644d; font-size: var(--text-meta); line-height: 1.45; }
+.s7-lees-flow > li span { margin-top: .25rem; font-size: .9rem; line-height: 1.7; }
+
+@container (min-width: 540px) {
+ .book-reading .s7-lees-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ .book-reading .s7-lees-flow > li { padding: 1.35rem .5rem 0 0; }
+ .s7-lees-flow > li::before { top: 0; }
+ .s7-lees-flow > li:not(:last-child)::after {
+  top: calc(.275rem - .5px);
+  bottom: auto;
+  left: .55rem;
+  width: calc(100% + 1rem - .55rem);
+  height: 1px;
+ }
+}
+
+.book-reading .article-section:has(> #book-18-reds-1) .wm-content-table {
+ table-layout: fixed;
+ min-width: 0;
+}
+.book-reading .article-section:has(> #book-18-reds-1) .wm-content-table th:first-child {
+ width: 35%;
+ min-width: 0;
+ white-space: normal;
+ overflow-wrap: anywhere;
+}
+.s7-place-name { display: block; line-height: 1.45; }
+.s7-place-name + .s7-place-name { margin-top: .6rem; }
+.s7-place-name small {
+ display: block;
+ margin-top: .1rem;
+ color: #56614c;
+ font-size: var(--text-meta);
+ font-weight: 400;
+}
+@media (max-width: 760px) {
+ .book-reading .article-section:has(> #book-18-reds-1) .wm-table-wrap::before { display: none; }
+ .book-reading .article-section:has(> #book-18-reds-1) .wm-content-table :is(th, td) {
+  padding: .7rem .55rem;
+  font-size: .875rem;
+  line-height: 1.7;
+ }
+}

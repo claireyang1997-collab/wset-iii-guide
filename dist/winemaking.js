@@ -1,6 +1,6 @@
 /* Integrated textbook, handout and teaching transcript chapter content. */
 function wmEscape(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function wmTable(t){return `<div class="comparison-wrap wm-table-wrap"><table class="comparison wm-content-table"><thead><tr>${t.headers.map(h=>`<th scope="col">${wmEscape(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map((v,i)=>i===0?`<th scope="row">${wmEscape(v)}</th>`:`<td>${wmEscape(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
+function wmTable(t, rowHeading=wmEscape){return `<div class="comparison-wrap wm-table-wrap"><table class="comparison wm-content-table"><thead><tr>${t.headers.map(h=>`<th scope="col">${wmEscape(h)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(r=>`<tr>${r.map((v,i)=>i===0?`<th scope="row">${rowHeading(v)}</th>`:`<td>${wmEscape(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
 function wmFlow(f){if(f.stages)return wmStageFlow(f);if(f.processGraph)return wmProcessFlow(winemakingData.processGraphs.find(g=>g.id===f.processGraph),f);return `<figure ${f.id?`id="wmfig-${wmEscape(f.id)}"`:""} class="wm-flow" data-wm-figure="flow"><div class="wm-flow-lanes">${f.lanes.map(l=>`<div class="wm-flow-lane"><strong>${wmEscape(l.label)}</strong><ol>${l.steps.map(step=>`<li>${wmEscape(step)}</li>`).join('')}</ol></div>`).join('')}</div>${f.caption?`<figcaption>${wmEscape(f.caption)}</figcaption>`:''}</figure>`;}
 function wmStageFlow(f){
  const {label,steps}=f.stages;

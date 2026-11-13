@@ -32,7 +32,8 @@ const regionsSession7 = {
    "17/terroir/s7-alsace-slope",
    "17/grapes",
    "17/winemaking",
-   "17/labels/book-17-labels-3"
+   "17/labels/book-17-labels-3",
+   "17/terroir/s7-alsace-slope-original"
   ],
   [
    "课本照片 49 · p.133",
@@ -49,7 +50,8 @@ const regionsSession7 = {
    "课本照片 51 · p.135",
    "四个地理分区、AOP 与 IGP、图 18.1 河流与主要产区",
    "18/geography/s7-loire",
-   "18/geography/book-18-geography-3"
+   "18/geography/book-18-geography-3",
+   "18/geography/s7-loire-textbook-map"
   ],
   [
    "课本照片 52 · p.136",
@@ -62,12 +64,14 @@ const regionsSession7 = {
    "图 18.2 石质葡萄园、默讷图与图赖讷、白诗南分批采收及潜在酒精度",
    "18/sauvignon/s7-sancerre-soil",
    "18/sauvignon/book-18-sauvignon-1",
-   "18/chenin/s7-chenin"
+   "18/chenin/s7-chenin",
+   "18/sauvignon/s7-sancerre-soil-original"
   ],
   [
    "课本照片 54 · p.138",
    "白诗南香气与陈年、武弗雷、索米尔、安茹、萨维涅尔和莱昂丘、图 18.3",
-   "18/chenin"
+   "18/chenin",
+   "18/chenin/s7-savennieres-vines"
   ],
   [
    "课本照片 55 · p.139",
@@ -93,18 +97,22 @@ const regionsSession7 = {
   [
    "讲义照片 26",
    "土壤分类、孚日山雨影剖面",
-   "17/terroir"
+   "17/terroir",
+   "17/terroir/s7-rain-shadow",
+   "17/terroir/s7-soil-profile"
   ],
   [
    "讲义照片 27",
    "雷司令、琼瑶浆、灰皮诺风格",
-   "17/grapes/book-17-grapes-1"
+   "17/grapes/book-17-grapes-1",
+   "17/grapes/s7-alsace-grapes"
   ],
   [
    "讲义照片 28",
    "麝香、白皮诺、黑皮诺及园地与酿造",
    "17/grapes",
-   "17/winemaking"
+   "17/winemaking",
+   "17/grapes/s7-muscat-grapes"
   ],
   [
    "讲义照片 29",
@@ -120,12 +128,15 @@ const regionsSession7 = {
   [
    "讲义照片 31",
    "法定品种矩阵、三处白酒例外、VT 与 SGN",
-   "17/labels"
+   "17/labels",
+   "17/labels/book-17-labels-2",
+   "17/labels/book-17-labels-3"
   ],
   [
    "讲义照片 32",
-   "卢瓦尔在法国的位置、各色酒款、市场概览",
-   "18/geography"
+   "法国定位、七个产区的 AOP 面积、卢瓦尔的酒色与起泡比例及出口概览",
+   "18/geography",
+   "18/geography/s7-loire-area"
   ],
   [
    "讲义照片 33",
@@ -141,12 +152,15 @@ const regionsSession7 = {
    "讲义照片 35",
    "区域品种分布、红白风格与酿造选择",
    "18/geography",
-   "18/reds/s7-red"
+   "18/reds/s7-red",
+   "18/geography/s7-loire-grapes"
   ],
   [
    "讲义照片 36",
    "南特、白瓜、密斯卡岱酒标与 Sur Lie",
-   "18/muscadet"
+   "18/muscadet",
+   "18/muscadet/s7-nantais-map",
+   "18/muscadet/s7-lees-vessel"
   ],
   [
    "讲义照片 37",
@@ -155,29 +169,38 @@ const regionsSession7 = {
   ],
   [
    "讲义照片 38",
-   "安茹桃红酒标、甜度、品种与酿造",
-   "18/rose"
+   "安茹桃红酒标、三类甜度、讲义 Cabernet 比例与酿造两法",
+   "18/rose",
+   "18/rose/s7-loire-rose-examples",
+   "18/reds/s7-loire-red-map"
   ],
   [
    "讲义照片 39",
-   "索米尔及索米尔–尚皮尼酒标、结构与饮用",
-   "18/reds/book-18-reds-1"
+   "索米尔和尚皮尼地图、酒标、85% 品丽珠、结构与饮用",
+   "18/reds/book-18-reds-1",
+   "18/reds/s7-loire-red-map",
+   "18/reds/s7-saumur-champigny-label"
   ],
   [
    "讲义照片 40",
    "图赖讷红、品丽珠土壤比较、白诗南成熟不均",
    "18/reds",
-   "18/chenin/s7-chenin"
+   "18/chenin/s7-chenin",
+   "18/chenin/s7-chenin-grapes"
   ],
   [
    "讲义照片 41",
-   "萨维涅尔、莱昂丘及甜酒法定产区、酒标",
-   "18/chenin/book-18-chenin-3"
+   "萨维涅尔朝南片岩坡、莱昂丘和独立甜酒产区的地图与酒标",
+   "18/chenin/book-18-chenin-3",
+   "18/chenin/s7-anjou-map",
+   "18/chenin/s7-anjou-chenin-labels"
   ],
   [
    "讲义照片 42",
    "武弗雷、Jasnières、tuffeau 洞窖与白诗南",
-   "18/chenin/book-18-chenin-2"
+   "18/chenin/book-18-chenin-2",
+   "18/chenin/s7-vouvray-map",
+   "18/chenin/s7-vouvray-cellars"
   ],
   [
    "讲义照片 43",
@@ -189,12 +212,15 @@ const regionsSession7 = {
    "讲义照片 44",
    "图赖讷白与长相思，中央产区地图",
    "18/sauvignon",
-   "18/geography/s7-loire"
+   "18/geography/s7-loire",
+   "18/sauvignon/s7-central-map"
   ],
   [
    "讲义照片 45",
    "桑塞尔、普依–芙美、默讷图–萨隆、酒标与其他地名",
-   "18/sauvignon/book-18-sauvignon-1"
+   "18/sauvignon/book-18-sauvignon-1",
+   "18/sauvignon/s7-central-map",
+   "18/sauvignon/s7-pouilly-fume-bottle"
   ],
   [
    "讲义照片 46",
@@ -246,12 +272,24 @@ const regionsSession7 = {
    "https://www.vinsalsace.com/assets/files/presse/dossier_presse_en.pdf"
   ],
   [
-   "法国公报 · 武弗雷规范与 Orbois（2011）",
-   "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000024153321"
+   "法国农业部 · Crémant d’Alsace 规范（2026 刊载）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-5738187d-eb02-46ff-97db-2454db638583/telechargement"
   ],
   [
-   "法国公报 · Rosé de Loire 规范（2009）",
-   "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000021136519"
+   "法国农业部 · 武弗雷规范与 Orbois（2023）",
+   "https://info.agriculture.gouv.fr/gedei/site/bo-agri/document_administratif-bf141eb3-e0b2-44aa-aea9-bfb05bdb761c/telechargement"
+  ],
+  [
+   "法国农业部 · Touraine 规范（2025）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-59d3a419-514e-4364-9c6c-526c38d753f5/telechargement"
+  ],
+  [
+   "法国农业部 · Saumur-Champigny 规范（2025）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-23c99bbb-8951-4743-b0a8-af281c7ff19c/telechargement"
+  ],
+  [
+   "法国农业部 · Rosé de Loire 规范（2026）",
+   "https://info.agriculture.gouv.fr/boagri/document_administratif-74b11813-6abe-40fc-b241-20ce1eb3d5d5/telechargement"
   ]
  ],
  "checks": {
@@ -439,13 +477,19 @@ const regionsSession7 = {
      "title": "地理与雨影",
      "items": [
       {
-       "text": "从北向南是斯特拉斯堡 Strasbourg、塞莱斯塔 Sélestat、科尔马 Colmar、米卢斯 Mulhouse。孚日山（Vosges）在西，莱茵河（Rhine）在东。西风带来的湿空气在山脉迎风面抬升并降雨，东侧处在雨影中，因此阿尔萨斯虽是凉爽到温和的大陆性气候，仍较干燥、日照充足。讲义的园地海拔概览为 200–400 米。"
+       "text": "从北向南是斯特拉斯堡 Strasbourg、塞莱斯塔 Sélestat、科尔马 Colmar、米卢斯 Mulhouse。孚日山（Vosges）在西，莱茵河（Rhine）在东。西风带来的湿空气在山脉迎风面抬升并降雨，东侧处在雨影中，因此阿尔萨斯虽是凉爽到温和的大陆性气候，仍较干燥、日照充足。讲义的园地海拔概览为 200–400 米。下莱茵省（Bas-Rhin）在北，上莱茵省（Haut-Rhin）在南。"
       },
       {
-       "text": "较佳山坡有适宜的坡度和朝向，能多接收阳光，较受山脉保护。平原遮蔽较少、春霜风险更显著，常为阿尔萨斯起泡酒 Crémant d’Alsace 供果。较干燥、晴朗的条件降低真菌病害压力，也解释了有机与生物动力种植在当地较普遍。"
+       "text": "较佳山坡有适宜的坡度和朝向，能多接收阳光，较受山脉保护。平原遮蔽较少、春霜风险更显著，常为阿尔萨斯起泡酒 Crémant d’Alsace 供果。Crémant 是法国起泡酒的术语，具体工艺见课本第 42 章。较干燥、晴朗的条件降低真菌病害压力，也解释了有机与生物动力种植在当地较普遍。"
       },
       {
        "figure": "alsace"
+      },
+      {
+       "figure": "rain-shadow"
+      },
+      {
+       "figure": "alsace-textbook-map"
       },
       {
        "figure": "alsace-slope"
@@ -457,6 +501,9 @@ const regionsSession7 = {
      "items": [
       {
        "text": "地质历史复杂，山麓葡萄园可在很短的距离内遇到不同土壤，帮助解释酒款风格的多样性。讲义举例包括碎石坡、石灰岩、火山沉积岩、泥灰砂岩、黄土与壤土、黏土泥灰岩、谷底冲积土、泥灰岩与石灰质泥灰岩、砂岩、砂质泥灰石灰土、花岗岩与片麻岩、钙质砂岩及片岩。"
+      },
+      {
+       "figure": "soil-profile"
       },
       {
        "table": {
@@ -515,18 +562,18 @@ const regionsSession7 = {
         "rows": [
          [
           "雷司令 Riesling",
-          "最广种的贵族品种。上佳干型高酸、中等酒精，课本描述中等至饱满酒体，较轻盈例子也可见",
+          "最广种的贵族品种。上佳干型高酸、中等酒精，课本描述中等至饱满酒体，讲义亦列轻至中等酒体",
           "柑橘（如青柠）、核果、石块或钢铁感，通常比德国雷司令少花香，有些酒留少量残糖"
          ],
          [
           "琼瑶浆 Gewurztraminer",
           "饱满醇厚，低至中酸，酒精偏高，课本指出 14% 并不常见",
-          "荔枝、玫瑰和甜烘焙香料。淡粉色果皮可使酒液偏金黄"
+          "荔枝、玫瑰和甜烘焙香料。淡粉色果皮可使酒液偏金黄。讲义以半甜、低酸为典型例子，课本给出的酸度范围是低至中等"
          ],
          [
           "灰皮诺 Pinot Gris",
           "上佳酒款丰满、高酒精，酸度往往高于琼瑶浆",
-          "颜色可相近，香气较含蓄，常见鲜果（如梨）、干果、蜂蜜或甜香料，常比意大利 Pinot Grigio 丰满"
+          "颜色可相近，香气较含蓄，常见鲜果（如梨）、干果、蜂蜜或甜香料，常比意大利 Pinot Grigio 丰满，讲义也用通常较琼瑶浆干来作对照"
          ],
          [
           "麝香 Muscat",
@@ -535,6 +582,9 @@ const regionsSession7 = {
          ]
         ]
        }
+      },
+      {
+       "figure": "alsace-grapes"
       }
      ]
     },
@@ -550,7 +600,7 @@ const regionsSession7 = {
         "rows": [
          [
           "白皮诺 Pinot Blanc",
-          "易搭餐，常见于肥沃平原，是起泡酒常用原料。静止酒通常清新、轻盈、简单，非芳香型"
+          "种植广，易搭餐，常见于肥沃平原，是起泡酒常用原料。静止酒通常清新、轻盈、简单，非芳香型"
          ],
          [
           "欧塞瓦 Auxerrois",
@@ -558,11 +608,11 @@ const regionsSession7 = {
          ],
          [
           "西万尼 Sylvaner",
-          "曾广种，后被贵族品种取代。细致芳香、有一定饱满度，适合年轻时喝。Zotzenberg 是特级园品种例外"
+          "曾广种，后被贵族品种取代。香气细致、酒体有一定饱满度，两者均弱于琼瑶浆，适合年轻时喝。Zotzenberg 是特级园品种例外"
          ],
          [
           "黑皮诺 Pinot Noir",
-          "课本列为当地唯一获准的黑葡萄品种。通常比勃艮第黑皮诺轻，做果味红酒或桃红。气候变暖及当地需求推动品质提升，部分酒庄做更浓郁、带新橡木味的酒"
+          "课本列为当地唯一获准的黑葡萄品种。通常比勃艮第黑皮诺轻，做颜色较浅、果味为主的红酒或桃红。气候变暖及当地需求推动品质提升，部分酒庄做更浓郁、带新橡木味的酒"
          ]
         ]
        }
@@ -583,13 +633,13 @@ const regionsSession7 = {
      "title": "大区、特级园与混合",
      "items": [
       {
-       "text": "Alsace AOP 占绝大多数。酒标只标单一品种时须全部使用所标品种。一般混合酒可以不写品种，少数风格可使用获准的村名。Réserve personnelle、Cuvée spéciale 是酒庄自行区分酒款的用语。"
+       "text": "Alsace AOP 占绝大多数，允许使用各获准品种，通常比特级园允许更高的产量。酒标只标单一品种时须全部使用所标品种。一般混合酒可以不写品种，少数风格可使用获准的村名。Réserve personnelle、Cuvée spéciale 是酒庄自行区分酒款的用语。"
       },
       {
        "text": "Edelzwicker、Gentil 或酒庄品牌都可能出现在混合酒标上。课本说一般混合酒可用未进入单一品种酒的酒汁，售价通常较低，也有少见的高品质混合酒，包括个别特级园酒款。阿尔萨斯行业协会说明，Edelzwicker 为当地获准白品种的混合，比例可变。Gentil 是行业集体标示，至少一半为四个贵族品种，分开酿造再混合，并注明年份。"
       },
       {
-       "text": "共有 51 个特级园法定名称。特级园酒标看地块名和年份，常见品种名。讲义介绍制度始于 1975 年、特级园产量限制更低。讲义图示以 Bas-Rhin、Haut-Rhin 两省定位，概览约占种植面积 8%、产量 4%（年份未注明）。酒标举例有 Schlossberg、Sommerberg 酒标。部分生产者认为一些划界太宽、园内质量不均，选择省略特级园标识。"
+       "text": "共有 51 个特级园法定名称。白葡萄酒通常用单一贵族品种酿造。特级园酒标看地块名和年份，常见品种名。讲义介绍制度始于 1975 年、特级园产量限制更低。讲义概览约占种植面积 8%、产量 4%（年份未注明）。酒标举例有 Schlossberg、Sommerberg 酒标。部分生产者认为一些划界太宽、园内质量不均，选择省略特级园标识。"
       }
      ]
     },
@@ -600,7 +650,37 @@ const regionsSession7 = {
        "text": "通常以四个贵族品种学习白酒。Altenberg de Bergheim 和 Kaefferkopf 允许按规范混合，Zotzenberg 可用 Sylvaner。法规更新允许指定特级园生产 Pinot Noir 红酒，2024 年核准规范列出 Hengst、Kirchberg de Barr 与 Vorbourg。复习讲义的四品种矩阵时，把红酒例外放回其法规版本。"
       },
       {
-       "text": "起泡酒另看 Crémant d’Alsace，白皮诺常用，霞多丽 Chardonnay 可用于该起泡酒产区，黑皮诺可用于起泡桃红。讲义中的大区、特级园、晚收与起泡酒各有不同的适用品种。"
+       "text": "大区、白特级园、晚收和起泡酒各有品种规则。霞多丽 Chardonnay 可酿 Crémant d’Alsace 白起泡酒。"
+      },
+      {
+       "table": {
+        "headers": [
+         "法定名称或标示",
+         "品种速查"
+        ],
+        "rows": [
+         [
+          "Alsace AOP",
+          "静止酒可见雷司令、琼瑶浆、灰皮诺、麝香、白皮诺、欧塞瓦、西万尼和黑皮诺等"
+         ],
+         [
+          "Alsace Grand Cru 白葡萄酒",
+          "通常为单一贵族品种。混酿和西万尼例外见上文"
+         ],
+         [
+          "VT、SGN",
+          "均限定四个贵族品种，可标于 Alsace 或 Alsace Grand Cru"
+         ],
+         [
+          "Crémant d’Alsace 白起泡酒",
+          "传统获准品种为欧塞瓦、霞多丽、白皮诺、灰皮诺、黑皮诺与雷司令。白皮诺常见"
+         ],
+         [
+          "Crémant d’Alsace 桃红起泡酒",
+          "传统使用黑皮诺。近年规范另列须经协议方可试用的适应性品种"
+         ]
+        ]
+       }
       },
       {
        "figure": "alsace-labels"
@@ -620,19 +700,19 @@ const regionsSession7 = {
         "rows": [
          [
           "Vendanges Tardives（VT）",
-          "晚收，四个贵族品种，最低采收糖度按品种规定。可自然风干浓缩（passerillage），也可能有贵腐",
+          "晚收，四个贵族品种，最低采收糖度按品种规定。优质酒的葡萄可自然风干浓缩（passerillage），也可能有贵腐",
           "课本描述干至半甜。发酵后残糖决定实际甜度"
          ],
          [
           "Sélection de Grains Nobles（SGN）",
           "粒选贵腐，四个贵族品种，糖度要求更高，合适条件才生产",
-          "甜型，低产、选果和低出汁率支撑高价"
+          "甜型。低产、选果和低出汁率支撑高价"
          ]
         ]
        }
       },
       {
-       "text": "课本记载自 2021 年起须标示甜度。读法语等级时按 sec（干）、demi-sec（半干）、moelleux（半甜）、doux（甜）记，成熟度术语与甜度标示应分别读。"
+       "text": "课本记载自 2021 年起须在背标标示甜度。读法语等级时按 sec（干）、demi-sec（半干）、moelleux（半甜）、doux（甜）记，成熟度术语与甜度标示应分别读。"
       }
      ]
     }
@@ -653,7 +733,7 @@ const regionsSession7 = {
        "text": "传统大旧橡木桶可用上百年，内壁积累酒石酸盐结晶，通常不给酒明显新橡木风味。现代酒庄越来越多用不锈钢，方便控温。课本图 17.3 也提醒，部分红酒会用更多小橡木桶，目的是不同的。"
       },
       {
-       "text": "芳香白酒通常避免苹果酸–乳酸转化（MLC），保留清晰果味与酸度，各酒庄有自己的选择。常在采收后的春季装瓶。多数可年轻饮用，一些酒仍能瓶陈发展。传统高品质酒多为干型，后来带明显甜度的酒款也更常见。"
+       "text": "芳香白酒通常避免苹果酸–乳酸转化（MLC），以一类香气为主，保留清晰果味与酸度，各酒庄有自己的选择。常在采收后的春季装瓶。多数可年轻饮用，一些酒仍能瓶陈发展。传统高品质酒多为干型，后来带明显甜度的酒款也更常见。"
       },
       {
        "figure": "alsace-cellar"
@@ -688,10 +768,19 @@ const regionsSession7 = {
        "figure": "loire"
       },
       {
-       "text": "四个地理子区从西向东是南特（Nantais）、安茹–索米尔（Anjou-Saumur）、图赖讷（Touraine）、中央产区（Central Vineyards）。中央产区产量在四区中最小。卢瓦尔河谷有静止白、红、桃红及起泡酒，讲义概览以白葡萄酒为主，并列出城堡景观及约 21% 的出口占比，统计年份未注明。讲义的 AOP 面积对比图列卢瓦尔 47,475 公顷、阿尔萨斯 15,529 公顷，统计日期未注明。"
+       "text": "四个地理子区从西向东是南特（Nantais）、安茹–索米尔（Anjou-Saumur）、图赖讷（Touraine）、中央产区（Central Vineyards）。这是地理分区，各区内部有各自的 AOP。中央产区产量在四区中最小。卢瓦尔河谷有静止白、红、桃红及起泡酒，讲义概览以白葡萄酒为主，并列出城堡景观及约 21% 的出口占比。讲义图示为白葡萄酒 37%、桃红 30%、红葡萄酒 20%、起泡 13%，统计年份未注明。"
+      },
+      {
+       "figure": "loire-area"
       },
       {
        "text": "南特以密斯卡岱干白为代表，安茹–索米尔看白诗南、品丽珠、桃红与起泡，图赖讷看白诗南、长相思、品丽珠和佳美，中央产区主要看长相思，也有黑皮诺红与桃红。"
+      },
+      {
+       "figure": "loire-grapes"
+      },
+      {
+       "text": "大部分白酒突出果香，酿造痕迹较轻。红酒可以强调果味，也可以带少量橡木风味，部分酒用整串发酵。"
       }
      ]
     },
@@ -699,7 +788,7 @@ const regionsSession7 = {
      "title": "气候、坡地与年份",
      "items": [
       {
-       "text": "整体偏凉，西端南特受大西洋影响较明显，东端中央产区大陆性较明显。接近成熟气候边缘时，年份差异更大，降雨增添真菌病害风险。中坡排冷、朝南增加光照，河面反射光及局部调节有助成熟。支流、坡向和遮蔽条件决定中气候，例如莱昂河谷和萨维涅尔会发展出截然不同的白诗南风格。"
+       "text": "整体偏凉，西端南特受大西洋影响较明显，东端中央产区大陆性较明显。接近成熟气候边缘时，年份差异更大，降雨增添真菌病害风险。中坡排冷、朝南增加光照，河面反射光及局部调节有助成熟。最有利的园地常把朝南、中坡和临河三项结合起来。支流、坡向和遮蔽条件决定中气候，例如莱昂河谷和萨维涅尔会发展出截然不同的白诗南风格。"
       },
       {
        "text": "讲义提到卢瓦尔有较早实践有机和生物动力的生产者，是否采用仍取决于园地与酒庄管理。"
@@ -736,28 +825,34 @@ const regionsSession7 = {
         "rows": [
          [
           "桑塞尔 Sancerre",
-          "卢瓦尔河西侧。长相思干白高酸、苹果和湿石感，也有黑皮诺红与桃红。Chavignol 村的 Les Monts Damnés 是风格鲜明、具陈年潜力的例子"
+          "卢瓦尔河西侧，凉爽大陆性气候。长相思干白高酸、苹果和湿石感，也有黑皮诺红与桃红，代表酒款价位较高。Chavignol 村的 Les Monts Damnés 是风格鲜明、具陈年潜力的例子"
          ],
          [
           "普依–芙美 Pouilly-Fumé",
-          "卢瓦尔河东岸。白酒为长相思，常有较细的烟熏、燧石联想。与 Pouilly-Fuissé 区分，后者在勃艮第马贡，以霞多丽酿白"
+          "卢瓦尔河东岸。只产白酒，品种为长相思。代表酒款价位较高，石灰质及燧石土常见，酒中常有较细的烟熏、燧石联想。与 Pouilly-Fuissé 区分，后者在勃艮第马贡，以霞多丽酿白"
          ],
          [
           "默讷图–萨隆 Menetou-Salon",
-          "位于桑塞尔西南，干白风格相近且往往更实惠，也出红和桃红"
+          "位于桑塞尔西南，干白风格相近，品质可与名区相当且往往更实惠，也出红和桃红"
          ],
          [
           "图赖讷 Touraine",
-          "长相思产量大，Sauvignon de Touraine 往往更简单、香气强度较低。典型柑橘、青草或芦笋感，少见新橡木。讲义也在图赖讷地理范围内讲白诗南，读酒标时要区分具体 AOP"
+          "长相思产量大，Sauvignon de Touraine 往往更简单、香气强度较低。典型柑橘、青草或芦笋感，少见新橡木。通用 Touraine 干白以长相思为主，清新简单，品种特征常较弱。图赖讷地理区也有以白诗南为主的其他名称，例如 Touraine Amboise 白酒"
          ]
         ]
        }
       },
       {
-       "text": "Quincy、Reuilly 也是讲义中央产区地图上的地名。桑塞尔和普依–芙美多宜年轻饮用，部分佳园酒可陈年。土壤可见黏土、砾石、石灰质土及燧石，课本图 18.2 可见石质园地利排水，远处翻整地用于重栽。品鉴所说的燧石是风味描述。"
+       "text": "Quincy、Reuilly 也是讲义中央产区地图上的地名。桑塞尔和普依–芙美多宜年轻饮用，部分佳园酒可陈年。桑塞尔与普依–芙美许多园地为排水良好的多石白垩质土，区域内也可见黏土、砾石及燧石。课本图 18.2 的前景是多石坡地，背景是为重栽清理的园地。品鉴所说的燧石是风味描述。"
+      },
+      {
+       "figure": "central-map"
       },
       {
        "figure": "sancerre-soil"
+      },
+      {
+       "figure": "pouilly-fume-bottle"
       }
      ]
     },
@@ -765,7 +860,7 @@ const regionsSession7 = {
      "title": "压榨、控温与质地",
      "items": [
       {
-       "text": "温和的气囊压榨加低温不锈钢发酵，有助保留清新果香。部分酒庄用旧桶或酒泥接触增加质地，新桶风味少见。是否让酒进行 MLC 视年份和目标而定，偏冷年份可能借此柔化偏高的酸。"
+       "text": "温和的气囊压榨加低温不锈钢发酵，有助保留清新果香。部分酒庄用旧桶发酵并熟化，保留酒泥接触以增加质地。少数酒庄使用新橡木桶，讲义以普依–芙美的用桶尝试为例。是否让酒进行 MLC 视年份和目标而定，偏冷年份可能借此柔化偏高的酸。"
       }
      ]
     }
@@ -777,7 +872,7 @@ const regionsSession7 = {
    "title": "同一株白诗南为何能做四种酒",
    "desc": "成熟度、分批采收与产区比较",
    "pages": "137–138",
-   "intro": "白诗南（Chenin Blanc，亦译白谢宁）是高酸、非芳香型品种。即使同一串果也可能熟得不均，多次采收有助去掉青涩果，分别挑选适合不同风格的原料。",
+   "intro": "白诗南（Chenin Blanc，亦译白谢宁）是高酸、非芳香型品种。即使同一串果也可能熟得不均，多次采收有助去掉青涩果，分别挑选适合不同风格的原料。若未剔除未成熟果，酒中容易有青涩草本味。图赖讷和安茹–索米尔的一些优质白酒以白诗南为基础。",
    "sections": [
     {
      "title": "成熟度与风格",
@@ -786,10 +881,13 @@ const regionsSession7 = {
        "figure": "chenin"
       },
       {
+       "figure": "chenin-grapes"
+      },
+      {
        "text": "较早采的果可供起泡酒，课本举的潜在酒精约 10–11%。更成熟的果可做干酒、半甜和甜酒，进一步晚收时可能自然风干，合适条件下还可贵腐。现代干型有时用更成熟的果以增加酒精与酒体，成酒可保留数克残糖。"
       },
       {
-       "text": "年轻时可有苹果、热带水果。干型可呈钢铁感或烟熏，贵腐酒常见杏和柑橘皮。高酸平衡糖与成熟果味，优质干型和甜型均可陈年数十年，逐渐圆润，发展蜂蜜、烤面包、干草等香气。讲义也用湿羊毛作为品鉴联想。"
+       "text": "年轻时可有清新苹果或更成熟的热带水果香，随采收成熟度变化。干型可呈钢铁感或烟熏，贵腐酒常见杏和柑橘皮。高酸平衡糖与成熟果味，优质干型和甜型均可陈年数十年，逐渐圆润，发展蜂蜜、烤面包、干草等香气。讲义也用湿羊毛作为品鉴联想。"
       }
      ]
     },
@@ -809,20 +907,26 @@ const regionsSession7 = {
          ],
          [
           "索米尔 Saumur",
-          "传统法起泡酒是典型例子，石灰岩洞窖适合稳定储存和熟化"
+          "白诗南传统法起泡酒是典型例子，石灰岩洞窖适合稳定储存和熟化"
          ],
          [
           "安茹 Anjou",
-          "干白可用白诗南，一些酒使用新橡木桶"
+          "干白可用白诗南，一些酒用新橡木桶熟化。安茹和索米尔在课本中以相近的气候、土壤对照不同风格"
          ]
         ]
        }
       },
       {
-       "text": "讲义地图也标出 Jasnières。武弗雷以白诗南为主，2011 年核准规范另列可少量种植的辅助品种 Orbois，种植比例上限为 5%。武弗雷等地的 tuffeau 是可开凿的石灰岩，洞窖的稳定环境利于储酒及传统法起泡酒的熟化。讲义剖面自表层向下列出高原粉砂、燧石砂与黏土、砂砾、上土仑阶黄色白垩、中土仑阶含云母白垩与塞诺曼阶泥灰岩。Bournais、Bournais perrucheux 和 Perruches 是图上不同表土位置的名称。"
+       "text": "武弗雷代表酒款价位较高。讲义地图也标出 Jasnières。武弗雷以白诗南为主，2023 年核准规范另列辅助品种 Orbois，种植比例上限为 5%。武弗雷等地的 tuffeau 是可开凿的石灰岩，洞窖的稳定环境利于储酒及传统法起泡酒的熟化。讲义剖面自表层向下列出高原粉砂、燧石砂与黏土、砂砾、上土仑阶黄色白垩、中土仑阶含云母白垩与塞诺曼阶泥灰岩。Bournais、Bournais perrucheux 和 Perruches 是图上不同表土位置的名称。"
+      },
+      {
+       "figure": "vouvray-map"
       },
       {
        "figure": "vouvray"
+      },
+      {
+       "figure": "vouvray-cellars"
       }
      ]
     },
@@ -830,13 +934,19 @@ const regionsSession7 = {
      "title": "萨维涅尔与莱昂丘",
      "items": [
       {
-       "text": "同属安茹的萨维涅尔（Savennières）和莱昂丘（Coteaux du Layon）通常比图赖讷温暖、干燥，酒体中等至饱满，花香较少。萨维涅尔向阳通风坡地利于成熟又抑制贵腐，可晚采酿复杂干型，陈年数十年。课本图 18.3 可见杯状修剪白诗南，讲义还提到片岩与 Coulée de Serrant。课堂举例是湿羊毛、石质感、果香内敛的高价干白。"
+       "text": "同属安茹的萨维涅尔（Savennières）和莱昂丘（Coteaux du Layon）通常比图赖讷温暖、干燥，酒体中等至饱满，花香较少。萨维涅尔朝南的片岩坡地向阳通风，利于成熟又抑制贵腐，可晚采酿复杂干型，陈年数十年。课本图 18.3 可见杯状修剪白诗南，Coulée de Serrant 是讲义中的酒标例子。课堂举例是湿羊毛、石质感、果香内敛的高价干白。"
       },
       {
        "figure": "savennieres-vines"
       },
       {
-       "text": "莱昂丘在卢瓦尔支流莱昂河一带，避风河谷有利贵腐，做甜酒。Quarts de Chaume 与 Bonnezeaux 是独立法定产区，讲义将其列作更高品质的同类例子。解释贵腐酒高价时，可把自然条件、选果和低产低出汁率连成因果。"
+       "text": "莱昂丘在卢瓦尔支流莱昂河一带，避风河谷有利贵腐，做甜型白诗南。Quarts de Chaume 与 Bonnezeaux 是独立法定产区，讲义将其列作更高品质的同类例子。解释贵腐酒高价时，可把自然条件、选果和低产低出汁率连成因果。"
+      },
+      {
+       "figure": "anjou-map"
+      },
+      {
+       "figure": "anjou-chenin-labels"
       }
      ]
     }
@@ -854,10 +964,13 @@ const regionsSession7 = {
      "title": "品种、地点和风格",
      "items": [
       {
-       "text": "慕斯卡德（Muscadet）使用白瓜。Melon 早熟、较耐霜、产量高，适应凉爽的南特。主要园地在卢瓦尔河口南侧。按课本区分，Muscadet 是面积最大的 AOP，Muscadet Sèvre et Maine 是产量最大的 AOP，以塞夫勒与曼恩两条河命名。"
+       "text": "慕斯卡德（Muscadet）使用白瓜。Melon 早熟、较耐霜、产量高，适应凉爽的南特。主要园地在卢瓦尔河口南侧。按课本区分，Muscadet 是面积最大的 AOP，Muscadet Sèvre et Maine 是产量最大的 AOP，以塞夫勒与曼恩两条河命名，也是更知名的法定名称。"
       },
       {
-       "text": "典型为干型、约 12% 酒精、轻酒体、高酸、清淡青果，宜年轻饮用。过去常用旧大桶，现在多用水泥罐或不锈钢。Melon 与用于酿香气型阿尔萨斯白的 Muscat（麝香）、波尔多白混合可见的 Muscadelle（密斯卡岱葡萄的常见译名之一）是三种不同的名字，检索与答题时用法文核对。"
+       "figure": "nantais-map"
+      },
+      {
+       "text": "典型为干型、约 12% 酒精、轻酒体、高酸、清淡青果，简单中性，宜年轻饮用。过去常用旧大桶，现在多用水泥罐或不锈钢。Melon 与用于酿香气型阿尔萨斯白的 Muscat（麝香）、波尔多白混合可见的 Muscadelle（密斯卡岱葡萄的常见译名之一）是三种不同的名字，检索与答题时用法文核对。"
       }
      ]
     },
@@ -868,7 +981,10 @@ const regionsSession7 = {
        "figure": "sur-lie"
       },
       {
-       "text": "课本写酒在细酒泥上越冬、采收后次年装瓶。装瓶前减少搬动有利保鲜，酒泥接触也能给轻酒体增加质地，通常没有明显酵母香。Sur Lie 标示还有适用的产区规范与装瓶要求。"
+       "text": "Muscadet Sèvre et Maine Sur Lie 是典型酒标。酒在细酒泥上越冬，采收后次年装瓶。装瓶前减少搬动有利保鲜，酒泥接触也能给轻酒体增加质地。接触时间相对短，通常没有明显酵母香。Sur Lie 标示还有适用的产区规范与装瓶要求。"
+      },
+      {
+       "figure": "lees-vessel"
       }
      ]
     }
@@ -886,7 +1002,10 @@ const regionsSession7 = {
      "title": "品丽珠与河岸位置",
      "items": [
       {
-       "text": "品丽珠（Cabernet Franc）开花与成熟较早。常见红果、草本与花香，成熟度、土壤和酿造会改变草本程度与结构。"
+       "text": "品丽珠（Cabernet Franc）开花与成熟较早。常见红果、草本与花香，成熟度、土壤和酿造会改变草本程度与结构。希侬、布尔格伊和圣尼古拉–布尔格伊都可见两类典型园地：沙地的酒轻盈果味、宜早饮，朝南石灰岩或黏土坡地的酒更饱满、单宁更高，优质酒可桶陈并继续瓶陈数年。"
+      },
+      {
+       "figure": "loire-red-map"
       },
       {
        "table": {
@@ -901,14 +1020,20 @@ const regionsSession7 = {
          ],
          [
           "布尔格伊 Bourgueil、圣尼古拉–布尔格伊 Saint-Nicolas-de-Bourgueil",
-          "位于卢瓦尔河北侧，同样有沙砾平地和坡地差异。比较时结合实际园址"
+          "位于卢瓦尔河北侧。讲义对比中，布尔格伊常较轻柔，希侬常更饱满、浓郁、有结构。具体仍看沙地或朝南坡地"
          ],
          [
           "索米尔 Saumur、索米尔–尚皮尼 Saumur-Champigny",
-          "多为较轻、年轻即饮的红酒，可稍凉饮用。尚皮尼可有紫罗兰香，也有更丰满且可陈年的酒"
+          "索米尔红通常酒体更轻、单宁较低、果香多汁，宜早饮，可稍凉饮用，也有优质例外。尚皮尼可有紫罗兰香，石灰岩和黏土地块可产更饱满、单宁更高的陈年酒"
          ]
         ]
        }
+      },
+      {
+       "text": "索米尔–尚皮尼成酒中，品丽珠至少占 85%，辅助品种合计最多 15%。"
+      },
+      {
+       "figure": "saumur-champigny-label"
       }
      ]
     },
@@ -916,7 +1041,7 @@ const regionsSession7 = {
      "title": "其他黑葡萄与工艺选择",
      "items": [
       {
-       "text": "佳美（Gamay）按课本是河谷第二重要的黑葡萄，常见于图赖讷和安茹，做年轻果味红。讲义以类似博若莱的便宜果味干红帮助理解部分图赖讷红酒，也列品丽珠与科特（Côt／Malbec），不同法定名称与年份规范适用不同配方。中央产区部分园种黑皮诺，典型较轻，优质园地往往优先种长相思。"
+       "text": "佳美（Gamay）按课本是河谷第二重要的黑葡萄，常见于图赖讷和安茹，做年轻果味红。讲义以类似博若莱的便宜果味干红帮助理解部分图赖讷红酒，也列品丽珠与科特（Côt／Malbec）。通用 Touraine Rouge 与单独标 Gamay 的酒各有配比规则。中央产区部分园种黑皮诺，典型较轻，优质园地往往优先种长相思。"
       },
       {
        "figure": "red"
@@ -931,7 +1056,7 @@ const regionsSession7 = {
    "title": "三种卢瓦尔桃红酒标",
    "desc": "干型、半干与半甜的名称和原料",
    "pages": "140",
-   "intro": "先辨三种主要桃红酒标，再把图赖讷和桑塞尔放到各自地理位置。用直接压榨、短浸渍解释淡色和新鲜果味。",
+   "intro": "桃红主要产自安茹–索米尔，图赖讷产量也相当大。先辨三种主要桃红酒标，再把图赖讷和桑塞尔放到各自地理位置。用直接压榨、短浸渍解释淡色和新鲜果味。",
    "sections": [
     {
      "title": "安茹的三种桃红",
@@ -945,7 +1070,7 @@ const regionsSession7 = {
         "rows": [
          [
           "Rosé de Loire 卢瓦尔桃红",
-          "干型，主要在安茹–索米尔，也延伸到图赖讷。可用 Cabernet Franc、Cabernet Sauvignon、Gamay、Grolleau、Grolleau Gris、Pineau d’Aunis 和 Pinot Noir"
+          "干型，主要在安茹–索米尔，也延伸到图赖讷。常规品种包括 Cabernet Franc、Cabernet Sauvignon、Gamay、Grolleau、Grolleau Gris、Pineau d’Aunis 和 Pinot Noir"
          ],
          [
           "Cabernet d’Anjou 安茹卡贝内",
@@ -953,10 +1078,13 @@ const regionsSession7 = {
          ],
          [
           "Rosé d’Anjou 安茹桃红",
-          "通常较 Cabernet d’Anjou 不甜。高产 Grolleau（果乐）常见，也可有品丽珠等"
+          "典型半干，通常较 Cabernet d’Anjou 不甜。高产 Grolleau（果乐）常见，也可有品丽珠等"
          ]
         ]
        }
+      },
+      {
+       "text": "讲义的 Rosé de Loire 表写了超过 30% 的 Cabernet。2026 年核准规范的成酒混合条款没有这个统一最低比例。答风格题时可举品丽珠和赤霞珠，区分干型 Rosé de Loire 与有残糖的安茹卡贝内。"
       }
      ]
     },
@@ -964,7 +1092,10 @@ const regionsSession7 = {
      "title": "图赖讷、桑塞尔与酿造",
      "items": [
       {
-       "text": "图赖讷桃红通常干、清新、果味直接，能用多种黑葡萄。桑塞尔桃红用黑皮诺，典型颜色淡、酒体轻、干型且细致。直接压榨或短时间带皮浸渍可减少色素和单宁提取，在惰性容器中凉温发酵能保留果香。"
+       "text": "图赖讷桃红通常干、清新、果味直接，能用多种黑葡萄。桑塞尔桃红用黑皮诺，典型颜色淡、酒体轻、干型且细致。直接压榨或短时间带皮浸渍可减少色素和单宁提取，在带温控的惰性容器中凉温发酵能保留果香。"
+      },
+      {
+       "figure": "loire-rose-examples"
       }
      ]
     }
