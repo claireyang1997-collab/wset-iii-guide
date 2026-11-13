@@ -147,6 +147,61 @@ function classroomTips() {
   </div>`;
 }
 
+function tastingSequence() {
+  const steps = [
+    ['看', '外观', 'assets/sat-look.webp', '以白底观察澄清度、颜色深度和色调。'],
+    ['闻', '嗅觉', 'assets/sat-smell.webp', '记录纯净性、香气浓度、具体香气与陈年度。'],
+    ['尝', '口感', 'assets/sat-taste.webp', '先记甜度、酸度、单宁、酒精和酒体，再记风味浓度、具体风味和余味。起泡酒加记气泡口感。'],
+    ['评', '结论', 'assets/sat-assess.webp', '用杯中证据判断质量，再判断适饮程度和陈年潜力。']
+  ];
+  return `<ol class="tasting-steps" aria-label="SAT 品鉴顺序">${steps.map(([verb, label, src, detail]) =>
+    `<li><img src="${src}" alt="" width="600" height="400" loading="lazy">
+      <h3><span>${verb}</span> ${label}</h3><p>${detail}</p></li>`
+  ).join('')}</ol>`;
+}
+
+function tastingObservations() {
+  return `<div class="tasting-observations">
+    <figure class="tasting-plate">
+      <div class="tasting-colour">
+        <img src="assets/sat-colour.webp" width="900" height="600" alt="斜俯视白葡萄酒杯，酒液从杯中较深处向边缘逐渐变淡。" loading="lazy">
+        <svg viewBox="0 0 360 240" aria-hidden="true">
+          <path d="M116 78L147 121M268 97L270 135"/>
+          <circle cx="147" cy="121" r="3"/><circle cx="270" cy="135" r="3"/>
+          <g><circle cx="116" cy="78" r="10"/><circle cx="268" cy="97" r="10"/></g>
+          <text x="116" y="82">1</text><text x="268" y="101">2</text>
+        </svg>
+      </div>
+      <div class="tasting-colour-key" aria-hidden="true">
+        <span><b>1</b> 较深处 · 看色调</span>
+        <span><b>2</b> 向边缘 · 看深浅变化</span>
+      </div>
+      <figcaption><h3>深浅和色调分开看</h3><p>把杯子倾向白底，观察颜色从中心到边缘的变化。判断色调时，看酒液颜色较明显的位置。</p></figcaption>
+    </figure>
+    <figure class="tasting-plate">
+      <div class="tasting-finish">
+        <div class="tasting-finish-key" aria-hidden="true"><span>可辨风味</span><span>酸感、热感或涩感</span></div>
+        <svg viewBox="0 0 360 154" role="img" aria-label="余味示意。吐出或吞下后，可辨风味逐渐消退。在这个例子里，酸感、热感或涩感持续得更久。">
+          <defs>
+            <linearGradient id="tasting-finish-shade" x2="0" y2="1">
+              <stop stop-color="#ab7080" stop-opacity=".28"/><stop offset="1" stop-color="#ab7080" stop-opacity=".06"/>
+            </linearGradient>
+          </defs>
+          <path d="M28 115H342M28 115V14" class="tasting-axis"/>
+          <path d="M28 36C76 33 107 51 136 72S180 108 209 115H28Z" fill="url(#tasting-finish-shade)"/>
+          <path d="M28 61C94 55 137 65 180 80S278 111 321 115" class="tasting-sensation-line"/>
+          <path d="M28 36C76 33 107 51 136 72S180 108 209 115" class="tasting-flavour-line"/>
+          <path d="M209 115V137M28 134H209M28 131V137" class="tasting-measure"/>
+          <circle cx="209" cy="115" r="4.5" fill="var(--wine)"/>
+          <text x="118" y="151" text-anchor="middle">余味持续时间</text>
+        </svg>
+        <div class="tasting-finish-axis" aria-hidden="true"><span>吐出或吞下</span><span>时间 →</span></div>
+      </div>
+      <figcaption><h3>余味看风味持续多久</h3><p>从吐出或吞下开始，留意果味、香料等何时不再可辨。酸感、酒精热感或涩感可能还在。</p></figcaption>
+    </figure>
+  </div>`;
+}
+
 function tastingView() {
   const satPdf = "https://www.wsetglobal.cn/wp-content/uploads/WSET_L3Wines_SAT_SC_Jun2023_Issue2C.pdf";
   return `<main id="main" class="wrap practice-shelf tasting-page">
@@ -174,27 +229,9 @@ function tastingView() {
     </section>
     <section class="method-section" id="sat" aria-labelledby="sat-title">
       <h2 id="sat-title">一杯酒，按四步记录</h2>
-      <figure class="method-figure">
-        ${methodFlow('SAT 品鉴顺序', [
-          ['看 · 外观','用白底观察。分别记澄清度、颜色深度和色调。'],
-          ['闻 · 嗅觉','判断是否纯净、香气浓度、具体香气和发展程度。'],
-          ['尝 · 口感','依次评甜度、酸度、单宁、酒精和酒体，再写风味浓度、具体风味和余味。起泡酒加记气泡口感。'],
-          ['评 · 结论','用杯中证据支持质量判断，再判断现在是否适饮、继续陈年是否有益。']
-        ])}
-        <figcaption>每个等级项选一个程度。写香气和风味时，用具体感受到的词。</figcaption>
-      </figure>
-      <div class="method-observations">
-        <figure class="method-observation">
-          <div class="method-wine-sample" aria-hidden="true"><i></i></div>
-          <div class="method-sample-labels"><span>边缘渐淡</span><span>中心看色调</span></div>
-          <figcaption><strong>深浅和色调分开看</strong><span>酒杯倾向白底，观察颜色从中心到边缘的变化，再从色泽较明显处判断色调。</span></figcaption>
-        </figure>
-        <figure class="method-observation">
-          <div class="method-finish" aria-hidden="true"><i></i></div>
-          <div class="method-sample-labels"><span>吐出或吞下</span><span>风味消退</span></div>
-          <figcaption><strong>余味看风味持续多久</strong><span>留意具体果味、香料等消失的时刻。酸感、酒精热感或涩感可持续更久。</span></figcaption>
-        </figure>
-      </div>
+      ${tastingSequence()}
+      <p class="method-note">每个等级项选一个程度。香气和风味用具体感受到的词记录。</p>
+      ${tastingObservations()}
       <p class="method-note">口感容易混淆的两项是成熟果味与甜度、单宁的量与粗细。各自判断，分开记录。</p>
     </section>
     <section class="method-section" id="aromas" aria-labelledby="aromas-title">
