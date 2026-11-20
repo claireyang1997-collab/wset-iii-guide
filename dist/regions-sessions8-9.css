@@ -1,0 +1,134 @@
+.s89-flow {
+ container-type: inline-size;
+}
+
+.book-reading .s89-flow-steps {
+ display: grid;
+ grid-template-columns: repeat(4, minmax(0, 1fr));
+ gap: 1px;
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ background: #dedfd1;
+ border-top: 1px solid #dedfd1;
+}
+
+.book-reading .s89-flow-steps:has(> :nth-child(3):last-child) {
+ grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.book-reading .s89-flow-steps > li {
+ display: flex;
+ flex-direction: column;
+ gap: .22rem;
+ padding: .8rem;
+ margin: 0;
+ background: #f0f0e6;
+ font-size: .92rem;
+ line-height: 1.55;
+ overflow-wrap: anywhere;
+}
+
+.s89-flow-steps small {
+ color: #56614c;
+ font-size: .8rem;
+}
+
+.s89-content-section .wm-content-table > :is(thead, tbody) > tr > :first-child {
+ width: 32%;
+ overflow-wrap: anywhere;
+}
+
+.s89-content-section:has(> :is(#book-21-appellations-1, #book-21-provence-3)) .wm-content-table {
+ min-width: 0;
+}
+
+.s89-content-section:has(> #book-21-appellations-1) .wm-content-table th:first-child {
+ width: 40%;
+ min-width: 0;
+ white-space: normal;
+}
+
+.s89-content-section:has(> #book-21-provence-3) .wm-content-table th:first-child {
+ width: 7rem;
+ min-width: 0;
+}
+
+#s89-cote-rotie-stakes,
+#s89-hermitage-slope,
+#s89-provence-map,
+#s89-provence-rose-label,
+#s89-rioja-gran-reserva-label,
+#s89-rioja-alta-vines,
+#s89-albarino-pergola,
+#s89-central-east-spain-map {
+ margin-inline: auto;
+}
+
+#s89-cote-rotie-stakes { max-width: 29rem; }
+#s89-hermitage-slope,
+#s89-provence-map,
+#s89-central-east-spain-map { max-width: 38rem; }
+#s89-provence-rose-label { max-width: 20rem; }
+#s89-rioja-gran-reserva-label { max-width: 16rem; }
+#s89-rioja-alta-vines { max-width: 34rem; }
+#s89-albarino-pergola { max-width: 32rem; }
+
+.s89-figure-pair {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: 0 .9rem;
+ max-width: 48rem;
+ margin: 1.35rem auto;
+}
+
+.s89-figure-pair > .s7-detail-figure {
+ display: grid;
+ grid-row: span 3;
+ grid-template-rows: subgrid;
+ min-width: 0;
+ margin: 0;
+}
+
+.s89-figure-pair .s7-detail-figure img {
+ aspect-ratio: 1.05;
+ max-height: none;
+}
+
+.s89-figure-pair:has(> #s89-priorat-terraces) {
+ max-width: 32rem;
+ gap: 0 .65rem;
+}
+
+.s89-figure-pair :is(#s89-priorat-terraces, #s89-priorat-slate) img {
+ aspect-ratio: auto;
+}
+
+@media (max-width: 680px) {
+ .s89-figure-pair:not(:has(> #s89-priorat-terraces)) {
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: .85rem;
+ }
+ .s89-figure-pair:not(:has(> #s89-priorat-terraces)) > .s7-detail-figure {
+  display: block;
+  grid-row: auto;
+ }
+ .s89-figure-pair .s7-detail-figure img {
+  aspect-ratio: auto;
+ }
+}
+
+@container (max-width: 540px) {
+ .book-reading .s89-flow-steps,
+ .book-reading .s89-flow-steps:has(> :nth-child(3):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+ }
+ .s89-flow-steps > li:nth-child(3):last-child { grid-column: 1 / -1; }
+}
+
+@container (max-width: 330px) {
+ .book-reading .s89-flow-steps,
+ .book-reading .s89-flow-steps:has(> :nth-child(3):last-child) {
+  grid-template-columns: minmax(0, 1fr);
+ }
+}

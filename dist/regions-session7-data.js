@@ -849,10 +849,7 @@ const regionsSession7 = {
        "figure": "central-map"
       },
       {
-       "figure": "sancerre-soil"
-      },
-      {
-       "figure": "pouilly-fume-bottle"
+       "figure": "sauvignon-photos"
       }
      ]
     },
@@ -915,6 +912,9 @@ const regionsSession7 = {
          ]
         ]
        }
+      },
+      {
+       "text": "武弗雷的年份会改变白诗南的成熟度。较凉的年份，成熟度有限而酸度仍高的葡萄可用于起泡基酒，充分成熟的批次也可做干型静止酒。条件有利的年份，晚收更有机会获得高糖原料，部分葡萄还可能风干或感染贵腐。酿酒师再按目标保留残糖，决定成酒是干型、半甜还是甜型。"
       },
       {
        "text": "武弗雷代表酒款价位较高。讲义地图也标出 Jasnières。武弗雷以白诗南为主，2023 年核准规范另列辅助品种 Orbois，种植比例上限为 5%。武弗雷等地的 tuffeau 是可开凿的石灰岩，洞窖的稳定环境利于储酒及传统法起泡酒的熟化。讲义剖面自表层向下列出高原粉砂、燧石砂与黏土、砂砾、上土仑阶黄色白垩、中土仑阶含云母白垩与塞诺曼阶泥灰岩。Bournais、Bournais perrucheux 和 Perruches 是图上不同表土位置的名称。"

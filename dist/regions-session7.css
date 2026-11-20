@@ -69,6 +69,7 @@
  text-align: center;
 }
 .s7-map-image span { display: block; padding: .35rem; font-size: .85rem; }
+#s7-loire > .s7-map-image { max-width: min(100%, 38rem); }
 
 .s7-detail-figure .textbook-original-link { background: #eeede3; }
 .s7-detail-figure .textbook-original-link:focus-visible { outline-offset: -4px; }
@@ -81,8 +82,12 @@
 .s7-image-grid .textbook-original-link { height: clamp(155px, 28cqi, 230px); }
 .s7-image-grid .textbook-original-link img { height: 100%; }
 .s7-image-grid .s7-detail-figure figcaption { flex: 1; }
-#s7-lees-vessel, #s7-saumur-champigny-label, #s7-pouilly-fume-bottle, #s7-chenin-grapes { max-width: 29rem; }
-:is(#s7-lees-vessel, #s7-saumur-champigny-label, #s7-pouilly-fume-bottle, #s7-chenin-grapes) img { max-height: 280px; }
+#s7-lees-vessel, #s7-saumur-champigny-label { max-width: 29rem; }
+:is(#s7-lees-vessel, #s7-saumur-champigny-label) img { max-height: 280px; }
+#s7-chenin-grapes {
+ max-width: 24rem;
+ margin-inline: auto;
+}
 .s7-figure-pending { padding: .8rem 1rem; border-style: dashed; color: #56614c; }
 .book-reading .s7-figure-pending p { margin: .2rem 0 0; font-size: var(--text-meta); }
 .s7-map-detail { margin: .2rem 1rem .95rem; }
@@ -97,6 +102,50 @@
 @container (max-width: 420px) {
  .s7-image-grid { grid-template-columns: minmax(0, 1fr); }
  .s7-image-grid .textbook-original-link { height: 180px; }
+}
+
+#s7-loire-grapes .s7-image-grid {
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: .75rem;
+}
+#s7-loire-grapes .s7-detail-figure h3,
+#s7-loire-grapes .s7-detail-figure figcaption {
+ padding-inline: .75rem;
+}
+#s7-loire-grapes .s7-detail-figure h3 small {
+ display: block;
+ color: #56614c;
+ font-size: .8rem;
+ font-weight: 500;
+}
+#s7-loire-grapes .textbook-original-link {
+ aspect-ratio: 3 / 4;
+ height: auto;
+}
+#s7-loire-grapes .textbook-original-link img { object-fit: cover; }
+@container (min-width: 680px) {
+ #s7-loire-grapes .s7-image-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+#s7-sauvignon-photos {
+ max-width: 42rem;
+ margin-inline: auto;
+}
+#s7-sauvignon-photos .s7-image-grid > #s7-sancerre-soil {
+ min-width: 0;
+ margin: 0;
+ padding: 0;
+}
+#s7-sancerre-soil > h3 { font: 600 .95rem/1.55 var(--sans); }
+#s7-sancerre-soil > img,
+#s7-pouilly-fume-bottle > .textbook-original-link {
+ height: clamp(155px, 31cqi, 208px);
+}
+#s7-sancerre-soil > img { background: #eeede3; }
+#s7-sancerre-soil > .s7-map-detail { margin-top: .75rem; }
+#s7-pouilly-fume-bottle > .textbook-original-link { background: #fff; }
+@container (min-width: 421px) {
+ #s7-sauvignon-photos .s7-image-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); }
 }
 
 #s7-sur-lie { container-type: inline-size; }

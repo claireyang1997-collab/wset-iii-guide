@@ -8,7 +8,7 @@ const s7Photos = {
 
 const s7DiagramImages = {
  alsace:['assets/s7-alsace-map.jpg',449,433,'地图上孚日山脉在西、莱茵河在东，葡萄园带夹在山麓与平原之间'],
- loire:['assets/s7-loire-map.jpg',1069,637,'卢瓦尔河从中央产区流经图赖讷、安茹–索米尔和南特，向西注入大西洋'],
+ loire:['assets/s7-loire-map-supplied.png',1343,800,'卢瓦尔河从中央产区流经图赖讷、安茹–索米尔和南特，向西注入大西洋'],
  vouvray:['assets/s7-vouvray-profile.jpg',694,402,'剖面依次显示高原、白垩斜坡、酒窖与河岸冲积土']
 };
 
@@ -23,9 +23,12 @@ const s7DetailImages = {
  'hugel-gentil':['assets/s7-hugel-gentil.webp',1044,743,'大区混酿','找 Gentil，读出阿尔萨斯混酿的标示。'],
  'schlossberg':['assets/s7-schlossberg.webp',774,805,'特级园单品种','找 Alsace Grand Cru、Schlossberg 和 Riesling，分别读出等级、地块和品种。'],
  'sommerberg-sgn':['assets/s7-sommerberg-sgn.webp',799,779,'特级园粒选贵腐','找 Sommerberg、Riesling、2009 和 Sélection de Grains Nobles，分别读出地块、品种、年份和采收术语。'],
- 'loire-textbook-map':['assets/s7-loire-textbook-map.webp',1250,796,'图 18.1 · 卢瓦尔河谷','从大西洋沿河向东找南特、安茹–索米尔、图赖讷和中央产区，再沿支流找莱昂丘、希侬等产区。'],
- 'loire-grapes':['assets/s7-loire-grapes.webp',1250,420,'卢瓦尔河谷四个代表品种','从左到右：白瓜、白诗南、长相思、品丽珠。结合上图记住各品种的主要产地。'],
- 'chenin-grapes':['assets/s7-chenin-grapes.webp',534,850,'白诗南果串','同一串葡萄也可能成熟不均。分批入园，挑选符合起泡、干白或甜酒所需成熟度的葡萄。'],
+ 'loire-textbook-map':['assets/s7-loire-textbook-map-redrawn.svg',1120,594,'图 18.1 · 卢瓦尔河谷','从大西洋沿河向东找南特、安茹–索米尔、图赖讷和中央产区，再沿莱昂河找莱昂丘、沿维埃纳河找希侬。'],
+ 'loire-melon':['assets/s7-loire-melon.png',470,634,'白瓜','南特 · 密斯卡岱干白','Melon de Bourgogne'],
+ 'loire-chenin':['assets/s7-loire-chenin.png',1232,1702,'白诗南','安茹–索米尔、图赖讷 · 干白、甜白与起泡酒','Chenin Blanc'],
+ 'loire-sauvignon':['assets/s7-loire-sauvignon.png',760,960,'长相思','中央产区 · 桑塞尔干白、普依–芙美','Sauvignon Blanc'],
+ 'loire-cabernet-franc':['assets/s7-loire-cabernet-franc.png',295,429,'品丽珠','图赖讷、安茹–索米尔 · 希侬红、索米尔–尚皮尼','Cabernet Franc'],
+ 'chenin-grapes':['assets/s7-chenin-grapes-supplied.png',1920,1080,'白诗南果串','同一串葡萄也可能成熟不均。分批入园，挑选符合起泡、干白或甜酒所需成熟度的葡萄。'],
  'nantais-map':['assets/s7-nantais-map.webp',1250,715,'南特与密斯卡岱','先找南特，再向东南找 Muscadet Sèvre et Maine。Muscadet 覆盖面积更大，Sèvre et Maine 的产量更大。'],
  'lees-vessel':['assets/s7-lees-vessel.webp',702,850,'酒泥熟化的容器','结合时间线看，酒在容器内与细酒泥接触越冬，次年装瓶。'],
  'rose-press':['assets/s7-rose-press.webp',1023,670,'桃红酿造的压榨设备','直接压榨在压榨时短暂接触果皮。短时浸皮则先让汁液与果皮接触，再分离果皮。'],
@@ -39,10 +42,12 @@ const s7DetailImages = {
  'tuffeau-cellar':['assets/s7-tuffeau-cellar.webp',736,850,'石灰岩内的洞窖','tuffeau 易于开凿。洞窖环境利于储酒，也用于传统法起泡酒的熟化。'],
  'vouvray-cliff':['assets/s7-vouvray-cliff.webp',595,850,'武弗雷石灰岩崖壁','先看崖壁与洞口，再对照剖面图的坡地和白垩岩层。'],
  'central-map':['assets/s7-central-map.webp',1250,707,'中央产区五个地名','桑塞尔与普依–芙美隔卢瓦尔河相望，默讷图–萨隆在桑塞尔西南，坎西和勒伊靠近谢尔河一带。'],
- 'pouilly-fume-bottle':['assets/s7-pouilly-fume-bottle.webp',458,850,'普依–芙美酒瓶上的燧石图案','瓶上的石块呼应烟熏和打火石的品鉴联想。复习时分别记住当地的土壤与杯中的风味。']
+ 'pouilly-fume-bottle':['assets/s7-pouilly-fume-bottle-supplied.png',353,566,'普依–芙美酒瓶上的燧石图案','瓶身的燧石图案呼应烟熏和打火石的品鉴联想。复习时分别记住当地的土壤与杯中的风味。']
 };
 
 const s7ImageGroups = {
+ 'loire-grapes':['卢瓦尔河谷四个代表品种',['loire-melon','loire-chenin','loire-sauvignon','loire-cabernet-franc']],
+ 'sauvignon-photos':['桑塞尔与普依–芙美',['sancerre-soil','pouilly-fume-bottle']],
  'alsace-grapes':['阿尔萨斯贵族品种图组',['riesling-grapes','gewurztraminer-grapes','pinot-gris-grapes','muscat-grapes']],
  'alsace-labels':['阿尔萨斯酒标实物',['hugel-pinot-gris','hugel-gentil','schlossberg','sommerberg-sgn']],
  'vouvray-cellars':['武弗雷的石灰岩与洞窖',['vouvray-cliff','tuffeau-cellar']],
@@ -146,8 +151,8 @@ function s7Figure(id) {
  }
  const detail=s7DetailImages[id];
  if(detail){
-  const [src,width,height,title,caption]=detail;
-  return s7DetailImage(id,src,title,width,height,caption);
+  const [src,width,height,title,caption,originalName]=detail;
+  return s7DetailImage(id,src,title,width,height,caption,originalName);
  }
  if(id==='alsace-textbook-map')return `<aside class="s7-figure s7-figure-pending" id="s7-alsace-textbook-map"><strong>图 17.1 · 阿尔萨斯地图</strong><p>待补课本第 17 章首页。可先看<a href="#read/17/terroir/s7-alsace">阿尔萨斯双语地图 →</a></p></aside>`;
  if(id==='loire-area')return `<figure class="s7-figure" id="s7-loire-area"><h3>法国七个产区的 AOP 面积</h3><ul class="s7-area-bars">${s7LoireAreas.map(([name,area])=>`<li><span>${name}</span><span aria-hidden="true" class="s7-area-bar"><span style="width:${100*area/s7LoireAreas[0][1]}%"></span></span><span>${area.toLocaleString('en-US')} 公顷</span></li>`).join('')}</ul><figcaption>按讲义图所列七个产区比较，统计年份未注明。</figcaption></figure>`;
@@ -166,12 +171,12 @@ function s7Figure(id) {
   ${directions?`<div class="s7-map-direction">${wmEscape(directions)}</div>`:''}
   ${regions?s7RegionCells(regions):s7DiagramCells(cells,id==='sur-lie'?'s7-lees-flow':undefined)}
   ${profile?`<h4>从西往东看雨影</h4>${s7DiagramCells(profile)}`:''}
-  ${id==='loire'?`<details class="s7-map-detail"><summary>对照课本图 18.1</summary>${s7Figure('loire-textbook-map')}</details>`:''}
+  ${id==='loire'?`<details class="s7-map-detail"><summary>查看图 18.1 重绘版</summary>${s7Figure('loire-textbook-map')}</details>`:''}
   <figcaption>${wmEscape(caption)}</figcaption></figure>`;
 }
 
-function s7DetailImage(id,src,title,width,height,caption) {
- return `<figure class="s7-figure s7-detail-figure" id="s7-${id}"><h3>${wmEscape(title)}</h3><a class="textbook-original-link" href="${src}" target="_blank" rel="noopener" aria-label="放大查看${wmEscape(title)}"><img src="${src}" width="${width}" height="${height}" alt="${wmEscape(title)}" loading="lazy"></a><figcaption>${wmEscape(caption)}</figcaption></figure>`;
+function s7DetailImage(id,src,title,width,height,caption,originalName) {
+ return `<figure class="s7-figure s7-detail-figure" id="s7-${id}"><h3>${wmEscape(title)}${originalName?`<small lang="fr">${wmEscape(originalName)}</small>`:''}</h3><a class="textbook-original-link" href="${src}" target="_blank" rel="noopener" aria-label="放大查看${wmEscape(title)}"><img src="${src}" width="${width}" height="${height}" alt="${wmEscape(title)}" loading="lazy"></a><figcaption>${wmEscape(caption)}</figcaption></figure>`;
 }
 
 function s7PlaceNames(label) {

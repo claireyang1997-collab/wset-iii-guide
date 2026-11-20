@@ -860,11 +860,19 @@
     {
      "title": "三个层次的名称",
      "paragraphs": [
-      "Mâcon 可为红酒或白葡萄酒；红酒多以佳美为主，也有黑皮诺，常轻盈果味、适合早饮。基础白葡萄酒可有苹果、柑橘及中等酸度、中等至饱满酒体，MLC 可能带来黄油表现。",
-      "Mâcon-Villages 及 Mâcon 加村名（如 Lugny）只产白葡萄酒，可较基本 Mâcon 更成熟、饱满。不要因为一个写 Villages、一个加具体村名，就不查规则地认定二者必然有固定品质差距。",
+      "基础 Mâcon 可为白、红或桃红。红酒可用佳美或黑皮诺，常轻盈果味、适合早饮。基础白葡萄酒可有苹果、柑橘及中等酸度、中等至饱满酒体，MLC 可能带来黄油表现。",
+      "Mâcon-Villages 属大区级，只产霞多丽白酒，风格可比基础 Mâcon 白酒更成熟、饱满。酒标写 Mâcon 加具体村名时，来源进一步限定，允许的酒色按该地名规定判断。例如 Mâcon-Chardonnay 中的 Chardonnay 是地名，该名称可用于白、红或桃红。",
       "Pouilly-Fuissé（普依–富赛）和 Saint-Véran（圣韦朗）是村庄法定产区，不是 Grand Cru；Pouilly-Fuissé 有获指定的一级园。石灰岩坡地和朝东／东南的圆形剧场地形可充分受光，带来成熟桃或热带果味、饱满酒体。",
-      "Mâcon-Villages可以来自一个获准村庄，也可以混合多个获准村庄的葡萄；Mâcon后附具体村名则进一步限定相应来源。不能把只写Mâcon-Villages的酒自动理解为单一村庄酒。"
+      "Mâcon-Villages 可以来自一个获准村庄，也可混合多个获准村庄的葡萄。读到 Villages 时，先认完整产区名，再判断级别、酒色和来源。"
      ],
+     "table": {
+      "headers": ["酒标名称", "级别", "允许酒色"],
+      "rows": [
+       ["Côte de Beaune-Villages", "村庄级", "只红"],
+       ["Côte de Nuits-Villages", "村庄级", "红、白"],
+       ["Mâcon-Villages", "大区级", "只白"]
+      ]
+     },
      "figures": [
       "maconnais-map",
       "pouilly-landscape",
@@ -2818,6 +2826,13 @@
    "routes": [
     "15/hierarchy",
     "15/cote-or"
+   ]
+  },
+  {
+   "title": "法国 INAO · Mâcon-Villages 与具体村名的酒色",
+   "url": "https://www.inao.gouv.fr/produit/macon-villages-primeur-ou-nouveau-17880",
+   "routes": [
+    "15/maconnais"
    ]
   },
   {
